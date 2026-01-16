@@ -1,0 +1,28 @@
+<!-- ============================================
+     FEATURES 3-COL - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - 3 columns with icons
+     - Icon: 150x150px
+     - Title: Inter Bold 22px
+     - Divider line: 158px width
+     - Text: Inter Medium 22px
+     ============================================ -->
+
+<section class="features section--bg-primary">
+  <div class="container">
+    <div class="features__wrapper">
+      {{#each items}}
+      <div class="feature-card">
+        <div class="feature-card__icon">
+          <img src="{{this.image}}" alt="">
+        </div>
+        <h3 class="feature-card__title">{{this.title}}</h3>
+        <div class="feature-card__divider"></div>
+        <p class="feature-card__text">{{this.text}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

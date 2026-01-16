@@ -1,0 +1,50 @@
+<!-- ============================================
+     PROMO V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Image: 428x533px (Landing 2) или 428x440px (Landing 1, shortImage: true)
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Divider: 1px line
+     - Link with arrow
+     ============================================ -->
+
+<section class="promo section--bg-secondary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Изображение слева -->
+      <div class="col-lg-5">
+        <div class="promo__image{{#if shortImage}} promo__image--short{{/if}}">
+          <img src="{{image}}" alt="">
+        </div>
+      </div>
+
+      <!-- Контент справа -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="promo__content">
+          <div class="promo__top">
+            <h2 class="promo__title">{{title}}</h2>
+            {{#if paragraphs}}
+              {{#each paragraphs}}
+              <p class="promo__text">{{this}}</p>
+              {{/each}}
+            {{else}}
+              <p class="promo__text">{{text}}</p>
+            {{/if}}
+          </div>
+          <div class="promo__bottom">
+            <div class="promo__divider"></div>
+            <a href="{{linkUrl}}" class="promo__link">
+              {{linkText}}
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

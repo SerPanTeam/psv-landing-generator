@@ -1,0 +1,55 @@
+<!-- ============================================
+     ABOUT V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Image: 466x560px
+     - Label: Inter Medium 28px
+     - Name: Inter Bold 28px
+     - Divider line: ~471px width
+     - Text: Inter Medium 22px (поддержка параграфов)
+     - Social icons: опционально (показывать только если есть в данных)
+     ============================================ -->
+
+<section class="about section--bg-primary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Изображение слева -->
+      <div class="col-lg-5">
+        <div class="about__image">
+          <img src="{{image}}" alt="{{name}}">
+        </div>
+      </div>
+
+      <!-- Контент справа -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__content">
+          <p class="about__label">{{label}}</p>
+          <h2 class="about__name">{{name}}</h2>
+          <div class="about__divider"></div>
+
+          {{!-- Поддержка массива параграфов --}}
+          {{#if paragraphs}}
+            {{#each paragraphs}}
+            <p class="about__text">{{this}}</p>
+            {{/each}}
+          {{else}}
+            {{!-- Fallback для старого формата с единым текстом --}}
+            <div class="about__text">{{text}}</div>
+          {{/if}}
+
+          {{!-- Социальные иконки показываются ТОЛЬКО если явно указаны в данных --}}
+          {{#if socials}}
+          <div class="about__social">
+            {{#each socials}}
+            <a href="{{this.url}}" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{this.name}}">
+              <img src="{{this.icon}}" alt="{{this.name}}">
+            </a>
+            {{/each}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,311 @@
+{
+  "name": "Лендинг 2 - Familien und Kinder (Kostenlos)",
+  "output": "landing2-family-kids.html",
+  "lang": "de",
+
+  "cssVariables": {
+    "--color-bg-primary": "#F5EDE0",
+    "--color-bg-secondary": "#EEE3D0",
+    "--color-button-primary": "#E2C08D",
+    "--color-accent": "#D4A574"
+  },
+
+  "meta": {
+    "title": "Kostenloses Familien und Kinder-Fotoshooting | Fotostudio",
+    "description": "Kostenloses Familien- und Kinder-Fotoshooting! Sichere dir jetzt deinen Gutschein für liebevolle Familienbilder.",
+    "keywords": "Familien-Fotoshooting, Kinder-Fotoshooting, kostenlos, Gutschein"
+  },
+
+  "quiz": {
+    "cardStyle": "square",
+    "logoText": "Logo",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "progress": "3 Fragen bis zum Gutschein",
+        "question": "Kennst du mich bereits?",
+        "columns": 4,
+        "nextPage": "quiz-step2.html",
+        "options": [
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "assets/images/placeholder.svg" },
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "assets/images/placeholder.svg" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "assets/images/placeholder.svg" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "progress": "2 Fragen bis zum Gutschein",
+        "question": "Gibt es bei euch auch tierische Familienmitglieder?",
+        "columns": 3,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "ja_unbedingt", "text": "Ja, unbedingt!", "image": "assets/images/placeholder.svg" },
+          { "value": "nein", "text": "Nein", "image": "assets/images/placeholder.svg" },
+          { "value": "vielleicht", "text": "Vielleicht – sind noch unsicher", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "progress": "1 Fragen bis zum Gutschein",
+        "question": "Wie groß ist eure Familie?",
+        "columns": 4,
+        "nextPage": "quiz-step4.html",
+        "options": [
+          { "value": "2_personen", "text": "2 Personen", "image": "assets/images/placeholder.svg" },
+          { "value": "3_4_personen", "text": "3–4 Personen", "image": "assets/images/placeholder.svg" },
+          { "value": "5_mehr", "text": "5 oder mehr Personen", "image": "assets/images/placeholder.svg" },
+          { "value": "noch_unklar", "text": "Noch unklar – wir entscheiden spontan", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "progress": "Fast geschafft!",
+        "question": "Schon mal ein Familien - Fotoshooting gehabt?",
+        "columns": 2,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "assets/images/placeholder.svg" },
+          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "assets/images/placeholder.svg" }
+        ]
+      }
+    ],
+
+    "form": {
+      "formLabel": "Klasse, jetzt zum Gutschein",
+      "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
+      "formSubtitle": "kostenloses Familien-Fotoshooting!",
+      "formNote": "Diese Aktion gilt nur bis zum 30.01.25.",
+      "formImage": "assets/images/placeholder.svg",
+      "formImageAlt": "Familien-Fotoshooting",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "placeholderAvailability": "Wann seid ihr erreichbar (Mehrfachauswahl)",
+      "availabilityOptions": [
+        { "value": "morgens", "label": "Morgens" },
+        { "value": "mittags", "label": "Mittags" },
+        { "value": "nachmittags", "label": "Nachmittags" },
+        { "value": "abends", "label": "Abends" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Jetzt Gutschein sichern!",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+      "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
+      "infoText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
+    },
+
+    "success": {
+      "successTitle": "Herzlichen Glückwunsch!",
+      "successSubtitle": "Deine Anfrage ist bei uns eingegangen!",
+      "successTexts": [
+        "Wir melden uns bald bei dir.",
+        "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
+      ],
+      "successImage": "assets/images/placeholder.svg",
+      "successImageAlt": "Familien-Fotoshooting",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "alternativeText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
+      "callButtonText": "Jetzt anrufen",
+      "emailButtonText": "Mail uns!",
+      "phoneNumber": "+49123456789",
+      "email": "info@example.com",
+      "aboutName": "Fotostudio",
+      "aboutTagline": "Familienfotos & Kinderfotografie",
+      "aboutTexts": [
+        "Wir freuen uns darauf, euch als Fotograf für eure Familienmomente zu begleiten.",
+        "Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung."
+      ],
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Logo"
+      }
+    },
+    {
+      "template": "hero/hero-v2.html",
+      "data": {
+        "label": "Kostenloses",
+        "title": "Familien und Kinder-Fotoshooting!",
+        "subtitle": "Familienbilder, die ein unvergessliches Familiengeschenk werden.",
+        "buttonText": "Jetzt Gutschein sichern",
+        "buttonLink": "quiz-step1.html",
+        "imageMain": "assets/images/placeholder.svg",
+        "imageSecondary": "assets/images/placeholder.svg",
+        "imageAlt": "Familien-Fotoshooting",
+        "sidebarLabel": "Liebe Familien, aufgepasst!",
+        "sidebarTitle": "Verpasst nicht unser Weihnachts-Familien-Fotoshooting-Special!",
+        "sidebarText": "Dieses kostenloses Fotoshooting findet nur bis zum 30.01.25 statt!",
+        "sidebarLinkText": "Kostenloses Familien-Fotoshooting sichern",
+        "sidebarLinkUrl": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "content/content-v1.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
+        "text": "Ich nehme mir viel Zeit für euch und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.",
+        "accentText": "",
+        "linkText": "Kostenloser Fotoshooting sichern",
+        "linkUrl": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "features/features-3col.html",
+      "data": {
+        "items": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Gemütlich relaxte Umgebung",
+            "text": "damit ganz natürliche Aufnahmen entstehen können"
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Ohne Termin für Schnellauswahl",
+            "text": "eure Lieblingsfotos können sofort mitgenommen werden"
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Professionelle Fotografin",
+            "text": "aus Leidenschaft für Momente"
+          }
+        ]
+      }
+    },
+    {
+      "template": "steps/steps-4.html",
+      "data": {
+        "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
+        "ctaText": "",
+        "ctaLink": "",
+        "steps": [
+          {
+            "number": "1",
+            "icon": "assets/images/placeholder.svg",
+            "title": "1. Eintragen",
+            "text": "Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann."
+          },
+          {
+            "number": "2",
+            "icon": "assets/images/placeholder.svg",
+            "title": "2. Shootingzeit",
+            "text": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen."
+          },
+          {
+            "number": "3",
+            "icon": "assets/images/placeholder.svg",
+            "title": "3. Wähle dein Lieblingsbild/er aus",
+            "text": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
+          },
+          {
+            "number": "4",
+            "icon": "assets/images/placeholder.svg",
+            "title": "4. Ergebnis",
+            "text": "Unvergängliche Erinnerungen in digitaler Form."
+          }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "title": "Häufige Fragen zum Fotoshooting",
+        "questions": [
+          {
+            "question": "Für wen ist das Fotoshooting gedacht?",
+            "answer": "Das Fotoshooting ist für Familien mit Kindern jeden Alters gedacht."
+          },
+          {
+            "question": "Wieso ist es tatsächlich kostenlos?",
+            "answer": "Wir möchten möglichst vielen Familien die Möglichkeit geben, professionelle Bilder zu bekommen."
+          },
+          {
+            "question": "Ist das Fotoshooting wirklich kostenlos?",
+            "answer": "Ja, das Fotoshooting selbst ist komplett kostenlos."
+          },
+          {
+            "question": "Ist das Fotoshooting wirklich kostenlos?",
+            "answer": "Ja, absolut kostenlos."
+          }
+        ]
+      }
+    },
+    {
+      "template": "services/services-grid.html",
+      "data": {
+        "title": "Rund ums Jahr warten spannende Fotoshooting-Aktionen auf dich.",
+        "services": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Family Time",
+            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Kinder-Fotoshooting",
+            "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen Bildern fest."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Newborn-Fotoshooting",
+            "text": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Kinder Fotoshooting",
+            "text": "Authentisch, ausdrucksstark, zeitlos."
+          }
+        ],
+        "ctaText": "Jetzt kostenlosen Fotoshooting-Gutschein sichern",
+        "ctaLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "label": "Hi, ich bin Anna – dein Kontakt zum Studio!",
+        "name": "",
+        "text": "Ich freue mich, wenn Du bei Fragen oder Wünschen direkt bei mir meldest. Gemeinsam finden wir den perfekten Termin für euer Fotoshooting.",
+        "socials": [
+          { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
+          { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },
+          { "icon": "assets/icons/web.svg", "url": "#", "name": "Website" }
+        ]
+      }
+    },
+    {
+      "template": "quiz/quiz-container.html",
+      "data": {
+        "totalSteps": 4,
+        "cardStyle": "square"
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

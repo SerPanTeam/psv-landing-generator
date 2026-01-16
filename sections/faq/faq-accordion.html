@@ -1,0 +1,38 @@
+<!-- ============================================
+     FAQ ACCORDION - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Title: Inter Bold 35px
+     - Question: Inter Bold 28px
+     - Answer: Inter Medium 22px
+     - Plus/minus icon: 30x30px
+     - Divider lines between questions
+     ============================================ -->
+
+<section class="faq section--bg-primary">
+  <div class="container">
+    <h2 class="faq__title">{{title}}</h2>
+
+    <div class="faq__list">
+      {{#each questions}}
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <span>{{this.question}}</span>
+          <span class="faq__icon">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <p>{{this.answer}}</p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

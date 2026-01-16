@@ -1,0 +1,35 @@
+<!-- ============================================
+     GALLERY SLIDER - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Primary background
+     - 3 visible slides
+     - Navigation arrows
+     - Smooth slide transitions
+     ============================================ -->
+
+<section class="gallery-slider section--bg-secondary">
+  <div class="gallery-slider__wrapper">
+    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="gallery-slider__viewport">
+      <div class="gallery-slider__track">
+        {{#each images}}
+        <div class="gallery-slider__slide">
+          <img src="{{this.src}}" alt="{{this.alt}}">
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</section>

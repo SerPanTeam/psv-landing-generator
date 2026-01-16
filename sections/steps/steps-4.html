@@ -1,0 +1,43 @@
+<!-- ============================================
+     STEPS 4 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Title: Inter Bold 35px
+     - CTA button with outline style
+     - 4 steps in 2x2 grid
+     - Step icon: ~70x75px
+     - Step title: Inter Bold 22px
+     - Step text: Inter Medium 22px
+     - Divider lines under each step
+     ============================================ -->
+
+<section class="steps section--bg-secondary">
+  <div class="container">
+    <!-- Header with title and CTA -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h2 class="steps__title">{{title}}</h2>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <a href="{{ctaLink}}" class="btn btn-outline steps__cta-btn">{{ctaText}}</a>
+      </div>
+    </div>
+
+    <!-- Steps grid 2x2 -->
+    <div class="row">
+      {{#each steps}}
+      <div class="col-lg-6">
+        <div class="step-card">
+          <div class="step-card__icon">
+            <img src="{{this.icon}}" alt="">
+          </div>
+          <h3 class="step-card__title">{{this.title}}</h3>
+          <p class="step-card__text">{{this.text}}</p>
+          <div class="step-card__divider"></div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

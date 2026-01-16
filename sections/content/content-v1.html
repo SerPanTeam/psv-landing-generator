@@ -1,0 +1,51 @@
+<!-- ============================================
+     CONTENT V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Image: 428x440px in white frame
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Accent text: #E2C08D
+     - Divider + link with arrow
+     ============================================ -->
+
+<section class="content-section section--bg-primary">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Контент слева -->
+      <div class="col-lg-5">
+        <div class="content-section__content">
+          <h2 class="content-section__title">{{title}}</h2>
+          {{#if paragraphs}}
+            {{#each paragraphs}}
+            <p class="content-section__text">{{this}}</p>
+            {{/each}}
+          {{else}}
+            <p class="content-section__text">{{text}}</p>
+          {{/if}}
+          <div class="content-section__divider"></div>
+          <a href="{{linkUrl}}" class="content-section__link">
+            {{linkText}}
+            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Изображение справа в рамке -->
+      <div class="col-lg-6 ms-auto">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <img src="{{image}}" alt="">
+          </div>
+          {{#if accentText}}
+          <p class="content-section__accent">{{accentText}}</p>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

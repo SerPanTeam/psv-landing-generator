@@ -1,0 +1,142 @@
+<!-- ============================================
+     QUIZ PAGE FORM - Landing Generator
+
+     Contact form page for quiz.
+     Two-column layout: form left, image + info right.
+     Includes map at bottom.
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Form fields: 557px width, 60px height
+     - Image: 549x437px
+     - Button: #E2C08D background
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Weihnachts-Fotoshooting-Aktion: Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein für ein liebevolles Familien-Fotoshooting.">
+  <title>Familien-Fotoshooting zu Weihnachten | Fotostudio - Formular</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--form" data-quiz-step="form">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Logo</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Form Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <div class="row">
+        <!-- Form Column -->
+        <div class="col-lg-5">
+          <!-- Form Header -->
+          <p class="quiz-form__label">Klasse, jetzt zum Gutschein</p>
+          <p class="quiz-form__title">Trage dich jetzt ein und sichere dir dein Platz für ein</p>
+          <h1 class="quiz-form__subtitle">Familien-Fotoshooting zu Weihnachten!</h1>
+          <p class="quiz-form__note">Diese Aktion gilt nur bis zum 06.12.25.</p>
+
+          <!-- Form -->
+          <form class="quiz-form__form" id="quiz-form" action="quiz-success.html" method="GET">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
+            </div>
+            <div class="form-group">
+              <select name="availability" required>
+                <option value="" disabled selected>Wann seid ihr erreichbar (Mehrfachauswahl)</option>
+                
+                <option value="morgens">Morgens</option>
+                
+
+                <option value="mittags">Mittags</option>
+                
+
+                <option value="nachmittags">Nachmittags</option>
+                
+
+                <option value="abends">Abends</option>
+                
+              </select>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label>
+                <input type="checkbox" name="privacy" required>
+                <span>Ich akzeptiere die <a href="#" target="_blank">Datenschutzbestimmungen</a>.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Jetzt Gutschein sichern!</button>
+          </form>
+        </div>
+
+        <!-- Image & Info Column -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-form__image">
+            <img src="assets/images/placeholder.svg" alt="Familien-Fotoshooting">
+          </div>
+          <p class="quiz-form__privacy-note">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          <div class="quiz-form__info">
+            <p class="quiz-form__info-title">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
+            <p class="quiz-form__info-text">Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Map Section -->
+  <section class="quiz-page__map">
+    
+    <iframe
+      src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/quiz-navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+/* ============================================
+   RESPONSIVE CSS - LANDING GENERATOR
+
+   ГЛАВНЫЙ ПРИНЦИП: Pixel-perfect по Figma с Bootstrap
+   Адаптивные стили для всех секций
+   ============================================ */
+
+/* ===== TABLET (768px - 991px) ===== */
+@media (max-width: 991.98px) {
+  /* Header */
+  .logo-text {
+    font-size: 28px;
+  }
+
+  /* Hero V1 */
+  .hero--v1 .hero__content {
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .hero--v1 .hero__image-main {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 428/394;
+  }
+
+  .hero--v1 .hero__image-secondary {
+    width: 250px;
+    height: 230px;
+    bottom: -60px;
+    left: -30px;
+  }
+
+  /* Promo */
+  .promo__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 428/440;
+    margin-bottom: 30px;
+  }
+
+  /* Features */
+  .feature-card {
+    margin-bottom: 40px;
+  }
+
+  .feature-card__icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Steps */
+  .step-card__icon {
+    width: 60px;
+    height: 65px;
+  }
+
+  /* Gallery Strip */
+  .gallery-strip__item {
+    width: 33.333%;
+  }
+
+  /* Services */
+  .service-card__image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  /* About */
+  .about__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 466/560;
+    margin-bottom: 30px;
+  }
+
+  .about__divider {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ===== MOBILE (< 768px) ===== */
+@media (max-width: 767.98px) {
+  /* Header */
+  .header {
+    padding: 16px 0;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  /* Hero V1 */
+  .hero {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero--v1 .hero__content {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .hero--v1 .hero__title {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero--v1 .hero__subtitle {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .hero--v1 .hero__image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .hero--v1 .hero__image-main {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .hero--v1 .hero__image-secondary {
+    width: 180px;
+    height: 160px;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-80%);
+  }
+
+  /* Promo */
+  .promo {
+    padding: 40px 0;
+  }
+
+  .promo__image {
+    max-width: 100%;
+    margin: 0 auto 30px;
+  }
+
+  /* Content Section */
+  .content-section__image-frame {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .content-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 428/440;
+  }
+
+  /* Features */
+  .features {
+    padding: 40px 0;
+  }
+
+  .feature-card {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .feature-card__icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 16px;
+  }
+
+  .feature-card__divider {
+    width: 120px;
+    margin: 10px auto;
+  }
+
+  /* Steps */
+  .steps {
+    padding: 40px 0;
+  }
+
+  .steps__title {
+    margin-bottom: 24px;
+  }
+
+  .steps__cta {
+    margin-bottom: 40px;
+  }
+
+  .step-card {
+    margin-bottom: 30px;
+  }
+
+  .step-card__icon {
+    width: 50px;
+    height: 55px;
+  }
+
+  /* Gallery Strip */
+  .gallery-strip__item {
+    width: 50%;
+  }
+
+  /* FAQ */
+  .faq {
+    padding: 40px 0;
+  }
+
+  .faq__title {
+    margin-bottom: 24px;
+  }
+
+  .faq__question {
+    font-size: var(--font-size-text);
+    padding: 20px 0;
+  }
+
+  .faq__answer-inner {
+    padding-bottom: 20px;
+  }
+
+  /* Services */
+  .services {
+    padding: 40px 0;
+  }
+
+  .services__header {
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .service-card__image {
+    max-width: 280px;
+    margin: 0 auto 16px;
+  }
+
+  /* About */
+  .about {
+    padding: 40px 0;
+  }
+
+  .about__image {
+    max-width: 320px;
+    margin: 0 auto 30px;
+  }
+
+  .about__divider {
+    max-width: 100%;
+  }
+
+  /* Footer */
+  .footer__map {
+    height: 250px;
+  }
+
+  .footer__nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer__separator {
+    display: none;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  /* Buttons */
+  .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn-outline {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* ===== SMALL MOBILE (< 576px) ===== */
+@media (max-width: 575.98px) {
+  /* Hero V1 */
+  .hero--v1 .hero__image-main {
+    max-width: 280px;
+  }
+
+  .hero--v1 .hero__image-secondary {
+    width: 150px;
+    height: 130px;
+    bottom: -30px;
+  }
+
+  /* Features */
+  .feature-card__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Gallery Strip */
+  .gallery-strip__item {
+    width: 100%;
+  }
+
+  /* Services - одна колонка */
+  .service-card__image {
+    max-width: 100%;
+  }
+
+  /* About */
+  .about__image {
+    max-width: 100%;
+  }
+}
+
+/* ===== HERO V2 RESPONSIVE (Лендинг 2) ===== */
+@media (max-width: 991.98px) {
+  .hero--v2 .hero__sidebar {
+    margin-top: 40px;
+  }
+}
+
+/* ===== HERO V3 RESPONSIVE (Лендинг 3) ===== */
+@media (max-width: 991.98px) {
+  .hero--v3 .hero__images {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ===== HERO V4 RESPONSIVE (Лендинг 4) ===== */
+@media (max-width: 991.98px) {
+  .hero--v4 .hero__gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero--v4 .hero__gallery-item {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero--v4 .hero__gallery-item {
+    width: 45%;
+  }
+}

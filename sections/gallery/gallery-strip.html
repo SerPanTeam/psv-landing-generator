@@ -1,0 +1,18 @@
+<!-- ============================================
+     GALLERY STRIP - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Full width strip of 4 images
+     - No gaps between images
+     - Square aspect ratio for each image
+     ============================================ -->
+
+<section class="gallery-strip section--bg-secondary">
+  <div class="gallery-strip__container">
+    {{#each images}}
+    <div class="gallery-strip__item">
+      <img src="{{this.src}}" alt="{{this.alt}}">
+    </div>
+    {{/each}}
+  </div>
+</section>

@@ -1,0 +1,137 @@
+<!-- ============================================
+     QUIZ PAGE FORM - Landing Generator
+
+     Contact form page for quiz.
+     Two-column layout: form left, image + info right.
+     Includes map at bottom.
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Form fields: 557px width, 60px height
+     - Image: 549x437px
+     - Button: #E2C08D background
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{metaDescription}}">
+  <title>{{metaTitle}}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--form" data-quiz-step="form">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">{{logoText}}</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Form Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <div class="row">
+        <!-- Form Column -->
+        <div class="col-lg-5">
+          <!-- Form Header -->
+          <p class="quiz-form__label">{{formLabel}}</p>
+          <p class="quiz-form__title">{{formTitle}}</p>
+          <h1 class="quiz-form__subtitle">{{formSubtitle}}</h1>
+          <p class="quiz-form__note">{{formNote}}</p>
+
+          <!-- Form -->
+          <form class="quiz-form__form" id="quiz-form" action="{{successPage}}" method="GET">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="{{placeholderName}}" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="{{placeholderEmail}}" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="{{placeholderPhone}}" required>
+            </div>
+            <div class="form-group">
+              <select name="availability" required>
+                <option value="" disabled selected>{{placeholderAvailability}}</option>
+                {{#each availabilityOptions}}
+                <option value="{{value}}">{{label}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label>
+                <input type="checkbox" name="privacy" required>
+                <span>{{privacyText}} <a href="{{datenschutzUrl}}" target="_blank">{{privacyLinkText}}</a>.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">{{submitButtonText}}</button>
+          </form>
+        </div>
+
+        <!-- Image & Info Column -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-form__image">
+            <img src="{{formImage}}" alt="{{formImageAlt}}">
+          </div>
+          <p class="quiz-form__privacy-note">{{privacyNote}}</p>
+          <div class="quiz-form__info">
+            <p class="quiz-form__info-title">{{infoTitle}}</p>
+            <p class="quiz-form__info-text">{{infoText}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Map Section -->
+  <section class="quiz-page__map">
+    {{#if mapEmbedUrl}}
+    <iframe
+      src="{{mapEmbedUrl}}"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    {{else}}
+    <div class="quiz-page__map-placeholder">
+      <p>Maps here ...</p>
+    </div>
+    {{/if}}
+  </section>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="{{impressumUrl}}">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="{{datenschutzUrl}}">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="{{cookieUrl}}">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/quiz-navigation.js"></script>
+</body>
+</html>

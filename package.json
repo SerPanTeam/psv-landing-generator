@@ -1,0 +1,24 @@
+{
+  "name": "landing-generator",
+  "version": "1.0.0",
+  "description": "Landing page generator for photographers based on Bootstrap 5",
+  "main": "generator.js",
+  "scripts": {
+    "build": "node generator.js",
+    "build:landing1": "node generator.js --landing=1",
+    "build:landing2": "node generator.js --landing=2",
+    "build:landing3": "node generator.js --landing=3",
+    "build:landing4": "node generator.js --landing=4",
+    "serve": "npx serve dist",
+    "watch": "node generator.js --watch"
+  },
+  "keywords": [
+    "landing",
+    "generator",
+    "bootstrap",
+    "photography"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {}
+}

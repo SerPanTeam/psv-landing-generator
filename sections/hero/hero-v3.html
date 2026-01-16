@@ -1,0 +1,54 @@
+<!-- ============================================
+     HERO V3 - Лендинг 3 (Hunde-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Label: "Kostenloses"
+     - Title: "Hunde-Fotoshooting"
+     - Description text
+     - CTA button
+     - Sidebar "Warum Kostenlos?"
+     - 3 feature cards below
+     ============================================ -->
+
+<section class="hero hero--v3 section--bg-primary">
+  <div class="container">
+    <div class="row">
+      <!-- Основной контент -->
+      <div class="col-lg-6">
+        <div class="hero__content">
+          <span class="hero__label">{{label}}</span>
+          <h1 class="hero__title">{{title}}</h1>
+          <p class="hero__subtitle">{{subtitle}}</p>
+          <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
+        </div>
+      </div>
+
+      <!-- Sidebar справа -->
+      <div class="col-lg-5 offset-lg-1">
+        <div class="hero__sidebar hero__sidebar--bordered">
+          <h3 class="hero__sidebar-title">{{sidebarTitle}}</h3>
+          <p class="hero__sidebar-text">{{sidebarText}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature cards (3 columns) -->
+    {{#if features}}
+    <div class="hero__features">
+      <div class="row">
+        {{#each features}}
+        <div class="col-lg-4">
+          <div class="hero__feature-card">
+            <div class="hero__feature-image">
+              <img src="{{this.image}}" alt="">
+            </div>
+            <h4 class="hero__feature-title">{{this.title}}</h4>
+            <p class="hero__feature-text">{{this.text}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+  </div>
+</section>

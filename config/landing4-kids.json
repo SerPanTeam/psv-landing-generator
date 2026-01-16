@@ -1,0 +1,295 @@
+{
+  "name": "Лендинг 4 - Kinder-Fotoshooting",
+  "output": "landing4-kids.html",
+  "lang": "de",
+
+  "cssVariables": {
+    "--color-bg-primary": "#F5EDE0",
+    "--color-bg-secondary": "#EEE3D0",
+    "--color-button-primary": "#E2C08D",
+    "--color-accent": "#D4A574"
+  },
+
+  "meta": {
+    "title": "Kostenloses Kinder-Fotoshooting | Fotostudio",
+    "description": "Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder.",
+    "keywords": "Kinder-Fotoshooting, Kinderfotografie, kostenlos, Bremen, Gutschein"
+  },
+
+  "quiz": {
+    "cardStyle": "rounded",
+    "logoText": "Logo",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "progress": "Weiter zum Gutschein",
+        "question": "Kennst du uns bereits?",
+        "columns": 4,
+        "nextPage": "quiz-step2.html",
+        "options": [
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "assets/images/placeholder.svg" },
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "assets/images/placeholder.svg" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "assets/images/placeholder.svg" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "progress": "2 Fragen bis zum Gutschein",
+        "question": "Schon mal ein Kinder-Fotoshooting gehabt?",
+        "columns": 2,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "assets/images/placeholder.svg" },
+          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "progress": "1 Fragen bis zum Gutschein",
+        "question": "Wer soll mit auf die Fotos?",
+        "columns": 4,
+        "nextPage": "quiz-step4.html",
+        "options": [
+          { "value": "nur_kinder", "text": "Nur das Kind / die Kinder", "image": "assets/images/placeholder.svg" },
+          { "value": "kinder_eltern", "text": "Kind(er) mit Eltern", "image": "assets/images/placeholder.svg" },
+          { "value": "auch_grosseltern", "text": "Auch Großeltern", "image": "assets/images/placeholder.svg" },
+          { "value": "noch_nicht_genau", "text": "Wir wissen es noch nicht genau", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "progress": "Letzte Frage!",
+        "question": "Welches Bild gefällt dir am Besten?",
+        "columns": 4,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "bild_1", "text": "1", "image": "assets/images/placeholder.svg" },
+          { "value": "bild_2", "text": "2", "image": "assets/images/placeholder.svg" },
+          { "value": "bild_3", "text": "3", "image": "assets/images/placeholder.svg" },
+          { "value": "bild_4", "text": "4", "image": "assets/images/placeholder.svg" }
+        ]
+      }
+    ],
+
+    "form": {
+      "formLabel": "Klasse, jetzt zum Gutschein",
+      "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
+      "formSubtitle": "kostenloses Kinder-Fotoshooting!",
+      "formNote": "",
+      "formImage": "assets/images/placeholder.svg",
+      "formImageAlt": "Kinder-Fotoshooting",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "placeholderAvailability": "Wann seid ihr erreichbar (Mehrfachauswahl)",
+      "availabilityOptions": [
+        { "value": "morgens", "label": "Morgens" },
+        { "value": "mittags", "label": "Mittags" },
+        { "value": "nachmittags", "label": "Nachmittags" },
+        { "value": "abends", "label": "Abends" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Jetzt Gutschein sichern!",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+      "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
+      "infoText": "Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
+    },
+
+    "success": {
+      "successTitle": "Herzlichen Glückwunsch!",
+      "successSubtitle": "Deine Anfrage ist bei uns eingegangen!",
+      "successTexts": [
+        "Wir melden uns bald bei dir.",
+        "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
+      ],
+      "successImage": "assets/images/placeholder.svg",
+      "successImageAlt": "Kinder-Fotoshooting",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "alternativeText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
+      "callButtonText": "Jetzt anrufen",
+      "emailButtonText": "Mail uns!",
+      "phoneNumber": "+4915290908090",
+      "email": "info@foto-findorff.de",
+      "aboutName": "Fotostudio Bremen-Findorff",
+      "aboutTagline": "Kinderfotografie & Familienbilder",
+      "aboutTexts": [
+        "Wir freuen uns darauf, eure Kinder in liebevollen Bildern festzuhalten.",
+        "Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung."
+      ],
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Logo"
+      }
+    },
+    {
+      "template": "hero/hero-v4.html",
+      "data": {
+        "label": "Kostenloses",
+        "title": "Kinder - Fotoshooting",
+        "subtitle": "Jetzt haben wir gemeinsam die wunderbare Chance, eure Familien oder Kindermomente in liebevollen Bildern festzuhalten.",
+        "buttonText": "Jetzt Gutschein sichern",
+        "buttonLink": "quiz-step1.html",
+        "images": [
+          { "src": "assets/images/placeholder.svg", "alt": "Kind 1" },
+          { "src": "assets/images/placeholder.svg", "alt": "Kind 2" },
+          { "src": "assets/images/placeholder.svg", "alt": "Kind 3" },
+          { "src": "assets/images/placeholder.svg", "alt": "Kind 4" }
+        ],
+        "sectionTitle": "Echte Kinderlachen, echte Erinnerungen!"
+      }
+    },
+    {
+      "template": "features/features-3col.html",
+      "data": {
+        "items": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Kinder-Fotoshooting – natürlich, kindlich & unvergesslich",
+            "text": "In vergnüglicher Atmosphäre entstehen echte, authentische Aufnahmen."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "",
+            "text": "Wir sorgen dafür, dass die Kleinen sich wohlfühlen und ganz sie selbst sein können."
+          }
+        ]
+      }
+    },
+    {
+      "template": "cta/cta-v1.html",
+      "data": {
+        "title": "Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.",
+        "subtitle": "Dauert bis zum Gutschein < 30 Sekunden",
+        "buttonText": "Jetzt Gutschein sichern",
+        "buttonLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "steps/steps-4.html",
+      "data": {
+        "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
+        "ctaText": "",
+        "ctaLink": "",
+        "steps": [
+          {
+            "number": "1",
+            "icon": "assets/images/placeholder.svg",
+            "title": "1. Anmelden",
+            "text": "Beantworte ein paar kurze Fragen und sichere dir deinen Gutschein."
+          },
+          {
+            "number": "2",
+            "icon": "assets/images/placeholder.svg",
+            "title": "2. Termin vereinbaren",
+            "text": "Wir melden uns bei dir und finden gemeinsam den perfekten Termin."
+          },
+          {
+            "number": "3",
+            "icon": "assets/images/placeholder.svg",
+            "title": "3. Lieblingsbild auswählen",
+            "text": "Nach dem Shooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
+          },
+          {
+            "number": "4",
+            "icon": "assets/images/placeholder.svg",
+            "title": "4. Ergebnis",
+            "text": "Unvergessliche Erinnerungen, die ihr für immer schätzen werdet."
+          }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "title": "Häufige Fragen",
+        "questions": [
+          {
+            "question": "Fragen 1",
+            "answer": "Antwort 1"
+          },
+          {
+            "question": "Fragen 2",
+            "answer": "Antwort 2"
+          },
+          {
+            "question": "Fragen 3",
+            "answer": "Antwort 3"
+          }
+        ]
+      }
+    },
+    {
+      "template": "services/services-grid.html",
+      "data": {
+        "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+        "services": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Family Time",
+            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Newborn & Babyshooting",
+            "text": "Die ersten Momente für immer festhalten."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Tischkarten-Fotoshooting",
+            "text": "Originelle Bilder für besondere Anlässe."
+          }
+        ],
+        "ctaText": "Jetzt Kinder-Fotoshooting anfragen",
+        "ctaLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "label": "Herzlich Willkommen in unserem Fotostudio in",
+        "name": "Bremen-Findorff!",
+        "text": "Wir lieben es, besondere Momente in authentischen Bildern festzuhalten. In unserem Studio entstehen natürliche Aufnahmen in entspannter Atmosphäre.\n\nWir freuen uns auf euch!KONTAKT\nMail: info@foto-findorff.de\nTel: 0152 90908090",
+        "socials": [
+          { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
+          { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },
+          { "icon": "assets/icons/web.svg", "url": "#", "name": "Website" }
+        ]
+      }
+    },
+    {
+      "template": "quiz/quiz-container.html",
+      "data": {
+        "totalSteps": 4,
+        "cardStyle": "rounded"
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

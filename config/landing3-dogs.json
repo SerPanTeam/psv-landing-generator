@@ -1,0 +1,291 @@
+{
+  "name": "Лендинг 3 - Hunde-Fotoshooting",
+  "output": "landing3-dogs.html",
+  "lang": "de",
+
+  "cssVariables": {
+    "--color-bg-primary": "#F5EDE0",
+    "--color-bg-secondary": "#EEE3D0",
+    "--color-button-primary": "#E2C08D",
+    "--color-accent": "#D4A574"
+  },
+
+  "meta": {
+    "title": "Kostenloses Hunde-Fotoshooting | Fotostudio",
+    "description": "Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest.",
+    "keywords": "Hunde-Fotoshooting, Hund, kostenlos, Haustier-Fotoshooting, Gutschein"
+  },
+
+  "quiz": {
+    "cardStyle": "rounded",
+    "logoText": "Logo",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "progress": "Weiter zum Gutschein",
+        "question": "Kennst du mich bereits?",
+        "columns": 3,
+        "nextPage": "quiz-step2.html",
+        "options": [
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "assets/images/placeholder.svg" },
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "assets/images/placeholder.svg" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "progress": "Noch 3 Fragen bis zum Gutschein",
+        "question": "Wer wird mit dabei sein?",
+        "columns": 3,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "pelziger_freund", "text": "Mein pelziger Freund", "image": "assets/images/placeholder.svg" },
+          { "value": "pelzige_freunde", "text": "Meine pelzigen Freunde", "image": "assets/images/placeholder.svg" },
+          { "value": "ganze_familie", "text": "Die ganze Familie", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "progress": "Noch 2 Fragen bis zum Gutschein",
+        "question": "Wie alt ist dein Hund?",
+        "columns": 4,
+        "nextPage": "quiz-step4.html",
+        "options": [
+          { "value": "unter_1_jahr", "text": "Unter 1 Jahr", "image": "assets/images/placeholder.svg" },
+          { "value": "1_3_jahre", "text": "1–3 Jahre", "image": "assets/images/placeholder.svg" },
+          { "value": "4_7_jahre", "text": "4–7 Jahre", "image": "assets/images/placeholder.svg" },
+          { "value": "ueber_7_jahre", "text": "Über 7 Jahre", "image": "assets/images/placeholder.svg" }
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "progress": "Noch 1 Fragen bis zum Gutschein",
+        "question": "Welche Eigenschaften beschreiben deinen Hund am besten?",
+        "columns": 4,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "ruhig_gelassen", "text": "Ruhig und gelassen", "image": "assets/images/placeholder.svg" },
+          { "value": "verspielt_energiegeladen", "text": "Verspielt und energiegeladen", "image": "assets/images/placeholder.svg" },
+          { "value": "schuechtern_aengstlich", "text": "Schüchtern oder ängstlich", "image": "assets/images/placeholder.svg" },
+          { "value": "neugierig_aufgeschlossen", "text": "Neugierig und aufgeschlossen", "image": "assets/images/placeholder.svg" }
+        ]
+      }
+    ],
+
+    "form": {
+      "formLabel": "Klasse, jetzt zum Gutschein",
+      "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
+      "formSubtitle": "kostenloses Hunde-Fotoshooting!",
+      "formNote": "",
+      "formImage": "assets/images/placeholder.svg",
+      "formImageAlt": "Hunde-Fotoshooting",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "placeholderAvailability": "Wann seid ihr erreichbar (Mehrfachauswahl)",
+      "availabilityOptions": [
+        { "value": "morgens", "label": "Morgens" },
+        { "value": "mittags", "label": "Mittags" },
+        { "value": "nachmittags", "label": "Nachmittags" },
+        { "value": "abends", "label": "Abends" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Jetzt Gutschein sichern!",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+      "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
+      "infoText": "Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
+    },
+
+    "success": {
+      "successTitle": "Herzlichen Glückwunsch!",
+      "successSubtitle": "Deine Anfrage ist bei uns eingegangen!",
+      "successTexts": [
+        "Wir melden uns bald bei dir.",
+        "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
+      ],
+      "successImage": "assets/images/placeholder.svg",
+      "successImageAlt": "Hunde-Fotoshooting",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "alternativeText": "Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!",
+      "callButtonText": "Jetzt anrufen",
+      "emailButtonText": "Mail uns!",
+      "phoneNumber": "+49123456789",
+      "email": "info@example.com",
+      "aboutName": "MileFotografie",
+      "aboutTagline": "Tierfotografie mit Herz",
+      "aboutTexts": [
+        "Wir freuen uns darauf, deinen Vierbeiner in liebevollen Bildern festzuhalten.",
+        "Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung."
+      ],
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Logo"
+      }
+    },
+    {
+      "template": "hero/hero-v3.html",
+      "data": {
+        "label": "Kostenloses",
+        "title": "Hunde-Fotoshooting",
+        "subtitle": "Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest – für dich, für immer.",
+        "buttonText": "Jetzt Gutschein sichern",
+        "buttonLink": "quiz-step1.html",
+        "sidebarTitle": "Warum Kostenlos?",
+        "sidebarText": "Weil ich meine Leidenschaft für Tierfotografie mit dir teilen möchte – und das soll keine Frage des Budgets sein.",
+        "features": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Hunde-Fotoshooting – liebevoll & natürlich",
+            "text": "Mit viel Geduld und Einfühlungsvermögen entstehen authentische Bilder."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Professionelles Hunde-Fotoshooting",
+            "text": "Hochwertige Aufnahmen, die die Persönlichkeit deines Hundes einfangen."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Hunde-Fotoshooting mit Herz, Geduld und Leckerlis",
+            "text": "Für entspannte Vierbeiner und glückliche Besitzer."
+          }
+        ]
+      }
+    },
+    {
+      "template": "cta/cta-v1.html",
+      "data": {
+        "title": "Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.",
+        "subtitle": "Dauert bis zum Gutschein < 30 Sekunden",
+        "buttonText": "Jetzt Gutschein sichern",
+        "buttonLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "steps/steps-4.html",
+      "data": {
+        "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
+        "ctaText": "",
+        "ctaLink": "",
+        "steps": [
+          {
+            "number": "1",
+            "icon": "assets/images/placeholder.svg",
+            "title": "1. Eintragen",
+            "text": "Beantworte ein paar kurze Fragen und sichere dir deinen Gutschein."
+          },
+          {
+            "number": "2",
+            "icon": "assets/images/placeholder.svg",
+            "title": "2. Termin vereinbaren",
+            "text": "Wir melden uns bei dir und finden gemeinsam den perfekten Termin."
+          },
+          {
+            "number": "3",
+            "icon": "assets/images/placeholder.svg",
+            "title": "3. Zum Fotoshooting kommen",
+            "text": "Kommt entspannt vorbei – mit Leckerlis sind wir bestens vorbereitet."
+          },
+          {
+            "number": "4",
+            "icon": "assets/images/placeholder.svg",
+            "title": "4. Bilder aussuchen",
+            "text": "Unvergessliche Erinnerungen, direkt zum Bestellen bereit."
+          }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "title": "Häufige Fragen zum Fotoshooting",
+        "questions": [
+          {
+            "question": "Fragen 1",
+            "answer": "Antwort 1"
+          },
+          {
+            "question": "Fragen 2",
+            "answer": "Antwort 2"
+          }
+        ]
+      }
+    },
+    {
+      "template": "services/services-grid.html",
+      "data": {
+        "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+        "services": [
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Family Time",
+            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Babybauch & Newborn",
+            "text": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Hunde-Fotoshooting",
+            "text": "Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest."
+          },
+          {
+            "image": "assets/images/placeholder.svg",
+            "title": "Kinder Fotoshooting",
+            "text": "Authentisch, ausdrucksstark, zeitlos."
+          }
+        ],
+        "ctaText": "Jetzt Hunde-Fotoshooting anfragen",
+        "ctaLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "label": "Willkommen bei",
+        "name": "MileFotografie",
+        "text": "Ich bin leidenschaftliche Fotografin mit einem besonderen Herz für Tiere. In meinem Studio entstehen authentische und liebevolle Bilder, die die einzigartige Persönlichkeit deines Vierbeiners einfangen.",
+        "socials": [
+          { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
+          { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },
+          { "icon": "assets/icons/web.svg", "url": "#", "name": "Website" }
+        ]
+      }
+    },
+    {
+      "template": "quiz/quiz-container.html",
+      "data": {
+        "totalSteps": 4,
+        "cardStyle": "rounded"
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

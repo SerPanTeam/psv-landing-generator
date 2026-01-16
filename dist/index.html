@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Generator - Fotoshooting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #F5EDE0; color: #3D3D3D; min-height: 100vh; padding: 60px 20px; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    h1 { font-size: 45px; font-weight: 700; margin-bottom: 16px; text-align: center; }
+    .subtitle { font-size: 22px; text-align: center; margin-bottom: 60px; color: #666; }
+    .landings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    @media (max-width: 768px) { .landings { grid-template-columns: 1fr; } h1 { font-size: 32px; } }
+    .landing-card { background: white; border: 1px solid #3D3D3D; padding: 30px; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; }
+    .landing-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+    .landing-card__number { font-size: 14px; color: #E2C08D; margin-bottom: 8px; }
+    .landing-card__title { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    .landing-card__description { font-size: 16px; color: #666; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Landing Generator</h1>
+    <p class="subtitle">Fotoshooting Landingpages für Fotografen</p>
+    <div class="landings">
+      
+      <a href="landing1-family/" class="landing-card">
+        <p class="landing-card__number">Лендинг 1</p>
+        <h2 class="landing-card__title">Familien-Fotoshooting zu Weihnachten</h2>
+        <p class="landing-card__description">Weihnachts-Fotoshooting-Aktion: Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutsc...</p>
+      </a>
+
+      <a href="landing2-family-kids/" class="landing-card">
+        <p class="landing-card__number">Лендинг 2</p>
+        <h2 class="landing-card__title">Kostenloses Familien und Kinder-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Familien- und Kinder-Fotoshooting! Sichere dir jetzt deinen Gutschein für liebevolle Fam...</p>
+      </a>
+
+      <a href="landing3-dogs/" class="landing-card">
+        <p class="landing-card__number">Лендинг 3</p>
+        <h2 class="landing-card__title">Kostenloses Hunde-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionelle...</p>
+      </a>
+
+      <a href="landing4-kids/" class="landing-card">
+        <p class="landing-card__number">Лендинг 4</p>
+        <h2 class="landing-card__title">Kostenloses Kinder-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevoll...</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

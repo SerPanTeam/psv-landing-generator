@@ -1,0 +1,36 @@
+<!-- ============================================
+     SERVICES GRID - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Title: Inter Bold 35px
+     - 4 service cards in row
+     - Card image: 300x300px
+     - Card title: Inter Bold 22px
+     - Card text: Inter Medium 22px
+     - CTA button with outline style
+     ============================================ -->
+
+<section class="services section--bg-secondary">
+  <div class="container">
+    <div class="services__header">
+      <h2 class="services__title">{{title}}</h2>
+    </div>
+
+    <div class="services__grid">
+      {{#each services}}
+      <div class="service-card">
+        <div class="service-card__image">
+          <img src="{{this.image}}" alt="">
+        </div>
+        <h3 class="service-card__title">{{this.title}}</h3>
+        <p class="service-card__text">{{this.text}}</p>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="services__cta">
+      <a href="{{ctaLink}}" class="btn btn-outline">{{ctaText}}</a>
+    </div>
+  </div>
+</section>
