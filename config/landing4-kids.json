@@ -222,16 +222,20 @@
         "title": "Häufige Fragen",
         "questions": [
           {
-            "question": "Fragen 1",
-            "answer": "Antwort 1"
+            "question": "Wie lange dauert das Kinder-Fotoshooting?",
+            "answer": "Das Shooting dauert ca. 30-45 Minuten. Wir nehmen uns genügend Zeit, damit die Kleinen sich wohlfühlen und natürliche Bilder entstehen können."
           },
           {
-            "question": "Fragen 2",
-            "answer": "Antwort 2"
+            "question": "Was sollen die Kinder anziehen?",
+            "answer": "Bequeme Kleidung, in der sich die Kinder wohlfühlen. Neutrale Farben wie Beige, Weiß oder Pastelltöne eignen sich besonders gut. Vermeidet große Aufdrucke oder Logos."
           },
           {
-            "question": "Fragen 3",
-            "answer": "Antwort 3"
+            "question": "Können Eltern mit auf die Fotos?",
+            "answer": "Ja, sehr gerne! Familienfotos mit Eltern und Kindern sind wunderschöne Erinnerungen. Teilt uns einfach bei der Buchung mit, wer dabei sein soll."
+          },
+          {
+            "question": "Was ist, wenn mein Kind schüchtern ist?",
+            "answer": "Kein Problem! Wir haben viel Erfahrung mit Kindern aller Altersgruppen. Wir schaffen eine spielerische Atmosphäre und lassen den Kindern Zeit, sich einzugewöhnen."
           }
         ]
       }
@@ -244,17 +248,17 @@
           {
             "image": "assets/images/placeholder.svg",
             "title": "Family Time",
-            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen."
+            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Newborn & Babyshooting",
-            "text": "Die ersten Momente für immer festhalten."
+            "title": "Newborn & Babybauch",
+            "text": "Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Tischkarten-Fotoshooting",
-            "text": "Originelle Bilder für besondere Anlässe."
+            "title": "Tierisches Fotoshooting",
+            "text": "Wir widmen ausgiebig Zeit, damit sich dein geliebtes Haustier im Studio einfinden und sich wohlfühlen kann."
           }
         ],
         "ctaText": "Jetzt Kinder-Fotoshooting anfragen",
@@ -267,7 +271,12 @@
         "image": "assets/images/placeholder.svg",
         "label": "Herzlich Willkommen in unserem Fotostudio in",
         "name": "Bremen-Findorff!",
-        "text": "Wir lieben es, besondere Momente in authentischen Bildern festzuhalten. In unserem Studio entstehen natürliche Aufnahmen in entspannter Atmosphäre.\n\nWir freuen uns auf euch!KONTAKT\nMail: info@foto-findorff.de\nTel: 0152 90908090",
+        "paragraphs": [
+          "Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild – wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.",
+          "Wir beraten euch gerne bei der Suche nach dem passenden Fotogeschenk oder der perfekten Momentaufnahme für eure Familie.",
+          "Falls ihr lieber Fotos bei euch zuhause oder in der Natur machen möchtet, vereinbaren wir gerne einen Termin, um diesen Wunsch vor Ort zu erfüllen.",
+          "Euer Portraitfotostudio in Bremen-Findorff freut sich auf euren Besuch!"
+        ],
         "socials": [
           { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
           { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },

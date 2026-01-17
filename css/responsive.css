@@ -87,6 +87,20 @@
 
 /* ===== MOBILE (< 768px) ===== */
 @media (max-width: 767.98px) {
+  /* === GLOBAL: Предотвращаем горизонтальный скролл === */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* === GLOBAL: Убираем лишние отступы контейнера === */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   /* Header */
   .header {
     padding: 16px 0;
@@ -96,66 +110,165 @@
     font-size: 24px;
   }
 
-  /* Hero V1 */
+  /* Hero V1 - Mobile order: Logo (header) → Image → Text → Button */
   .hero {
-    min-height: auto;
-    padding: 40px 0;
+    min-height: auto !important;
+    padding: 0 0 40px;
+  }
+
+  .hero--v1 {
+    padding-bottom: 40px;
+  }
+
+  /* Меняем порядок: картинка первая, контент второй */
+  .hero--v1 .row {
+    flex-direction: column;
+  }
+
+  .hero--v1 .row > .col-lg-6:first-child {
+    order: 2; /* Контент идёт вторым */
+  }
+
+  .hero--v1 .row > .col-lg-6:last-child {
+    order: 1; /* Картинка идёт первой */
   }
 
   .hero--v1 .hero__content {
-    padding-top: 20px;
+    padding-top: 24px;
+    padding-bottom: 0;
     text-align: center;
+    min-height: auto;
   }
 
   .hero--v1 .hero__title {
     max-width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 16px !important; /* Убираем 115px gap */
+    font-size: 28px;
+    line-height: 1.2;
   }
 
   .hero--v1 .hero__subtitle {
     max-width: 100%;
     margin-bottom: 24px;
+    font-size: 16px;
+    height: auto !important;
+    line-height: 1.4;
   }
 
+  /* Hero картинки edge-to-edge */
   .hero--v1 .hero__image-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: calc(100% + 32px); /* Выходим за контейнер */
+    margin-left: -16px;
+    margin-right: -16px;
+    position: relative;
+    height: auto !important; /* Убираем фиксированную высоту 474px */
   }
 
   .hero--v1 .hero__image-main {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
+    height: auto !important;
+    aspect-ratio: 4/3; /* Более подходящее соотношение для мобильного */
+    position: relative !important;
+    right: auto;
+    top: auto !important;
+  }
+
+  .hero--v1 .hero__image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero--v1 .hero__image-secondary {
-    width: 180px;
-    height: 160px;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-80%);
+    display: none !important; /* Скрываем вторичное изображение на мобильном */
   }
 
   /* Promo */
   .promo {
     padding: 40px 0;
+    overflow: hidden; /* Предотвращаем горизонтальный скролл */
   }
 
-  .promo__image {
+  /* Promo картинка на всю ширину */
+  .promo .row {
+    flex-direction: column;
+  }
+
+  .promo .row > .col-lg-5 {
+    order: 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  .promo .row > .col-lg-6 {
+    order: 2;
+    width: 100%;
+  }
+
+  .promo__image,
+  .promo__image--short {
+    width: 100%; /* Не выходим за контейнер */
     max-width: 100%;
-    margin: 0 auto 30px;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    margin-bottom: 24px;
   }
 
-  /* Content Section */
+  .promo__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .promo__content {
+    text-align: center;
+  }
+
+  .promo__link {
+    justify-content: center;
+  }
+
+  /* Content Section - картинка на всю ширину */
+  .content-section .row {
+    flex-direction: column;
+  }
+
+  .content-section .row > .col-lg-5 {
+    order: 2;
+    width: 100%;
+  }
+
+  .content-section .row > .col-lg-6 {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
+
   .content-section__image-frame {
-    padding: 20px;
-    margin-bottom: 30px;
+    width: calc(100% + 32px); /* Выходим за контейнер */
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 16px;
+    margin-bottom: 24px;
   }
 
   .content-section__image {
     width: 100%;
     height: auto;
     aspect-ratio: 428/440;
+  }
+
+  .content-section__content {
+    text-align: center;
+  }
+
+  .content-section__link {
+    justify-content: center;
   }
 
   /* Features */
@@ -243,17 +356,47 @@
     margin: 0 auto 16px;
   }
 
-  /* About */
+  /* About - картинка на всю ширину */
   .about {
     padding: 40px 0;
   }
 
+  .about .row {
+    flex-direction: column;
+  }
+
+  .about .row > .col-lg-5 {
+    order: 1;
+    width: 100%;
+    padding: 0;
+  }
+
+  .about .row > .col-lg-6 {
+    order: 2;
+    width: 100%;
+  }
+
   .about__image {
-    max-width: 320px;
-    margin: 0 auto 30px;
+    width: calc(100% + 32px); /* Выходим за контейнер */
+    max-width: none;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 24px;
+    height: auto;
+    aspect-ratio: 466/560;
+  }
+
+  .about__content {
+    text-align: center;
+    padding-top: 0;
   }
 
   .about__divider {
+    max-width: 100%;
+    margin: 24px auto;
+  }
+
+  .about__text {
     max-width: 100%;
   }
 
@@ -291,15 +434,27 @@
 
 /* ===== SMALL MOBILE (< 576px) ===== */
 @media (max-width: 575.98px) {
-  /* Hero V1 */
+  /* Hero V1 - изображение на всю ширину edge-to-edge */
+  .hero--v1 .hero__image-wrapper {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+
   .hero--v1 .hero__image-main {
-    max-width: 280px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero--v1 .hero__image-main img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
   }
 
   .hero--v1 .hero__image-secondary {
-    width: 150px;
-    height: 130px;
-    bottom: -30px;
+    display: none;
   }
 
   /* Features */
@@ -354,5 +509,369 @@
 @media (max-width: 575.98px) {
   .hero--v4 .hero__gallery-item {
     width: 45%;
+  }
+}
+
+/* ===== GALLERY SLIDER RESPONSIVE - КРИТИЧНО ===== */
+/* Fix для горизонтального скролла: viewport и slides должны масштабироваться */
+
+/* Desktop smaller than 1440px - scale proportionally */
+@media (max-width: 1439.98px) and (min-width: 992px) {
+  /* Gallery Slider */
+  .gallery-slider__wrapper {
+    max-width: 100%;
+  }
+
+  .gallery-slider__viewport {
+    width: calc(100% - 86px); /* Space for arrows */
+    max-width: 1244px;
+  }
+
+  .gallery-slider__slide {
+    flex: 0 0 calc((100% - 44px) / 3); /* 3 slides with gaps */
+    width: calc((100% - 44px) / 3);
+  }
+
+  /* Services Grid - scale cards */
+  .services__grid {
+    gap: 12px;
+  }
+
+  .service-card {
+    width: calc((100% - 36px) / 4); /* 4 cards with 3 gaps of 12px */
+    flex: 0 0 calc((100% - 36px) / 4);
+  }
+
+  .service-card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .service-card__text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Gallery Slider - overflow только на viewport, не на wrapper */
+  .gallery-slider {
+    overflow: hidden; /* Скрываем мелкие overflow */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .gallery-slider__wrapper {
+    max-width: 100%;
+    overflow: visible; /* Не обрезаем стрелки */
+    box-sizing: border-box;
+  }
+
+  /* Viewport: overflow hidden только здесь */
+  .gallery-slider__viewport {
+    width: calc(100% - 90px) !important; /* Место для стрелок */
+    max-width: calc(100% - 90px);
+    overflow: hidden; /* Скрываем лишние слайды */
+  }
+
+  /* Slides: 2 слайда на tablet */
+  .gallery-slider__slide {
+    flex: 0 0 calc(50% - 11px) !important; /* 50% минус половина gap */
+    width: calc(50% - 11px) !important;
+    min-width: 0 !important; /* Важно для flex shrink */
+    max-width: calc(50% - 11px) !important;
+    height: auto !important;
+    aspect-ratio: 1;
+  }
+
+  .gallery-slider__slide img {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Arrows: увеличиваем touch target */
+  .gallery-slider__arrow {
+    padding: 12px;
+    flex-shrink: 0;
+  }
+
+  .gallery-slider__arrow svg {
+    width: 24px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-slider__viewport {
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px);
+  }
+
+  .gallery-slider__slide {
+    flex: 0 0 calc(50% - 10px) !important;
+    width: calc(50% - 10px) !important;
+    min-width: 0 !important;
+    max-width: calc(50% - 10px) !important;
+  }
+
+  .gallery-slider__slide img {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Viewport: 1 слайд, место для стрелок */
+  .gallery-slider__viewport {
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px);
+  }
+
+  /* Slides: 1 слайд на small mobile */
+  .gallery-slider__slide {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+  }
+
+  /* Arrows: минимум 44px touch target, не обрезаем */
+  .gallery-slider__arrow {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 44px;
+    flex-shrink: 0;
+  }
+}
+
+/* ===== GALLERY FULLWIDTH RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .gallery-fullwidth__image {
+    height: 450px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Gallery Fullwidth на всю ширину экрана */
+  .gallery-fullwidth {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .gallery-fullwidth__image {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gallery-fullwidth__image {
+    min-height: 200px;
+  }
+}
+
+/* ===== GALLERY STRIP RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .gallery-strip {
+    height: 450px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-strip {
+    height: auto;
+  }
+
+  .gallery-strip__container {
+    flex-wrap: wrap;
+  }
+
+  .gallery-strip__item {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gallery-strip__item {
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ===== CONTENT SECTION RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .content-section__image-frame {
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+  }
+
+  .content-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 428/440;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .content-section__image-frame {
+    max-width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .content-section__content {
+    min-height: auto;
+  }
+
+  .content-section__title,
+  .content-section__text {
+    max-width: 100%;
+  }
+
+  .content-section__divider {
+    width: 100%;
+    margin: 30px 0;
+  }
+}
+
+/* ===== SERVICES GRID RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .services__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .service-card {
+    width: calc(50% - 15px);
+    max-width: 300px;
+  }
+
+  /* Убираем stagger на tablet - карточки в 2 колонки */
+  .service-card:nth-child(1),
+  .service-card:nth-child(2),
+  .service-card:nth-child(3),
+  .service-card:nth-child(4) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 100%; /* На всю ширину */
+    text-align: center;
+  }
+
+  .service-card__image {
+    width: calc(100% + 32px); /* Выходим за контейнер */
+    max-width: none;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 16px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* CTA button full width */
+  .services__cta {
+    text-align: center;
+  }
+
+  .services__cta .btn-outline {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ===== STEPS RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .steps__header {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .steps__cta .btn-outline {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .steps__header {
+    gap: 24px;
+  }
+
+  .steps__cta .btn-outline {
+    max-width: 320px;
+  }
+
+  .step-card__divider {
+    width: 100%;
+  }
+}
+
+/* ===== FAQ RESPONSIVE FIXES ===== */
+@media (max-width: 767.98px) {
+  /* Увеличиваем max-height для длинных ответов */
+  .faq__item.is-open .faq__answer {
+    max-height: 1000px;
+  }
+
+  /* Увеличиваем touch target для вопросов */
+  .faq__question {
+    min-height: 44px;
+    padding: 16px 0;
+  }
+
+  .faq__icon {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 7px;
+  }
+}
+
+/* ===== PROMO RESPONSIVE FIXES ===== */
+@media (max-width: 767.98px) {
+  .promo__content {
+    min-height: auto;
+  }
+
+  .promo__divider {
+    width: 100%;
+  }
+}
+
+/* ===== HERO V1 BUTTON FIX ===== */
+@media (max-width: 767.98px) {
+  .hero--v1 .btn-primary {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero--v1 .btn-primary {
+    max-width: 280px;
   }
 }

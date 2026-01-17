@@ -9,8 +9,16 @@
     "build:landing2": "node generator.js --landing=2",
     "build:landing3": "node generator.js --landing=3",
     "build:landing4": "node generator.js --landing=4",
-    "serve": "npx serve dist",
-    "watch": "node generator.js --watch"
+    "serve": "npx serve dist -p 8080",
+    "watch": "node generator.js --watch",
+    "test": "node test-comprehensive.js",
+    "test:content": "node test-figma-content.js",
+    "test:backgrounds": "node test-backgrounds.js",
+    "test:mobile": "node take-screenshots.js",
+    "test:desktop": "node take-desktop-screenshot.js",
+    "test:figma": "node test-figma-comparison.js",
+    "test:all": "npm run build && npm run test",
+    "audit": "npm run build && npm run test"
   },
   "keywords": [
     "landing",
@@ -20,5 +28,7 @@
   ],
   "author": "",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
 }

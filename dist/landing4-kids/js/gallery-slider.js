@@ -13,10 +13,21 @@ class GallerySlider {
     this.nextBtn = element.querySelector('.gallery-slider__arrow--next');
 
     this.currentIndex = 0;
-    this.slidesToShow = 3; // Показывать 3 слайда одновременно
-    this.slideGap = 20; // Отступ между слайдами в px
+    this.slidesToShow = this.calculateSlidesToShow(); // Responsive количество слайдов
+    this.slideGap = 22; // FIGMA: gap между слайдами
 
     this.init();
+  }
+
+  /**
+   * Вычисляет количество видимых слайдов в зависимости от ширины экрана
+   * @returns {number} Количество слайдов для отображения
+   */
+  calculateSlidesToShow() {
+    const width = window.innerWidth;
+    if (width < 576) return 1;  // Small mobile: 1 слайд
+    if (width < 992) return 2;  // Tablet/Mobile: 2 слайда
+    return 3;                    // Desktop: 3 слайда
   }
 
   init() {
@@ -27,10 +38,28 @@ class GallerySlider {
     this.updatePosition();
     this.updateArrowsState();
 
-    // Пересчёт при ресайзе
+    // Пересчёт при ресайзе с debounce
+    let resizeTimeout;
     window.addEventListener('resize', () => {
-      this.calculateSlideWidth();
-      this.updatePosition();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const newSlidesToShow = this.calculateSlidesToShow();
+
+        // Если количество слайдов изменилось, обновляем
+        if (newSlidesToShow !== this.slidesToShow) {
+          this.slidesToShow = newSlidesToShow;
+
+          // Корректируем currentIndex если он выходит за пределы
+          const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+          if (this.currentIndex > maxIndex) {
+            this.currentIndex = maxIndex;
+          }
+        }
+
+        this.calculateSlideWidth();
+        this.updatePosition();
+        this.updateArrowsState();
+      }, 150);
     });
   }
 
