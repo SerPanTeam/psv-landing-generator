@@ -208,9 +208,10 @@
 
 .quiz-form__image {
   width: 100%;
-  max-width: 428px;
-  aspect-ratio: 1;
+  max-width: 549px;
+  aspect-ratio: 549 / 822; /* FIGMA: 549x822px */
   background-color: #7f7f7f;
+  margin-bottom: 20px;
 }
 
 .quiz-form__image img {
@@ -519,20 +520,9 @@
 
 .quiz-form__form .btn-primary {
   margin-top: 20px;
-}
-
-.quiz-form__image {
-  width: 100%;
-  max-width: 549px;
-  aspect-ratio: 549 / 437;
-  background-color: #7f7f7f;
-  margin-bottom: 20px;
-}
-
-.quiz-form__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 346px; /* FIGMA: exact */
+  height: 66px; /* FIGMA: exact */
+  max-width: 100%;
 }
 
 .quiz-form__privacy-note {
@@ -706,6 +696,13 @@
 
   .quiz-form__form {
     max-width: 100%;
+  }
+
+  /* Quiz form button - full width on mobile */
+  .quiz-form__form .btn-primary {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
   }
 
   .quiz-success__buttons {

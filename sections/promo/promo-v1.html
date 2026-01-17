@@ -8,6 +8,8 @@
      - Text: Inter Medium 22px
      - Divider: 1px line
      - Link with arrow
+
+     Поддерживает опциональную секцию subtitle + extraText
      ============================================ -->
 
 <section class="promo section--bg-secondary">
@@ -33,8 +35,35 @@
               <p class="promo__text">{{text}}</p>
             {{/if}}
           </div>
+
+          {{#if subtitle}}
+          <div class="promo__divider"></div>
+          <div class="promo__extra">
+            <p class="promo__subtitle">{{subtitle}}</p>
+            {{#if extraParagraphs}}
+            {{#each extraParagraphs}}
+            <p class="promo__text">{{this}}</p>
+            {{/each}}
+            {{/if}}
+            {{#if extraText}}
+            <p class="promo__text">{{extraText}}</p>
+            {{/if}}
+          </div>
+          {{/if}}
+
           <div class="promo__bottom">
+            {{#if showBottomDivider}}
             <div class="promo__divider"></div>
+            {{/if}}
+            {{#if linkAsButton}}
+            <a href="{{linkUrl}}" class="btn btn-outline promo__btn">
+              {{linkText}}
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+            {{else}}
             <a href="{{linkUrl}}" class="promo__link">
               {{linkText}}
               <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,6 +71,7 @@
                 <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </a>
+            {{/if}}
           </div>
         </div>
       </div>

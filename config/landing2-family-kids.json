@@ -22,7 +22,7 @@
     "impressumUrl": "#",
     "datenschutzUrl": "#",
     "cookieUrl": "#",
-    "mapEmbedUrl": "",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
 
     "steps": [
       {
@@ -78,9 +78,9 @@
 
     "form": {
       "formLabel": "Klasse, jetzt zum Gutschein",
-      "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
-      "formSubtitle": "kostenloses Familien-Fotoshooting!",
-      "formNote": "Diese Aktion gilt nur bis zum 30.01.25.",
+      "formTitle": "Special-Gutschein:",
+      "formSubtitle": "Familien-Fotoshooting<br>KOSTENLOS",
+      "formNote": "Nur für kurze Zeit",
       "formImage": "assets/images/placeholder.svg",
       "formImageAlt": "Familien-Fotoshooting",
       "successPage": "quiz-success.html",
@@ -96,10 +96,8 @@
       ],
       "privacyText": "Ich akzeptiere die",
       "privacyLinkText": "Datenschutzbestimmungen",
-      "submitButtonText": "Jetzt Gutschein sichern!",
-      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
-      "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
-      "infoText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
+      "submitButtonText": "Sende mir den Gutschein zu!",
+      "privacyNote": "Deine Sicherheit ist unser größtes Anliegen – Vertraue uns und schütze deine Privatsphäre!"
     },
 
     "success": {
@@ -118,10 +116,10 @@
       "emailButtonText": "Mail uns!",
       "phoneNumber": "+49123456789",
       "email": "info@example.com",
-      "aboutName": "Fotostudio",
-      "aboutTagline": "Familienfotos & Kinderfotografie",
+      "aboutName": "Yvonne Jadke – Fotograf Hannover",
+      "aboutTagline": "Familienfotos, Businessportraits & Hochzeitsfotografie",
       "aboutTexts": [
-        "Wir freuen uns darauf, euch als Fotograf für eure Familienmomente zu begleiten.",
+        "Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!",
         "Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung."
       ],
       "showSocial": true,
@@ -139,21 +137,35 @@
       }
     },
     {
-      "template": "hero/hero-v2.html",
+      "template": "hero/hero-v1.html",
       "data": {
         "label": "Kostenloses",
         "title": "Familien und Kinder-Fotoshooting!",
-        "subtitle": "Familienbilder, die ein unvergessliches Familiengeschenk werden.",
-        "buttonText": "Jetzt Gutschein sichern",
+        "subtitle": "<strong>Familienbilder</strong>, die sich ideal als ein <strong>Weihnachtsgeschenk</strong> eignen.",
+        "buttonText": "Button",
         "buttonLink": "quiz-step1.html",
         "imageMain": "assets/images/placeholder.svg",
         "imageSecondary": "assets/images/placeholder.svg",
-        "imageAlt": "Familien-Fotoshooting",
-        "sidebarLabel": "Liebe Familien, aufgepasst!",
-        "sidebarTitle": "Verpasst nicht unser Weihnachts-Familien-Fotoshooting-Special!",
-        "sidebarText": "Dieses kostenloses Fotoshooting findet nur bis zum 30.01.25 statt!",
-        "sidebarLinkText": "Kostenloses Familien-Fotoshooting sichern",
-        "sidebarLinkUrl": "quiz-step1.html"
+        "imageAlt": "Familien-Fotoshooting"
+      }
+    },
+    {
+      "template": "promo/promo-v1.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "title": "Liebe Familien, aufgepasst!",
+        "paragraphs": [
+          "Jetzt kostenloses Weihnachts-Familien-Fotoshooting sichern – bei mir im Studio in Aalen!",
+          "Die kostenlosen Fotoshootings sind nur bis zum 20.11.25"
+        ],
+        "subtitle": "Warum kostenlos?",
+        "extraParagraphs": [
+          "Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.",
+          "Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko."
+        ],
+        "linkText": "Kostenloses Familien-Fotoshooting anfragen",
+        "linkUrl": "quiz-step1.html",
+        "linkAsButton": true
       }
     },
     {
@@ -161,30 +173,42 @@
       "data": {
         "image": "assets/images/placeholder.svg",
         "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
-        "text": "Ich nehme mir viel Zeit für euch und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.",
-        "accentText": "",
-        "linkText": "Kostenloser Fotoshooting sichern",
+        "subtitle": "Familien-Fotoshooting – liebevoll & natürlich",
+        "text": "Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.",
+        "accentText": "Familienmomente, die das Herz berühren",
+        "linkText": "Kostenlosses Fotoshooting sichern",
         "linkUrl": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "gallery/gallery-slider.html",
+      "data": {
+        "images": [
+          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 1" },
+          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 2" },
+          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 3" }
+        ]
       }
     },
     {
       "template": "features/features-3col.html",
       "data": {
+        "sectionTitle": "Was dich erwartet",
         "items": [
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Gemütlich relaxte Umgebung",
-            "text": "damit ganz natürliche Aufnahmen entstehen können"
+            "title": "Liebevoll dekoriertes Set mit Weihnachtszauber",
+            "text": "Gemütliche Atmosphäre mit stimmungsvoller Deko – perfekt für eure festlichen Familienfotos."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Ohne Termin für Schnellauswahl",
-            "text": "eure Lieblingsfotos können sofort mitgenommen werden"
+            "title": "Ganz viel Raum für echte Familienmomente",
+            "text": "Ob Kuscheln, Lachen oder einfach Zusammensein – ich halte eure Verbindung in natürlichen Bildern fest."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Professionelle Fotografin",
-            "text": "aus Leidenschaft für Momente"
+            "title": "Wunderschöne Erinnerungen zum Verschenken",
+            "text": "Echte, emotionale Bilder, die ihr lieben – und zu Weihnachten verschenken – werdet."
           }
         ]
       }
@@ -193,34 +217,42 @@
       "template": "steps/steps-4.html",
       "data": {
         "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
-        "ctaText": "",
-        "ctaLink": "",
+        "ctaText": "Jetzt Familien-Fotoshooting anfragen",
+        "ctaLink": "quiz-step1.html",
+        "ctaBottom": true,
         "steps": [
           {
             "number": "1",
             "icon": "assets/images/placeholder.svg",
             "title": "1. Eintragen",
-            "text": "Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann."
+            "text": "Mach das Quiz und beantworte die Fragen, damit ich genügend Zeit für euch einplanen kann. Trag dich ein und sichere dir deinen unschlagbaren Gutschein! Ich melde mich so schnell wie möglich bei dir."
           },
           {
             "number": "2",
             "icon": "assets/images/placeholder.svg",
             "title": "2. Shootingzeit",
-            "text": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen."
+            "text": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt."
           },
           {
             "number": "3",
             "icon": "assets/images/placeholder.svg",
             "title": "3. Wähle dein Lieblingsbild/er aus",
-            "text": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
+            "text": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen und entscheiden, welche ihr erwerben möchtet – ganz ohne Kaufzwang."
           },
           {
             "number": "4",
             "icon": "assets/images/placeholder.svg",
             "title": "4. Ergebnis",
-            "text": "Unvergängliche Erinnerungen in digitaler Form."
+            "text": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben."
           }
         ]
+      }
+    },
+    {
+      "template": "gallery/gallery-fullwidth.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "alt": "Familien-Fotoshooting"
       }
     },
     {
@@ -233,16 +265,16 @@
             "answer": "Das Fotoshooting ist für Familien mit Kindern jeden Alters gedacht."
           },
           {
-            "question": "Wieso ist es tatsächlich kostenlos?",
-            "answer": "Wir möchten möglichst vielen Familien die Möglichkeit geben, professionelle Bilder zu bekommen."
+            "question": "Gibt es eine Frist in der das Angebot gilt?",
+            "answer": "Ja, das Angebot gilt nur für kurze Zeit. Sichere dir jetzt deinen Termin!"
           },
           {
             "question": "Ist das Fotoshooting wirklich kostenlos?",
-            "answer": "Ja, das Fotoshooting selbst ist komplett kostenlos."
+            "answer": "Ja, das Fotoshooting selbst ist komplett kostenlos. Du entscheidest danach, ob du Bilder kaufen möchtest."
           },
           {
             "question": "Ist das Fotoshooting wirklich kostenlos?",
-            "answer": "Ja, absolut kostenlos."
+            "answer": "Ja, absolut kostenlos. Du gehst kein Risiko ein."
           }
         ]
       }
@@ -255,25 +287,25 @@
           {
             "image": "assets/images/placeholder.svg",
             "title": "Family Time",
-            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen."
+            "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
           },
           {
             "image": "assets/images/placeholder.svg",
             "title": "Kinder-Fotoshooting",
-            "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen Bildern fest."
+            "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Newborn-Fotoshooting",
-            "text": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten."
+            "title": "Babybauch & Newborn",
+            "text": "Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren."
           },
           {
             "image": "assets/images/placeholder.svg",
-            "title": "Kinder Fotoshooting",
-            "text": "Authentisch, ausdrucksstark, zeitlos."
+            "title": "Und vieles mehr!",
+            "text": ""
           }
         ],
-        "ctaText": "Jetzt kostenlosen Fotoshooting-Gutschein sichern",
+        "ctaText": "Jetzt Kostenloses Fotoshooting sichern",
         "ctaLink": "quiz-step1.html"
       }
     },
@@ -281,14 +313,14 @@
       "template": "about/about-v1.html",
       "data": {
         "image": "assets/images/placeholder.svg",
-        "label": "Hi, ich bin Anna – dein Kontakt zum Studio!",
+        "label": "Hi, ich bin Jenni – dein Kameramädle!",
         "name": "",
-        "text": "Ich freue mich, wenn Du bei Fragen oder Wünschen direkt bei mir meldest. Gemeinsam finden wir den perfekten Termin für euer Fotoshooting.",
-        "socials": [
-          { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
-          { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },
-          { "icon": "assets/icons/web.svg", "url": "#", "name": "Website" }
-        ]
+        "texts": [
+          "Ich liebe es, besondere Momente einzufangen und sie für dich unvergesslich zu machen. Mein Studio ist ein Ort, an dem du dich fallen lassen kannst – ganz ohne Zeitdruck und Stress.",
+          "Mir ist wichtig, dass du dich bei mir wohlfühlst und einfach du selbst sein kannst. Ich lache gern mit meinen Kunden und freue mich, wenn aus einem Fotoshooting ein richtig schönes Erlebnis wird.",
+          "Über 500 Babys durfte ich schon fotografieren und jede Familie, jedes Paar ist für mich einzigartig. Genau diese Emotionen will ich für dich in liebevollen Bildern festhalten – Erinnerungen, die dich ein Leben lang begleiten."
+        ],
+        "socials": []
       }
     },
     {
@@ -301,7 +333,7 @@
     {
       "template": "footer/footer-v1.html",
       "data": {
-        "mapEmbedUrl": "",
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
         "impressumUrl": "#",
         "datenschutzUrl": "#",
         "cookieUrl": "#"

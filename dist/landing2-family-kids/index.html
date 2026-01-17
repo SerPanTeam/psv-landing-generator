@@ -48,30 +48,36 @@
 
 
 <!-- ============================================
-     HERO V2 - Лендинг 2 (Familien und Kinder - Kostenlos)
+     HERO V1 - Универсальный шаблон Hero секции
 
      PIXEL-PERFECT ПО FIGMA:
-     - Label: "Kostenloses"
-     - Title: "Familien und Kinder-Fotoshooting!"
-     - Description text
-     - Sidebar справа с дополнительной информацией
-     - 2 изображения
+     - Секция: 634px высота (674px с label), фон #F5EDE0
+     - Label (опционально): Inter Bold 55px, акцентный цвет
+     - Title: Inter Bold 55px, max-width 629px
+     - Subtitle: Inter Medium 22px, max-width 386px
+     - Button: 286x70px, фон #E2C08D
+     - Main image: 428x394px
+     - Secondary image: 306x290px (смещена)
      ============================================ -->
 
-<section class="hero hero--v2 section--bg-primary">
+<section class="hero hero--v1 section--bg-primary">
   <div class="container">
-    <div class="row">
-      <!-- Основной контент слева -->
+    <div class="row align-items-start">
+      <!-- Контент слева -->
       <div class="col-lg-6">
         <div class="hero__content">
+          
           <span class="hero__label">Kostenloses</span>
+          
           <h1 class="hero__title">Familien und Kinder-Fotoshooting!</h1>
-          <p class="hero__subtitle">Familienbilder, die ein unvergessliches Familiengeschenk werden.</p>
-          <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
+          <p class="hero__subtitle"><strong>Familienbilder</strong>, die sich ideal als ein <strong>Weihnachtsgeschenk</strong> eignen.</p>
+          <a href="quiz-step1.html" class="btn btn-primary">Button</a>
         </div>
+      </div>
 
-        <!-- Изображения -->
-        <div class="hero__images">
+      <!-- Изображения справа -->
+      <div class="col-lg-6">
+        <div class="hero__image-wrapper">
           <div class="hero__image-main">
             <img src="assets/images/placeholder.svg" alt="Familien-Fotoshooting">
           </div>
@@ -80,21 +86,78 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Sidebar справа -->
-      <div class="col-lg-5 offset-lg-1">
-        <div class="hero__sidebar">
-          <p class="hero__sidebar-label">Liebe Familien, aufgepasst!</p>
-          <h2 class="hero__sidebar-title">Verpasst nicht unser Weihnachts-Familien-Fotoshooting-Special!</h2>
-          <div class="hero__sidebar-text">Dieses kostenloses Fotoshooting findet nur bis zum 30.01.25 statt!</div>
-          <div class="hero__sidebar-divider"></div>
-          <a href="quiz-step1.html" class="hero__sidebar-link">
-            Kostenloses Familien-Fotoshooting sichern
-            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </a>
+
+<!-- ============================================
+     PROMO V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Image: 428x533px (Landing 2) или 428x440px (Landing 1, shortImage: true)
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Divider: 1px line
+     - Link with arrow
+
+     Поддерживает опциональную секцию subtitle + extraText
+     ============================================ -->
+
+<section class="promo section--bg-secondary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Изображение слева -->
+      <div class="col-lg-5">
+        <div class="promo__image">
+          <img src="assets/images/placeholder.svg" alt="">
+        </div>
+      </div>
+
+      <!-- Контент справа -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="promo__content">
+          <div class="promo__top">
+            <h2 class="promo__title">Liebe Familien, aufgepasst!</h2>
+            
+              
+              <p class="promo__text">Jetzt kostenloses Weihnachts-Familien-Fotoshooting sichern – bei mir im Studio in Aalen!</p>
+              
+
+              <p class="promo__text">Die kostenlosen Fotoshootings sind nur bis zum 20.11.25</p>
+              
+            
+          </div>
+
+          
+          <div class="promo__divider"></div>
+          <div class="promo__extra">
+            <p class="promo__subtitle">Warum kostenlos?</p>
+            
+            
+            <p class="promo__text">Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.</p>
+            
+
+            <p class="promo__text">Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.</p>
+            
+            
+            
+          </div>
+          
+
+          <div class="promo__bottom">
+            
+            
+            <a href="quiz-step1.html" class="btn btn-outline promo__btn">
+              Kostenloses Familien-Fotoshooting anfragen
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -122,11 +185,14 @@
         <div class="content-section__content">
           <h2 class="content-section__title">Für die schönsten Erinnerungen mit deinen Liebsten!</h2>
           
-            <p class="content-section__text">Ich nehme mir viel Zeit für euch und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>
+          <p class="content-section__subtitle">Familien-Fotoshooting – liebevoll & natürlich</p>
+          
+          
+            <p class="content-section__text">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>
           
           <div class="content-section__divider"></div>
           <a href="quiz-step1.html" class="content-section__link">
-            Kostenloser Fotoshooting sichern
+            Kostenlosses Fotoshooting sichern
             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -142,9 +208,58 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           
+          <p class="content-section__accent">Familienmomente, die das Herz berühren</p>
+          
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SLIDER - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Primary background
+     - 3 visible slides
+     - Navigation arrows
+     - Smooth slide transitions
+     ============================================ -->
+
+<section class="gallery-slider section--bg-secondary">
+  <div class="gallery-slider__wrapper">
+    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="gallery-slider__viewport">
+      <div class="gallery-slider__track">
+        
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Familien-Foto 1">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Familien-Foto 2">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Familien-Foto 3">
+        </div>
+        
+      </div>
+    </div>
+    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
 </section>
 
@@ -163,15 +278,18 @@
 
 <section class="features section--bg-primary">
   <div class="container">
+    
+    <h2 class="features__title">Was dich erwartet</h2>
+    
     <div class="features__wrapper">
       
       <div class="feature-card">
         <div class="feature-card__icon">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="feature-card__title">Gemütlich relaxte Umgebung</h3>
+        <h3 class="feature-card__title">Liebevoll dekoriertes Set mit Weihnachtszauber</h3>
         <div class="feature-card__divider"></div>
-        <p class="feature-card__text">damit ganz natürliche Aufnahmen entstehen können</p>
+        <p class="feature-card__text">Gemütliche Atmosphäre mit stimmungsvoller Deko – perfekt für eure festlichen Familienfotos.</p>
       </div>
       
 
@@ -179,9 +297,9 @@
         <div class="feature-card__icon">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="feature-card__title">Ohne Termin für Schnellauswahl</h3>
+        <h3 class="feature-card__title">Ganz viel Raum für echte Familienmomente</h3>
         <div class="feature-card__divider"></div>
-        <p class="feature-card__text">eure Lieblingsfotos können sofort mitgenommen werden</p>
+        <p class="feature-card__text">Ob Kuscheln, Lachen oder einfach Zusammensein – ich halte eure Verbindung in natürlichen Bildern fest.</p>
       </div>
       
 
@@ -189,9 +307,9 @@
         <div class="feature-card__icon">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="feature-card__title">Professionelle Fotografin</h3>
+        <h3 class="feature-card__title">Wunderschöne Erinnerungen zum Verschenken</h3>
         <div class="feature-card__divider"></div>
-        <p class="feature-card__text">aus Leidenschaft für Momente</p>
+        <p class="feature-card__text">Echte, emotionale Bilder, die ihr lieben – und zu Weihnachten verschenken – werdet.</p>
       </div>
       
     </div>
@@ -205,25 +323,19 @@
      PIXEL-PERFECT ПО FIGMA:
      - Background: #EEE3D0 (secondary)
      - Title: Inter Bold 35px
-     - CTA button with outline style
+     - CTA button: outline (Landing 1, сверху справа) или primary (Landing 2, снизу)
+     - ctaBottom: true = кнопка снизу по центру, primary стиль
      - 4 steps in 2x2 grid
-     - Step icon: ~70x75px
-     - Step title: Inter Bold 22px
-     - Step text: Inter Medium 22px
-     - Divider lines under each step
      ============================================ -->
 
 <section class="steps section--bg-secondary">
   <div class="container">
-    <!-- Header with title and CTA -->
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-6">
-        <h2 class="steps__title">Wie genau komme ich zum kostenlosen Fotoshooting?</h2>
-      </div>
-      <div class="col-lg-6 text-lg-end">
-        <a href="" class="btn btn-outline steps__cta-btn"></a>
-      </div>
-    </div>
+    <!-- Title (full width when ctaBottom, otherwise with button on right) -->
+    
+    <h2 class="steps__title steps__title--full">Wie genau komme ich zum kostenlosen Fotoshooting?</h2>
+    
+
+    
 
     <!-- Steps grid 2x2 -->
     <div class="row">
@@ -234,7 +346,7 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">1. Eintragen</h3>
-          <p class="step-card__text">Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann.</p>
+          <p class="step-card__text">Mach das Quiz und beantworte die Fragen, damit ich genügend Zeit für euch einplanen kann. Trag dich ein und sichere dir deinen unschlagbaren Gutschein! Ich melde mich so schnell wie möglich bei dir.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -246,7 +358,7 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">2. Shootingzeit</h3>
-          <p class="step-card__text">Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen.</p>
+          <p class="step-card__text">Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -258,7 +370,7 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">3. Wähle dein Lieblingsbild/er aus</h3>
-          <p class="step-card__text">Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen.</p>
+          <p class="step-card__text">Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen und entscheiden, welche ihr erwerben möchtet – ganz ohne Kaufzwang.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -270,13 +382,35 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">4. Ergebnis</h3>
-          <p class="step-card__text">Unvergängliche Erinnerungen in digitaler Form.</p>
+          <p class="step-card__text">Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
       
     </div>
+
+    <!-- CTA at bottom -->
+    
+    <div class="steps__cta-bottom">
+      <a href="quiz-step1.html" class="btn btn-primary">Jetzt Familien-Fotoshooting anfragen</a>
+    </div>
+    
   </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY FULLWIDTH - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Max-width: 1440px
+     - Height: 656px
+     - Full-width image
+     - Между Steps и FAQ
+     ============================================ -->
+
+<section class="gallery-fullwidth">
+  <img src="assets/images/placeholder.svg" alt="Familien-Fotoshooting" class="gallery-fullwidth__image">
 </section>
 
 
@@ -318,7 +452,7 @@
 
       <div class="faq__item" data-faq-item>
         <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Wieso ist es tatsächlich kostenlos?</span>
+          <span>Gibt es eine Frist in der das Angebot gilt?</span>
           <span class="faq__icon">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -328,7 +462,7 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
-            <p>Wir möchten möglichst vielen Familien die Möglichkeit geben, professionelle Bilder zu bekommen.</p>
+            <p>Ja, das Angebot gilt nur für kurze Zeit. Sichere dir jetzt deinen Termin!</p>
           </div>
         </div>
       </div>
@@ -346,7 +480,7 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
-            <p>Ja, das Fotoshooting selbst ist komplett kostenlos.</p>
+            <p>Ja, das Fotoshooting selbst ist komplett kostenlos. Du entscheidest danach, ob du Bilder kaufen möchtest.</p>
           </div>
         </div>
       </div>
@@ -364,7 +498,7 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
-            <p>Ja, absolut kostenlos.</p>
+            <p>Ja, absolut kostenlos. Du gehst kein Risiko ein.</p>
           </div>
         </div>
       </div>
@@ -400,7 +534,7 @@
           <img src="assets/images/placeholder.svg" alt="">
         </div>
         <h3 class="service-card__title">Family Time</h3>
-        <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen.</p>
+        <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
       </div>
       
 
@@ -409,7 +543,7 @@
           <img src="assets/images/placeholder.svg" alt="">
         </div>
         <h3 class="service-card__title">Kinder-Fotoshooting</h3>
-        <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen Bildern fest.</p>
+        <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest.</p>
       </div>
       
 
@@ -417,8 +551,8 @@
         <div class="service-card__image">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="service-card__title">Newborn-Fotoshooting</h3>
-        <p class="service-card__text">Schwangerschaft und Neugeborene in liebevollen Bildern festhalten.</p>
+        <h3 class="service-card__title">Babybauch & Newborn</h3>
+        <p class="service-card__text">Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren.</p>
       </div>
       
 
@@ -426,14 +560,14 @@
         <div class="service-card__image">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="service-card__title">Kinder Fotoshooting</h3>
-        <p class="service-card__text">Authentisch, ausdrucksstark, zeitlos.</p>
+        <h3 class="service-card__title">Und vieles mehr!</h3>
+        <p class="service-card__text"></p>
       </div>
       
     </div>
 
     <div class="services__cta">
-      <a href="quiz-step1.html" class="btn btn-outline">Jetzt kostenlosen Fotoshooting-Gutschein sichern</a>
+      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Kostenloses Fotoshooting sichern</a>
     </div>
   </div>
 </section>
@@ -465,33 +599,26 @@
       <!-- Контент справа -->
       <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
-          <p class="about__label">Hi, ich bin Anna – dein Kontakt zum Studio!</p>
+          <p class="about__label">Hi, ich bin Jenni – dein Kameramädle!</p>
           <h2 class="about__name"></h2>
           <div class="about__divider"></div>
 
           
           
-            
-            <div class="about__text">Ich freue mich, wenn Du bei Fragen oder Wünschen direkt bei mir meldest. Gemeinsam finden wir den perfekten Termin für euer Fotoshooting.</div>
+          <p class="about__text">Ich liebe es, besondere Momente einzufangen und sie für dich unvergesslich zu machen. Mein Studio ist ein Ort, an dem du dich fallen lassen kannst – ganz ohne Zeitdruck und Stress.</p>
+          
+
+          <p class="about__text">Mir ist wichtig, dass du dich bei mir wohlfühlst und einfach du selbst sein kannst. Ich lache gern mit meinen Kunden und freue mich, wenn aus einem Fotoshooting ein richtig schönes Erlebnis wird.</p>
+          
+
+          <p class="about__text">Über 500 Babys durfte ich schon fotografieren und jede Familie, jedes Paar ist für mich einzigartig. Genau diese Emotionen will ich für dich in liebevollen Bildern festhalten – Erinnerungen, die dich ein Leben lang begleiten.</p>
+          
           
 
           
+
           
           <div class="about__social">
-            
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="assets/icons/facebook.svg" alt="Facebook">
-            </a>
-            
-
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="assets/icons/instagram.svg" alt="Instagram">
-            </a>
-            
-
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Website">
-              <img src="assets/icons/web.svg" alt="Website">
-            </a>
             
           </div>
           
@@ -765,10 +892,15 @@
   <!-- Google Maps -->
   <div class="footer__map">
     
-    <div class="footer__map-placeholder">
-      <img src="assets/images/placeholder.svg" alt="Map placeholder">
-      <p>Karte wird hier angezeigt</p>
-    </div>
+    <iframe
+      src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     
   </div>
 

@@ -12,6 +12,9 @@
 
 <section class="features section--bg-primary">
   <div class="container">
+    {{#if sectionTitle}}
+    <h2 class="features__title">{{sectionTitle}}</h2>
+    {{/if}}
     <div class="features__wrapper">
       {{#each items}}
       <div class="feature-card">

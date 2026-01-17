@@ -28,17 +28,18 @@
           <h2 class="about__name">{{name}}</h2>
           <div class="about__divider"></div>
 
-          {{!-- Поддержка массива параграфов --}}
-          {{#if paragraphs}}
-            {{#each paragraphs}}
-            <p class="about__text">{{this}}</p>
-            {{/each}}
-          {{else}}
-            {{!-- Fallback для старого формата с единым текстом --}}
-            <div class="about__text">{{text}}</div>
+          {{#if texts}}
+          {{#each texts}}
+          <p class="about__text">{{this}}</p>
+          {{/each}}
           {{/if}}
 
-          {{!-- Социальные иконки показываются ТОЛЬКО если явно указаны в данных --}}
+          {{#if paragraphs}}
+          {{#each paragraphs}}
+          <p class="about__text">{{this}}</p>
+          {{/each}}
+          {{/if}}
+
           {{#if socials}}
           <div class="about__social">
             {{#each socials}}

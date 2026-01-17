@@ -91,11 +91,17 @@
           <div class="quiz-form__image">
             <img src="{{formImage}}" alt="{{formImageAlt}}">
           </div>
+          {{#if privacyNote}}
           <p class="quiz-form__privacy-note">{{privacyNote}}</p>
+          {{/if}}
+          {{#if infoTitle}}
           <div class="quiz-form__info">
             <p class="quiz-form__info-title">{{infoTitle}}</p>
+            {{#if infoText}}
             <p class="quiz-form__info-text">{{infoText}}</p>
+            {{/if}}
           </div>
+          {{/if}}
         </div>
       </div>
     </div>

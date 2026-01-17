@@ -1,8 +1,9 @@
 <!-- ============================================
-     HERO V1 - Лендинг 1 (Familien-Fotoshooting)
+     HERO V1 - Универсальный шаблон Hero секции
 
      PIXEL-PERFECT ПО FIGMA:
-     - Секция: 634px высота, фон #F5EDE0
+     - Секция: 634px высота (674px с label), фон #F5EDE0
+     - Label (опционально): Inter Bold 55px, акцентный цвет
      - Title: Inter Bold 55px, max-width 629px
      - Subtitle: Inter Medium 22px, max-width 386px
      - Button: 286x70px, фон #E2C08D
@@ -16,6 +17,9 @@
       <!-- Контент слева -->
       <div class="col-lg-6">
         <div class="hero__content">
+          {{#if label}}
+          <span class="hero__label">{{label}}</span>
+          {{/if}}
           <h1 class="hero__title">{{title}}</h1>
           <p class="hero__subtitle">{{subtitle}}</p>
           <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>

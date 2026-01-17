@@ -4,17 +4,19 @@
      PIXEL-PERFECT ПО FIGMA:
      - Background: #EEE3D0 (secondary)
      - Title: Inter Bold 35px
-     - CTA button with outline style
+     - CTA button: outline (Landing 1, сверху справа) или primary (Landing 2, снизу)
+     - ctaBottom: true = кнопка снизу по центру, primary стиль
      - 4 steps in 2x2 grid
-     - Step icon: ~70x75px
-     - Step title: Inter Bold 22px
-     - Step text: Inter Medium 22px
-     - Divider lines under each step
      ============================================ -->
 
 <section class="steps section--bg-secondary">
   <div class="container">
-    <!-- Header with title and CTA -->
+    <!-- Title (full width when ctaBottom, otherwise with button on right) -->
+    {{#if ctaBottom}}
+    <h2 class="steps__title steps__title--full">{{title}}</h2>
+    {{/if}}
+
+    {{#if ctaTop}}
     <div class="row align-items-center mb-5">
       <div class="col-lg-6">
         <h2 class="steps__title">{{title}}</h2>
@@ -23,6 +25,7 @@
         <a href="{{ctaLink}}" class="btn btn-outline steps__cta-btn">{{ctaText}}</a>
       </div>
     </div>
+    {{/if}}
 
     <!-- Steps grid 2x2 -->
     <div class="row">
@@ -39,5 +42,12 @@
       </div>
       {{/each}}
     </div>
+
+    <!-- CTA at bottom -->
+    {{#if ctaBottom}}
+    <div class="steps__cta-bottom">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
   </div>
 </section>

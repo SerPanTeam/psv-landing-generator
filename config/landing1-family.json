@@ -162,7 +162,8 @@
           "Diese Aktion gilt nur bis zum 06.12.25."
         ],
         "linkText": "Hier geht's zur Fotoshooting-Aktion",
-        "linkUrl": "quiz-step1.html"
+        "linkUrl": "quiz-step1.html",
+        "showBottomDivider": true
       }
     },
     {
@@ -217,6 +218,7 @@
         "title": "Wie genau komme ich zum Fotoshooting?",
         "ctaText": "Deine Fotoshooting-Aktion – jetzt sichern!",
         "ctaLink": "quiz-step1.html",
+        "ctaTop": true,
         "steps": [
           {
             "number": "1",

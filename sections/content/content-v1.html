@@ -17,6 +17,9 @@
       <div class="col-lg-5">
         <div class="content-section__content">
           <h2 class="content-section__title">{{title}}</h2>
+          {{#if subtitle}}
+          <p class="content-section__subtitle">{{subtitle}}</p>
+          {{/if}}
           {{#if paragraphs}}
             {{#each paragraphs}}
             <p class="content-section__text">{{this}}</p>
