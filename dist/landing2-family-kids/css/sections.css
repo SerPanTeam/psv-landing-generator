@@ -909,6 +909,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  background-color: var(--color-bg-secondary); /* FIGMA: #EEE3D0 */
 }
 
 .gallery-fullwidth__image {
@@ -1245,7 +1246,8 @@
 .footer__map {
   width: 100%;
   height: 534px; /* FIGMA: approximate map area height */
-  background-color: #7f7f7f;
+  /* FIGMA: White background, gray is only the map image placeholder */
+  background-color: var(--color-bg-white);
 }
 
 .footer__map iframe {
@@ -1266,6 +1268,7 @@
 .footer__bottom {
   padding: var(--footer-padding-y) 0;
   text-align: center;
+  background-color: var(--color-bg-primary); /* FIGMA: #F5EDE0 - links below white map area */
 }
 
 .footer__nav {

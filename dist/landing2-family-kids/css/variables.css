@@ -109,7 +109,7 @@
   /* FIGMA: Logo at top 53px, left 101px */
 
   --header-padding-y: 53px;
-  --header-bg: transparent;
+  --header-bg: var(--color-bg-primary); /* FIGMA: #F5EDE0 */
   --logo-font-size: 45px; /* FIGMA: 45px */
   --logo-font-weight: var(--font-weight-bold);
   --logo-color: var(--color-text-primary);

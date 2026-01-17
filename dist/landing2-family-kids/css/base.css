@@ -43,6 +43,26 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* ===== HEADER & LOGO (Shared across all pages) ===== */
+/* FIGMA: Logo at top 53px, font-size 45px Inter Bold */
+
+.header {
+  padding-top: var(--header-padding-y); /* FIGMA: 53px */
+  padding-bottom: 0;
+  background-color: var(--header-bg);
+}
+
+.header__logo {
+  display: inline-block;
+}
+
+.logo-text {
+  font-size: var(--logo-font-size); /* FIGMA: 45px */
+  font-weight: var(--logo-font-weight);
+  color: var(--logo-color);
+  line-height: 1; /* FIGMA: no extra line-height */
+}
+
 /* ===== TYPOGRAPHY ===== */
 
 h1, h2, h3, h4, h5, h6 {

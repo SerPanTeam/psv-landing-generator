@@ -434,15 +434,27 @@
 
 /* ===== SMALL MOBILE (< 576px) ===== */
 @media (max-width: 575.98px) {
-  /* Hero V1 */
+  /* Hero V1 - изображение на всю ширину edge-to-edge */
+  .hero--v1 .hero__image-wrapper {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+
   .hero--v1 .hero__image-main {
-    max-width: 280px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero--v1 .hero__image-main img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
   }
 
   .hero--v1 .hero__image-secondary {
-    width: 150px;
-    height: 130px;
-    bottom: -30px;
+    display: none;
   }
 
   /* Features */
@@ -542,28 +554,39 @@
 }
 
 @media (max-width: 991.98px) {
-  /* Основной контейнер - запрещаем overflow */
+  /* Gallery Slider - overflow только на viewport, не на wrapper */
   .gallery-slider {
-    overflow: hidden;
+    overflow: hidden; /* Скрываем мелкие overflow */
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .gallery-slider__wrapper {
     max-width: 100%;
-    overflow: hidden;
+    overflow: visible; /* Не обрезаем стрелки */
+    box-sizing: border-box;
   }
 
-  /* Viewport: убираем hardcoded 1244px, используем calc */
+  /* Viewport: overflow hidden только здесь */
   .gallery-slider__viewport {
-    width: calc(100% - 100px) !important; /* 100px = arrows space */
-    max-width: calc(100% - 100px);
+    width: calc(100% - 90px) !important; /* Место для стрелок */
+    max-width: calc(100% - 90px);
+    overflow: hidden; /* Скрываем лишние слайды */
   }
 
   /* Slides: 2 слайда на tablet */
   .gallery-slider__slide {
     flex: 0 0 calc(50% - 11px) !important; /* 50% минус половина gap */
     width: calc(50% - 11px) !important;
+    min-width: 0 !important; /* Важно для flex shrink */
+    max-width: calc(50% - 11px) !important;
     height: auto !important;
     aspect-ratio: 1;
+  }
+
+  .gallery-slider__slide img {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   /* Arrows: увеличиваем touch target */
@@ -580,21 +603,27 @@
 
 @media (max-width: 767.98px) {
   .gallery-slider__viewport {
-    width: calc(100% - 80px) !important; /* Меньше места для arrows */
+    width: calc(100% - 80px) !important;
     max-width: calc(100% - 80px);
   }
 
   .gallery-slider__slide {
     flex: 0 0 calc(50% - 10px) !important;
     width: calc(50% - 10px) !important;
+    min-width: 0 !important;
+    max-width: calc(50% - 10px) !important;
+  }
+
+  .gallery-slider__slide img {
+    max-width: 100% !important;
   }
 }
 
 @media (max-width: 575.98px) {
-  /* Viewport: ещё меньше */
+  /* Viewport: 1 слайд, место для стрелок */
   .gallery-slider__viewport {
-    width: calc(100% - 70px) !important;
-    max-width: calc(100% - 70px);
+    width: calc(100% - 80px) !important;
+    max-width: calc(100% - 80px);
   }
 
   /* Slides: 1 слайд на small mobile */
@@ -603,11 +632,12 @@
     width: 100% !important;
   }
 
-  /* Arrows: минимум 44px touch target */
+  /* Arrows: минимум 44px touch target, не обрезаем */
   .gallery-slider__arrow {
-    padding: 10px;
-    min-width: 35px;
+    padding: 8px;
+    min-width: 40px;
     min-height: 44px;
+    flex-shrink: 0;
   }
 }
 
