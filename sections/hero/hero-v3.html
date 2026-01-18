@@ -1,53 +1,71 @@
 <!-- ============================================
      HERO V3 - Лендинг 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Label: "Kostenloses"
-     - Title: "Hunde-Fotoshooting"
-     - Description text
-     - CTA button
-     - Sidebar "Warum Kostenlos?"
-     - 3 feature cards below
+     PIXEL-PERFECT ПО FIGMA (node 369:256):
+     - Full-width banner: 1237x641px, rounded-50px
+     - Text overlay on banner (white)
+     - Below banner: sidebar image LEFT + "Warum kostenlos?" RIGHT
+     - 3 feature cards at bottom
      ============================================ -->
 
 <section class="hero hero--v3 section--bg-primary">
   <div class="container">
-    <div class="row">
-      <!-- Основной контент -->
-      <div class="col-lg-6">
-        <div class="hero__content">
-          <span class="hero__label">{{label}}</span>
-          <h1 class="hero__title">{{title}}</h1>
-          <p class="hero__subtitle">{{subtitle}}</p>
-          <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
-        </div>
-      </div>
+    <!-- Main banner with overlay content -->
+    <div class="hero__image-banner">
+      <img src="{{bannerImage}}" alt="{{title}}">
 
-      <!-- Sidebar справа -->
-      <div class="col-lg-5 offset-lg-1">
-        <div class="hero__sidebar hero__sidebar--bordered">
-          <h3 class="hero__sidebar-title">{{sidebarTitle}}</h3>
-          <p class="hero__sidebar-text">{{sidebarText}}</p>
+      <!-- Content overlay on banner -->
+      <div class="hero__content-overlay">
+        <span class="hero__label">{{label}}</span>
+        <h1 class="hero__title">{{title}}</h1>
+        <div class="hero__subtitle">
+          {{#if subtitleLines}}
+          {{#each subtitleLines}}
+          <p>{{this}}</p>
+          {{/each}}
+          {{/if}}
         </div>
+        <a href="{{buttonLink}}" class="btn btn-primary hero__btn">{{buttonText}}</a>
+      </div>
+    </div>
+
+    <!-- Below banner: sidebar image + "Warum Kostenlos?" -->
+    <div class="hero__below-banner">
+      <!-- Sidebar image (left, overlapping) -->
+      {{#if sidebarImage}}
+      <div class="hero__sidebar-image">
+        <img src="{{sidebarImage}}" alt="">
+      </div>
+      {{/if}}
+
+      <!-- "Warum Kostenlos?" block (right) -->
+      <div class="hero__sidebar-block">
+        <h3 class="hero__sidebar-title">{{sidebarTitle}}</h3>
+        <div class="hero__sidebar-text">
+          {{#if sidebarTexts}}
+          {{#each sidebarTexts}}
+          <p>{{this}}</p>
+          {{/each}}
+          {{/if}}
+        </div>
+        {{#if sidebarButtonText}}
+        <a href="{{sidebarButtonLink}}" class="btn btn-primary hero__sidebar-btn">{{sidebarButtonText}}</a>
+        {{/if}}
       </div>
     </div>
 
     <!-- Feature cards (3 columns) -->
     {{#if features}}
     <div class="hero__features">
-      <div class="row">
-        {{#each features}}
-        <div class="col-lg-4">
-          <div class="hero__feature-card">
-            <div class="hero__feature-image">
-              <img src="{{this.image}}" alt="">
-            </div>
-            <h4 class="hero__feature-title">{{this.title}}</h4>
-            <p class="hero__feature-text">{{this.text}}</p>
-          </div>
+      {{#each features}}
+      <div class="hero__feature-card">
+        <div class="hero__feature-image">
+          <img src="{{this.image}}" alt="">
         </div>
-        {{/each}}
+        <h4 class="hero__feature-title">{{this.title}}</h4>
+        <p class="hero__feature-text">{{this.text}}</p>
       </div>
+      {{/each}}
     </div>
     {{/if}}
   </div>

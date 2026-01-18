@@ -274,30 +274,26 @@
 
 /* Hero V3 - Лендинг 3 (Hunde-Fotoshooting)
    FIGMA PIXEL-PERFECT VALUES (from node 369:256):
-   - Page: 1440px, hero section height 921px
-   - Logo: left ~102px, top 61px, 45px font
-   - Hero image: 1237x641px, rounded-50px, top 188px
-   - Title ON image: top 453px, width 526px, 45px white text
-   - Subtitle ON image: top 577px, width 653px, 22px white
-   - Button: top 714px, 382x70px, rounded-30px
-   - Below hero: sidebar 507x448px rounded-30px
+   - Full-width banner: 1237x641px, rounded-50px
+   - Text overlay on banner in white
+   - Below banner: sidebar image (left) + "Warum kostenlos?" (right)
+   - 3 feature cards at bottom
 */
 .hero--v3 {
-  min-height: 921px; /* FIGMA: section height */
-  padding-top: 8px; /* FIGMA: 61px - 53px = 8px from header */
-  padding-bottom: 0;
-  position: relative;
+  padding-top: 30px;
+  padding-bottom: 60px;
 }
 
+/* Full-width banner */
 .hero--v3 .hero__image-banner {
   position: relative;
   width: 100%;
-  max-width: 1237px; /* FIGMA: exact */
-  height: 641px; /* FIGMA: exact */
+  max-width: 1237px;
+  height: 641px;
   background-color: #7f7f7f;
-  border-radius: 50px; /* FIGMA: rounded-50px */
-  margin-top: 74px; /* FIGMA: 188px - 61px - 53px */
+  border-radius: 50px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .hero--v3 .hero__image-banner img {
@@ -306,88 +302,140 @@
   object-fit: cover;
 }
 
+/* Content overlay on banner */
 .hero--v3 .hero__content-overlay {
   position: absolute;
-  bottom: 100px; /* Position content from bottom of banner */
-  left: 40px;
-  max-width: 653px;
+  left: 50px;
+  bottom: 70px;
+  max-width: 600px;
   z-index: 2;
 }
 
 .hero--v3 .hero__label {
   display: block;
-  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF; /* FIGMA: white text on image */
-  margin-bottom: 0;
+  color: #FFFFFF;
+  margin-bottom: 5px;
 }
 
 .hero--v3 .hero__title {
-  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  max-width: 526px; /* FIGMA: exact */
-  margin-bottom: 45px; /* FIGMA: 577 - 453 - 79 */
-  color: #FFFFFF; /* FIGMA: white text on image */
+  color: #FFFFFF;
+  margin-bottom: 25px;
 }
 
 .hero--v3 .hero__subtitle {
-  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-size: 22px;
   font-weight: var(--font-weight-medium);
-  line-height: 1.2;
-  max-width: 653px; /* FIGMA: exact */
-  margin-bottom: 16px;
-  color: #FFFFFF; /* FIGMA: white text */
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
-.hero--v3 .btn-primary {
-  width: 382px; /* FIGMA: exact */
-  height: 70px; /* FIGMA: exact */
-  border-radius: 30px; /* FIGMA: rounded buttons for V3 */
+.hero--v3 .hero__subtitle p {
+  margin-bottom: 0;
 }
 
-/* Sidebar section below hero banner */
-.hero--v3 .hero__sidebar {
+.hero--v3 .hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 382px;
+  height: 70px;
+  padding: 0 40px;
+  font-size: 22px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* Below banner section */
+.hero--v3 .hero__below-banner {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: flex-start;
+}
+
+/* Sidebar image (left) */
+.hero--v3 .hero__sidebar-image {
+  flex-shrink: 0;
+  width: 507px;
+  height: 448px;
   background-color: #7f7f7f;
-  width: 507px; /* FIGMA: exact */
-  height: 448px; /* FIGMA: exact */
-  border-radius: 30px; /* FIGMA: rounded-30px */
-  padding: 40px;
-  margin-top: -100px; /* Overlap with hero banner */
-  position: relative;
-  z-index: 3;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.hero--v3 .hero__sidebar-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* "Warum Kostenlos?" block (right) */
+.hero--v3 .hero__sidebar-block {
+  flex: 1;
+  padding-top: 20px;
 }
 
 .hero--v3 .hero__sidebar-title {
-  font-size: var(--font-size-text-lg); /* FIGMA: 28px */
+  font-size: 28px;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   color: var(--color-text-primary);
 }
 
 .hero--v3 .hero__sidebar-text {
-  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-size: 22px;
   font-weight: var(--font-weight-medium);
+  line-height: 1.5;
   color: var(--color-text-primary);
+  margin-bottom: 50px; /* FIGMA: ~50px gap before button */
 }
 
-/* Feature cards with rounded corners for V3 */
+.hero--v3 .hero__sidebar-text p {
+  margin-bottom: 20px;
+}
+
+.hero--v3 .hero__sidebar-text p:last-child {
+  margin-bottom: 0;
+}
+
+.hero--v3 .hero__sidebar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 413px;
+  height: 70px;
+  padding: 0 40px;
+  font-size: 22px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* Feature cards - 3 columns */
 .hero--v3 .hero__features {
+  display: flex;
+  gap: 40px;
   margin-top: 60px;
 }
 
 .hero--v3 .hero__feature-card {
-  text-align: left;
+  flex: 1;
 }
 
 .hero--v3 .hero__feature-image {
-  width: 350px; /* FIGMA: exact */
-  height: 300px; /* FIGMA: exact */
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
   background-color: #7f7f7f;
-  border-radius: 35px; /* FIGMA: rounded-35px */
-  margin-bottom: 20px;
+  border-radius: 35px;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 
 .hero--v3 .hero__feature-image img {
@@ -397,14 +445,18 @@
 }
 
 .hero--v3 .hero__feature-title {
-  font-size: var(--font-size-text-lg); /* FIGMA: 28px */
+  font-size: 28px;
   font-weight: var(--font-weight-bold);
-  margin-bottom: 12px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: var(--color-text-primary);
 }
 
 .hero--v3 .hero__feature-text {
-  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-size: 22px;
   font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-primary);
 }
 
 /* Hero V4 - Лендинг 4 (Kinder-Fotoshooting)
@@ -882,6 +934,52 @@
   max-width: 316px; /* FIGMA L2: text width */
 }
 
+/* ===== FEATURES GRID (Landing 3) ===== */
+/* FIGMA Landing 3 (node 369:285):
+   - 2x2 grid layout
+   - Icon: 74x75px
+   - Text: 22px Bold
+   - Gap between icon and text: ~30px
+*/
+.features--grid {
+  padding: 60px 0;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.feature-item__icon {
+  flex-shrink: 0;
+  width: 74px;
+  height: 75px;
+  background-color: #7f7f7f;
+}
+
+.feature-item__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-item__text {
+  font-size: var(--font-size-text); /* 22px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  max-width: 400px;
+}
+
 /* ===== STEPS SECTION ===== */
 /* FIGMA Landing 1 (node 7:66):
    - Section bg: y=3226, height=964
@@ -1037,6 +1135,11 @@
   opacity: 0.7;
 }
 
+/* Gallery Slider Rounded - Landing 3 */
+.gallery-slider--rounded .gallery-slider__slide {
+  border-radius: 50px;
+}
+
 .gallery-slider__arrow.is-disabled {
   opacity: 0.3;
   cursor: not-allowed;
@@ -1061,6 +1164,55 @@
   height: 656px; /* FIGMA: exact */
   object-fit: cover;
   display: block;
+}
+
+/* Gallery Fullwidth Rounded (Landing 3) */
+.gallery-fullwidth--rounded {
+  background-color: var(--color-bg-primary);
+  padding: 40px 0;
+}
+
+.gallery-fullwidth--rounded .gallery-fullwidth__image {
+  border-radius: 30px;
+  height: 500px;
+}
+
+/* ===== GALLERY DECORATED (Landing 3) ===== */
+/* FIGMA: Main image with overlapping decorative images */
+.gallery-decorated {
+  padding: 40px 0 80px;
+}
+
+.gallery-decorated__wrapper {
+  position: relative;
+  max-width: 1233px;
+  margin: 0 auto;
+}
+
+.gallery-decorated__main {
+  width: 100%;
+  height: 656px;
+  object-fit: cover;
+  border-radius: 50px;
+  display: block;
+}
+
+.gallery-decorated__decor {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.gallery-decorated__decor--top-right {
+  top: -100px; /* FIGMA: half of 200px height */
+  right: 80px;
+}
+
+.gallery-decorated__decor--bottom-left {
+  bottom: -100px; /* FIGMA: half of 200px height */
+  left: 84px;
 }
 
 /* ===== GALLERY STRIP ===== */
@@ -1189,6 +1341,21 @@
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-none); /* FIGMA: 100% */
+}
+
+.faq__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.faq__cta .btn {
+  min-width: 400px;
+  height: 70px;
+}
+
+/* FAQ Cards - rounded button */
+.faq--cards .faq__cta .btn {
+  border-radius: 30px;
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -1447,6 +1614,9 @@
 .cta {
   padding: var(--section-padding-y) 0;
   background-color: var(--color-bg-secondary);
+}
+
+.cta__content {
   text-align: center;
 }
 
@@ -1467,6 +1637,259 @@
   margin-bottom: 30px;
 }
 
-.cta .btn-primary {
+.cta__btn {
   min-width: 310px; /* FIGMA: typical CTA button width */
+}
+
+/* CTA Row Layout - text left, button right */
+.cta--row .cta__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+}
+
+.cta--row .cta__text {
+  flex: 1;
+  max-width: 706px;
+}
+
+.cta--row .cta__title {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.cta--row .cta__subtitle {
+  margin-bottom: 0;
+}
+
+.cta--row .cta__btn {
+  flex-shrink: 0;
+  min-width: 310px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* ============================================
+   ROUNDED STYLES - Landing 3 & 4
+
+   BEM модификаторы для скруглённых углов.
+   Не влияет на Landing 1 и 2.
+   ============================================ */
+
+/* ===== STEPS ROUNDED ===== */
+.steps--rounded {
+  background-color: var(--color-bg-primary);
+}
+
+.steps--rounded .steps__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+}
+
+.steps--rounded .step-card {
+  background: var(--color-bg-white);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 0; /* Remove staggered layout */
+}
+
+.steps--rounded .step-card__icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.steps--rounded .step-card__title {
+  margin-bottom: 16px;
+}
+
+.steps--rounded .step-card__divider {
+  display: none;
+}
+
+.steps--rounded .steps__cta-bottom .btn-primary {
+  width: 413px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 22px;
+}
+
+/* ===== FAQ CARDS STYLE ===== */
+.faq--cards .faq__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 100%;
+}
+
+.faq--cards .faq__item {
+  background: #F8F8F8;
+  border-radius: 30px;
+  padding: 30px;
+  border: none;
+}
+
+.faq--cards .faq__question {
+  font-size: var(--font-size-text);
+  padding: 0;
+  margin-bottom: 16px;
+  cursor: default;
+}
+
+.faq--cards .faq__icon {
+  display: none;
+}
+
+.faq--cards .faq__answer {
+  max-height: none;
+  overflow: visible;
+}
+
+.faq--cards .faq__answer-inner {
+  padding-bottom: 0;
+}
+
+/* ===== FAQ CARDS ONLY (Landing 3) ===== */
+/* FIGMA: Static cards without accordion, 2x2 grid */
+.faq--cards-only {
+  padding: 60px 0 80px;
+}
+
+.faq--cards-only .faq__title {
+  font-size: var(--font-size-h2); /* 45px */
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 27px;
+  max-width: 1233px;
+  margin: 0 auto;
+}
+
+.faq__card {
+  background: #F8F8F8;
+  border-radius: 30px;
+  padding: 40px;
+  min-height: 117px;
+  display: flex;
+  align-items: center;
+}
+
+.faq__card-text {
+  font-size: var(--font-size-text); /* 22px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.faq--cards-only .faq__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.faq--cards-only .faq__cta .btn {
+  min-width: 400px;
+  height: 70px;
+  border-radius: 30px;
+}
+
+/* ===== SERVICES ROUNDED ===== */
+.services--rounded .services__header {
+  text-align: center;
+}
+
+.services--rounded .services__title {
+  max-width: 100%;
+  font-size: var(--font-size-h2); /* FIGMA Landing 3: 45px */
+}
+
+.services--rounded .service-card__image {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Remove staggered layout for rounded variant */
+.services--rounded .service-card:nth-child(1),
+.services--rounded .service-card:nth-child(2),
+.services--rounded .service-card:nth-child(3),
+.services--rounded .service-card:nth-child(4) {
+  margin-top: 0;
+}
+
+/* Services CTA for rounded variant */
+.services--rounded .services__cta {
+  text-align: center;
+}
+
+.services--rounded .services__cta .btn {
+  width: 473px; /* FIGMA Landing 3: exact */
+  height: 70px;
+  border-radius: 30px;
+  font-size: 22px;
+}
+
+/* ===== ABOUT ROUNDED ===== */
+.about--rounded .about__image {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* ===== ABOUT COMPACT (Landing 3) ===== */
+/* FIGMA: No divider, combined title, image 551x608px, text aligned to image height */
+.about--rounded .about__image {
+  width: 551px;
+  height: 608px;
+}
+
+.about--rounded .about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__title-compact {
+  font-size: var(--font-size-h2); /* 45px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 39px; /* FIGMA: 7410-7263-108 = 39px gap */
+}
+
+.about__title-line {
+  display: block;
+}
+
+/* Compact variant text spacing */
+/* FIGMA Landing 3: text width 621px, height 461px to align with image bottom */
+.about--rounded .about__content {
+  padding-top: 0; /* Title and text start at same level as image top */
+}
+
+.about--rounded .about__text {
+  max-width: 621px; /* FIGMA: exact */
+  margin-bottom: 22px; /* FIGMA: gap between paragraphs */
+  line-height: 1.2; /* FIGMA: closer to 100% for Inter */
+}
+
+.about--rounded .about__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CTA ROUNDED BUTTON ===== */
+.cta--rounded .btn-outline,
+.cta--rounded .btn-primary {
+  border-radius: 30px;
 }

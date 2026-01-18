@@ -312,6 +312,47 @@
     margin: 10px auto;
   }
 
+  /* Features Grid (Landing 3) */
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px;
+  }
+
+  .feature-item {
+    gap: 20px;
+  }
+
+  .feature-item__icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .feature-item__text {
+    font-size: 18px;
+  }
+
+  /* Gallery Decorated */
+  .gallery-decorated__main {
+    height: 400px;
+    border-radius: 30px;
+  }
+
+  .gallery-decorated__decor {
+    width: 200px;
+    height: 130px;
+  }
+
+  .gallery-decorated__decor--top-right {
+    top: -65px; /* half of 130px */
+    right: 40px;
+  }
+
+  .gallery-decorated__decor--bottom-left {
+    bottom: -65px; /* half of 130px */
+    left: 40px;
+  }
+
   /* Steps */
   .steps {
     padding: 40px 0;
@@ -355,6 +396,30 @@
 
   .faq__answer-inner {
     padding-bottom: 20px;
+  }
+
+  /* FAQ Cards Only (Landing 3) */
+  .faq--cards-only {
+    padding: 40px 0 60px;
+  }
+
+  .faq__cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .faq__card {
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .faq__card-text {
+    font-size: 18px;
+  }
+
+  .faq--cards-only .faq__cta .btn {
+    min-width: 100%;
+    max-width: 400px;
   }
 
   /* Services */
@@ -504,9 +569,85 @@
 
 /* ===== HERO V3 RESPONSIVE (Лендинг 3) ===== */
 @media (max-width: 991.98px) {
-  .hero--v3 .hero__images {
-    flex-wrap: wrap;
-    justify-content: center;
+  .hero--v3 .hero__image-banner {
+    height: 450px;
+    border-radius: 30px;
+  }
+
+  .hero--v3 .hero__content-overlay {
+    left: 30px;
+    bottom: 50px;
+  }
+
+  .hero--v3 .hero__label,
+  .hero--v3 .hero__title {
+    font-size: 36px;
+  }
+
+  .hero--v3 .hero__subtitle {
+    font-size: 18px;
+  }
+
+  .hero--v3 .hero__btn {
+    min-width: auto;
+    width: 100%;
+    max-width: 350px;
+    font-size: 18px;
+    height: 60px;
+  }
+
+  .hero--v3 .hero__below-banner {
+    flex-direction: column;
+  }
+
+  .hero--v3 .hero__sidebar-image {
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+  }
+
+  .hero--v3 .hero__sidebar-block {
+    padding-top: 0;
+  }
+
+  .hero--v3 .hero__sidebar-title {
+    font-size: 24px;
+  }
+
+  .hero--v3 .hero__sidebar-text {
+    font-size: 18px;
+  }
+
+  .hero--v3 .hero__sidebar-btn {
+    min-width: auto;
+    width: 100%;
+    max-width: 350px;
+    font-size: 18px;
+    height: 60px;
+  }
+
+  .hero--v3 .hero__features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero--v3 .hero__feature-card {
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .hero--v3 .hero__feature-image {
+    margin: 0 auto 20px;
+    max-width: 300px;
+    height: 250px;
+  }
+
+  .hero--v3 .hero__feature-title {
+    font-size: 22px;
+  }
+
+  .hero--v3 .hero__feature-text {
+    font-size: 18px;
   }
 }
 
@@ -682,6 +823,34 @@
 @media (max-width: 575.98px) {
   .gallery-fullwidth__image {
     min-height: 200px;
+  }
+}
+
+/* ===== GALLERY DECORATED RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+  .gallery-decorated {
+    padding: 60px 0 80px;
+  }
+
+  .gallery-decorated__main {
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  .gallery-decorated__decor {
+    width: 120px;
+    height: 80px;
+    border-radius: 15px;
+  }
+
+  .gallery-decorated__decor--top-right {
+    top: -40px; /* half of 80px */
+    right: 16px;
+  }
+
+  .gallery-decorated__decor--bottom-left {
+    bottom: -40px; /* half of 80px */
+    left: 16px;
   }
 }
 
@@ -903,5 +1072,567 @@
 
   .hero--v1 .hero__label {
     font-size: 20px;
+  }
+}
+
+/* ============================================
+   ROUNDED STYLES RESPONSIVE - Landing 3 & 4
+   ============================================ */
+
+/* ===== HERO V3 RESPONSIVE (mobile) ===== */
+@media (max-width: 767.98px) {
+  .hero--v3 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .hero--v3 .hero__image-banner {
+    height: 350px;
+    border-radius: 25px;
+  }
+
+  .hero--v3 .hero__content-overlay {
+    left: 20px;
+    bottom: 40px;
+    max-width: calc(100% - 40px);
+  }
+
+  .hero--v3 .hero__label,
+  .hero--v3 .hero__title {
+    font-size: 26px;
+  }
+
+  .hero--v3 .hero__subtitle {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .hero--v3 .hero__btn {
+    width: 100%;
+    max-width: 100%;
+    height: 55px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .hero--v3 .hero__below-banner {
+    margin-top: 30px;
+    gap: 30px;
+  }
+
+  .hero--v3 .hero__sidebar-image {
+    max-width: 100%;
+    height: 280px;
+    border-radius: 20px;
+  }
+
+  .hero--v3 .hero__sidebar-block {
+    text-align: center;
+  }
+
+  .hero--v3 .hero__sidebar-title {
+    font-size: 22px;
+  }
+
+  .hero--v3 .hero__sidebar-text {
+    font-size: 16px;
+  }
+
+  .hero--v3 .hero__sidebar-btn {
+    width: 100%;
+    height: 55px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .hero--v3 .hero__features {
+    margin-top: 40px;
+    gap: 30px;
+  }
+
+  .hero--v3 .hero__feature-image {
+    max-width: 280px;
+    height: 220px;
+    border-radius: 20px;
+  }
+
+  .hero--v3 .hero__feature-title {
+    font-size: 20px;
+  }
+
+  .hero--v3 .hero__feature-text {
+    font-size: 16px;
+  }
+}
+
+/* ===== STEPS ROUNDED RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .steps--rounded .steps__grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .steps--rounded .step-card {
+    padding: 24px;
+  }
+
+  .steps--rounded .step-card__title {
+    font-size: 18px;
+  }
+
+  .steps--rounded .step-card__text {
+    font-size: 16px;
+  }
+}
+
+/* ===== FAQ CARDS RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .faq--cards .faq__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .faq--cards .faq__item {
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  .faq--cards .faq__question {
+    font-size: 16px;
+  }
+
+  .faq--cards .faq__answer-inner {
+    font-size: 14px;
+  }
+}
+
+/* ===== SERVICES ROUNDED RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .services--rounded .services__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .services--rounded .service-card {
+    width: calc(50% - 16px);
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services--rounded .service-card {
+    width: 100%;
+  }
+
+  .services--rounded .service-card__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+/* ===== ABOUT ROUNDED RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .about--rounded .about__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 551/608; /* FIGMA Landing 3 */
+    margin: 0 auto 40px;
+  }
+
+  .about__title-compact {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .about--rounded .about__text {
+    text-align: center;
+  }
+}
+
+/* ===== CTA ROUNDED RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+  .cta--rounded .btn-outline,
+  .cta--rounded .btn-primary {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===== CTA ROW RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .cta--row .cta__content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta--row .cta__text {
+    max-width: 100%;
+  }
+
+  .cta--row .cta__title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta--row .cta__subtitle {
+    margin-bottom: 30px;
+  }
+
+  .cta--row .cta__btn {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+/* ============================================
+   LANDING 3 MOBILE FIXES - Кнопки и тексты
+   ============================================ */
+
+/* ===== ГЛОБАЛЬНОЕ ИСПРАВЛЕНИЕ КНОПОК НА МОБИЛЬНЫХ ===== */
+@media (max-width: 767.98px) {
+  /* Разрешаем перенос текста в кнопках */
+  .btn {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn {
+    min-height: 50px;
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+}
+
+/* ===== HERO V3 MOBILE - Кнопки и тексты ===== */
+@media (max-width: 767.98px) {
+  /* Hero banner button */
+  .hero--v3 .hero__btn {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px;
+  }
+
+  /* Sidebar button */
+  .hero--v3 .hero__sidebar-btn {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px;
+  }
+
+  /* Feature card titles - меньше и компактнее */
+  .hero--v3 .hero__feature-title {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  /* Feature card text */
+  .hero--v3 .hero__feature-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Sidebar text */
+  .hero--v3 .hero__sidebar-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .hero--v3 .hero__sidebar-text p {
+    margin-bottom: 12px;
+  }
+
+  .hero--v3 .hero__sidebar-text p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Ещё меньше на маленьких экранах */
+  .hero--v3 .hero__btn,
+  .hero--v3 .hero__sidebar-btn {
+    font-size: 14px;
+    min-height: 48px;
+    padding: 10px 16px;
+  }
+
+  .hero--v3 .hero__feature-title {
+    font-size: 16px;
+  }
+
+  .hero--v3 .hero__feature-text {
+    font-size: 14px;
+  }
+
+  .hero--v3 .hero__label,
+  .hero--v3 .hero__title {
+    font-size: 22px;
+  }
+
+  .hero--v3 .hero__subtitle {
+    font-size: 13px;
+  }
+}
+
+/* ===== STEPS CTA BUTTON MOBILE ===== */
+@media (max-width: 767.98px) {
+  .steps__cta-bottom .btn-primary,
+  .steps--rounded .steps__cta-bottom .btn-primary {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 55px;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px !important;
+  }
+
+  .steps--rounded .step-card__text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .steps__cta-bottom .btn-primary,
+  .steps--rounded .steps__cta-bottom .btn-primary {
+    font-size: 14px !important;
+    min-height: 48px;
+  }
+}
+
+/* ===== FAQ CARDS CTA BUTTON MOBILE ===== */
+@media (max-width: 767.98px) {
+  .faq--cards-only .faq__cta .btn {
+    white-space: normal !important;
+    height: auto !important;
+    min-height: 55px;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px !important;
+  }
+
+  .faq__card-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .faq--cards-only .faq__cta .btn {
+    font-size: 14px !important;
+    min-height: 48px;
+  }
+
+  .faq__card-text {
+    font-size: 15px;
+  }
+}
+
+/* ===== SERVICES CTA BUTTON MOBILE ===== */
+@media (max-width: 767.98px) {
+  .services__cta .btn {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .services--rounded .services__cta .btn {
+    border-radius: 25px;
+  }
+
+  .service-card__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .service-card__text {
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 100% !important; /* Убираем ограничение ширины на мобильных */
+    text-align: left; /* Выравнивание по левому краю для читаемости */
+  }
+
+  /* Заголовок секции на всю ширину */
+  .services__title {
+    font-size: 22px;
+    line-height: 1.3;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .services__cta .btn {
+    font-size: 14px;
+    min-height: 48px;
+  }
+
+  .service-card__title {
+    font-size: 16px;
+  }
+
+  .service-card__text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .services__title {
+    font-size: 20px;
+  }
+}
+
+/* ===== CTA SECTION BUTTON MOBILE ===== */
+@media (max-width: 767.98px) {
+  .cta__btn {
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 15px;
+  }
+
+  .cta--rounded .cta__btn {
+    border-radius: 25px;
+  }
+
+  .cta__title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .cta__subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cta__btn {
+    font-size: 14px;
+    min-height: 48px;
+  }
+
+  .cta__title {
+    font-size: 20px;
+  }
+
+  .cta__subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ===== FEATURES GRID MOBILE ===== */
+@media (max-width: 767.98px) {
+  .features--grid .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .features--grid .feature-item__icon {
+    margin: 0 auto;
+  }
+
+  .features--grid .feature-item__text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .features--grid .feature-item__text {
+    font-size: 15px;
+  }
+
+  .features--grid .feature-item__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ===== ABOUT SECTION MOBILE ===== */
+@media (max-width: 767.98px) {
+  .about__title-compact {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .about--rounded .about__text {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about__title-compact {
+    font-size: 22px;
+  }
+
+  .about--rounded .about__text {
+    font-size: 14px;
+  }
+}
+
+/* ===== GALLERY DECORATED MOBILE - меньше декор элементы ===== */
+@media (max-width: 575.98px) {
+  .gallery-decorated {
+    padding: 50px 0 60px;
+  }
+
+  .gallery-decorated__main {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  .gallery-decorated__decor {
+    width: 90px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .gallery-decorated__decor--top-right {
+    top: -30px;
+    right: 10px;
+  }
+
+  .gallery-decorated__decor--bottom-left {
+    bottom: -30px;
+    left: 10px;
   }
 }

@@ -1,0 +1,22 @@
+<!-- ============================================
+     GALLERY DECORATED - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA (Landing 3):
+     - Main image: 1233x656px, rounded 50px
+     - Decorative image top-right: 300x200px
+     - Decorative image bottom-left: 300x200px
+     ============================================ -->
+
+<section class="gallery-decorated section--bg-primary">
+  <div class="container">
+    <div class="gallery-decorated__wrapper">
+      <img src="{{image}}" alt="{{alt}}" class="gallery-decorated__main">
+      {{#if decorTopRight}}
+      <img src="{{decorTopRight}}" alt="" class="gallery-decorated__decor gallery-decorated__decor--top-right">
+      {{/if}}
+      {{#if decorBottomLeft}}
+      <img src="{{decorBottomLeft}}" alt="" class="gallery-decorated__decor gallery-decorated__decor--bottom-left">
+      {{/if}}
+    </div>
+  </div>
+</section>

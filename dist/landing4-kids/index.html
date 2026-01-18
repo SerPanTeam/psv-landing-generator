@@ -156,15 +156,17 @@
      - Background: #EEE3D0 (secondary)
      - Title: Inter Bold
      - Subtitle: Inter Medium
-     - Outline button
+     - Layout: default (center) or layoutRow (text left, button right)
      ============================================ -->
 
 <section class="cta section--bg-secondary">
   <div class="container">
-    <div class="cta__content text-center">
-      <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.</h2>
-      <p class="cta__subtitle">Dauert bis zum Gutschein < 30 Sekunden</p>
-      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Gutschein sichern</a>
+    <div class="cta__content">
+      <div class="cta__text">
+        <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.</h2>
+        <p class="cta__subtitle">Dauert bis zum Gutschein < 30 Sekunden</p>
+      </div>
+      <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
     </div>
   </div>
 </section>
@@ -336,6 +338,8 @@
       </div>
       
     </div>
+
+    
   </div>
 </section>
 
@@ -422,9 +426,11 @@
       <!-- Контент справа -->
       <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
+          
           <p class="about__label">Herzlich Willkommen in unserem Fotostudio in</p>
           <h2 class="about__name">Bremen-Findorff!</h2>
           <div class="about__divider"></div>
+          
 
           
 

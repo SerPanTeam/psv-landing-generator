@@ -50,77 +50,160 @@
 <!-- ============================================
      HERO V3 - Лендинг 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Label: "Kostenloses"
-     - Title: "Hunde-Fotoshooting"
-     - Description text
-     - CTA button
-     - Sidebar "Warum Kostenlos?"
-     - 3 feature cards below
+     PIXEL-PERFECT ПО FIGMA (node 369:256):
+     - Full-width banner: 1237x641px, rounded-50px
+     - Text overlay on banner (white)
+     - Below banner: sidebar image LEFT + "Warum kostenlos?" RIGHT
+     - 3 feature cards at bottom
      ============================================ -->
 
 <section class="hero hero--v3 section--bg-primary">
   <div class="container">
-    <div class="row">
-      <!-- Основной контент -->
-      <div class="col-lg-6">
-        <div class="hero__content">
-          <span class="hero__label">Kostenloses</span>
-          <h1 class="hero__title">Hunde-Fotoshooting</h1>
-          <p class="hero__subtitle">Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest – für dich, für immer.</p>
-          <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
-        </div>
-      </div>
+    <!-- Main banner with overlay content -->
+    <div class="hero__image-banner">
+      <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting">
 
-      <!-- Sidebar справа -->
-      <div class="col-lg-5 offset-lg-1">
-        <div class="hero__sidebar hero__sidebar--bordered">
-          <h3 class="hero__sidebar-title">Warum Kostenlos?</h3>
-          <p class="hero__sidebar-text">Weil ich meine Leidenschaft für Tierfotografie mit dir teilen möchte – und das soll keine Frage des Budgets sein.</p>
+      <!-- Content overlay on banner -->
+      <div class="hero__content-overlay">
+        <span class="hero__label">Kostenloses</span>
+        <h1 class="hero__title">Hunde-Fotoshooting</h1>
+        <div class="hero__subtitle">
+          
+          
+          <p>Hallo an alle Hundebesitzer!</p>
+          
+
+          <p>Aufgepasst: Sichert euch frühzeitig euren Termin!</p>
+          
+
+          <p>Die Fotoshootings finden nur bis zum</p>
+          
+
+          <p>23.07.25 statt!</p>
+          
+          
         </div>
+        <a href="quiz-step1.html" class="btn btn-primary hero__btn">Hier geht's zu den Gutscheinen</a>
+      </div>
+    </div>
+
+    <!-- Below banner: sidebar image + "Warum Kostenlos?" -->
+    <div class="hero__below-banner">
+      <!-- Sidebar image (left, overlapping) -->
+      
+      <div class="hero__sidebar-image">
+        <img src="assets/images/placeholder.svg" alt="">
+      </div>
+      
+
+      <!-- "Warum Kostenlos?" block (right) -->
+      <div class="hero__sidebar-block">
+        <h3 class="hero__sidebar-title">Warum kostenlos?</h3>
+        <div class="hero__sidebar-text">
+          
+          
+          <p>Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.</p>
+          
+
+          <p>Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.</p>
+          
+          
+        </div>
+        
+        <a href="quiz-step1.html" class="btn btn-primary hero__sidebar-btn">Kostenloses Fotoshooting sichern</a>
+        
       </div>
     </div>
 
     <!-- Feature cards (3 columns) -->
     
     <div class="hero__features">
-      <div class="row">
+      
+      <div class="hero__feature-card">
+        <div class="hero__feature-image">
+          <img src="assets/images/placeholder.svg" alt="">
+        </div>
+        <h4 class="hero__feature-title">Hunde-Fotoshooting – liebevoll & natürlich</h4>
+        <p class="hero__feature-text">Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen.</p>
+      </div>
+      
+
+      <div class="hero__feature-card">
+        <div class="hero__feature-image">
+          <img src="assets/images/placeholder.svg" alt="">
+        </div>
+        <h4 class="hero__feature-title">Professionelles Hunde-Fotoshooting</h4>
+        <p class="hero__feature-text">Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest.</p>
+      </div>
+      
+
+      <div class="hero__feature-card">
+        <div class="hero__feature-image">
+          <img src="assets/images/placeholder.svg" alt="">
+        </div>
+        <h4 class="hero__feature-title">Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit</h4>
+        <p class="hero__feature-text">Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren.</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SLIDER - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Primary background
+     - 3 visible slides
+     - Navigation arrows
+     - Smooth slide transitions
+     ============================================ -->
+
+<section class="gallery-slider section--bg-primary gallery-slider--rounded">
+  <div class="gallery-slider__wrapper">
+    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="gallery-slider__viewport">
+      <div class="gallery-slider__track">
         
-        <div class="col-lg-4">
-          <div class="hero__feature-card">
-            <div class="hero__feature-image">
-              <img src="assets/images/placeholder.svg" alt="">
-            </div>
-            <h4 class="hero__feature-title">Hunde-Fotoshooting – liebevoll & natürlich</h4>
-            <p class="hero__feature-text">Mit viel Geduld und Einfühlungsvermögen entstehen authentische Bilder.</p>
-          </div>
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting 1">
         </div>
         
 
-        <div class="col-lg-4">
-          <div class="hero__feature-card">
-            <div class="hero__feature-image">
-              <img src="assets/images/placeholder.svg" alt="">
-            </div>
-            <h4 class="hero__feature-title">Professionelles Hunde-Fotoshooting</h4>
-            <p class="hero__feature-text">Hochwertige Aufnahmen, die die Persönlichkeit deines Hundes einfangen.</p>
-          </div>
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting 2">
         </div>
         
 
-        <div class="col-lg-4">
-          <div class="hero__feature-card">
-            <div class="hero__feature-image">
-              <img src="assets/images/placeholder.svg" alt="">
-            </div>
-            <h4 class="hero__feature-title">Hunde-Fotoshooting mit Herz, Geduld und Leckerlis</h4>
-            <p class="hero__feature-text">Für entspannte Vierbeiner und glückliche Besitzer.</p>
-          </div>
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting 3">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting 4">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting 5">
         </div>
         
       </div>
     </div>
-    
+    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
 </section>
 
@@ -132,15 +215,17 @@
      - Background: #EEE3D0 (secondary)
      - Title: Inter Bold
      - Subtitle: Inter Medium
-     - Outline button
+     - Layout: default (center) or layoutRow (text left, button right)
      ============================================ -->
 
-<section class="cta section--bg-secondary">
+<section class="cta section--bg-primary cta--rounded cta--row">
   <div class="container">
-    <div class="cta__content text-center">
-      <h2 class="cta__title">Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.</h2>
-      <p class="cta__subtitle">Dauert bis zum Gutschein < 30 Sekunden</p>
-      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Gutschein sichern</a>
+    <div class="cta__content">
+      <div class="cta__text">
+        <h2 class="cta__title">Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.</h2>
+        <p class="cta__subtitle">Dauer bis zum Gutschein: ≈ 30 Sekunden</p>
+      </div>
+      <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
     </div>
   </div>
 </section>
@@ -157,9 +242,11 @@
      - 4 steps in 2x2 grid
      ============================================ -->
 
-<section class="steps section--bg-secondary">
+<section class="steps section--bg-primary steps--rounded">
   <div class="container">
     <!-- Title (full width when ctaBottom, otherwise with button on right) -->
+    
+    <h2 class="steps__title steps__title--full">Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?</h2>
     
 
     
@@ -173,7 +260,7 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">1. Eintragen</h3>
-          <p class="step-card__text">Beantworte ein paar kurze Fragen und sichere dir deinen Gutschein.</p>
+          <p class="step-card__text">Beantworte ein paar kurze Fragen im Quiz, damit ich besser einschätzen kann, wie viel Zeit ich für dein persönliches Shooting einplanen darf. Melde dich jetzt für dein kostenloses Fotoshooting an und sichere dir deinen exklusiven Gutschein!</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -185,7 +272,7 @@
             <img src="assets/images/placeholder.svg" alt="">
           </div>
           <h3 class="step-card__title">2. Termin vereinbaren</h3>
-          <p class="step-card__text">Wir melden uns bei dir und finden gemeinsam den perfekten Termin.</p>
+          <p class="step-card__text">Ich melde mich bei dir, um die Details zu besprechen und einen passenden Termin für das Fotoshooting zu finden.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -196,8 +283,8 @@
           <div class="step-card__icon">
             <img src="assets/images/placeholder.svg" alt="">
           </div>
-          <h3 class="step-card__title">3. Zum Fotoshooting kommen</h3>
-          <p class="step-card__text">Kommt entspannt vorbei – mit Leckerlis sind wir bestens vorbereitet.</p>
+          <h3 class="step-card__title">3. Let's start: Fotoshooting</h3>
+          <p class="step-card__text">Während des kostenlosen Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit du eine große Auswahl an Bildern hast und deine persönlichen Favoriten wählen kannst.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -208,8 +295,8 @@
           <div class="step-card__icon">
             <img src="assets/images/placeholder.svg" alt="">
           </div>
-          <h3 class="step-card__title">4. Bilder aussuchen</h3>
-          <p class="step-card__text">Unvergessliche Erinnerungen, direkt zum Bestellen bereit.</p>
+          <h3 class="step-card__title">4. Bildauswahl</h3>
+          <p class="step-card__text">Nach dem Shooting darfst du dir in Ruhe die Bilder anschauen und genau die auswählen, die dir wirklich gefallen. Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung.</p>
           <div class="step-card__divider"></div>
         </div>
       </div>
@@ -218,100 +305,132 @@
 
     <!-- CTA at bottom -->
     
+    <div class="steps__cta-bottom">
+      <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+    </div>
+    
   </div>
 </section>
 
 
 <!-- ============================================
-     FAQ ACCORDION - Landing Generator
+     FEATURES GRID - Landing Generator
 
-     PIXEL-PERFECT ПО FIGMA:
+     PIXEL-PERFECT ПО FIGMA (Landing 3):
      - Background: #F5EDE0 (primary)
-     - Title: Inter Bold 35px
-     - Question: Inter Bold 28px
-     - Answer: Inter Medium 22px
-     - Plus/minus icon: 30x30px
-     - Divider lines between questions
+     - 2x2 grid layout
+     - Icon: 74x75px (left)
+     - Text: Inter Bold 22px (right)
      ============================================ -->
 
-<section class="faq section--bg-primary">
+<section class="features features--grid section--bg-primary">
   <div class="container">
-    <h2 class="faq__title">Häufige Fragen zum Fotoshooting</h2>
-
-    <div class="faq__list">
+    <div class="features__grid">
       
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Wie lange dauert das Hunde-Fotoshooting?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Das Fotoshooting dauert in der Regel 30-45 Minuten. Wir nehmen uns genügend Zeit, damit sich dein Hund entspannen kann und natürliche Aufnahmen entstehen.</p>
-          </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <img src="assets/images/placeholder.svg" alt="">
         </div>
+        <p class="feature-item__text">Ganz viel Zeit & Raum für dich und deinen pelzigen Freund</p>
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Was muss ich zum Shooting mitbringen?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Bringe gerne Leckerlis, das Lieblingsspielzeug deines Hundes und eine Decke mit. Diese vertrauten Gegenstände helfen deinem Vierbeiner, sich wohlzufühlen.</p>
-          </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <img src="assets/images/placeholder.svg" alt="">
         </div>
+        <p class="feature-item__text">Professionelle Fotografin aus Leidenschaft und Professionalität</p>
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Kann ich auch mit auf die Fotos?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Ja, sehr gerne! Fotos mit dir und deinem Hund zusammen sind besonders schön und zeigen eure einzigartige Verbindung.</p>
-          </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <img src="assets/images/placeholder.svg" alt="">
         </div>
+        <p class="feature-item__text">Kostenfreies Fotoshooting</p>
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Was ist, wenn mein Hund nervös oder schüchtern ist?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Kein Problem! Wir haben viel Geduld und Erfahrung mit allen Hundecharakteren. Wir lassen deinem Hund die Zeit, die er braucht, um sich einzugewöhnen.</p>
-          </div>
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <img src="assets/images/placeholder.svg" alt="">
         </div>
+        <p class="feature-item__text">Hohe Qualität der Fotos hautnah erleben</p>
       </div>
       
     </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY DECORATED - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA (Landing 3):
+     - Main image: 1233x656px, rounded 50px
+     - Decorative image top-right: 300x200px
+     - Decorative image bottom-left: 300x200px
+     ============================================ -->
+
+<section class="gallery-decorated section--bg-primary">
+  <div class="container">
+    <div class="gallery-decorated__wrapper">
+      <img src="assets/images/placeholder.svg" alt="Hunde-Fotoshooting" class="gallery-decorated__main">
+      
+      <img src="assets/images/placeholder.svg" alt="" class="gallery-decorated__decor gallery-decorated__decor--top-right">
+      
+      
+      <img src="assets/images/placeholder.svg" alt="" class="gallery-decorated__decor gallery-decorated__decor--bottom-left">
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     FAQ CARDS - Landing Generator (Landing 3)
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Title: Inter Bold 45px, centered
+     - Cards: 2x2 grid, #F8F8F8 background
+     - Card radius: 30px
+     - Question text: Inter Medium 22px
+     - NO accordion - static cards only
+     ============================================ -->
+
+<section class="faq faq--cards-only section--bg-primary">
+  <div class="container">
+    <h2 class="faq__title">Häufige Fragen zum Fotoshooting</h2>
+
+    <div class="faq__cards-grid">
+      
+      <div class="faq__card">
+        <p class="faq__card-text">Wie lange dauert das Hunde-Fotoshooting?</p>
+      </div>
+      
+
+      <div class="faq__card">
+        <p class="faq__card-text">Was muss ich zum Shooting mitbringen?</p>
+      </div>
+      
+
+      <div class="faq__card">
+        <p class="faq__card-text">Kann ich auch mit auf die Fotos?</p>
+      </div>
+      
+
+      <div class="faq__card">
+        <p class="faq__card-text">Was ist, wenn mein Hund nervös oder schüchtern ist?</p>
+      </div>
+      
+    </div>
+
+    
+    <div class="faq__cta">
+      <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+    </div>
+    
   </div>
 </section>
 
@@ -329,7 +448,7 @@
      - CTA button with outline style
      ============================================ -->
 
-<section class="services section--bg-secondary">
+<section class="services section--bg-primary services--rounded">
   <div class="container">
     <div class="services__header">
       <h2 class="services__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
@@ -342,7 +461,7 @@
           <img src="assets/images/placeholder.svg" alt="">
         </div>
         <h3 class="service-card__title">Family Time</h3>
-        <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten einzufangen.</p>
+        <p class="service-card__text">Haltet die unbeschwerte Freude eurer Familie in liebevollen, natürlichen Bildern fest – voller Nähe, Lachen und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und eure Verbundenheit authentisch zeigen.</p>
       </div>
       
 
@@ -351,7 +470,7 @@
           <img src="assets/images/placeholder.svg" alt="">
         </div>
         <h3 class="service-card__title">Babybauch & Newborn</h3>
-        <p class="service-card__text">Schwangerschaft und Neugeborene in liebevollen Bildern festhalten.</p>
+        <p class="service-card__text">Vom wachsenden Babybauch bis zu den ersten zauberhaften Momenten mit deinem Neugeborenen – ich halte diese unwiederbringliche Zeit in liebevollen Bildern fest, die ein Leben lang begleiten.</p>
       </div>
       
 
@@ -360,7 +479,7 @@
           <img src="assets/images/placeholder.svg" alt="">
         </div>
         <h3 class="service-card__title">Hunde-Fotoshooting</h3>
-        <p class="service-card__text">Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest.</p>
+        <p class="service-card__text">Ein kreatives Shooting voller unvergesslicher Erinnerungen – perfekt für dich und deinen vierbeinigen Freund – mit ganz viel Herz, Persönlichkeit und Emotion.</p>
       </div>
       
 
@@ -368,14 +487,14 @@
         <div class="service-card__image">
           <img src="assets/images/placeholder.svg" alt="">
         </div>
-        <h3 class="service-card__title">Kinder Fotoshooting</h3>
-        <p class="service-card__text">Authentisch, ausdrucksstark, zeitlos.</p>
+        <h3 class="service-card__title">Kinder-Fotoshooting</h3>
+        <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest – voller Lachen, Neugier und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und die Persönlichkeit eurer Kleinen authentisch zeigen.</p>
       </div>
       
     </div>
 
     <div class="services__cta">
-      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Hunde-Fotoshooting anfragen</a>
+      <a href="quiz-step1.html" class="btn btn-primary">Jetzt kostenloses Fotoshooting sichern</a>
     </div>
   </div>
 </section>
@@ -394,45 +513,40 @@
      - Social icons: опционально (показывать только если есть в данных)
      ============================================ -->
 
-<section class="about section--bg-primary">
+<section class="about section--bg-primary about--rounded">
   <div class="container">
     <div class="row align-items-start">
       <!-- Изображение слева -->
       <div class="col-lg-5">
         <div class="about__image">
-          <img src="assets/images/placeholder.svg" alt="MileFotografie">
+          <img src="assets/images/placeholder.svg" alt="Möst Fotografie">
         </div>
       </div>
 
       <!-- Контент справа -->
       <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
-          <p class="about__label">Willkommen bei</p>
-          <h2 class="about__name">MileFotografie</h2>
-          <div class="about__divider"></div>
+          
+          <h2 class="about__title-compact">
+            <span class="about__title-line">Willkommen bei</span>
+            <span class="about__title-line">Möst Fotografie</span>
+          </h2>
+          
 
+          
+          
+          <p class="about__text">Ich bin Maren Möst – ausgebildete Fotografin und Mediengestalterin mit einem Bachelor in Medienwirtschaft. Nach mehreren Jahren im Medienbereich, unter anderem beim SWR und bei Bavaria Film, habe ich mich ganz der Fotografie verschrieben.</p>
+          
+
+          <p class="about__text">In meinem Studio kombiniere ich technisches Know-how mit einem künstlerischen Blick fürs Detail. Ich liebe es, echte Momente einzufangen – ruhig, authentisch und mit Gefühl. Meine Erfahrung aus der Filmwelt und der Mediengestaltung hilft mir dabei, Geschichten nicht nur festzuhalten, sondern sichtbar zu machen.</p>
+          
+
+          <p class="about__text">Ob Babybauch, Familie oder Porträt – für mich steht der Mensch im Mittelpunkt. Mit viel Ruhe und einem sicheren Gespür für Atmosphäre entstehen Bilder, die bleiben.</p>
+          
           
 
           
 
-          
-          <div class="about__social">
-            
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="assets/icons/facebook.svg" alt="Facebook">
-            </a>
-            
-
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="assets/icons/instagram.svg" alt="Instagram">
-            </a>
-            
-
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Website">
-              <img src="assets/icons/web.svg" alt="Website">
-            </a>
-            
-          </div>
           
         </div>
       </div>
@@ -704,10 +818,15 @@
   <!-- Google Maps -->
   <div class="footer__map">
     
-    <div class="footer__map-placeholder">
-      <img src="assets/images/placeholder.svg" alt="Map placeholder">
-      <p>Karte wird hier angezeigt</p>
-    </div>
+    <iframe
+      src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     
   </div>
 

@@ -9,7 +9,7 @@
      - 4 steps in 2x2 grid
      ============================================ -->
 
-<section class="steps section--bg-secondary">
+<section class="steps {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} steps--rounded{{/if}}">
   <div class="container">
     <!-- Title (full width when ctaBottom, otherwise with button on right) -->
     {{#if ctaBottom}}

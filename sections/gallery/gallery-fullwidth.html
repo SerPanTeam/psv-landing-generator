@@ -6,8 +6,11 @@
      - Height: 656px
      - Full-width image
      - Между Steps и FAQ
+     - Rounded: 30px radius (Landing 3)
      ============================================ -->
 
-<section class="gallery-fullwidth">
-  <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
+<section class="gallery-fullwidth{{#if rounded}} gallery-fullwidth--rounded{{/if}}">
+  <div class="container">
+    <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
+  </div>
 </section>

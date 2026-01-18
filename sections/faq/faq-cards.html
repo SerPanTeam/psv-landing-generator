@@ -1,0 +1,31 @@
+<!-- ============================================
+     FAQ CARDS - Landing Generator (Landing 3)
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Title: Inter Bold 45px, centered
+     - Cards: 2x2 grid, #F8F8F8 background
+     - Card radius: 30px
+     - Question text: Inter Medium 22px
+     - NO accordion - static cards only
+     ============================================ -->
+
+<section class="faq faq--cards-only section--bg-primary">
+  <div class="container">
+    <h2 class="faq__title">{{title}}</h2>
+
+    <div class="faq__cards-grid">
+      {{#each questions}}
+      <div class="faq__card">
+        <p class="faq__card-text">{{this.question}}</p>
+      </div>
+      {{/each}}
+    </div>
+
+    {{#if ctaText}}
+    <div class="faq__cta">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
+  </div>
+</section>

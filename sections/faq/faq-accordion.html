@@ -10,7 +10,7 @@
      - Divider lines between questions
      ============================================ -->
 
-<section class="faq section--bg-primary">
+<section class="faq section--bg-primary{{#if cardStyle}} faq--{{cardStyle}}{{/if}}">
   <div class="container">
     <h2 class="faq__title">{{title}}</h2>
 
@@ -34,5 +34,11 @@
       </div>
       {{/each}}
     </div>
+
+    {{#if ctaText}}
+    <div class="faq__cta">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
   </div>
 </section>

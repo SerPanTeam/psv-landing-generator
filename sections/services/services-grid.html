@@ -11,7 +11,7 @@
      - CTA button with outline style
      ============================================ -->
 
-<section class="services section--bg-secondary">
+<section class="services {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} services--rounded{{/if}}">
   <div class="container">
     <div class="services__header">
       <h2 class="services__title">{{title}}</h2>
@@ -30,7 +30,7 @@
     </div>
 
     <div class="services__cta">
-      <a href="{{ctaLink}}" class="btn btn-outline">{{ctaText}}</a>
+      <a href="{{ctaLink}}" class="btn {{#if primaryButton}}btn-primary{{else}}btn-outline{{/if}}">{{ctaText}}</a>
     </div>
   </div>
 </section>

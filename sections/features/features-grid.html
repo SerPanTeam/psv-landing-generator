@@ -1,0 +1,24 @@
+<!-- ============================================
+     FEATURES GRID - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA (Landing 3):
+     - Background: #F5EDE0 (primary)
+     - 2x2 grid layout
+     - Icon: 74x75px (left)
+     - Text: Inter Bold 22px (right)
+     ============================================ -->
+
+<section class="features features--grid section--bg-primary{{#if rounded}} features--rounded{{/if}}">
+  <div class="container">
+    <div class="features__grid">
+      {{#each items}}
+      <div class="feature-item">
+        <div class="feature-item__icon">
+          <img src="{{this.image}}" alt="">
+        </div>
+        <p class="feature-item__text">{{this.text}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

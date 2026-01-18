@@ -5,15 +5,17 @@
      - Background: #EEE3D0 (secondary)
      - Title: Inter Bold
      - Subtitle: Inter Medium
-     - Outline button
+     - Layout: default (center) or layoutRow (text left, button right)
      ============================================ -->
 
-<section class="cta section--bg-secondary">
+<section class="cta {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} cta--rounded{{/if}}{{#if layoutRow}} cta--row{{/if}}">
   <div class="container">
-    <div class="cta__content text-center">
-      <h2 class="cta__title">{{title}}</h2>
-      <p class="cta__subtitle">{{subtitle}}</p>
-      <a href="{{buttonLink}}" class="btn btn-outline">{{buttonText}}</a>
+    <div class="cta__content">
+      <div class="cta__text">
+        <h2 class="cta__title">{{title}}</h2>
+        <p class="cta__subtitle">{{subtitle}}</p>
+      </div>
+      <a href="{{buttonLink}}" class="btn btn-primary cta__btn">{{buttonText}}</a>
     </div>
   </div>
 </section>
