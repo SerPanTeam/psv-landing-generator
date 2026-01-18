@@ -32,10 +32,10 @@
         "columns": 4,
         "nextPage": "quiz-step2.html",
         "options": [
-          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "assets/images/placeholder.svg" },
-          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "assets/images/placeholder.svg" },
-          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "assets/images/placeholder.svg" },
-          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "assets/images/placeholder.svg" }
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=200&h=200&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -45,9 +45,9 @@
         "columns": 3,
         "nextPage": "quiz-step3.html",
         "options": [
-          { "value": "ja_unbedingt", "text": "Ja, unbedingt!", "image": "assets/images/placeholder.svg" },
-          { "value": "nein", "text": "Nein", "image": "assets/images/placeholder.svg" },
-          { "value": "vielleicht", "text": "Vielleicht – sind noch unsicher", "image": "assets/images/placeholder.svg" }
+          { "value": "ja_unbedingt", "text": "Ja, unbedingt!", "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=200&h=200&fit=crop" },
+          { "value": "nein", "text": "Nein", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
+          { "value": "vielleicht", "text": "Vielleicht – sind noch unsicher", "image": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -57,10 +57,10 @@
         "columns": 4,
         "nextPage": "quiz-step4.html",
         "options": [
-          { "value": "2_personen", "text": "2 Personen", "image": "assets/images/placeholder.svg" },
-          { "value": "3_4_personen", "text": "3–4 Personen", "image": "assets/images/placeholder.svg" },
-          { "value": "5_mehr", "text": "5 oder mehr Personen", "image": "assets/images/placeholder.svg" },
-          { "value": "noch_unklar", "text": "Noch unklar – wir entscheiden spontan", "image": "assets/images/placeholder.svg" }
+          { "value": "2_personen", "text": "2 Personen", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=200&h=200&fit=crop" },
+          { "value": "3_4_personen", "text": "3–4 Personen", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
+          { "value": "5_mehr", "text": "5 oder mehr Personen", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
+          { "value": "noch_unklar", "text": "Noch unklar – wir entscheiden spontan", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -70,8 +70,8 @@
         "columns": 2,
         "nextPage": "quiz-form.html",
         "options": [
-          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "assets/images/placeholder.svg" },
-          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "assets/images/placeholder.svg" }
+          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=200&h=200&fit=crop" }
         ]
       }
     ],
@@ -81,7 +81,7 @@
       "formTitle": "Special-Gutschein:",
       "formSubtitle": "Familien-Fotoshooting<br>KOSTENLOS",
       "formNote": "Nur für kurze Zeit",
-      "formImage": "assets/images/placeholder.svg",
+      "formImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=450&h=550&fit=crop",
       "formImageAlt": "Familien-Fotoshooting",
       "successPage": "quiz-success.html",
       "placeholderName": "Dein Vor- und Nachname",
@@ -97,7 +97,9 @@
       "privacyText": "Ich akzeptiere die",
       "privacyLinkText": "Datenschutzbestimmungen",
       "submitButtonText": "Sende mir den Gutschein zu!",
-      "privacyNote": "Deine Sicherheit ist unser größtes Anliegen – Vertraue uns und schütze deine Privatsphäre!"
+      "privacyNote": "Deine Sicherheit ist unser größtes Anliegen – Vertraue uns und schütze deine Privatsphäre!",
+      "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
+      "infoText": "Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
     },
 
     "success": {
@@ -107,7 +109,7 @@
         "Wir melden uns bald bei dir.",
         "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
       ],
-      "successImage": "assets/images/placeholder.svg",
+      "successImage": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=450&h=550&fit=crop",
       "successImageAlt": "Familien-Fotoshooting",
       "ctaText": "Jetzt Termin wählen & sichern!",
       "ctaLink": "#",
@@ -144,15 +146,15 @@
         "subtitle": "<strong>Familienbilder</strong>, die sich ideal als ein <strong>Weihnachtsgeschenk</strong> eignen.",
         "buttonText": "Button",
         "buttonLink": "quiz-step1.html",
-        "imageMain": "assets/images/placeholder.svg",
-        "imageSecondary": "assets/images/placeholder.svg",
+        "imageMain": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=500&h=500&fit=crop",
+        "imageSecondary": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=400&h=380&fit=crop",
         "imageAlt": "Familien-Fotoshooting"
       }
     },
     {
       "template": "promo/promo-v1.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
+        "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=500&h=600&fit=crop",
         "title": "Liebe Familien, aufgepasst!",
         "paragraphs": [
           "Jetzt kostenloses Weihnachts-Familien-Fotoshooting sichern – bei mir im Studio in Aalen!",
@@ -171,7 +173,7 @@
     {
       "template": "content/content-v1.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
+        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=600&fit=crop",
         "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
         "subtitle": "Familien-Fotoshooting – liebevoll & natürlich",
         "text": "Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.",
@@ -184,9 +186,10 @@
       "template": "gallery/gallery-slider.html",
       "data": {
         "images": [
-          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 1" },
-          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 2" },
-          { "src": "assets/images/placeholder.svg", "alt": "Familien-Foto 3" }
+          { "src": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&h=400&fit=crop", "alt": "Familien-Foto 1" },
+          { "src": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=400&h=400&fit=crop", "alt": "Familien-Foto 2" },
+          { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=400&fit=crop", "alt": "Familien-Foto 3" },
+          { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop", "alt": "Familien-Foto 4" }
         ]
       }
     },
@@ -196,17 +199,17 @@
         "sectionTitle": "Was dich erwartet",
         "items": [
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&h=120&fit=crop",
             "title": "Liebevoll dekoriertes Set mit Weihnachtszauber",
             "text": "Gemütliche Atmosphäre mit stimmungsvoller Deko – perfekt für eure festlichen Familienfotos."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=120&h=120&fit=crop",
             "title": "Ganz viel Raum für echte Familienmomente",
             "text": "Ob Kuscheln, Lachen oder einfach Zusammensein – ich halte eure Verbindung in natürlichen Bildern fest."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=120&h=120&fit=crop",
             "title": "Wunderschöne Erinnerungen zum Verschenken",
             "text": "Echte, emotionale Bilder, die ihr lieben – und zu Weihnachten verschenken – werdet."
           }
@@ -223,25 +226,25 @@
         "steps": [
           {
             "number": "1",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=80&h=80&fit=crop",
             "title": "1. Eintragen",
             "text": "Mach das Quiz und beantworte die Fragen, damit ich genügend Zeit für euch einplanen kann. Trag dich ein und sichere dir deinen unschlagbaren Gutschein! Ich melde mich so schnell wie möglich bei dir."
           },
           {
             "number": "2",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1452802447250-470a88ac82bc?w=80&h=80&fit=crop",
             "title": "2. Shootingzeit",
             "text": "Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt."
           },
           {
             "number": "3",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop",
             "title": "3. Wähle dein Lieblingsbild/er aus",
             "text": "Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen und entscheiden, welche ihr erwerben möchtet – ganz ohne Kaufzwang."
           },
           {
             "number": "4",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop",
             "title": "4. Ergebnis",
             "text": "Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben."
           }
@@ -251,7 +254,7 @@
     {
       "template": "gallery/gallery-fullwidth.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
+        "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=1400&h=700&fit=crop",
         "alt": "Familien-Fotoshooting"
       }
     },
@@ -285,22 +288,22 @@
         "title": "Rund ums Jahr warten spannende Fotoshooting-Aktionen auf dich.",
         "services": [
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=350&fit=crop",
             "title": "Family Time",
             "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop",
             "title": "Kinder-Fotoshooting",
             "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=350&h=350&fit=crop",
             "title": "Babybauch & Newborn",
             "text": "Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=350&h=350&fit=crop",
             "title": "Und vieles mehr!",
             "text": ""
           }
@@ -312,7 +315,8 @@
     {
       "template": "about/about-v1.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
+        "showDivider": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop",
         "label": "Hi, ich bin Jenni – dein Kameramädle!",
         "name": "",
         "texts": [

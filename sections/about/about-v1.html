@@ -1,66 +1,11 @@
 <!-- ============================================
-     ABOUT V1 - Landing Generator
+     ABOUT V1 - Default layout (image left, content right)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #F5EDE0 (primary)
-     - Image: 466x560px (single) or 615x360px (stacked)
-     - Label: Inter Medium 28px
-     - Name: Inter Bold 28px
-     - Divider line: ~471px width
-     - Text: Inter Medium 22px (поддержка параграфов)
-     - Social icons: опционально
-     - imagesRight: true = 2 images on right, content on left
+     Для layout с изображениями справа используйте about-v2.html
      ============================================ -->
 
-<section class="about section--bg-primary{{#if rounded}} about--rounded{{/if}}{{#if imagesRight}} about--images-right{{/if}}">
+<section class="about section--bg-primary{{#if rounded}} about--rounded{{/if}}">
   <div class="container">
-    {{#if imagesRight}}
-    <!-- Layout with text on left, 2 stacked images on right -->
-    <div class="row align-items-start">
-      <!-- Контент слева -->
-      <div class="col-lg-5">
-        <div class="about__content">
-          {{#if titleCompact}}
-          <h2 class="about__title-compact">{{titleCompact}}</h2>
-          {{else}}
-          <p class="about__label">{{label}}</p>
-          <h2 class="about__name">{{name}}</h2>
-          {{#unless compact}}<div class="about__divider"></div>{{/unless}}
-          {{/if}}
-
-          {{#if texts}}
-          {{#each texts}}
-          <p class="about__text">{{this}}</p>
-          {{/each}}
-          {{/if}}
-
-          {{#if paragraphs}}
-          {{#each paragraphs}}
-          <p class="about__text">{{this}}</p>
-          {{/each}}
-          {{/if}}
-
-          {{#if ctaText}}
-          <div class="about__cta">
-            <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
-          </div>
-          {{/if}}
-        </div>
-      </div>
-
-      <!-- 2 stacked images on right -->
-      <div class="col-lg-6 offset-lg-1">
-        <div class="about__images-stack">
-          {{#each images}}
-          <div class="about__image-stacked">
-            <img src="{{this.src}}" alt="{{this.alt}}">
-          </div>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-    {{else}}
-    <!-- Default layout: image on left, content on right -->
     <div class="row align-items-start">
       <!-- Изображение слева -->
       <div class="col-lg-5">
@@ -80,33 +25,24 @@
           {{else}}
           <p class="about__label">{{label}}</p>
           <h2 class="about__name">{{name}}</h2>
-          <div class="about__divider"></div>
+          {{#if showDivider}}<div class="about__divider"></div>{{/if}}
           {{/if}}
 
-          {{#if texts}}
           {{#each texts}}
           <p class="about__text">{{this}}</p>
           {{/each}}
-          {{/if}}
 
-          {{#if paragraphs}}
           {{#each paragraphs}}
           <p class="about__text">{{this}}</p>
           {{/each}}
-          {{/if}}
 
-          {{#if socials}}
-          <div class="about__social">
-            {{#each socials}}
-            <a href="{{this.url}}" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{this.name}}">
-              <img src="{{this.icon}}" alt="{{this.name}}">
-            </a>
-            {{/each}}
-          </div>
-          {{/if}}
+          {{#each socials}}
+          <a href="{{url}}" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{name}}">
+            <img src="{{icon}}" alt="{{name}}">
+          </a>
+          {{/each}}
         </div>
       </div>
     </div>
-    {{/if}}
   </div>
 </section>

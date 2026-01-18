@@ -32,9 +32,9 @@
         "columns": 3,
         "nextPage": "quiz-step2.html",
         "options": [
-          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "assets/images/placeholder.svg" },
-          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "assets/images/placeholder.svg" },
-          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "assets/images/placeholder.svg" }
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" },
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -44,9 +44,9 @@
         "columns": 3,
         "nextPage": "quiz-step3.html",
         "options": [
-          { "value": "pelziger_freund", "text": "Mein pelziger Freund", "image": "assets/images/placeholder.svg" },
-          { "value": "pelzige_freunde", "text": "Meine pelzige Freunde", "image": "assets/images/placeholder.svg" },
-          { "value": "ganze_familie", "text": "Die ganze Familie", "image": "assets/images/placeholder.svg" }
+          { "value": "pelziger_freund", "text": "Mein pelziger Freund", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" },
+          { "value": "pelzige_freunde", "text": "Meine pelzige Freunde", "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=200&h=200&fit=crop" },
+          { "value": "ganze_familie", "text": "Die ganze Familie", "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -56,10 +56,10 @@
         "columns": 4,
         "nextPage": "quiz-step4.html",
         "options": [
-          { "value": "unter_1_jahr", "text": "Unter 1 Jahr", "image": "assets/images/placeholder.svg" },
-          { "value": "1_3_jahre", "text": "1–3 Jahre", "image": "assets/images/placeholder.svg" },
-          { "value": "4_7_jahre", "text": "4–7 Jahre", "image": "assets/images/placeholder.svg" },
-          { "value": "ueber_7_jahre", "text": "Über 7 Jahre", "image": "assets/images/placeholder.svg" }
+          { "value": "unter_1_jahr", "text": "Unter 1 Jahr", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" },
+          { "value": "1_3_jahre", "text": "1–3 Jahre", "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=200&h=200&fit=crop" },
+          { "value": "4_7_jahre", "text": "4–7 Jahre", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" },
+          { "value": "ueber_7_jahre", "text": "Über 7 Jahre", "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -69,10 +69,10 @@
         "columns": 4,
         "nextPage": "quiz-form.html",
         "options": [
-          { "value": "ruhig_gelassen", "text": "Ruhig und gelassen", "image": "assets/images/placeholder.svg" },
-          { "value": "verspielt_energiegeladen", "text": "Verspielt und energiegeladen", "image": "assets/images/placeholder.svg" },
-          { "value": "schuechtern_aengstlich", "text": "Schüchtern oder ängstlich", "image": "assets/images/placeholder.svg" },
-          { "value": "neugierig_aufgeschlossen", "text": "Neugierig und aufgeschlossen", "image": "assets/images/placeholder.svg" }
+          { "value": "ruhig_gelassen", "text": "Ruhig und gelassen", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" },
+          { "value": "verspielt_energiegeladen", "text": "Verspielt und energiegeladen", "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=200&h=200&fit=crop" },
+          { "value": "schuechtern_aengstlich", "text": "Schüchtern oder ängstlich", "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=200&h=200&fit=crop" },
+          { "value": "neugierig_aufgeschlossen", "text": "Neugierig und aufgeschlossen", "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=200&h=200&fit=crop" }
         ]
       }
     ],
@@ -82,7 +82,7 @@
       "formTitle": "Trag dich jetzt ein und sichere dir dein kostenloses Hunde-Fotoshooting!",
       "formSubtitle": "",
       "formNote": "Das Fotoshooting findet nur bis zum 23.07.2025 statt! Schnell sein lohnt sich - ich freue mich auf euch!",
-      "formImage": "assets/images/placeholder.svg",
+      "formImage": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=450&h=550&fit=crop",
       "formImageAlt": "Hunde-Fotoshooting",
       "successPage": "quiz-success.html",
       "placeholderName": "Dein Vor- und Nachname",
@@ -110,7 +110,7 @@
         "Wir melden uns bald bei dir.",
         "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
       ],
-      "successImage": "assets/images/placeholder.svg",
+      "successImage": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=450&h=550&fit=crop",
       "successImageAlt": "Hunde-Fotoshooting",
       "ctaText": "Jetzt Termin wählen & sichern!",
       "ctaLink": "#",
@@ -142,7 +142,7 @@
     {
       "template": "hero/hero-v3.html",
       "data": {
-        "bannerImage": "assets/images/placeholder.svg",
+        "bannerImage": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&h=800&fit=crop",
         "label": "Kostenloses",
         "title": "Hunde-Fotoshooting",
         "subtitleLines": [
@@ -160,20 +160,20 @@
         ],
         "sidebarButtonText": "Kostenloses Fotoshooting sichern",
         "sidebarButtonLink": "quiz-step1.html",
-        "sidebarImage": "assets/images/placeholder.svg",
+        "sidebarImage": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=500&h=400&fit=crop",
         "features": [
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop",
             "title": "Hunde-Fotoshooting – liebevoll & natürlich",
             "text": "Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop",
             "title": "Professionelles Hunde-Fotoshooting",
             "text": "Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop",
             "title": "Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit",
             "text": "Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren."
           }
@@ -185,11 +185,11 @@
       "data": {
         "rounded": true,
         "images": [
-          { "src": "assets/images/placeholder.svg", "alt": "Hunde-Fotoshooting 1" },
-          { "src": "assets/images/placeholder.svg", "alt": "Hunde-Fotoshooting 2" },
-          { "src": "assets/images/placeholder.svg", "alt": "Hunde-Fotoshooting 3" },
-          { "src": "assets/images/placeholder.svg", "alt": "Hunde-Fotoshooting 4" },
-          { "src": "assets/images/placeholder.svg", "alt": "Hunde-Fotoshooting 5" }
+          { "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop", "alt": "Hunde-Fotoshooting 1" },
+          { "src": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=400&fit=crop", "alt": "Hunde-Fotoshooting 2" },
+          { "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop", "alt": "Hunde-Fotoshooting 3" },
+          { "src": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=400&fit=crop", "alt": "Hunde-Fotoshooting 4" },
+          { "src": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=400&fit=crop", "alt": "Hunde-Fotoshooting 5" }
         ]
       }
     },
@@ -217,25 +217,25 @@
         "steps": [
           {
             "number": "1",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=80&h=80&fit=crop",
             "title": "1. Eintragen",
             "text": "Beantworte ein paar kurze Fragen im Quiz, damit ich besser einschätzen kann, wie viel Zeit ich für dein persönliches Shooting einplanen darf. Melde dich jetzt für dein kostenloses Fotoshooting an und sichere dir deinen exklusiven Gutschein!"
           },
           {
             "number": "2",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1452802447250-470a88ac82bc?w=80&h=80&fit=crop",
             "title": "2. Termin vereinbaren",
             "text": "Ich melde mich bei dir, um die Details zu besprechen und einen passenden Termin für das Fotoshooting zu finden."
           },
           {
             "number": "3",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop",
             "title": "3. Let's start: Fotoshooting",
             "text": "Während des kostenlosen Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit du eine große Auswahl an Bildern hast und deine persönlichen Favoriten wählen kannst."
           },
           {
             "number": "4",
-            "icon": "assets/images/placeholder.svg",
+            "icon": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop",
             "title": "4. Bildauswahl",
             "text": "Nach dem Shooting darfst du dir in Ruhe die Bilder anschauen und genau die auswählen, die dir wirklich gefallen. Du kaufst nur, was dich begeistert – ganz ohne Druck oder Verpflichtung."
           }
@@ -246,20 +246,20 @@
       "template": "features/features-grid.html",
       "data": {
         "items": [
-          { "image": "assets/images/placeholder.svg", "text": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund" },
-          { "image": "assets/images/placeholder.svg", "text": "Professionelle Fotografin aus Leidenschaft und Professionalität" },
-          { "image": "assets/images/placeholder.svg", "text": "Kostenfreies Fotoshooting" },
-          { "image": "assets/images/placeholder.svg", "text": "Hohe Qualität der Fotos hautnah erleben" }
+          { "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=120&h=120&fit=crop", "text": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund" },
+          { "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=120&h=120&fit=crop", "text": "Professionelle Fotografin aus Leidenschaft und Professionalität" },
+          { "image": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=120&h=120&fit=crop", "text": "Kostenfreies Fotoshooting" },
+          { "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=120&h=120&fit=crop", "text": "Hohe Qualität der Fotos hautnah erleben" }
         ]
       }
     },
     {
       "template": "gallery/gallery-decorated.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
+        "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1300&h=700&fit=crop",
         "alt": "Hunde-Fotoshooting",
-        "decorTopRight": "assets/images/placeholder.svg",
-        "decorBottomLeft": "assets/images/placeholder.svg"
+        "decorTopRight": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=350&h=250&fit=crop",
+        "decorBottomLeft": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=350&h=250&fit=crop"
       }
     },
     {
@@ -297,22 +297,22 @@
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "services": [
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=350&h=350&fit=crop",
             "title": "Family Time",
             "text": "Haltet die unbeschwerte Freude eurer Familie in liebevollen, natürlichen Bildern fest – voller Nähe, Lachen und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und eure Verbundenheit authentisch zeigen."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=350&h=350&fit=crop",
             "title": "Babybauch & Newborn",
             "text": "Vom wachsenden Babybauch bis zu den ersten zauberhaften Momenten mit deinem Neugeborenen – ich halte diese unwiederbringliche Zeit in liebevollen Bildern fest, die ein Leben lang begleiten."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=350&h=350&fit=crop",
             "title": "Hunde-Fotoshooting",
             "text": "Ein kreatives Shooting voller unvergesslicher Erinnerungen – perfekt für dich und deinen vierbeinigen Freund – mit ganz viel Herz, Persönlichkeit und Emotion."
           },
           {
-            "image": "assets/images/placeholder.svg",
+            "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop",
             "title": "Kinder-Fotoshooting",
             "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest – voller Lachen, Neugier und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und die Persönlichkeit eurer Kleinen authentisch zeigen."
           }
@@ -326,7 +326,7 @@
       "data": {
         "rounded": true,
         "compact": true,
-        "image": "assets/images/placeholder.svg",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop",
         "label": "Willkommen bei",
         "name": "Möst Fotografie",
         "texts": [

@@ -1,0 +1,48 @@
+<!-- ============================================
+     ABOUT V2 - Images Right layout (content left, 2 stacked images right)
+
+     Используется в Landing 4 (Kids)
+     ============================================ -->
+
+<section class="about section--bg-primary about--images-right{{#if rounded}} about--rounded{{/if}}">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Контент слева -->
+      <div class="col-lg-5">
+        <div class="about__content">
+          {{#if titleCompact}}
+          <h2 class="about__title-compact">{{titleCompact}}</h2>
+          {{else}}
+          <p class="about__label">{{label}}</p>
+          <h2 class="about__name">{{name}}</h2>
+          {{/if}}
+
+          {{#each texts}}
+          <p class="about__text">{{this}}</p>
+          {{/each}}
+
+          {{#each paragraphs}}
+          <p class="about__text">{{this}}</p>
+          {{/each}}
+
+          {{#if ctaText}}
+          <div class="about__cta">
+            <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- 2 stacked images on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__images-stack">
+          {{#each images}}
+          <div class="about__image-stacked">
+            <img src="{{src}}" alt="{{alt}}">
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

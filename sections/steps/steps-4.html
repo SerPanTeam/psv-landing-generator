@@ -32,10 +32,14 @@
       {{#each steps}}
       <div class="col-lg-6">
         <div class="step-card">
-          <div class="step-card__icon">
-            <img src="{{this.icon}}" alt="">
+          <div class="step-card__header">
+            <div class="step-card__number">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6L6 11L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-card__title">{{this.title}}</h3>
           </div>
-          <h3 class="step-card__title">{{this.title}}</h3>
           <p class="step-card__text">{{this.text}}</p>
           <div class="step-card__divider"></div>
         </div>

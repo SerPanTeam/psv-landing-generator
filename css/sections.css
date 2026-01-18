@@ -1086,13 +1086,37 @@
 
 .step-card {
   margin-bottom: 40px;
+  min-height: 180px; /* Fixed min-height to prevent shifting */
 }
 
+/* Header with icon and title inline */
+.step-card__header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Checkmark icon in circle */
+.step-card__number {
+  width: 40px;
+  height: 40px;
+  min-width: 40px; /* Prevent shrinking */
+  border: 2px solid var(--color-text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+/* Legacy icon support (if still used) */
 .step-card__icon {
-  width: 76px; /* FIGMA: max width */
-  height: 75px; /* FIGMA: exact */
-  background-color: #7f7f7f;
-  margin-bottom: 46px; /* FIGMA: 3563-3442-75 = 46px gap to title */
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  flex-shrink: 0;
 }
 
 .step-card__icon img {
@@ -1104,8 +1128,8 @@
 .step-card__title {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-none); /* FIGMA: 100% */
-  margin-bottom: 29px; /* FIGMA: 3614-3563-22 = 29px gap to text */
+  line-height: 1.2;
+  margin: 0; /* Reset margin when in header */
 }
 
 .step-card__text {
@@ -1275,11 +1299,12 @@
   flex-shrink: 0;
   padding: 10px;
   color: var(--color-text-primary);
+  font-size: 24px;
   transition: opacity 0.2s ease;
 }
 
 .gallery-slider__arrow:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* Gallery Slider Rounded - Landing 3 */
@@ -2221,12 +2246,21 @@
   border-radius: 20px;
   padding: 30px;
   margin-top: 0; /* Remove staggered layout */
+  min-height: 200px; /* Fixed height to prevent shifting */
+}
+
+.steps--rounded .step-card__header {
+  margin-bottom: 16px;
+}
+
+.steps--rounded .step-card__number {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .steps--rounded .step-card__icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .steps--rounded .step-card__title {

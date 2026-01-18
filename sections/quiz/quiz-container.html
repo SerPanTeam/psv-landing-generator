@@ -12,123 +12,25 @@
 <section class="quiz section--bg-primary" id="quiz" data-quiz data-quiz-steps="{{totalSteps}}">
   <div class="container">
 
-    <!-- STEP 1: Kennst du mich bereits? -->
-    <div class="quiz-step" data-quiz-step="0">
+    {{#each steps}}
+    <!-- STEP {{stepNumber}}: {{question}} -->
+    <div class="quiz-step" data-quiz-step="{{@index}}">
       <div class="quiz-step__header">
-        <span class="quiz-step__progress">Weiter zum Gutschein</span>
-        <h2 class="quiz-step__question">Kennst du mich bereits?</h2>
+        <span class="quiz-step__progress">{{progress}}</span>
+        <h2 class="quiz-step__question">{{question}}</h2>
       </div>
-      <div class="quiz-step__options quiz-step__options--4">
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="ja_vom_hoeren">
+      <div class="quiz-step__options quiz-step__options--{{columns}}">
+        {{#each options}}
+        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="{{value}}">
           <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
+            <img src="{{image}}" alt="{{text}}">
           </div>
-          <span class="quiz-option__text">Ja, vom Hören</span>
+          <span class="quiz-option__text">{{text}}</span>
         </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="ja_na_klar">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Ja, na klar!</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="schon_sehr_lang">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Schon sehr lang</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="nein_noch_nicht">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Nein, noch nicht</span>
-        </button>
+        {{/each}}
       </div>
     </div>
-
-    <!-- STEP 2: Welches Bild gefällt dir am Besten? -->
-    <div class="quiz-step" data-quiz-step="1">
-      <div class="quiz-step__header">
-        <span class="quiz-step__progress">4 Fragen bis zum Gutschein</span>
-        <h2 class="quiz-step__question">Welches Bild gefällt dir am Besten?</h2>
-      </div>
-      <div class="quiz-step__options quiz-step__options--4">
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="bild_1">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">1</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="bild_2">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">2</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="bild_3">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">3</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="bild_4">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">4</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- STEP 3: Schon mal ein Familien-Fotoshooting gehabt? -->
-    <div class="quiz-step" data-quiz-step="2">
-      <div class="quiz-step__header">
-        <span class="quiz-step__progress">3 Fragen bis zum Gutschein</span>
-        <h2 class="quiz-step__question">Schon mal ein Familien-Fotoshooting gehabt?</h2>
-      </div>
-      <div class="quiz-step__options quiz-step__options--2">
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="ja_hammer">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Ja, das war der Hammer!</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="nein_noch_nicht">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Nein, bisher noch nicht!</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- STEP 4: Wer wird mit dabei sein? -->
-    <div class="quiz-step" data-quiz-step="3">
-      <div class="quiz-step__header">
-        <span class="quiz-step__progress">2 Fragen bis zum Gutschein</span>
-        <h2 class="quiz-step__question">Wer wird mit dabei sein?</h2>
-      </div>
-      <div class="quiz-step__options quiz-step__options--3">
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="elternpaar">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Nur wir als Elternpaar</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="eltern_kinder">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Eltern und die Kinder</span>
-        </button>
-        <button class="quiz-option quiz-option--{{cardStyle}}" data-quiz-option="mit_haustier">
-          <div class="quiz-option__image">
-            <img src="assets/images/placeholder.svg" alt="">
-          </div>
-          <span class="quiz-option__text">Wir nehmen auch unser Haustier mit</span>
-        </button>
-      </div>
-    </div>
+    {{/each}}
 
     <!-- FORM: Контактная форма -->
     <div class="quiz-step quiz-form" data-quiz-step="form">
@@ -136,50 +38,49 @@
         <!-- Форма слева -->
         <div class="col-lg-5">
           <div class="quiz-form__header">
-            <span class="quiz-form__label">Klasse, jetzt zum Gutschein</span>
-            <p class="quiz-form__title">Trage dich jetzt ein und sichere dir dein Platz für ein</p>
-            <h2 class="quiz-form__subtitle">Familien-Fotoshooting zu Weihnachten!</h2>
-            <p class="quiz-form__note">Diese Aktion gilt nur bis zum 06.12.25.</p>
+            <span class="quiz-form__label">{{form.formLabel}}</span>
+            <p class="quiz-form__title">{{form.formTitle}}</p>
+            <h2 class="quiz-form__subtitle">{{form.formSubtitle}}</h2>
+            <p class="quiz-form__note">{{form.formNote}}</p>
           </div>
 
           <form class="quiz-form__form" data-quiz-form>
             <div class="form-group">
-              <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
+              <input type="text" name="name" placeholder="{{form.placeholderName}}" required>
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+              <input type="email" name="email" placeholder="{{form.placeholderEmail}}" required>
             </div>
             <div class="form-group">
-              <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
+              <input type="tel" name="phone" placeholder="{{form.placeholderPhone}}" required>
             </div>
             <div class="form-group">
               <select name="availability">
-                <option value="" disabled selected>Wann seid ihr erreichbar (Mehrfachauswahl)</option>
-                <option value="morgens">Morgens</option>
-                <option value="mittags">Mittags</option>
-                <option value="nachmittags">Nachmittags</option>
-                <option value="abends">Abends</option>
+                <option value="" disabled selected>{{form.placeholderAvailability}}</option>
+                {{#each form.availabilityOptions}}
+                <option value="{{value}}">{{label}}</option>
+                {{/each}}
               </select>
             </div>
             <div class="form-group form-group--checkbox">
               <label>
                 <input type="checkbox" name="privacy" required>
-                <span>Ich akzeptiere die <a href="#" target="_blank">Datenschutzbestimmungen</a>.</span>
+                <span>{{form.privacyText}} <a href="{{datenschutzUrl}}" target="_blank">{{form.privacyLinkText}}</a>.</span>
               </label>
             </div>
-            <button type="submit" class="btn btn-primary">Jetzt Gutschein sichern!</button>
+            <button type="submit" class="btn btn-primary">{{form.submitButtonText}}</button>
           </form>
         </div>
 
         <!-- Контент справа -->
         <div class="col-lg-6 offset-lg-1">
           <div class="quiz-form__image">
-            <img src="assets/images/placeholder.svg" alt="">
+            <img src="{{form.formImage}}" alt="{{form.formImageAlt}}">
           </div>
-          <p class="quiz-form__privacy">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          <p class="quiz-form__privacy">{{form.privacyNote}}</p>
           <div class="quiz-form__info">
-            <p class="quiz-form__info-title">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
-            <p class="quiz-form__info-text">Da mein Zeitplan während des Aktionszeitraums besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
+            <p class="quiz-form__info-title">{{form.infoTitle}}</p>
+            <p class="quiz-form__info-text">{{form.infoText}}</p>
           </div>
         </div>
       </div>
@@ -190,57 +91,62 @@
       <div class="row">
         <!-- Контент слева -->
         <div class="col-lg-5">
-          <h2 class="quiz-success__title">Herzlichen Glückwunsch!</h2>
-          <p class="quiz-success__subtitle">Deine Anfrage ist bei uns eingegangen!</p>
-          <p class="quiz-success__text">Wir melden uns bald bei dir.</p>
+          <h2 class="quiz-success__title">{{success.successTitle}}</h2>
+          <p class="quiz-success__subtitle">{{success.successSubtitle}}</p>
+          {{#each success.successTexts}}
+          <p class="quiz-success__text">{{this}}</p>
+          {{/each}}
 
           <div class="quiz-success__cta">
-            <a href="#" class="btn btn-primary">Jetzt Termin wählen &amp; sichern!</a>
+            <a href="{{success.ctaLink}}" class="btn btn-primary">{{success.ctaText}}</a>
           </div>
 
-          <p class="quiz-success__alternative">Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!</p>
+          <p class="quiz-success__alternative">{{success.alternativeText}}</p>
 
           <div class="quiz-success__buttons">
-            <a href="tel:+49123456789" class="btn btn-outline">Jetzt anrufen</a>
-            <a href="mailto:info@example.com" class="btn btn-outline">Mail uns!</a>
+            <a href="tel:{{success.phoneNumber}}" class="btn btn-outline">{{success.callButtonText}}</a>
+            <a href="mailto:{{success.email}}" class="btn btn-outline">{{success.emailButtonText}}</a>
           </div>
         </div>
 
         <!-- Изображение справа -->
         <div class="col-lg-6 offset-lg-1">
           <div class="quiz-success__image">
-            <img src="assets/images/placeholder.svg" alt="">
+            <img src="{{success.successImage}}" alt="{{success.successImageAlt}}">
           </div>
         </div>
       </div>
 
       <!-- About section -->
+      {{#if success.showSocial}}
       <div class="quiz-success__about">
         <div class="row">
           <div class="col-lg-5">
             <div class="about__image">
-              <img src="assets/images/placeholder.svg" alt="">
+              <img src="{{success.successImage}}" alt="{{success.aboutName}}">
             </div>
           </div>
           <div class="col-lg-6 offset-lg-1">
-            <p class="about__label">Willkommen bei</p>
-            <h3 class="about__name">Dorett Dornbusch</h3>
-            <div class="about__divider"></div>
-            <p class="about__text">Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.</p>
+            <h3 class="about__name">{{success.aboutName}}</h3>
+            <p class="about__tagline">{{success.aboutTagline}}</p>
+            {{#each success.aboutTexts}}
+            <p class="about__text">{{this}}</p>
+            {{/each}}
             <div class="about__social">
-              <a href="#" class="social-icon" aria-label="Facebook">
+              <a href="{{success.facebookUrl}}" class="social-icon" aria-label="Facebook">
                 <img src="assets/icons/facebook.svg" alt="Facebook">
               </a>
-              <a href="#" class="social-icon" aria-label="Instagram">
+              <a href="{{success.instagramUrl}}" class="social-icon" aria-label="Instagram">
                 <img src="assets/icons/instagram.svg" alt="Instagram">
               </a>
-              <a href="#" class="social-icon" aria-label="Website">
+              <a href="{{success.websiteUrl}}" class="social-icon" aria-label="Website">
                 <img src="assets/icons/web.svg" alt="Website">
               </a>
             </div>
           </div>
         </div>
       </div>
+      {{/if}}
     </div>
 
   </div>
