@@ -1,0 +1,31 @@
+<!-- ============================================
+     CONTENT V2 - Landing 4 Style (2-column text)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:47):
+     - Background: #F5EDE0 (primary)
+     - Title left: Inter Bold 28px
+     - Text right: Inter Medium 22px
+     - Button: rounded style
+     ============================================ -->
+
+<section class="content-section content-section--2col section--bg-primary">
+  <div class="container">
+    <div class="row">
+      <!-- Title + Button on left -->
+      <div class="col-lg-5">
+        <h2 class="content-section__title content-section__title--bold">{{title}}</h2>
+        {{#if buttonText}}
+        <a href="{{buttonLink}}" class="btn btn-primary content-section__btn">{{buttonText}}</a>
+        {{/if}}
+      </div>
+      <!-- Text on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="content-section__text-block">
+          {{#each texts}}
+          <p class="content-section__text">{{this}}</p>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

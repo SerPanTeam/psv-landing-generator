@@ -9,7 +9,7 @@
      - Rounded: 30px radius (Landing 3)
      ============================================ -->
 
-<section class="gallery-fullwidth{{#if rounded}} gallery-fullwidth--rounded{{/if}}">
+<section class="gallery-fullwidth {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} gallery-fullwidth--rounded{{/if}}">
   <div class="container">
     <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
   </div>

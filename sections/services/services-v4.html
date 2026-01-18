@@ -1,0 +1,30 @@
+<!-- ============================================
+     SERVICES V4 - Landing 4 (Kinder-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:77):
+     - Title: 45px Bold, left-aligned
+     - 3 white cards in row (424x596px, radius 15px)
+     - Card: image (339x257px) + title (28px) + text (22px)
+     - No CTA button
+     - Background: secondary (#EEE3D0)
+     ============================================ -->
+
+<section class="services-v4 {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}">
+  <div class="container">
+    <h2 class="services-v4__title">{{title}}</h2>
+
+    <div class="services-v4__grid">
+      {{#each services}}
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="{{this.image}}" alt="{{this.title}}" class="services-v4__image">
+        </div>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">{{this.title}}</h3>
+          <p class="services-v4__card-text">{{this.text}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -86,6 +86,19 @@ function replacePlaceholders(template, data) {
       // Индекс
       itemResult = itemResult.replace(/\{\{@index\}\}/g, index);
       itemResult = itemResult.replace(/\{\{@number\}\}/g, index + 1);
+
+      // @first - показываем контент только для первого элемента
+      const isFirst = index === 0;
+      itemResult = itemResult.replace(/\{\{#if @first\}\}([\s\S]*?)\{\{\/if\}\}/g, (m, content) => {
+        return isFirst ? content : '';
+      });
+
+      // @last - показываем контент только для последнего элемента
+      const isLast = index === items.length - 1;
+      itemResult = itemResult.replace(/\{\{#if @last\}\}([\s\S]*?)\{\{\/if\}\}/g, (m, content) => {
+        return isLast ? content : '';
+      });
+
       return itemResult;
     }).join('\n');
   });

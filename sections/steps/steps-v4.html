@@ -1,0 +1,46 @@
+<!-- ============================================
+     STEPS V4 - Landing 4 (Kinder-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:52):
+     - Primary background
+     - Title: 45px Bold
+     - 3 vertical cards on LEFT (white bg, 15px radius)
+     - Each card: number badge + title + description
+     - Large rotated image on RIGHT
+     - CTA button at bottom right
+     ============================================ -->
+
+<section class="steps steps--v4 section--bg-primary">
+  <div class="container">
+    <h2 class="steps__title steps__title--full">{{title}}</h2>
+
+    <div class="row">
+      <!-- 3 steps on the left -->
+      <div class="col-lg-6">
+        <div class="steps__cards">
+          {{#each steps}}
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">{{this.number}}</div>
+              <h3 class="step-card-v4__title">{{this.title}}</h3>
+            </div>
+            <p class="step-card-v4__text">{{this.text}}</p>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      <!-- Image + CTA on the right -->
+      <div class="col-lg-6">
+        <div class="steps__right-content">
+          <div class="steps__image">
+            <img src="{{image}}" alt="{{imageAlt}}">
+          </div>
+          <div class="steps__cta-right">
+            <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

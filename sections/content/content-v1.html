@@ -20,13 +20,9 @@
           {{#if subtitle}}
           <p class="content-section__subtitle">{{subtitle}}</p>
           {{/if}}
-          {{#if paragraphs}}
-            {{#each paragraphs}}
-            <p class="content-section__text">{{this}}</p>
-            {{/each}}
-          {{else}}
-            <p class="content-section__text">{{text}}</p>
-          {{/if}}
+          {{#each paragraphs}}
+          <p class="content-section__text">{{this}}</p>
+          {{/each}}
           <div class="content-section__divider"></div>
           <a href="{{linkUrl}}" class="content-section__link">
             {{linkText}}

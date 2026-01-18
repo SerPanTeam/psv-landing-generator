@@ -30,120 +30,108 @@
 </head>
 <body>
   <!-- ============================================
-     HEADER V1 - Landing Generator
-
-     PIXEL-PERFECT ПО FIGMA:
-     - Logo: Inter Bold, 45px, #3D3D3D
-     - Padding: 53px top (от края до текста логотипа)
-     - Left margin: 101px (в контейнере 1440px)
-     ============================================ -->
-
-<header class="header">
-  <div class="container">
-    <a href="/" class="header__logo">
-      <span class="logo-text">Logo</span>
-    </a>
-  </div>
-</header>
-
-
-<!-- ============================================
      HERO V4 - Лендинг 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Label: "Kostenloses"
-     - Title: "Kinder - Fotoshooting"
-     - Description text
-     - CTA button
-     - 4 наклонённых изображения в ряд
+     PIXEL-PERFECT ПО FIGMA (node 479:30):
+     - Dark background: #3D3D3D, height 709px
+     - Logo: #F5EDE0 (light on dark)
+     - Label + Title: #E2C08D (yellow/gold)
+     - Subtitle: white, 22px
+     - Date notice: #E2C08D, 16px
+     - Button: 406x60px, rounded-40px
+     - "Warum kostenlos?" section
+     - Below: 4 tilted image cards + title
      ============================================ -->
 
-<section class="hero hero--v4 section--bg-primary">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Контент слева -->
-      <div class="col-lg-5">
-        <div class="hero__content">
-          <span class="hero__label">Kostenloses</span>
-          <h1 class="hero__title">Kinder - Fotoshooting</h1>
-          <p class="hero__subtitle">Jetzt haben wir gemeinsam die wunderbare Chance, eure Familien oder Kindermomente in liebevollen Bildern festzuhalten.</p>
-          <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
+<section class="hero hero--v4">
+  <div class="hero__dark-section">
+    <div class="container">
+      
+      <p class="hero__logo">Logo</p>
+      
+      <div class="hero__content">
+        <span class="hero__label">Kostenloses</span>
+        <h1 class="hero__title">Kinder - Fotoshooting</h1>
+        <p class="hero__subtitle">Emotionale Bilder – ein persönliches Geschenk zu Weihnachten.</p>
+        
+        <p class="hero__date-notice">Die kostenlosen Kinder- Fotoshootings finden nur vom 01.11. bis 29.11.2025 statt!</p>
+        
+        <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+
+        
+        <div class="hero__why-free">
+          <h3 class="hero__why-free-title">Warum kostenlos?</h3>
+          <p class="hero__why-free-text">Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.</p>
         </div>
-      </div>
-
-      <!-- 4 наклонённых изображения справа -->
-      <div class="col-lg-7">
-        <div class="hero__gallery">
-          
-          <div class="hero__gallery-item hero__gallery-item--1">
-            <img src="assets/images/placeholder.svg" alt="Kind 1">
-          </div>
-          
-
-          <div class="hero__gallery-item hero__gallery-item--2">
-            <img src="assets/images/placeholder.svg" alt="Kind 2">
-          </div>
-          
-
-          <div class="hero__gallery-item hero__gallery-item--3">
-            <img src="assets/images/placeholder.svg" alt="Kind 3">
-          </div>
-          
-
-          <div class="hero__gallery-item hero__gallery-item--4">
-            <img src="assets/images/placeholder.svg" alt="Kind 4">
-          </div>
-          
-        </div>
+        
       </div>
     </div>
+  </div>
 
-    <!-- Subtitle section -->
-    
-    <div class="hero__section-title">
-      <h2>Echte Kinderlachen, echte Erinnerungen!</h2>
+  <!-- Gallery section with tilted images -->
+  <div class="hero__gallery-section section--bg-primary">
+    <div class="container">
+      
+      <h2 class="hero__gallery-title">Echte Kinderlachen, echte Erinnerungen!</h2>
+      
+      <div class="hero__gallery">
+        
+        <div class="hero__gallery-item hero__gallery-item--1">
+          <img src="assets/images/placeholder.svg" alt="Kind 1">
+        </div>
+        
+
+        <div class="hero__gallery-item hero__gallery-item--2">
+          <img src="assets/images/placeholder.svg" alt="Kind 2">
+        </div>
+        
+
+        <div class="hero__gallery-item hero__gallery-item--3">
+          <img src="assets/images/placeholder.svg" alt="Kind 3">
+        </div>
+        
+
+        <div class="hero__gallery-item hero__gallery-item--4">
+          <img src="assets/images/placeholder.svg" alt="Kind 4">
+        </div>
+        
+      </div>
     </div>
-    
   </div>
 </section>
 
 
 <!-- ============================================
-     FEATURES 3-COL - Landing Generator
+     CONTENT V2 - Landing 4 Style (2-column text)
 
-     PIXEL-PERFECT ПО FIGMA:
+     PIXEL-PERFECT ПО FIGMA (node 479:47):
      - Background: #F5EDE0 (primary)
-     - 3 columns with icons
-     - Icon: 150x150px
-     - Title: Inter Bold 22px
-     - Divider line: 158px width
-     - Text: Inter Medium 22px
+     - Title left: Inter Bold 28px
+     - Text right: Inter Medium 22px
+     - Button: rounded style
      ============================================ -->
 
-<section class="features section--bg-primary">
+<section class="content-section content-section--2col section--bg-primary">
   <div class="container">
-    
-    <div class="features__wrapper">
-      
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <img src="assets/images/placeholder.svg" alt="">
-        </div>
-        <h3 class="feature-card__title">Kinder-Fotoshooting – natürlich, kindlich & unvergesslich</h3>
-        <div class="feature-card__divider"></div>
-        <p class="feature-card__text">In vergnüglicher Atmosphäre entstehen echte, authentische Aufnahmen.</p>
+    <div class="row">
+      <!-- Title + Button on left -->
+      <div class="col-lg-5">
+        <h2 class="content-section__title content-section__title--bold">Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich</h2>
+        
+        <a href="quiz-step1.html" class="btn btn-primary content-section__btn">Fotoshooting sichern</a>
+        
       </div>
-      
+      <!-- Text on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="content-section__text-block">
+          
+          <p class="content-section__text">In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.</p>
+          
 
-      <div class="feature-card">
-        <div class="feature-card__icon">
-          <img src="assets/images/placeholder.svg" alt="">
+          <p class="content-section__text">Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!</p>
+          
         </div>
-        <h3 class="feature-card__title"></h3>
-        <div class="feature-card__divider"></div>
-        <p class="feature-card__text">Wir sorgen dafür, dass die Kleinen sich wohlfühlen und ganz sie selbst sein können.</p>
       </div>
-      
     </div>
   </div>
 </section>
@@ -159,12 +147,12 @@
      - Layout: default (center) or layoutRow (text left, button right)
      ============================================ -->
 
-<section class="cta section--bg-secondary">
+<section class="cta section--bg-secondary cta--rounded cta--left">
   <div class="container">
     <div class="cta__content">
       <div class="cta__text">
         <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.</h2>
-        <p class="cta__subtitle">Dauert bis zum Gutschein < 30 Sekunden</p>
+        <p class="cta__subtitle">Dauer bis zum Gutschein: ≈ 30 Sekunden</p>
       </div>
       <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
     </div>
@@ -173,229 +161,279 @@
 
 
 <!-- ============================================
-     STEPS 4 - Landing Generator
+     STEPS V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold 35px
-     - CTA button: outline (Landing 1, сверху справа) или primary (Landing 2, снизу)
-     - ctaBottom: true = кнопка снизу по центру, primary стиль
-     - 4 steps in 2x2 grid
+     PIXEL-PERFECT ПО FIGMA (node 479:52):
+     - Primary background
+     - Title: 45px Bold
+     - 3 vertical cards on LEFT (white bg, 15px radius)
+     - Each card: number badge + title + description
+     - Large rotated image on RIGHT
+     - CTA button at bottom right
      ============================================ -->
 
-<section class="steps section--bg-secondary">
+<section class="steps steps--v4 section--bg-primary">
   <div class="container">
-    <!-- Title (full width when ctaBottom, otherwise with button on right) -->
-    
+    <h2 class="steps__title steps__title--full">Wie genau komme ich zum kostenlosen Fotoshooting?</h2>
 
-    
-
-    <!-- Steps grid 2x2 -->
     <div class="row">
-      
+      <!-- 3 steps on the left -->
       <div class="col-lg-6">
-        <div class="step-card">
-          <div class="step-card__icon">
-            <img src="assets/images/placeholder.svg" alt="">
+        <div class="steps__cards">
+          
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">1</div>
+              <h3 class="step-card-v4__title">Eintragen</h3>
+            </div>
+            <p class="step-card-v4__text">Jetzt eintragen und von deinem unschlagbaren Gutschein profitieren!</p>
           </div>
-          <h3 class="step-card__title">1. Anmelden</h3>
-          <p class="step-card__text">Beantworte ein paar kurze Fragen und sichere dir deinen Gutschein.</p>
-          <div class="step-card__divider"></div>
-        </div>
-      </div>
-      
+          
 
-      <div class="col-lg-6">
-        <div class="step-card">
-          <div class="step-card__icon">
-            <img src="assets/images/placeholder.svg" alt="">
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">2</div>
+              <h3 class="step-card-v4__title">Termin vereinbaren</h3>
+            </div>
+            <p class="step-card-v4__text">Wir werden uns nach deiner Eintragung bei dir melden um einen passenden Termin zu finden.</p>
           </div>
-          <h3 class="step-card__title">2. Termin vereinbaren</h3>
-          <p class="step-card__text">Wir melden uns bei dir und finden gemeinsam den perfekten Termin.</p>
-          <div class="step-card__divider"></div>
-        </div>
-      </div>
-      
+          
 
-      <div class="col-lg-6">
-        <div class="step-card">
-          <div class="step-card__icon">
-            <img src="assets/images/placeholder.svg" alt="">
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">3</div>
+              <h3 class="step-card-v4__title">Let's start: Fotoshooting</h3>
+            </div>
+            <p class="step-card-v4__text">Während des Fotoshootings gestalten wir gemeinsam wunderschöne Bilder in entspannter Atmosphäre. Im Anschluss hast du die Möglichkeit, deine Lieblingsbilder auszuwählen und nur die zu erwerben, die dir wirklich gefallen</p>
           </div>
-          <h3 class="step-card__title">3. Lieblingsbild auswählen</h3>
-          <p class="step-card__text">Nach dem Shooting könnt ihr in Ruhe eure Lieblingsbilder auswählen.</p>
-          <div class="step-card__divider"></div>
+          
         </div>
       </div>
-      
 
+      <!-- Image + CTA on the right -->
       <div class="col-lg-6">
-        <div class="step-card">
-          <div class="step-card__icon">
-            <img src="assets/images/placeholder.svg" alt="">
+        <div class="steps__right-content">
+          <div class="steps__image">
+            <img src="assets/images/placeholder.svg" alt="Kinder-Fotoshooting">
           </div>
-          <h3 class="step-card__title">4. Ergebnis</h3>
-          <p class="step-card__text">Unvergessliche Erinnerungen, die ihr für immer schätzen werdet.</p>
-          <div class="step-card__divider"></div>
+          <div class="steps__cta-right">
+            <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+          </div>
         </div>
       </div>
-      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     FAQ V4 - Landing 4 (Kinder-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:124):
+     - 2-column layout
+     - Left: 2 cards, Right: 2 cards
+     - White cards with rounded corners (15-25px)
+     - Expand/collapse with +/- icons
+     - Button at bottom left (432x60px, radius 40px)
+     ============================================ -->
+
+<section class="faq faq--v4 section--bg-secondary">
+  <div class="container">
+    <h2 class="faq__title faq__title--left">Häufige Fragen</h2>
+
+    <div class="faq__grid">
+      <!-- Left Column -->
+      <div class="faq__column faq__column--left">
+        
+        <div class="faq-card-v4 faq-card-v4--expanded" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Wie lange dauert das Kinder-Fotoshooting?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Das Shooting dauert ca. 30-45 Minuten. Wir nehmen uns genügend Zeit, damit die Kleinen sich wohlfühlen und natürliche Bilder entstehen können.</p>
+          </div>
+        </div>
+        
+
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Was sollen die Kinder anziehen?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Bequeme Kleidung, in der sich die Kinder wohlfühlen. Neutrale Farben wie Beige, Weiß oder Pastelltöne eignen sich besonders gut. Vermeidet große Aufdrucke oder Logos.</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Right Column -->
+      <div class="faq__column faq__column--right">
+        
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Können Eltern mit auf die Fotos?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Ja, sehr gerne! Familienfotos mit Eltern und Kindern sind wunderschöne Erinnerungen. Teilt uns einfach bei der Buchung mit, wer dabei sein soll.</p>
+          </div>
+        </div>
+        
+
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Was ist, wenn mein Kind schüchtern ist?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Kein Problem! Wir haben viel Erfahrung mit Kindern aller Altersgruppen. Wir schaffen eine spielerische Atmosphäre und lassen den Kindern Zeit, sich einzugewöhnen.</p>
+          </div>
+        </div>
+        
+      </div>
     </div>
 
-    <!-- CTA at bottom -->
+    
+    <div class="faq__cta faq__cta--left">
+      <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoschooting sichern</a>
+    </div>
     
   </div>
 </section>
 
 
 <!-- ============================================
-     FAQ ACCORDION - Landing Generator
+     GALLERY SLIDER V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #F5EDE0 (primary)
-     - Title: Inter Bold 35px
-     - Question: Inter Bold 28px
-     - Answer: Inter Medium 22px
-     - Plus/minus icon: 30x30px
-     - Divider lines between questions
+     PIXEL-PERFECT ПО FIGMA (node 479:107):
+     - Single large image with navigation arrows
+     - Image: 1233px x 746px, rounded 40px
+     - Small chevron arrows on left/right
      ============================================ -->
 
-<section class="faq section--bg-primary">
-  <div class="container">
-    <h2 class="faq__title">Häufige Fragen</h2>
+<section class="gallery-slider-v4 section--bg-primary">
+  <div class="gallery-slider-v4__wrapper">
+    <button class="gallery-slider-v4__arrow gallery-slider-v4__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1L2 14.5L13 28" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-    <div class="faq__list">
+    <div class="gallery-slider-v4__container" data-gallery-slider>
       
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Wie lange dauert das Kinder-Fotoshooting?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Das Shooting dauert ca. 30-45 Minuten. Wir nehmen uns genügend Zeit, damit die Kleinen sich wohlfühlen und natürliche Bilder entstehen können.</p>
-          </div>
-        </div>
+      <div class="gallery-slider-v4__slide is-active">
+        <img src="assets/images/placeholder.svg" alt="Galerie 1" class="gallery-slider-v4__image">
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Was sollen die Kinder anziehen?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Bequeme Kleidung, in der sich die Kinder wohlfühlen. Neutrale Farben wie Beige, Weiß oder Pastelltöne eignen sich besonders gut. Vermeidet große Aufdrucke oder Logos.</p>
-          </div>
-        </div>
+      <div class="gallery-slider-v4__slide">
+        <img src="assets/images/placeholder.svg" alt="Galerie 2" class="gallery-slider-v4__image">
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Können Eltern mit auf die Fotos?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Ja, sehr gerne! Familienfotos mit Eltern und Kindern sind wunderschöne Erinnerungen. Teilt uns einfach bei der Buchung mit, wer dabei sein soll.</p>
-          </div>
-        </div>
+      <div class="gallery-slider-v4__slide">
+        <img src="assets/images/placeholder.svg" alt="Galerie 3" class="gallery-slider-v4__image">
       </div>
       
 
-      <div class="faq__item" data-faq-item>
-        <button class="faq__question" data-faq-toggle aria-expanded="false">
-          <span>Was ist, wenn mein Kind schüchtern ist?</span>
-          <span class="faq__icon">
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-        </button>
-        <div class="faq__answer" data-faq-answer>
-          <div class="faq__answer-inner">
-            <p>Kein Problem! Wir haben viel Erfahrung mit Kindern aller Altersgruppen. Wir schaffen eine spielerische Atmosphäre und lassen den Kindern Zeit, sich einzugewöhnen.</p>
-          </div>
-        </div>
+      <div class="gallery-slider-v4__slide">
+        <img src="assets/images/placeholder.svg" alt="Galerie 4" class="gallery-slider-v4__image">
+      </div>
+      
+
+      <div class="gallery-slider-v4__slide">
+        <img src="assets/images/placeholder.svg" alt="Galerie 5" class="gallery-slider-v4__image">
       </div>
       
     </div>
 
-    
+    <button class="gallery-slider-v4__arrow gallery-slider-v4__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1L13 14.5L2 28" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 </section>
 
 
 <!-- ============================================
-     SERVICES GRID - Landing Generator
+     SERVICES V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold 35px
-     - 4 service cards in row
-     - Card image: 300x300px
-     - Card title: Inter Bold 22px
-     - Card text: Inter Medium 22px
-     - CTA button with outline style
+     PIXEL-PERFECT ПО FIGMA (node 479:77):
+     - Title: 45px Bold, left-aligned
+     - 3 white cards in row (424x596px, radius 15px)
+     - Card: image (339x257px) + title (28px) + text (22px)
+     - No CTA button
+     - Background: secondary (#EEE3D0)
      ============================================ -->
 
-<section class="services section--bg-secondary">
+<section class="services-v4 section--bg-secondary">
   <div class="container">
-    <div class="services__header">
-      <h2 class="services__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
-    </div>
+    <h2 class="services-v4__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
 
-    <div class="services__grid">
+    <div class="services-v4__grid">
       
-      <div class="service-card">
-        <div class="service-card__image">
-          <img src="assets/images/placeholder.svg" alt="">
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="assets/images/placeholder.svg" alt="Family Time" class="services-v4__image">
         </div>
-        <h3 class="service-card__title">Family Time</h3>
-        <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Family Time</h3>
+          <p class="services-v4__card-text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
+        </div>
       </div>
       
 
-      <div class="service-card">
-        <div class="service-card__image">
-          <img src="assets/images/placeholder.svg" alt="">
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="assets/images/placeholder.svg" alt="Newborn & Babybauch" class="services-v4__image">
         </div>
-        <h3 class="service-card__title">Newborn & Babybauch</h3>
-        <p class="service-card__text">Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren.</p>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Newborn & Babybauch</h3>
+          <p class="services-v4__card-text">Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren.</p>
+        </div>
       </div>
       
 
-      <div class="service-card">
-        <div class="service-card__image">
-          <img src="assets/images/placeholder.svg" alt="">
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="assets/images/placeholder.svg" alt="Tierisches Fotoshooting" class="services-v4__image">
         </div>
-        <h3 class="service-card__title">Tierisches Fotoshooting</h3>
-        <p class="service-card__text">Wir widmen ausgiebig Zeit, damit sich dein geliebtes Haustier im Studio einfinden und sich wohlfühlen kann.</p>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Tierisches Fotoshooting</h3>
+          <p class="services-v4__card-text">Wir widmen ausgiebig Zeit, damit sich dein geliebtes Haustier im Studio einfinden und sich wohlfühlen kann.</p>
+        </div>
       </div>
       
     </div>
+  </div>
+</section>
 
-    <div class="services__cta">
-      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Kinder-Fotoshooting anfragen</a>
-    </div>
+
+<!-- ============================================
+     GALLERY FULLWIDTH - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Max-width: 1440px
+     - Height: 656px
+     - Full-width image
+     - Между Steps и FAQ
+     - Rounded: 30px radius (Landing 3)
+     ============================================ -->
+
+<section class="gallery-fullwidth section--bg-primary">
+  <div class="container">
+    <img src="assets/images/placeholder.svg" alt="Fotostudio" class="gallery-fullwidth__image">
   </div>
 </section>
 
@@ -405,38 +443,32 @@
 
      PIXEL-PERFECT ПО FIGMA:
      - Background: #F5EDE0 (primary)
-     - Image: 466x560px
+     - Image: 466x560px (single) or 615x360px (stacked)
      - Label: Inter Medium 28px
      - Name: Inter Bold 28px
      - Divider line: ~471px width
      - Text: Inter Medium 22px (поддержка параграфов)
-     - Social icons: опционально (показывать только если есть в данных)
+     - Social icons: опционально
+     - imagesRight: true = 2 images on right, content on left
      ============================================ -->
 
-<section class="about section--bg-primary">
+<section class="about section--bg-primary about--images-right">
   <div class="container">
+    
+    <!-- Layout with text on left, 2 stacked images on right -->
     <div class="row align-items-start">
-      <!-- Изображение слева -->
+      <!-- Контент слева -->
       <div class="col-lg-5">
-        <div class="about__image">
-          <img src="assets/images/placeholder.svg" alt="Bremen-Findorff!">
-        </div>
-      </div>
-
-      <!-- Контент справа -->
-      <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
           
-          <p class="about__label">Herzlich Willkommen in unserem Fotostudio in</p>
-          <h2 class="about__name">Bremen-Findorff!</h2>
-          <div class="about__divider"></div>
+          <h2 class="about__title-compact">Herzlich Willkommen in unserem Fotostudio in Bremen-Findorff!</h2>
           
 
           
 
           
           
-          <p class="about__text">Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild – wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.</p>
+          <p class="about__text">Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild - wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.</p>
           
 
           <p class="about__text">Wir beraten euch gerne bei der Suche nach dem passenden Fotogeschenk oder der perfekten Momentaufnahme für eure Familie.</p>
@@ -450,27 +482,30 @@
           
 
           
-          <div class="about__social">
-            
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <img src="assets/icons/facebook.svg" alt="Facebook">
-            </a>
-            
+          <div class="about__cta">
+            <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
+          </div>
+          
+        </div>
+      </div>
 
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <img src="assets/icons/instagram.svg" alt="Instagram">
-            </a>
-            
+      <!-- 2 stacked images on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__images-stack">
+          
+          <div class="about__image-stacked">
+            <img src="assets/images/placeholder.svg" alt="Studio 1">
+          </div>
+          
 
-            <a href="#" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Website">
-              <img src="assets/icons/web.svg" alt="Website">
-            </a>
-            
+          <div class="about__image-stacked">
+            <img src="assets/images/placeholder.svg" alt="Studio 2">
           </div>
           
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 
@@ -738,10 +773,15 @@
   <!-- Google Maps -->
   <div class="footer__map">
     
-    <div class="footer__map-placeholder">
-      <img src="assets/images/placeholder.svg" alt="Map placeholder">
-      <p>Karte wird hier angezeigt</p>
-    </div>
+    <iframe
+      src="https://maps.google.com/maps?q=Bremen-Findorff&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
     
   </div>
 

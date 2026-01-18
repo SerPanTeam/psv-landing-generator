@@ -505,16 +505,50 @@
 
      PIXEL-PERFECT ПО FIGMA:
      - Background: #F5EDE0 (primary)
-     - Image: 466x560px
+     - Image: 466x560px (single) or 615x360px (stacked)
      - Label: Inter Medium 28px
      - Name: Inter Bold 28px
      - Divider line: ~471px width
      - Text: Inter Medium 22px (поддержка параграфов)
-     - Social icons: опционально (показывать только если есть в данных)
+     - Social icons: опционально
+     - imagesRight: true = 2 images on right, content on left
      ============================================ -->
 
 <section class="about section--bg-primary about--rounded">
   <div class="container">
+    
+          <p class="about__label">Willkommen bei</p>
+          <h2 class="about__name">Möst Fotografie</h2>
+          {{#unless compact}}<div class="about__divider"></div>{{/unless}}
+          
+
+          
+          
+          <p class="about__text">Ich bin Maren Möst – ausgebildete Fotografin und Mediengestalterin mit einem Bachelor in Medienwirtschaft. Nach mehreren Jahren im Medienbereich, unter anderem beim SWR und bei Bavaria Film, habe ich mich ganz der Fotografie verschrieben.</p>
+          
+
+          <p class="about__text">In meinem Studio kombiniere ich technisches Know-how mit einem künstlerischen Blick fürs Detail. Ich liebe es, echte Momente einzufangen – ruhig, authentisch und mit Gefühl. Meine Erfahrung aus der Filmwelt und der Mediengestaltung hilft mir dabei, Geschichten nicht nur festzuhalten, sondern sichtbar zu machen.</p>
+          
+
+          <p class="about__text">Ob Babybauch, Familie oder Porträt – für mich steht der Mensch im Mittelpunkt. Mit viel Ruhe und einem sicheren Gespür für Atmosphäre entstehen Bilder, die bleiben.</p>
+          
+          
+
+          
+
+          
+        </div>
+      </div>
+
+      <!-- 2 stacked images on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__images-stack">
+          
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <!-- Default layout: image on left, content on right -->
     <div class="row align-items-start">
       <!-- Изображение слева -->
       <div class="col-lg-5">
@@ -551,6 +585,7 @@
         </div>
       </div>
     </div>
+    {{/if}}
   </div>
 </section>
 

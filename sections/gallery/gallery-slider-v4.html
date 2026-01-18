@@ -1,0 +1,32 @@
+<!-- ============================================
+     GALLERY SLIDER V4 - Landing 4 (Kinder-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:107):
+     - Single large image with navigation arrows
+     - Image: 1233px x 746px, rounded 40px
+     - Small chevron arrows on left/right
+     ============================================ -->
+
+<section class="gallery-slider-v4 {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}">
+  <div class="gallery-slider-v4__wrapper">
+    <button class="gallery-slider-v4__arrow gallery-slider-v4__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1L2 14.5L13 28" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="gallery-slider-v4__container" data-gallery-slider>
+      {{#each images}}
+      <div class="gallery-slider-v4__slide{{#if @first}} is-active{{/if}}">
+        <img src="{{this.src}}" alt="{{this.alt}}" class="gallery-slider-v4__image">
+      </div>
+      {{/each}}
+    </div>
+
+    <button class="gallery-slider-v4__arrow gallery-slider-v4__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 1L13 14.5L2 28" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>

@@ -59,8 +59,9 @@ class FAQAccordion {
     const answer = item.querySelector(this.selectors.answer);
     if (!answer) return;
 
-    // Добавляем класс
+    // Добавляем классы (поддержка обоих вариантов)
     item.classList.add('is-open');
+    item.classList.add('faq-card-v4--expanded');
 
     // Анимация высоты
     answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -76,8 +77,9 @@ class FAQAccordion {
     const answer = item.querySelector(this.selectors.answer);
     if (!answer) return;
 
-    // Убираем класс
+    // Убираем классы (поддержка обоих вариантов)
     item.classList.remove('is-open');
+    item.classList.remove('faq-card-v4--expanded');
 
     // Анимация высоты
     answer.style.maxHeight = '0';

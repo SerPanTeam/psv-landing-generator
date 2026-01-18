@@ -79,9 +79,9 @@
 
     "form": {
       "formLabel": "Klasse, jetzt zum Gutschein",
-      "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
-      "formSubtitle": "kostenloses Kinder-Fotoshooting!",
-      "formNote": "",
+      "formTitle": "Trag dich jetzt ein und sichere dir dein",
+      "formSubtitle": "kostenloses Kinder-Fotoshooting",
+      "formNote": "Das kostenlose Fotoshooting findet nur vom 1.11.- 29.11.25 statt!\n\nSchnell sein lohnt sich - wir freuen uns auf euch!",
       "formImage": "assets/images/placeholder.svg",
       "formImageAlt": "Kinder-Fotoshooting",
       "successPage": "quiz-success.html",
@@ -98,7 +98,7 @@
       "privacyText": "Ich akzeptiere die",
       "privacyLinkText": "Datenschutzbestimmungen",
       "submitButtonText": "Jetzt Gutschein sichern!",
-      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+      "privacyNote": "Deine Privatsphäre ist bei uns sicher – wir schätzen dein Vertrauen.",
       "infoTitle": "WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.",
       "infoText": "Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation."
     },
@@ -119,10 +119,10 @@
       "emailButtonText": "Mail uns!",
       "phoneNumber": "+4915290908090",
       "email": "info@foto-findorff.de",
-      "aboutName": "Fotostudio Bremen-Findorff",
-      "aboutTagline": "Kinderfotografie & Familienbilder",
+      "aboutName": "Yvonne Jadke – Fotograf Hannover",
+      "aboutTagline": "Familienfotos, Businessportraits & Hochzeitsfotografie",
       "aboutTexts": [
-        "Wir freuen uns darauf, eure Kinder in liebevollen Bildern festzuhalten.",
+        "Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!",
         "Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung."
       ],
       "showSocial": true,
@@ -134,19 +134,17 @@
 
   "sections": [
     {
-      "template": "header/header-v1.html",
-      "data": {
-        "logoText": "Logo"
-      }
-    },
-    {
       "template": "hero/hero-v4.html",
       "data": {
+        "logoText": "Logo",
         "label": "Kostenloses",
         "title": "Kinder - Fotoshooting",
-        "subtitle": "Jetzt haben wir gemeinsam die wunderbare Chance, eure Familien oder Kindermomente in liebevollen Bildern festzuhalten.",
-        "buttonText": "Jetzt Gutschein sichern",
+        "subtitle": "Emotionale Bilder – ein persönliches Geschenk zu Weihnachten.",
+        "dateNotice": "Die kostenlosen Kinder- Fotoshootings finden nur vom 01.11. bis 29.11.2025 statt!",
+        "buttonText": "Kostenloses Fotoshooting sichern",
         "buttonLink": "quiz-step1.html",
+        "whyFreeTitle": "Warum kostenlos?",
+        "whyFreeText": "Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.",
         "images": [
           { "src": "assets/images/placeholder.svg", "alt": "Kind 1" },
           { "src": "assets/images/placeholder.svg", "alt": "Kind 2" },
@@ -157,70 +155,61 @@
       }
     },
     {
-      "template": "features/features-3col.html",
+      "template": "content/content-v2.html",
       "data": {
-        "items": [
-          {
-            "image": "assets/images/placeholder.svg",
-            "title": "Kinder-Fotoshooting – natürlich, kindlich & unvergesslich",
-            "text": "In vergnüglicher Atmosphäre entstehen echte, authentische Aufnahmen."
-          },
-          {
-            "image": "assets/images/placeholder.svg",
-            "title": "",
-            "text": "Wir sorgen dafür, dass die Kleinen sich wohlfühlen und ganz sie selbst sein können."
-          }
-        ]
+        "title": "Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich",
+        "texts": [
+          "In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.",
+          "Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!"
+        ],
+        "buttonText": "Fotoshooting sichern",
+        "buttonLink": "quiz-step1.html"
       }
     },
     {
       "template": "cta/cta-v1.html",
       "data": {
         "title": "Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.",
-        "subtitle": "Dauert bis zum Gutschein < 30 Sekunden",
+        "subtitle": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
         "buttonText": "Jetzt Gutschein sichern",
-        "buttonLink": "quiz-step1.html"
+        "buttonLink": "quiz-step1.html",
+        "rounded": true,
+        "alignLeft": true
       }
     },
     {
-      "template": "steps/steps-4.html",
+      "template": "steps/steps-v4.html",
       "data": {
         "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
-        "ctaText": "",
-        "ctaLink": "",
+        "image": "assets/images/placeholder.svg",
+        "imageAlt": "Kinder-Fotoshooting",
+        "ctaText": "Kostenloses Fotoshooting sichern",
+        "ctaLink": "quiz-step1.html",
         "steps": [
           {
             "number": "1",
-            "icon": "assets/images/placeholder.svg",
-            "title": "1. Anmelden",
-            "text": "Beantworte ein paar kurze Fragen und sichere dir deinen Gutschein."
+            "title": "Eintragen",
+            "text": "Jetzt eintragen und von deinem unschlagbaren Gutschein profitieren!"
           },
           {
             "number": "2",
-            "icon": "assets/images/placeholder.svg",
-            "title": "2. Termin vereinbaren",
-            "text": "Wir melden uns bei dir und finden gemeinsam den perfekten Termin."
+            "title": "Termin vereinbaren",
+            "text": "Wir werden uns nach deiner Eintragung bei dir melden um einen passenden Termin zu finden."
           },
           {
             "number": "3",
-            "icon": "assets/images/placeholder.svg",
-            "title": "3. Lieblingsbild auswählen",
-            "text": "Nach dem Shooting könnt ihr in Ruhe eure Lieblingsbilder auswählen."
-          },
-          {
-            "number": "4",
-            "icon": "assets/images/placeholder.svg",
-            "title": "4. Ergebnis",
-            "text": "Unvergessliche Erinnerungen, die ihr für immer schätzen werdet."
+            "title": "Let's start: Fotoshooting",
+            "text": "Während des Fotoshootings gestalten wir gemeinsam wunderschöne Bilder in entspannter Atmosphäre. Im Anschluss hast du die Möglichkeit, deine Lieblingsbilder auszuwählen und nur die zu erwerben, die dir wirklich gefallen"
           }
         ]
       }
     },
     {
-      "template": "faq/faq-accordion.html",
+      "template": "faq/faq-v4.html",
       "data": {
+        "bgClass": "section--bg-secondary",
         "title": "Häufige Fragen",
-        "questions": [
+        "questionsLeft": [
           {
             "question": "Wie lange dauert das Kinder-Fotoshooting?",
             "answer": "Das Shooting dauert ca. 30-45 Minuten. Wir nehmen uns genügend Zeit, damit die Kleinen sich wohlfühlen und natürliche Bilder entstehen können."
@@ -228,7 +217,9 @@
           {
             "question": "Was sollen die Kinder anziehen?",
             "answer": "Bequeme Kleidung, in der sich die Kinder wohlfühlen. Neutrale Farben wie Beige, Weiß oder Pastelltöne eignen sich besonders gut. Vermeidet große Aufdrucke oder Logos."
-          },
+          }
+        ],
+        "questionsRight": [
           {
             "question": "Können Eltern mit auf die Fotos?",
             "answer": "Ja, sehr gerne! Familienfotos mit Eltern und Kindern sind wunderschöne Erinnerungen. Teilt uns einfach bei der Buchung mit, wer dabei sein soll."
@@ -237,13 +228,28 @@
             "question": "Was ist, wenn mein Kind schüchtern ist?",
             "answer": "Kein Problem! Wir haben viel Erfahrung mit Kindern aller Altersgruppen. Wir schaffen eine spielerische Atmosphäre und lassen den Kindern Zeit, sich einzugewöhnen."
           }
+        ],
+        "ctaText": "Kostenloses Fotoschooting sichern",
+        "ctaLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "gallery/gallery-slider-v4.html",
+      "data": {
+        "images": [
+          { "src": "assets/images/placeholder.svg", "alt": "Galerie 1" },
+          { "src": "assets/images/placeholder.svg", "alt": "Galerie 2" },
+          { "src": "assets/images/placeholder.svg", "alt": "Galerie 3" },
+          { "src": "assets/images/placeholder.svg", "alt": "Galerie 4" },
+          { "src": "assets/images/placeholder.svg", "alt": "Galerie 5" }
         ]
       }
     },
     {
-      "template": "services/services-grid.html",
+      "template": "services/services-v4.html",
       "data": {
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
+        "bgClass": "section--bg-secondary",
         "services": [
           {
             "image": "assets/images/placeholder.svg",
@@ -260,27 +266,32 @@
             "title": "Tierisches Fotoshooting",
             "text": "Wir widmen ausgiebig Zeit, damit sich dein geliebtes Haustier im Studio einfinden und sich wohlfühlen kann."
           }
-        ],
-        "ctaText": "Jetzt Kinder-Fotoshooting anfragen",
-        "ctaLink": "quiz-step1.html"
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-fullwidth.html",
+      "data": {
+        "image": "assets/images/placeholder.svg",
+        "alt": "Fotostudio"
       }
     },
     {
       "template": "about/about-v1.html",
       "data": {
-        "image": "assets/images/placeholder.svg",
-        "label": "Herzlich Willkommen in unserem Fotostudio in",
-        "name": "Bremen-Findorff!",
+        "imagesRight": true,
+        "titleCompact": "Herzlich Willkommen in unserem Fotostudio in Bremen-Findorff!",
         "paragraphs": [
-          "Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild – wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.",
+          "Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild - wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.",
           "Wir beraten euch gerne bei der Suche nach dem passenden Fotogeschenk oder der perfekten Momentaufnahme für eure Familie.",
           "Falls ihr lieber Fotos bei euch zuhause oder in der Natur machen möchtet, vereinbaren wir gerne einen Termin, um diesen Wunsch vor Ort zu erfüllen.",
           "Euer Portraitfotostudio in Bremen-Findorff freut sich auf euren Besuch!"
         ],
-        "socials": [
-          { "icon": "assets/icons/facebook.svg", "url": "#", "name": "Facebook" },
-          { "icon": "assets/icons/instagram.svg", "url": "#", "name": "Instagram" },
-          { "icon": "assets/icons/web.svg", "url": "#", "name": "Website" }
+        "ctaText": "Jetzt Gutschein sichern",
+        "ctaLink": "quiz-step1.html",
+        "images": [
+          { "src": "assets/images/placeholder.svg", "alt": "Studio 1" },
+          { "src": "assets/images/placeholder.svg", "alt": "Studio 2" }
         ]
       }
     },
@@ -294,7 +305,7 @@
     {
       "template": "footer/footer-v1.html",
       "data": {
-        "mapEmbedUrl": "",
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Bremen-Findorff&t=&z=15&ie=UTF8&iwloc=&output=embed",
         "impressumUrl": "#",
         "datenschutzUrl": "#",
         "cookieUrl": "#"

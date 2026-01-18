@@ -175,12 +175,10 @@
           <h2 class="content-section__title">Für die schönsten Erinnerungen mit deinen Liebsten!</h2>
           
           
-            
-            <p class="content-section__text">Familien-Fotoshooting – liebevoll & natürlich</p>
-            
+          <p class="content-section__text">Familien-Fotoshooting – liebevoll & natürlich</p>
+          
 
-            <p class="content-section__text">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>
-            
+          <p class="content-section__text">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>
           
           <div class="content-section__divider"></div>
           <a href="quiz-step1.html" class="content-section__link">
@@ -403,7 +401,7 @@
      - Rounded: 30px radius (Landing 3)
      ============================================ -->
 
-<section class="gallery-fullwidth">
+<section class="gallery-fullwidth section--bg-primary">
   <div class="container">
     <img src="assets/images/placeholder.svg" alt="Familien-Fotoshooting Galerie" class="gallery-fullwidth__image">
   </div>
@@ -558,16 +556,50 @@
 
      PIXEL-PERFECT ПО FIGMA:
      - Background: #F5EDE0 (primary)
-     - Image: 466x560px
+     - Image: 466x560px (single) or 615x360px (stacked)
      - Label: Inter Medium 28px
      - Name: Inter Bold 28px
      - Divider line: ~471px width
      - Text: Inter Medium 22px (поддержка параграфов)
-     - Social icons: опционально (показывать только если есть в данных)
+     - Social icons: опционально
+     - imagesRight: true = 2 images on right, content on left
      ============================================ -->
 
 <section class="about section--bg-primary">
   <div class="container">
+    
+          <p class="about__label">Willkommen bei</p>
+          <h2 class="about__name">Dorett Dornbusch</h2>
+          {{#unless compact}}<div class="about__divider"></div>{{/unless}}
+          
+
+          
+
+          
+          
+          <p class="about__text">Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.</p>
+          
+
+          <p class="about__text">In meinem Studio in Dortmund-Huckarde sorge ich für eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen.</p>
+          
+
+          <p class="about__text">Mit meiner positiven Art nehme ich dir die Nervosität und mache das Shooting zu einem entspannten Erlebnis – gerne per Du!</p>
+          
+          
+
+          
+        </div>
+      </div>
+
+      <!-- 2 stacked images on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__images-stack">
+          
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <!-- Default layout: image on left, content on right -->
     <div class="row align-items-start">
       <!-- Изображение слева -->
       <div class="col-lg-5">
@@ -603,6 +635,7 @@
         </div>
       </div>
     </div>
+    {{/if}}
   </div>
 </section>
 

@@ -1,44 +1,55 @@
 <!-- ============================================
      HERO V4 - Лендинг 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Label: "Kostenloses"
-     - Title: "Kinder - Fotoshooting"
-     - Description text
-     - CTA button
-     - 4 наклонённых изображения в ряд
+     PIXEL-PERFECT ПО FIGMA (node 479:30):
+     - Dark background: #3D3D3D, height 709px
+     - Logo: #F5EDE0 (light on dark)
+     - Label + Title: #E2C08D (yellow/gold)
+     - Subtitle: white, 22px
+     - Date notice: #E2C08D, 16px
+     - Button: 406x60px, rounded-40px
+     - "Warum kostenlos?" section
+     - Below: 4 tilted image cards + title
      ============================================ -->
 
-<section class="hero hero--v4 section--bg-primary">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Контент слева -->
-      <div class="col-lg-5">
-        <div class="hero__content">
-          <span class="hero__label">{{label}}</span>
-          <h1 class="hero__title">{{title}}</h1>
-          <p class="hero__subtitle">{{subtitle}}</p>
-          <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
-        </div>
-      </div>
+<section class="hero hero--v4">
+  <div class="hero__dark-section">
+    <div class="container">
+      {{#if logoText}}
+      <p class="hero__logo">{{logoText}}</p>
+      {{/if}}
+      <div class="hero__content">
+        <span class="hero__label">{{label}}</span>
+        <h1 class="hero__title">{{title}}</h1>
+        <p class="hero__subtitle">{{subtitle}}</p>
+        {{#if dateNotice}}
+        <p class="hero__date-notice">{{dateNotice}}</p>
+        {{/if}}
+        <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
 
-      <!-- 4 наклонённых изображения справа -->
-      <div class="col-lg-7">
-        <div class="hero__gallery">
-          {{#each images}}
-          <div class="hero__gallery-item hero__gallery-item--{{@number}}">
-            <img src="{{this.src}}" alt="{{this.alt}}">
-          </div>
-          {{/each}}
+        {{#if whyFreeTitle}}
+        <div class="hero__why-free">
+          <h3 class="hero__why-free-title">{{whyFreeTitle}}</h3>
+          <p class="hero__why-free-text">{{whyFreeText}}</p>
         </div>
+        {{/if}}
       </div>
     </div>
+  </div>
 
-    <!-- Subtitle section -->
-    {{#if sectionTitle}}
-    <div class="hero__section-title">
-      <h2>{{sectionTitle}}</h2>
+  <!-- Gallery section with tilted images -->
+  <div class="hero__gallery-section section--bg-primary">
+    <div class="container">
+      {{#if sectionTitle}}
+      <h2 class="hero__gallery-title">{{sectionTitle}}</h2>
+      {{/if}}
+      <div class="hero__gallery">
+        {{#each images}}
+        <div class="hero__gallery-item hero__gallery-item--{{@number}}">
+          <img src="{{this.src}}" alt="{{this.alt}}">
+        </div>
+        {{/each}}
+      </div>
     </div>
-    {{/if}}
   </div>
 </section>

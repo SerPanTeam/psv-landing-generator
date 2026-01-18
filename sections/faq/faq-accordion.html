@@ -10,7 +10,7 @@
      - Divider lines between questions
      ============================================ -->
 
-<section class="faq section--bg-primary{{#if cardStyle}} faq--{{cardStyle}}{{/if}}">
+<section class="faq {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if cardStyle}} faq--{{cardStyle}}{{/if}}">
   <div class="container">
     <h2 class="faq__title">{{title}}</h2>
 
