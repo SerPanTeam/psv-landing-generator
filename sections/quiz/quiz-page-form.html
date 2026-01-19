@@ -53,12 +53,19 @@
         <div class="col-lg-5">
           <!-- Form Header -->
           <p class="quiz-form__label">{{formLabel}}</p>
+          {{#if formTitleLine1}}
+          <div class="quiz-form__title-split">
+            <p class="quiz-form__title-line1">{{formTitleLine1}}</p>
+            <p class="quiz-form__title-line2">{{formTitleLine2}}</p>
+          </div>
+          {{else}}
           <p class="quiz-form__title">{{formTitle}}</p>
           <h1 class="quiz-form__subtitle">{{formSubtitle}}</h1>
+          {{/if}}
           <p class="quiz-form__note">{{formNote}}</p>
 
           <!-- Form -->
-          <form class="quiz-form__form" id="quiz-form" action="{{successPage}}" method="GET">
+          <form class="quiz-form__form{{#if rounded}} quiz-form__form--rounded{{/if}}" id="quiz-form" action="{{successPage}}" method="GET">
             <div class="form-group">
               <input type="text" name="name" placeholder="{{placeholderName}}" required>
             </div>
@@ -84,11 +91,14 @@
             </div>
             <button type="submit" class="btn btn-primary">{{submitButtonText}}</button>
           </form>
+          {{#if privacyNoteLeft}}
+          <p class="quiz-form__privacy-note quiz-form__privacy-note--left">{{privacyNoteLeft}}</p>
+          {{/if}}
         </div>
 
         <!-- Image & Info Column -->
         <div class="col-lg-6 offset-lg-1">
-          <div class="quiz-form__image">
+          <div class="quiz-form__image{{#if rounded}} quiz-form__image--rounded{{/if}}">
             <img src="{{formImage}}" alt="{{formImageAlt}}">
           </div>
           {{#if privacyNote}}

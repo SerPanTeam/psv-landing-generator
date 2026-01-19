@@ -740,8 +740,8 @@
         <div class="col-lg-5">
           <div class="quiz-form__header">
             <span class="quiz-form__label">Klasse, jetzt zum Gutschein</span>
-            <p class="quiz-form__title">Trag dich jetzt ein und sichere dir dein kostenloses Hunde-Fotoshooting!</p>
-            <h2 class="quiz-form__subtitle"></h2>
+            <p class="quiz-form__title">{{form.formTitle}}</p>
+            <h2 class="quiz-form__subtitle">{{form.formSubtitle}}</h2>
             <p class="quiz-form__note">Das Fotoshooting findet nur bis zum 23.07.2025 statt! Schnell sein lohnt sich - ich freue mich auf euch!</p>
           </div>
 
@@ -785,12 +785,12 @@
         <!-- Контент справа -->
         <div class="col-lg-6 offset-lg-1">
           <div class="quiz-form__image">
-            <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=450&h=600&fit=crop" alt="Hunde-Fotoshooting">
+            <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=549&h=822&fit=crop" alt="Hunde-Fotoshooting">
           </div>
-          <p class="quiz-form__privacy">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          <p class="quiz-form__privacy">{{form.privacyNote}}</p>
           <div class="quiz-form__info">
-            <p class="quiz-form__info-title">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
-            <p class="quiz-form__info-text">Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
+            <p class="quiz-form__info-title">{{form.infoTitle}}</p>
+            <p class="quiz-form__info-text">{{form.infoText}}</p>
           </div>
         </div>
       </div>

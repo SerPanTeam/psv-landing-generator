@@ -53,12 +53,16 @@
         <div class="col-lg-5">
           <!-- Form Header -->
           <p class="quiz-form__label">Klasse, jetzt zum Gutschein</p>
-          <p class="quiz-form__title">Trag dich jetzt ein und sichere dir dein kostenloses Hunde-Fotoshooting!</p>
-          <h1 class="quiz-form__subtitle"></h1>
+          
+          <div class="quiz-form__title-split">
+            <p class="quiz-form__title-line1">Trag dich jetzt ein und sichere dir dein</p>
+            <p class="quiz-form__title-line2">kostenloses Hunde-Fotoshooting</p>
+          </div>
+          
           <p class="quiz-form__note">Das Fotoshooting findet nur bis zum 23.07.2025 statt! Schnell sein lohnt sich - ich freue mich auf euch!</p>
 
           <!-- Form -->
-          <form class="quiz-form__form" id="quiz-form" action="quiz-success.html" method="GET">
+          <form class="quiz-form__form quiz-form__form--rounded" id="quiz-form" action="quiz-success.html" method="GET">
             <div class="form-group">
               <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
             </div>
@@ -93,23 +97,17 @@
             </div>
             <button type="submit" class="btn btn-primary">Jetzt Gutschein sichern!</button>
           </form>
+          
+          <p class="quiz-form__privacy-note quiz-form__privacy-note--left">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          
         </div>
 
         <!-- Image & Info Column -->
         <div class="col-lg-6 offset-lg-1">
-          <div class="quiz-form__image">
-            <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=450&h=600&fit=crop" alt="Hunde-Fotoshooting">
+          <div class="quiz-form__image quiz-form__image--rounded">
+            <img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=549&h=822&fit=crop" alt="Hunde-Fotoshooting">
           </div>
           
-          <p class="quiz-form__privacy-note">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
-          
-          
-          <div class="quiz-form__info">
-            <p class="quiz-form__info-title">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
-            
-            <p class="quiz-form__info-text">Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
-            
-          </div>
           
         </div>
       </div>
