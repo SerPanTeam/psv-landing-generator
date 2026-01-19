@@ -59,9 +59,12 @@ class FAQAccordion {
     const answer = item.querySelector(this.selectors.answer);
     if (!answer) return;
 
-    // Добавляем классы (поддержка обоих вариантов)
+    // Добавляем классы
     item.classList.add('is-open');
-    item.classList.add('faq-card-v4--expanded');
+    // faq-card-v4--expanded только для V4 карточек (с border-radius)
+    if (item.classList.contains('faq-card-v4')) {
+      item.classList.add('faq-card-v4--expanded');
+    }
 
     // Анимация высоты
     answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -77,9 +80,11 @@ class FAQAccordion {
     const answer = item.querySelector(this.selectors.answer);
     if (!answer) return;
 
-    // Убираем классы (поддержка обоих вариантов)
+    // Убираем классы
     item.classList.remove('is-open');
-    item.classList.remove('faq-card-v4--expanded');
+    if (item.classList.contains('faq-card-v4')) {
+      item.classList.remove('faq-card-v4--expanded');
+    }
 
     // Анимация высоты
     answer.style.maxHeight = '0';
