@@ -33,9 +33,9 @@
         "nextPage": "quiz-step2.html",
         "options": [
           { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" },
-          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
-          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=200&h=200&fit=crop" },
-          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=200&h=200&fit=crop" }
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -46,7 +46,7 @@
         "nextPage": "quiz-step3.html",
         "options": [
           { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" },
-          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" }
+          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -57,9 +57,9 @@
         "nextPage": "quiz-step4.html",
         "options": [
           { "value": "nur_kinder", "text": "Nur das Kind / die Kinder", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" },
-          { "value": "kinder_eltern", "text": "Kind(er) mit Eltern", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
+          { "value": "kinder_eltern", "text": "Kind(er) mit Eltern", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" },
           { "value": "auch_grosseltern", "text": "Auch Großeltern", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
-          { "value": "noch_nicht_genau", "text": "Wir wissen es noch nicht genau", "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=200&h=200&fit=crop" }
+          { "value": "noch_nicht_genau", "text": "Wir wissen es noch nicht genau", "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -70,9 +70,9 @@
         "nextPage": "quiz-form.html",
         "options": [
           { "value": "bild_1", "text": "1", "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" },
-          { "value": "bild_2", "text": "2", "image": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=200&h=200&fit=crop" },
-          { "value": "bild_3", "text": "3", "image": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=200&h=200&fit=crop" },
-          { "value": "bild_4", "text": "4", "image": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=200&h=200&fit=crop" }
+          { "value": "bild_2", "text": "2", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" },
+          { "value": "bild_3", "text": "3", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "bild_4", "text": "4", "image": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" }
         ]
       }
     ],
@@ -82,7 +82,7 @@
       "formTitle": "Trag dich jetzt ein und sichere dir dein",
       "formSubtitle": "kostenloses Kinder-Fotoshooting",
       "formNote": "Das kostenlose Fotoshooting findet nur vom 1.11.- 29.11.25 statt!\n\nSchnell sein lohnt sich - wir freuen uns auf euch!",
-      "formImage": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=500&fit=crop",
+      "formImage": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=550&fit=crop",
       "formImageAlt": "Kinder-Fotoshooting",
       "successPage": "quiz-success.html",
       "placeholderName": "Dein Vor- und Nachname",
@@ -110,7 +110,7 @@
         "Wir melden uns bald bei dir.",
         "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
       ],
-      "successImage": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&h=500&fit=crop",
+      "successImage": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=550&fit=crop",
       "successImageAlt": "Kinder-Fotoshooting",
       "ctaText": "Jetzt Termin wählen & sichern!",
       "ctaLink": "#",
@@ -147,9 +147,9 @@
         "whyFreeText": "Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.",
         "images": [
           { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop", "alt": "Kind 1" },
-          { "src": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=400&fit=crop", "alt": "Kind 2" },
-          { "src": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=350&h=400&fit=crop", "alt": "Kind 3" },
-          { "src": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=350&h=400&fit=crop", "alt": "Kind 4" }
+          { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop", "alt": "Kind 2" },
+          { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=350&h=400&fit=crop", "alt": "Kind 3" },
+          { "src": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=350&h=400&fit=crop", "alt": "Kind 4" }
         ],
         "sectionTitle": "Echte Kinderlachen, echte Erinnerungen!"
       }
@@ -181,7 +181,7 @@
       "template": "steps/steps-v4.html",
       "data": {
         "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
-        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=650&fit=crop",
+        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=550&h=650&fit=crop",
         "imageAlt": "Kinder-Fotoshooting",
         "ctaText": "Kostenloses Fotoshooting sichern",
         "ctaLink": "quiz-step1.html",
@@ -237,11 +237,11 @@
       "template": "gallery/gallery-slider-v4.html",
       "data": {
         "images": [
-          { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1300&h=800&fit=crop", "alt": "Galerie 1" },
-          { "src": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=1300&h=800&fit=crop", "alt": "Galerie 2" },
-          { "src": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=1300&h=800&fit=crop", "alt": "Galerie 3" },
-          { "src": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1300&h=800&fit=crop", "alt": "Galerie 4" },
-          { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=1300&h=800&fit=crop", "alt": "Galerie 5" }
+          { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&h=700&fit=crop", "alt": "Galerie 1" },
+          { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1200&h=700&fit=crop", "alt": "Galerie 2" },
+          { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=1200&h=700&fit=crop", "alt": "Galerie 3" },
+          { "src": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=1200&h=700&fit=crop", "alt": "Galerie 4" },
+          { "src": "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=1200&h=700&fit=crop", "alt": "Galerie 5" }
         ]
       }
     },
@@ -252,12 +252,12 @@
         "bgClass": "section--bg-secondary",
         "services": [
           {
-            "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=300&fit=crop",
+            "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=300&fit=crop",
             "title": "Family Time",
             "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
           },
           {
-            "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=400&h=300&fit=crop",
+            "image": "https://images.unsplash.com/photo-1544126592-807ade215a0b?w=400&h=300&fit=crop",
             "title": "Newborn & Babybauch",
             "text": "Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren."
           },
@@ -272,7 +272,7 @@
     {
       "template": "gallery/gallery-fullwidth.html",
       "data": {
-        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1400&h=700&fit=crop",
+        "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1400&h=600&fit=crop",
         "alt": "Fotostudio"
       }
     },
@@ -290,7 +290,7 @@
         "ctaLink": "quiz-step1.html",
         "images": [
           { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop", "alt": "Studio 1" },
-          { "src": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=400&fit=crop", "alt": "Studio 2" }
+          { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop", "alt": "Studio 2" }
         ]
       }
     },

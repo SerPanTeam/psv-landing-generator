@@ -32,10 +32,10 @@
         "columns": 4,
         "nextPage": "quiz-step2.html",
         "options": [
-          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=200&h=200&fit=crop" },
-          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
-          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=200&h=200&fit=crop" },
-          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=200&h=200&fit=crop" }
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=200&h=200&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -45,10 +45,10 @@
         "columns": 4,
         "nextPage": "quiz-step3.html",
         "options": [
-          { "value": "bild_1", "text": "1", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=200&h=200&fit=crop" },
-          { "value": "bild_2", "text": "2", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
-          { "value": "bild_3", "text": "3", "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=200&h=200&fit=crop" },
-          { "value": "bild_4", "text": "4", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=200&h=200&fit=crop" }
+          { "value": "bild_1", "text": "1", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" },
+          { "value": "bild_2", "text": "2", "image": "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=200&h=200&fit=crop" },
+          { "value": "bild_3", "text": "3", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "bild_4", "text": "4", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -58,8 +58,8 @@
         "columns": 2,
         "nextPage": "quiz-step4.html",
         "options": [
-          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=200&h=200&fit=crop" },
-          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" }
+          { "value": "ja_hammer", "text": "Ja, das war der Hammer!", "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, bisher noch nicht!", "image": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" }
         ]
       },
       {
@@ -69,7 +69,7 @@
         "columns": 3,
         "nextPage": "quiz-form.html",
         "options": [
-          { "value": "elternpaar", "text": "Nur wir als Elternpaar", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=200&h=200&fit=crop" },
+          { "value": "elternpaar", "text": "Nur wir als Elternpaar", "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=200&h=200&fit=crop" },
           { "value": "eltern_kinder", "text": "Eltern und die Kinder", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" },
           { "value": "mit_haustier", "text": "Wir nehmen auch unser Haustier mit", "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=200&h=200&fit=crop" }
         ]
@@ -81,7 +81,7 @@
       "formTitle": "Trage dich jetzt ein und sichere dir dein Platz für ein",
       "formSubtitle": "Familien-Fotoshooting zu Weihnachten!",
       "formNote": "Diese Aktion gilt nur bis zum 06.12.25.",
-      "formImage": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=450&h=550&fit=crop",
+      "formImage": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=450&h=600&fit=crop",
       "formImageAlt": "Familien-Fotoshooting",
       "successPage": "quiz-success.html",
       "placeholderName": "Dein Vor- und Nachname",
@@ -109,7 +109,7 @@
         "Wir melden uns bald bei dir.",
         "Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!"
       ],
-      "successImage": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=450&h=550&fit=crop",
+      "successImage": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=450&h=600&fit=crop",
       "successImageAlt": "Familien-Fotoshooting",
       "ctaText": "Jetzt Termin wählen & sichern!",
       "ctaLink": "#",
@@ -146,15 +146,15 @@
         "subtitle": "Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein.",
         "buttonText": "Jetzt Gutschein sichern",
         "buttonLink": "quiz-step1.html",
-        "imageMain": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=500&h=500&fit=crop",
-        "imageSecondary": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=380&fit=crop",
+        "imageMain": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=500&h=500&fit=crop",
+        "imageSecondary": "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=400&h=380&fit=crop",
         "imageAlt": "Familien-Fotoshooting"
       }
     },
     {
       "template": "promo/promo-v1.html",
       "data": {
-        "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=500&h=600&fit=crop",
+        "image": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=500&h=600&fit=crop",
         "shortImage": true,
         "title": "Weihnachts-Fotoshooting-Aktion",
         "paragraphs": [
@@ -170,7 +170,7 @@
     {
       "template": "content/content-v1.html",
       "data": {
-        "image": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=500&h=600&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=500&h=600&fit=crop",
         "title": "Für die schönsten Erinnerungen mit deinen Liebsten!",
         "paragraphs": [
           "Familien-Fotoshooting – liebevoll & natürlich",
@@ -185,10 +185,10 @@
       "template": "gallery/gallery-slider.html",
       "data": {
         "images": [
-          { "src": "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=400&h=400&fit=crop", "alt": "Familienfoto 1" },
-          { "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop", "alt": "Familienfoto 2" },
-          { "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop", "alt": "Familienfoto 3" },
-          { "src": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=400&h=400&fit=crop", "alt": "Familienfoto 4" }
+          { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=400&fit=crop", "alt": "Familienfoto 1" },
+          { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=400&fit=crop", "alt": "Familienfoto 2" },
+          { "src": "https://images.unsplash.com/photo-1540479859555-17af45c78602?w=400&h=400&fit=crop", "alt": "Familienfoto 3" },
+          { "src": "https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=400&h=400&fit=crop", "alt": "Familienfoto 4" }
         ]
       }
     },
@@ -197,7 +197,7 @@
       "data": {
         "items": [
           {
-            "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=120&h=120&fit=crop",
+            "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=120&h=120&fit=crop",
             "title": "Viel Zeit & Raum",
             "text": "für Momente für dich und deine Familie"
           },
@@ -252,7 +252,7 @@
     {
       "template": "gallery/gallery-fullwidth.html",
       "data": {
-        "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&h=700&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1400&h=600&fit=crop",
         "alt": "Familien-Fotoshooting Galerie"
       }
     },
@@ -282,22 +282,22 @@
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "services": [
           {
-            "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=350&h=350&fit=crop",
+            "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=350&h=350&fit=crop",
             "title": "Family Time",
             "text": "Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen."
           },
           {
-            "image": "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop",
+            "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=350&fit=crop",
             "title": "Kinder-Fotoshooting",
             "text": "Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest."
           },
           {
-            "image": "https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=350&h=350&fit=crop",
+            "image": "https://images.unsplash.com/photo-1544126592-807ade215a0b?w=350&h=350&fit=crop",
             "title": "Babybauch & Newborn",
             "text": "Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben."
           },
           {
-            "image": "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=350&h=350&fit=crop",
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=350&h=350&fit=crop",
             "title": "Portraitfotografie",
             "text": "Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest."
           }
