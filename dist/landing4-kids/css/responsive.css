@@ -1117,6 +1117,7 @@
   .hero--v3 {
     padding-top: 20px;
     padding-bottom: 40px;
+    overflow-x: clip; /* Prevent horizontal scroll */
   }
 
   .hero--v3 .hero__image-banner {
@@ -2689,10 +2690,11 @@
     line-height: 1.4;
   }
 
-  /* === GALLERY DECORATED - предотвращаем overflow === */
+  /* === GALLERY DECORATED - предотвращаем горизонтальный overflow === */
   .gallery-decorated {
     padding: 50px 0 70px;
-    overflow: visible;
+    overflow-x: clip;
+    overflow-y: visible; /* Декоративные элементы выходят по вертикали */
   }
 
   .gallery-decorated__wrapper {
