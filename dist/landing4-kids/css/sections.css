@@ -1092,7 +1092,7 @@
 /* Header with icon and title inline */
 .step-card__header {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Иконка на уровне первой строки заголовка */
   gap: 15px;
   margin-bottom: 20px;
 }
