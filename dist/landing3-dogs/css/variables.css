@@ -87,13 +87,13 @@
   --button-height-sm: 50px;
   --button-padding-x: 40px;
   --button-padding-x-sm: 24px;
-  --button-border-radius: 0;
+  --button-border-radius: 30px;
   --button-font-size: var(--font-size-text);
   --button-font-weight: var(--font-weight-bold);
   
   /* Карточки */
   --card-border-radius: 0;            /* Прямоугольные (Лендинги 1, 2) */
-  --card-border-radius-rounded: 20px; /* Скруглённые (Лендинги 3, 4) */
+  --card-border-radius-rounded: 30px; /* Скруглённые (Лендинги 3, 4) */
   --card-padding: 24px;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   
