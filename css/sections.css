@@ -2257,7 +2257,7 @@
   background: var(--color-bg-white);
   border-radius: 20px;
   padding: 30px;
-  margin-top: 0; /* Remove staggered layout */
+  margin: 0; /* Remove all margins, gap handled by grid */
   min-height: auto; /* Use grid stretch instead of fixed min-height */
   display: flex;
   flex-direction: column;
