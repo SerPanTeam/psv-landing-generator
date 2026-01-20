@@ -526,6 +526,7 @@
   color: var(--color-text-primary);
   margin-bottom: 0;
   line-height: 1.2;
+  white-space: nowrap; /* FIGMA: одна строка без переноса */
 }
 
 .quiz-form__title-line2 {
