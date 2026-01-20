@@ -353,9 +353,10 @@
 }
 
 /* Below banner section */
+/* FIGMA: Image right edge 609px, text left 728px → gap = 119px */
 .hero--v3 .hero__below-banner {
   display: flex;
-  gap: 40px;
+  gap: 119px; /* FIGMA: exact */
   margin-top: 40px;
   align-items: flex-start;
 }
