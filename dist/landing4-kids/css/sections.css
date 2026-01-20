@@ -2699,3 +2699,50 @@
     height: 24px;
   }
 }
+
+/* ===== LANDING 3 SPECIFIC GAPS ===== */
+/* FIGMA gaps between sections for Landing 3 (Hunde-Fotoshooting) */
+
+/* Gallery slider → CTA: 89px */
+.gallery-single-slider {
+  padding-bottom: 89px;
+}
+
+/* CTA (layoutRow) → Steps: 98px */
+.cta--layout-row {
+  padding-top: 0;
+  padding-bottom: 98px;
+}
+
+/* Steps (rounded) → Features: 89px */
+.steps--rounded {
+  padding-top: 0;
+  padding-bottom: 89px;
+}
+
+/* Features grid → Gallery decorated: 86px */
+.features--grid {
+  padding-top: 0;
+  padding-bottom: 86px;
+}
+
+/* Gallery decorated → FAQ: 72px */
+.gallery-decorated {
+  padding-top: 0;
+  padding-bottom: 72px;
+}
+
+/* FAQ cards → Services: 115px (handled by services--rounded padding-top) */
+.faq--cards-only {
+  padding-bottom: 0;
+}
+
+/* Services → About: 137px */
+.services--rounded {
+  padding-bottom: 137px;
+}
+
+/* About → Footer: 115px */
+.about--rounded {
+  padding-bottom: 115px;
+}
