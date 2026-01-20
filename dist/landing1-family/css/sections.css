@@ -2238,9 +2238,10 @@
 
 .steps--rounded .steps__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 600px); /* FIGMA: exact card width */
+  gap: 33px; /* FIGMA: 735 - 702 = 33px */
+  max-width: 1233px; /* FIGMA: 600 + 33 + 600 = 1233px */
+  margin: 0 auto;
   align-items: stretch; /* FIGMA: Cards in same row have equal height */
 }
 
