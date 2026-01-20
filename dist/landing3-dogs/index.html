@@ -157,52 +157,53 @@
      PIXEL-PERFECT ПО FIGMA (node 369:268):
      - Single large image: 1233px x 746px
      - Border-radius: 50px
-     - Navigation arrows on left/right sides
+     - Small chevron arrows at page edges (left: 45px, right: ~64px)
      - One image visible at a time, click to navigate
      ============================================ -->
 
 <section class="gallery-single-slider section--bg-primary">
-  <div class="gallery-single-slider__wrapper">
-    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
-      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 2L3 19L18 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+  <!-- FIGMA: Arrow left at 45px from page edge -->
+  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 
-    <div class="gallery-single-slider__container" data-gallery-single-slider>
-      
-      <div class="gallery-single-slider__slide is-active">
-        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 1" class="gallery-single-slider__image">
-      </div>
-      
-
-      <div class="gallery-single-slider__slide">
-        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 2" class="gallery-single-slider__image">
-      </div>
-      
-
-      <div class="gallery-single-slider__slide">
-        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 3" class="gallery-single-slider__image">
-      </div>
-      
-
-      <div class="gallery-single-slider__slide">
-        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 4" class="gallery-single-slider__image">
-      </div>
-      
-
-      <div class="gallery-single-slider__slide">
-        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 5" class="gallery-single-slider__image">
-      </div>
-      
+  <!-- FIGMA: Image 1233x746px centered -->
+  <div class="gallery-single-slider__container" data-gallery-single-slider>
+    
+    <div class="gallery-single-slider__slide is-active">
+      <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 1" class="gallery-single-slider__image">
     </div>
+    
 
-    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
-      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 2L17 19L2 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 2" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 3" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 4" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 5" class="gallery-single-slider__image">
+    </div>
+    
   </div>
+
+  <!-- FIGMA: Arrow right at ~64px from page edge -->
+  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
 </section>
 
 

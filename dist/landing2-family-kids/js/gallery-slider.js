@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Gallery Single Slider - Single Image Slider (Landing 3)
-  document.querySelectorAll('.gallery-single-slider__wrapper').forEach(wrapper => {
-    new GallerySingleSlider(wrapper);
+  document.querySelectorAll('.gallery-single-slider').forEach(section => {
+    new GallerySingleSlider(section);
   });
 });
 
@@ -235,14 +235,15 @@ class GallerySliderV4 {
 /**
  * Gallery Single Slider - Single Image Slider (Landing 3)
  * Shows one image at a time with prev/next navigation
- * Similar to V4 but with different styling (50px radius)
+ * Arrows are positioned at section edges
  */
 class GallerySingleSlider {
-  constructor(element) {
-    this.wrapper = element;
-    this.slides = element.querySelectorAll('.gallery-single-slider__slide');
-    this.prevBtn = element.querySelector('.gallery-single-slider__arrow--prev');
-    this.nextBtn = element.querySelector('.gallery-single-slider__arrow--next');
+  constructor(section) {
+    this.section = section;
+    this.container = section.querySelector('.gallery-single-slider__container');
+    this.slides = section.querySelectorAll('.gallery-single-slider__slide');
+    this.prevBtn = section.querySelector('.gallery-single-slider__arrow--prev');
+    this.nextBtn = section.querySelector('.gallery-single-slider__arrow--next');
     this.currentIndex = 0;
 
     this.init();
@@ -263,15 +264,14 @@ class GallerySingleSlider {
       this.nextBtn.addEventListener('click', () => this.next());
     }
 
-    // Touch/swipe support
-    const container = this.wrapper.querySelector('.gallery-single-slider__container');
-    if (container) {
+    // Touch/swipe support on container
+    if (this.container) {
       let startX = 0;
-      container.addEventListener('touchstart', (e) => {
+      this.container.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
       }, { passive: true });
 
-      container.addEventListener('touchend', (e) => {
+      this.container.addEventListener('touchend', (e) => {
         const endX = e.changedTouches[0].clientX;
         const diff = startX - endX;
         if (Math.abs(diff) > 50) {
