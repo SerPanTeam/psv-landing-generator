@@ -1,0 +1,34 @@
+<!-- ============================================
+     CONTENT SIDEBAR - "Warum kostenlos?" блок
+
+     FIGMA (node 369:256):
+     - Image left: 507x448px, rounded-30px
+     - Text block right with title, texts, button
+     - Gap between image and text: 119px
+     ============================================ -->
+
+<section class="content-sidebar section--bg-primary{{paddingClasses}}">
+  <div class="container">
+    <div class="content-sidebar__inner">
+      {{#if image}}
+      <div class="content-sidebar__image">
+        <img src="{{image}}" alt="">
+      </div>
+      {{/if}}
+
+      <div class="content-sidebar__content">
+        <h3 class="content-sidebar__title">{{title}}</h3>
+        <div class="content-sidebar__text">
+          {{#if texts}}
+          {{#each texts}}
+          <p>{{this}}</p>
+          {{/each}}
+          {{/if}}
+        </div>
+        {{#if buttonText}}
+        <a href="{{buttonLink}}" class="btn btn-primary content-sidebar__btn">{{buttonText}}</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>

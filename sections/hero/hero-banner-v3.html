@@ -1,0 +1,28 @@
+<!-- ============================================
+     HERO BANNER V3 - Landing 3 (Hunde-Fotoshooting)
+
+     FIGMA (node 369:256):
+     - Full-width banner: 1237x641px, rounded-50px
+     - Text overlay on banner (white)
+     ============================================ -->
+
+<section class="hero-banner hero-banner--v3 section--bg-primary{{paddingClasses}}">
+  <div class="container">
+    <div class="hero-banner__image">
+      <img src="{{bannerImage}}" alt="{{title}}">
+
+      <div class="hero-banner__overlay">
+        <span class="hero-banner__label">{{label}}</span>
+        <h1 class="hero-banner__title">{{title}}</h1>
+        <div class="hero-banner__subtitle">
+          {{#if subtitleLines}}
+          {{#each subtitleLines}}
+          <p>{{this}}</p>
+          {{/each}}
+          {{/if}}
+        </div>
+        <a href="{{buttonLink}}" class="btn btn-primary hero-banner__btn">{{buttonText}}</a>
+      </div>
+    </div>
+  </div>
+</section>

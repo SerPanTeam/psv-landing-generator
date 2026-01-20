@@ -48,26 +48,22 @@
 
 
 <!-- ============================================
-     HERO V3 - Лендинг 3 (Hunde-Fotoshooting)
+     HERO BANNER V3 - Landing 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 369:256):
+     FIGMA (node 369:256):
      - Full-width banner: 1237x641px, rounded-50px
      - Text overlay on banner (white)
-     - Below banner: sidebar image LEFT + "Warum kostenlos?" RIGHT
-     - 3 feature cards at bottom
      ============================================ -->
 
-<section class="hero hero--v3 section--bg-primary">
+<section class="hero-banner hero-banner--v3 section--bg-primary pb-92">
   <div class="container">
-    <!-- Main banner with overlay content -->
-    <div class="hero__image-banner">
+    <div class="hero-banner__image">
       <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1400&h=700&fit=crop" alt="Hunde-Fotoshooting">
 
-      <!-- Content overlay on banner -->
-      <div class="hero__content-overlay">
-        <span class="hero__label">Kostenloses</span>
-        <h1 class="hero__title">Hunde-Fotoshooting</h1>
-        <div class="hero__subtitle">
+      <div class="hero-banner__overlay">
+        <span class="hero-banner__label">Kostenloses</span>
+        <h1 class="hero-banner__title">Hunde-Fotoshooting</h1>
+        <div class="hero-banner__subtitle">
           
           
           <p>Hallo an alle Hundebesitzer!</p>
@@ -83,23 +79,34 @@
           
           
         </div>
-        <a href="quiz-step1.html" class="btn btn-primary hero__btn">Hier geht's zu den Gutscheinen</a>
+        <a href="quiz-step1.html" class="btn btn-primary hero-banner__btn">Hier geht's zu den Gutscheinen</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Below banner: sidebar image + "Warum Kostenlos?" -->
-    <div class="hero__below-banner">
-      <!-- Sidebar image (left, overlapping) -->
+
+<!-- ============================================
+     CONTENT SIDEBAR - "Warum kostenlos?" блок
+
+     FIGMA (node 369:256):
+     - Image left: 507x448px, rounded-30px
+     - Text block right with title, texts, button
+     - Gap between image and text: 119px
+     ============================================ -->
+
+<section class="content-sidebar section--bg-primary pb-195">
+  <div class="container">
+    <div class="content-sidebar__inner">
       
-      <div class="hero__sidebar-image">
+      <div class="content-sidebar__image">
         <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500&h=400&fit=crop" alt="">
       </div>
       
 
-      <!-- "Warum Kostenlos?" block (right) -->
-      <div class="hero__sidebar-block">
-        <h3 class="hero__sidebar-title">Warum kostenlos?</h3>
-        <div class="hero__sidebar-text">
+      <div class="content-sidebar__content">
+        <h3 class="content-sidebar__title">Warum kostenlos?</h3>
+        <div class="content-sidebar__text">
           
           
           <p>Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.</p>
@@ -110,43 +117,55 @@
           
         </div>
         
-        <a href="quiz-step1.html" class="btn btn-primary hero__sidebar-btn">Kostenloses Fotoshooting sichern</a>
+        <a href="quiz-step1.html" class="btn btn-primary content-sidebar__btn">Kostenloses Fotoshooting sichern</a>
         
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- Feature cards (3 columns) -->
-    
-    <div class="hero__features">
+
+<!-- ============================================
+     FEATURES CARDS V3 - 3 карточки (image + title + text)
+
+     FIGMA (node 369:256):
+     - 3 columns, gap 40px
+     - Image: 350x300px, rounded-35px
+     - Title: 28px bold
+     - Text: 22px medium
+     ============================================ -->
+
+<section class="features-cards features-cards--v3 section--bg-primary pb-56">
+  <div class="container">
+    <div class="features-cards__grid">
       
-      <div class="hero__feature-card">
-        <div class="hero__feature-image">
+      <div class="features-cards__item">
+        <div class="features-cards__image">
           <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=300&fit=crop" alt="">
         </div>
-        <h4 class="hero__feature-title">Hunde-Fotoshooting – liebevoll & natürlich</h4>
-        <p class="hero__feature-text">Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen.</p>
+        <h4 class="features-cards__title">Hunde-Fotoshooting – liebevoll & natürlich</h4>
+        <p class="features-cards__text">Viel Zeit und Raum für besondere Momente mit deinem Haustier – ganz entspannt, in vertrauter Umgebung und mit viel Geduld für einzigartige Aufnahmen.</p>
       </div>
       
 
-      <div class="hero__feature-card">
-        <div class="hero__feature-image">
+      <div class="features-cards__item">
+        <div class="features-cards__image">
           <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&h=300&fit=crop" alt="">
         </div>
-        <h4 class="hero__feature-title">Professionelles Hunde-Fotoshooting</h4>
-        <p class="hero__feature-text">Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest.</p>
+        <h4 class="features-cards__title">Professionelles Hunde-Fotoshooting</h4>
+        <p class="features-cards__text">Ich nehme mir Zeit für euch und halte mit viel Geduld und einem geschulten Auge die besondere Verbindung zwischen dir und deinem Tier in liebevollen Bildern fest.</p>
       </div>
       
 
-      <div class="hero__feature-card">
-        <div class="hero__feature-image">
+      <div class="features-cards__item">
+        <div class="features-cards__image">
           <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop" alt="">
         </div>
-        <h4 class="hero__feature-title">Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit</h4>
-        <p class="hero__feature-text">Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren.</p>
+        <h4 class="features-cards__title">Hunde-Fotoshooting mit Herz, Stil und Persönlichkeit</h4>
+        <p class="features-cards__text">Professionelle Aufnahmen, mit viel Geduld und Liebe zum Detail – individuell auf euch abgestimmt. Denn jedes Tier ist einzigartig, und genau das soll man auf den Bildern sehen und spüren.</p>
       </div>
       
     </div>
-    
   </div>
 </section>
 
@@ -241,7 +260,7 @@
      - 4 steps in 2x2 grid
      ============================================ -->
 
-<section class="steps section--bg-primary steps--rounded pt-0 pb-89">
+<section class="steps section--bg-primary steps--rounded pt-0 pb-106">
   <div class="container">
     <!-- Title (full width when ctaBottom, otherwise with button on right) -->
     
@@ -952,7 +971,7 @@
         <span class="footer__separator">·</span>
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <p class="footer__updated">Letzte Aktualisierung: 20.01.2026 22:25</p>
+      <p class="footer__updated">Letzte Aktualisierung: 20.01.2026 23:00</p>
     </div>
   </div>
 </footer>

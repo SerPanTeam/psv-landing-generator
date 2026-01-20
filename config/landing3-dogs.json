@@ -142,8 +142,9 @@
       }
     },
     {
-      "template": "hero/hero-v3.html",
+      "template": "hero/hero-banner-v3.html",
       "data": {
+        "paddingBottom": 92,
         "bannerImage": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1400&h=700&fit=crop",
         "label": "Kostenloses",
         "title": "Hunde-Fotoshooting",
@@ -154,15 +155,27 @@
           "23.07.25 statt!"
         ],
         "buttonText": "Hier geht's zu den Gutscheinen",
-        "buttonLink": "quiz-step1.html",
-        "sidebarTitle": "Warum kostenlos?",
-        "sidebarTexts": [
+        "buttonLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "content/content-sidebar.html",
+      "data": {
+        "paddingBottom": 195,
+        "image": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500&h=400&fit=crop",
+        "title": "Warum kostenlos?",
+        "texts": [
           "Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.",
           "Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko."
         ],
-        "sidebarButtonText": "Kostenloses Fotoshooting sichern",
-        "sidebarButtonLink": "quiz-step1.html",
-        "sidebarImage": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500&h=400&fit=crop",
+        "buttonText": "Kostenloses Fotoshooting sichern",
+        "buttonLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "features/features-cards-v3.html",
+      "data": {
+        "paddingBottom": 56,
         "features": [
           {
             "image": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=400&h=300&fit=crop",
@@ -217,7 +230,7 @@
         "rounded": true,
         "ctaBottom": true,
         "paddingTop": 0,
-        "paddingBottom": 89,
+        "paddingBottom": 106,
         "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
         "ctaText": "Kostenloses Fotoshooting sichern",
         "ctaLink": "quiz-step1.html",

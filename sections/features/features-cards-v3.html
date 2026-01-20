@@ -1,0 +1,25 @@
+<!-- ============================================
+     FEATURES CARDS V3 - 3 карточки (image + title + text)
+
+     FIGMA (node 369:256):
+     - 3 columns, gap 40px
+     - Image: 350x300px, rounded-35px
+     - Title: 28px bold
+     - Text: 22px medium
+     ============================================ -->
+
+<section class="features-cards features-cards--v3 section--bg-primary{{paddingClasses}}">
+  <div class="container">
+    <div class="features-cards__grid">
+      {{#each features}}
+      <div class="features-cards__item">
+        <div class="features-cards__image">
+          <img src="{{this.image}}" alt="">
+        </div>
+        <h4 class="features-cards__title">{{this.title}}</h4>
+        <p class="features-cards__text">{{this.text}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
