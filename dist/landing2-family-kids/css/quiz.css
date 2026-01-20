@@ -658,6 +658,16 @@
   object-fit: cover;
 }
 
+/* ===== ROUNDED SUCCESS IMAGE (Landing 3, 4) ===== */
+.quiz-success__image--rounded {
+  border-radius: 40px; /* FIGMA: 40px */
+  overflow: hidden;
+}
+
+.quiz-success__image--rounded img {
+  border-radius: 40px;
+}
+
 /* ===== ABOUT SECTION (Success Page) ===== */
 .quiz-success__about {
   padding: 80px 0;

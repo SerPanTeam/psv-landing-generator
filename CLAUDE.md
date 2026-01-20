@@ -436,6 +436,28 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 
 **Пример ошибки:** Quiz-form Landing 3 - title "Trag dich jetzt ein und sichere dir dein" должен быть на ОДНОЙ строке, но CSS не имел `white-space: nowrap`.
 
+### 9️⃣ ЗАКРУГЛЕНИЯ КАРТИНОК — Проверь ВСЕ изображения!
+```
+□ Получи design_context или screenshot для каждой секции с картинками
+□ Найди параметр `rounded-[Xpx]` или `border-radius` в Figma
+□ Landing 1/2: обычно БЕЗ закругления (border-radius: 0)
+□ Landing 3/4: обычно С закруглением (border-radius: 40px)
+□ Проверь: шаблон поддерживает флаг `rounded: true`?
+□ Добавь `rounded: true` в JSON конфиг если нужно
+```
+
+**Секции с поддержкой `rounded: true`:**
+| Шаблон | Элемент | Класс | Border-radius |
+|--------|---------|-------|---------------|
+| `quiz-page-form.html` | form image | `.quiz-form__image--rounded` | 40px |
+| `quiz-page-success.html` | success image | `.quiz-success__image--rounded` | 40px |
+| `about-v1.html` | about image | `.about--rounded .about__image` | 40px |
+| `services-grid.html` | card images | `.services--rounded .service-card__image` | 40px |
+| `gallery-fullwidth.html` | gallery image | `.gallery-fullwidth--rounded` | 40px |
+| `steps-v4.html` | steps image | автоматически 40px | 40px |
+
+**Пример ошибки:** Quiz-success Landing 3 - изображение было БЕЗ закругления, потому что в конфиге success не было `rounded: true`.
+
 ---
 
 ## ✅ Чеклист соответствия Figma

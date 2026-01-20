@@ -106,6 +106,7 @@
     },
 
     "success": {
+      "rounded": true,
       "successTitle": "Herzlichen Glückwunsch!",
       "successSubtitle": "Deine Anfrage ist bei uns eingegangen!",
       "successTexts": [
