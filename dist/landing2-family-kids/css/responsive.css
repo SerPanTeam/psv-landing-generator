@@ -2750,6 +2750,20 @@
     line-height: 1.4;
   }
 
+  .faq--cards-only .faq__card-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .faq--cards-only .faq__card-answer-inner {
+    padding-top: 16px;
+  }
+
+  .faq--cards-only .faq__card-answer-inner p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
   .faq--cards-only .faq__cta {
     margin-top: 30px;
   }
