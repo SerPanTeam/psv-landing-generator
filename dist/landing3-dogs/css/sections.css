@@ -2249,17 +2249,19 @@
 .steps--rounded .row {
   display: grid;
   grid-template-columns: repeat(2, 600px); /* FIGMA: exact card width */
-  gap: 33px; /* FIGMA: 735 - 702 = 33px */
+  column-gap: 33px; /* FIGMA: 735 - 702 = 33px */
+  row-gap: 32px; /* FIGMA: 3877 - 3845 = 32px */
   max-width: 1233px; /* FIGMA: 600 + 33 + 600 = 1233px */
   margin: 0 auto;
   align-items: stretch; /* FIGMA: Cards in same row have equal height */
 }
 
-/* Reset Bootstrap col width when using CSS Grid */
+/* Reset Bootstrap col width and padding when using CSS Grid */
 .steps--rounded .row > .col-lg-6 {
   width: 100%;
   max-width: none;
   flex: none;
+  padding: 0; /* Remove Bootstrap gutter */
 }
 
 .steps--rounded .step-card {
