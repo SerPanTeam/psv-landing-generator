@@ -2443,7 +2443,7 @@
 
 /* ===== SERVICES ROUNDED ===== */
 .services--rounded {
-  padding-top: 80px; /* Extra top spacing after FAQ */
+  padding-top: 115px; /* FIGMA: 6113 - 5998 = 115px gap after FAQ */
 }
 
 .services--rounded .services__header {
