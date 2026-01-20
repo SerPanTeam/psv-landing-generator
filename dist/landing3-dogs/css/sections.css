@@ -2442,6 +2442,10 @@
 }
 
 /* ===== SERVICES ROUNDED ===== */
+.services--rounded {
+  padding-top: 80px; /* Extra top spacing after FAQ */
+}
+
 .services--rounded .services__header {
   text-align: center;
 }
