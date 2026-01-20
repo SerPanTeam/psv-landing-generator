@@ -2257,7 +2257,7 @@
 }
 
 .steps--rounded .step-card__header {
-  margin-bottom: 16px;
+  margin-bottom: 24px; /* FIGMA: 3683 - 3659 = 24px */
 }
 
 .steps--rounded .step-card__number {
@@ -2271,7 +2271,7 @@
 }
 
 .steps--rounded .step-card__title {
-  margin-bottom: 16px;
+  margin-bottom: 0; /* Title inside header, gap controlled by header margin */
 }
 
 .steps--rounded .step-card__divider {
