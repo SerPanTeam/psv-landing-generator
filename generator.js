@@ -229,6 +229,16 @@ function buildSection(sectionConfig, globalConfig = {}) {
 
   let data = sectionConfig.data || {};
 
+  // Process padding utilities (for Landing 3 & 4 pixel-perfect gaps)
+  let paddingClasses = '';
+  if (data.paddingTop !== undefined) {
+    paddingClasses += ` pt-${data.paddingTop}`;
+  }
+  if (data.paddingBottom !== undefined) {
+    paddingClasses += ` pb-${data.paddingBottom}`;
+  }
+  data.paddingClasses = paddingClasses;
+
   // Add lastUpdated to footer
   if (sectionConfig.template.includes('footer')) {
     data.lastUpdated = getLastUpdatedDate();

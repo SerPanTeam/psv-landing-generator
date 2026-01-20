@@ -281,7 +281,7 @@
 */
 .hero--v3 {
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 56px; /* FIGMA: 2238 - 2182 = 56px gap to gallery */
 }
 
 /* Full-width banner */
@@ -357,7 +357,7 @@
 .hero--v3 .hero__below-banner {
   display: flex;
   gap: 119px; /* FIGMA: exact */
-  margin-top: 40px;
+  margin-top: 92px; /* FIGMA: 921 - 829 = 92px */
   align-items: flex-start;
 }
 
@@ -422,7 +422,7 @@
 .hero--v3 .hero__features {
   display: flex;
   gap: 40px;
-  margin-top: 60px;
+  margin-top: 195px; /* FIGMA: 1511 - 1316 = 195px */
 }
 
 .hero--v3 .hero__feature-card {
@@ -436,7 +436,7 @@
   background-color: #7f7f7f;
   border-radius: 35px;
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-bottom: 36px; /* FIGMA: 1847 - 1811 = 36px */
 }
 
 .hero--v3 .hero__feature-image img {
@@ -2442,9 +2442,7 @@
 }
 
 /* ===== SERVICES ROUNDED ===== */
-.services--rounded {
-  padding-top: 115px; /* FIGMA: 6113 - 5998 = 115px gap after FAQ */
-}
+/* Note: padding controlled via JSON config paddingTop/paddingBottom */
 
 .services--rounded .services__header {
   text-align: center;
@@ -2599,7 +2597,7 @@
    - Right arrow: right ~64px
 */
 .gallery-single-slider {
-  padding: 40px 0;
+  padding: 0; /* FIGMA: Hero-v3 handles the 56px gap above */
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
@@ -2700,49 +2698,40 @@
   }
 }
 
-/* ===== LANDING 3 SPECIFIC GAPS ===== */
-/* FIGMA gaps between sections for Landing 3 (Hunde-Fotoshooting) */
+/* ===== PADDING UTILITIES ===== */
+/* Pixel-perfect values from Figma for Landing 3 & 4 */
+/* Usage: Add paddingTop/paddingBottom to section data in JSON config */
 
-/* Gallery slider → CTA: 89px */
-.gallery-single-slider {
-  padding-bottom: 89px;
-}
+/* padding-top */
+.pt-0 { padding-top: 0 !important; }
+.pt-56 { padding-top: 56px !important; }
+.pt-72 { padding-top: 72px !important; }
+.pt-80 { padding-top: 80px !important; }
+.pt-86 { padding-top: 86px !important; }
+.pt-88 { padding-top: 88px !important; }
+.pt-89 { padding-top: 89px !important; }
+.pt-96 { padding-top: 96px !important; }
+.pt-98 { padding-top: 98px !important; }
+.pt-103 { padding-top: 103px !important; }
+.pt-104 { padding-top: 104px !important; }
+.pt-106 { padding-top: 106px !important; }
+.pt-115 { padding-top: 115px !important; }
+.pt-120 { padding-top: 120px !important; }
+.pt-137 { padding-top: 137px !important; }
 
-/* CTA (layoutRow) → Steps: 98px */
-.cta--layout-row {
-  padding-top: 0;
-  padding-bottom: 98px;
-}
-
-/* Steps (rounded) → Features: 89px */
-.steps--rounded {
-  padding-top: 0;
-  padding-bottom: 89px;
-}
-
-/* Features grid → Gallery decorated: 86px */
-.features--grid {
-  padding-top: 0;
-  padding-bottom: 86px;
-}
-
-/* Gallery decorated → FAQ: 72px */
-.gallery-decorated {
-  padding-top: 0;
-  padding-bottom: 72px;
-}
-
-/* FAQ cards → Services: 115px (handled by services--rounded padding-top) */
-.faq--cards-only {
-  padding-bottom: 0;
-}
-
-/* Services → About: 137px */
-.services--rounded {
-  padding-bottom: 137px;
-}
-
-/* About → Footer: 115px */
-.about--rounded {
-  padding-bottom: 115px;
-}
+/* padding-bottom */
+.pb-0 { padding-bottom: 0 !important; }
+.pb-56 { padding-bottom: 56px !important; }
+.pb-72 { padding-bottom: 72px !important; }
+.pb-80 { padding-bottom: 80px !important; }
+.pb-86 { padding-bottom: 86px !important; }
+.pb-88 { padding-bottom: 88px !important; }
+.pb-89 { padding-bottom: 89px !important; }
+.pb-96 { padding-bottom: 96px !important; }
+.pb-98 { padding-bottom: 98px !important; }
+.pb-103 { padding-bottom: 103px !important; }
+.pb-104 { padding-bottom: 104px !important; }
+.pb-106 { padding-bottom: 106px !important; }
+.pb-115 { padding-bottom: 115px !important; }
+.pb-120 { padding-bottom: 120px !important; }
+.pb-137 { padding-bottom: 137px !important; }

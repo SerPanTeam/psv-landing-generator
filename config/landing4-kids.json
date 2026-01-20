@@ -160,6 +160,7 @@
     {
       "template": "content/content-v2.html",
       "data": {
+        "paddingBottom": 103,
         "title": "Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich",
         "texts": [
           "In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.",
@@ -172,6 +173,7 @@
     {
       "template": "cta/cta-v1.html",
       "data": {
+        "paddingBottom": 80,
         "title": "Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.",
         "subtitle": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
         "buttonText": "Jetzt Gutschein sichern",
@@ -183,6 +185,7 @@
     {
       "template": "steps/steps-v4.html",
       "data": {
+        "paddingBottom": 104,
         "title": "Wie genau komme ich zum kostenlosen Fotoshooting?",
         "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=550&h=650&fit=crop",
         "imageAlt": "Kinder-Fotoshooting",
@@ -211,6 +214,7 @@
       "template": "faq/faq-v4.html",
       "data": {
         "bgClass": "section--bg-secondary",
+        "paddingBottom": 88,
         "title": "Häufige Fragen",
         "questionsLeft": [
           {
@@ -239,6 +243,7 @@
     {
       "template": "gallery/gallery-slider-v4.html",
       "data": {
+        "paddingBottom": 120,
         "images": [
           { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&h=700&fit=crop", "alt": "Galerie 1" },
           { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1200&h=700&fit=crop", "alt": "Galerie 2" },
@@ -251,6 +256,7 @@
     {
       "template": "services/services-v4.html",
       "data": {
+        "paddingBottom": 0,
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "bgClass": "section--bg-secondary",
         "services": [
@@ -282,6 +288,7 @@
     {
       "template": "about/about-v2.html",
       "data": {
+        "paddingBottom": 106,
         "titleCompact": "Herzlich Willkommen in unserem Fotostudio in Bremen-Findorff!",
         "paragraphs": [
           "Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild - wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.",

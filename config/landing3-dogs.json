@@ -185,6 +185,8 @@
     {
       "template": "gallery/gallery-single-slider.html",
       "data": {
+        "paddingTop": 0,
+        "paddingBottom": 89,
         "images": [
           { "src": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop", "alt": "Hunde-Fotoshooting 1" },
           { "src": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop", "alt": "Hunde-Fotoshooting 2" },
@@ -200,6 +202,8 @@
         "bgClass": "section--bg-primary",
         "rounded": true,
         "layoutRow": true,
+        "paddingTop": 0,
+        "paddingBottom": 98,
         "title": "Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.",
         "subtitle": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
         "buttonText": "Jetzt Gutschein sichern",
@@ -212,6 +216,8 @@
         "bgClass": "section--bg-primary",
         "rounded": true,
         "ctaBottom": true,
+        "paddingTop": 0,
+        "paddingBottom": 89,
         "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
         "ctaText": "Kostenloses Fotoshooting sichern",
         "ctaLink": "quiz-step1.html",
@@ -246,6 +252,8 @@
     {
       "template": "features/features-grid.html",
       "data": {
+        "paddingTop": 0,
+        "paddingBottom": 86,
         "items": [
           { "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=120&h=120&fit=crop", "text": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund" },
           { "image": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=120&h=120&fit=crop", "text": "Professionelle Fotografin aus Leidenschaft und Professionalität" },
@@ -257,6 +265,8 @@
     {
       "template": "gallery/gallery-decorated.html",
       "data": {
+        "paddingTop": 0,
+        "paddingBottom": 72,
         "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1300&h=600&fit=crop",
         "alt": "Hunde-Fotoshooting",
         "decorTopRight": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=350&h=250&fit=crop",
@@ -266,6 +276,7 @@
     {
       "template": "faq/faq-cards.html",
       "data": {
+        "paddingBottom": 0,
         "title": "Häufige Fragen zum Fotoshooting",
         "questions": [
           {
@@ -293,6 +304,8 @@
         "bgClass": "section--bg-primary",
         "rounded": true,
         "primaryButton": true,
+        "paddingTop": 115,
+        "paddingBottom": 137,
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "services": [
           {
@@ -325,6 +338,7 @@
       "data": {
         "rounded": true,
         "compact": true,
+        "paddingBottom": 115,
         "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop",
         "label": "Willkommen bei",
         "name": "Möst Fotografie",

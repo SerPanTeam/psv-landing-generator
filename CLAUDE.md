@@ -186,15 +186,70 @@ Quiz Success: node-id=483-180
   --section-padding-y: 80px;
   --content-gap: 40px;
   --content-gap-sm: 20px;
-  
+
   --button-height: 70px;
   --button-padding-x: 40px;
   --button-border-radius: 0;
-  
+
   --card-border-radius: 0;           /* Лендинги 1, 2 */
   --card-border-radius-rounded: 20px; /* Лендинги 3, 4 */
 }
 ```
+
+### Система отступов между секциями (Padding Utilities)
+
+Для pixel-perfect соответствия Figma в Landing 3 и 4 используется система CSS utility классов.
+
+**Как работает:**
+1. В JSON конфиге секции указываются `paddingTop` и/или `paddingBottom`
+2. Generator.js генерирует классы `pt-{value}` и `pb-{value}`
+3. CSS utility классы применяют точные значения из Figma
+
+**Пример JSON конфига:**
+```json
+{
+  "template": "cta/cta-v1.html",
+  "data": {
+    "paddingTop": 0,
+    "paddingBottom": 98,
+    "title": "...",
+    "buttonText": "..."
+  }
+}
+```
+
+**Доступные значения (px):**
+```
+0, 56, 72, 80, 86, 88, 89, 96, 98, 103, 104, 106, 115, 120, 137
+```
+
+**Landing 3 (Hunde-Fotoshooting) - Отступы:**
+| Секция | paddingTop | paddingBottom |
+|--------|------------|---------------|
+| gallery-single-slider | 0 | 89 |
+| cta | 0 | 98 |
+| steps | 0 | 89 |
+| features-grid | 0 | 86 |
+| gallery-decorated | 0 | 72 |
+| faq-cards | — | 0 |
+| services-grid | 115 | 137 |
+| about | — | 115 |
+
+**Landing 4 (Kinder-Fotoshooting) - Отступы:**
+| Секция | paddingTop | paddingBottom |
+|--------|------------|---------------|
+| content-v2 | — | 103 |
+| cta | — | 80 |
+| steps-v4 | — | 104 |
+| faq-v4 | — | 88 |
+| gallery-slider-v4 | — | 120 |
+| services-v4 | — | 0 |
+| about-v2 | — | 106 |
+
+**Важно:**
+- Landing 1 & 2 НЕ используют эту систему (фоны секций перекрываются)
+- Landing 3 & 4 используют pixel-perfect gaps между секциями
+- Все значения взяты из Figma путём вычисления: `element2.top - element1.bottom`
 
 ---
 
@@ -410,7 +465,16 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 □ bgClass: "..." — переопределение фона?
 □ imagesRight: true — картинки справа?
 □ layoutRow: true — горизонтальный layout?
+□ paddingTop: N — отступ сверху (Landing 3 & 4)
+□ paddingBottom: N — отступ снизу (Landing 3 & 4)
 ```
+
+**Padding Utilities (Landing 3 & 4 only):**
+| Значение | Использование |
+|----------|---------------|
+| 0 | Убрать стандартный отступ |
+| 72-98 | Средние отступы между секциями |
+| 103-137 | Большие отступы (services, about) |
 
 ### 7️⃣ ФИНАЛЬНАЯ ПРОВЕРКА
 ```
