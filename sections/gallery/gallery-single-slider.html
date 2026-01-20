@@ -1,0 +1,33 @@
+<!-- ============================================
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 369:268):
+     - Single large image: 1233px x 746px
+     - Border-radius: 50px
+     - Navigation arrows on left/right sides
+     - One image visible at a time, click to navigate
+     ============================================ -->
+
+<section class="gallery-single-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}">
+  <div class="gallery-single-slider__wrapper">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2L3 19L18 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      {{#each images}}
+      <div class="gallery-single-slider__slide{{#if @first}} is-active{{/if}}">
+        <img src="{{this.src}}" alt="{{this.alt}}" class="gallery-single-slider__image">
+      </div>
+      {{/each}}
+    </div>
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L17 19L2 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</section>

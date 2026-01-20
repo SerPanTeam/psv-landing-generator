@@ -152,56 +152,54 @@
 
 
 <!-- ============================================
-     GALLERY SLIDER - Landing Generator
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Primary background
-     - 3 visible slides
-     - Navigation arrows
-     - Smooth slide transitions
+     PIXEL-PERFECT ПО FIGMA (node 369:268):
+     - Single large image: 1233px x 746px
+     - Border-radius: 50px
+     - Navigation arrows on left/right sides
+     - One image visible at a time, click to navigate
      ============================================ -->
 
-<section class="gallery-slider section--bg-primary gallery-slider--rounded">
-  <div class="gallery-slider__wrapper">
-    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
-      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<section class="gallery-single-slider section--bg-primary">
+  <div class="gallery-single-slider__wrapper">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2L3 19L18 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
-    <div class="gallery-slider__viewport">
-      <div class="gallery-slider__track">
-        
-        <div class="gallery-slider__slide">
-          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=400&h=400&fit=crop" alt="Hunde-Fotoshooting 1">
-        </div>
-        
 
-        <div class="gallery-slider__slide">
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=400&h=400&fit=crop" alt="Hunde-Fotoshooting 2">
-        </div>
-        
-
-        <div class="gallery-slider__slide">
-          <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=400&fit=crop" alt="Hunde-Fotoshooting 3">
-        </div>
-        
-
-        <div class="gallery-slider__slide">
-          <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&h=400&fit=crop" alt="Hunde-Fotoshooting 4">
-        </div>
-        
-
-        <div class="gallery-slider__slide">
-          <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=400&h=400&fit=crop" alt="Hunde-Fotoshooting 5">
-        </div>
-        
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 1" class="gallery-single-slider__image">
       </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 2" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 3" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 4" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 5" class="gallery-single-slider__image">
+      </div>
+      
     </div>
-    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
-      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L17 19L2 36" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
   </div>
@@ -522,7 +520,7 @@
       
       <div class="service-card">
         <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=350&h=350&fit=crop" alt="">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=280&h=280&fit=crop" alt="">
         </div>
         <h3 class="service-card__title">Family Time</h3>
         <p class="service-card__text">Haltet die unbeschwerte Freude eurer Familie in liebevollen, natürlichen Bildern fest – voller Nähe, Lachen und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und eure Verbundenheit authentisch zeigen.</p>
@@ -531,7 +529,7 @@
 
       <div class="service-card">
         <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=350&h=350&fit=crop" alt="">
+          <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=280&h=280&fit=crop" alt="">
         </div>
         <h3 class="service-card__title">Babybauch & Newborn</h3>
         <p class="service-card__text">Vom wachsenden Babybauch bis zu den ersten zauberhaften Momenten mit deinem Neugeborenen – ich halte diese unwiederbringliche Zeit in liebevollen Bildern fest, die ein Leben lang begleiten.</p>
@@ -540,7 +538,7 @@
 
       <div class="service-card">
         <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=350&h=350&fit=crop" alt="">
+          <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=280&h=280&fit=crop" alt="">
         </div>
         <h3 class="service-card__title">Hunde-Fotoshooting</h3>
         <p class="service-card__text">Ein kreatives Shooting voller unvergesslicher Erinnerungen – perfekt für dich und deinen vierbeinigen Freund – mit ganz viel Herz, Persönlichkeit und Emotion.</p>
@@ -549,7 +547,7 @@
 
       <div class="service-card">
         <div class="service-card__image">
-          <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop" alt="">
+          <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=280&h=280&fit=crop" alt="">
         </div>
         <h3 class="service-card__title">Kinder-Fotoshooting</h3>
         <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest – voller Lachen, Neugier und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und die Persönlichkeit eurer Kleinen authentisch zeigen.</p>

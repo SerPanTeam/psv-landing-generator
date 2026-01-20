@@ -154,9 +154,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new GallerySlider(wrapper);
   });
 
-  // Gallery Slider V4 - Single Image Slider
+  // Gallery Slider V4 - Single Image Slider (Landing 4)
   document.querySelectorAll('.gallery-slider-v4__wrapper').forEach(wrapper => {
     new GallerySliderV4(wrapper);
+  });
+
+  // Gallery Single Slider - Single Image Slider (Landing 3)
+  document.querySelectorAll('.gallery-single-slider__wrapper').forEach(wrapper => {
+    new GallerySingleSlider(wrapper);
   });
 });
 
@@ -192,6 +197,74 @@ class GallerySliderV4 {
 
     // Touch/swipe support
     const container = this.wrapper.querySelector('.gallery-slider-v4__container');
+    if (container) {
+      let startX = 0;
+      container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0) this.next();
+          else this.prev();
+        }
+      }, { passive: true });
+    }
+  }
+
+  prev() {
+    const newIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.slides.length - 1;
+    this.showSlide(newIndex);
+  }
+
+  next() {
+    const newIndex = this.currentIndex < this.slides.length - 1 ? this.currentIndex + 1 : 0;
+    this.showSlide(newIndex);
+  }
+
+  showSlide(index) {
+    this.slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index);
+    });
+    this.currentIndex = index;
+  }
+}
+
+/**
+ * Gallery Single Slider - Single Image Slider (Landing 3)
+ * Shows one image at a time with prev/next navigation
+ * Similar to V4 but with different styling (50px radius)
+ */
+class GallerySingleSlider {
+  constructor(element) {
+    this.wrapper = element;
+    this.slides = element.querySelectorAll('.gallery-single-slider__slide');
+    this.prevBtn = element.querySelector('.gallery-single-slider__arrow--prev');
+    this.nextBtn = element.querySelector('.gallery-single-slider__arrow--next');
+    this.currentIndex = 0;
+
+    this.init();
+  }
+
+  init() {
+    if (this.slides.length === 0) return;
+
+    this.bindEvents();
+    this.showSlide(0);
+  }
+
+  bindEvents() {
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => this.prev());
+    }
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => this.next());
+    }
+
+    // Touch/swipe support
+    const container = this.wrapper.querySelector('.gallery-single-slider__container');
     if (container) {
       let startX = 0;
       container.addEventListener('touchstart', (e) => {
