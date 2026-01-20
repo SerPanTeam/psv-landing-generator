@@ -206,6 +206,19 @@ function replacePlaceholders(template, data) {
 }
 
 /**
+ * Генерирует дату/время последнего обновления
+ */
+function getLastUpdatedDate() {
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  return `${day}.${month}.${year} ${hours}:${minutes}`;
+}
+
+/**
  * Собирает секцию с данными
  * @param {object} sectionConfig - Section configuration
  * @param {object} globalConfig - Global landing configuration (for quiz data)
@@ -215,6 +228,11 @@ function buildSection(sectionConfig, globalConfig = {}) {
   if (!template) return '';
 
   let data = sectionConfig.data || {};
+
+  // Add lastUpdated to footer
+  if (sectionConfig.template.includes('footer')) {
+    data.lastUpdated = getLastUpdatedDate();
+  }
 
   // If this is quiz-container, merge quiz data
   if (sectionConfig.template === 'quiz/quiz-container.html' && globalConfig.quiz) {

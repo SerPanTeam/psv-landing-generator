@@ -2127,6 +2127,15 @@
   color: var(--footer-text-color);
 }
 
+.footer__updated {
+  text-align: center;
+  font-size: 12px;
+  color: var(--footer-text-color);
+  opacity: 0.6;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
 /* ===== CTA SECTION ===== */
 /* FIGMA: Secondary background, centered call-to-action
    Title: 45px bold
