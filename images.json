@@ -1,0 +1,104 @@
+{
+  "_comment": "Unsplash URLs для изображений лендингов. Замените на свои фото.",
+
+  "landing1-family": {
+    "hero": {
+      "main": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=600&fit=crop",
+      "secondary": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop"
+    },
+    "promo": "https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=500&h=600&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=400&fit=crop"
+    ],
+    "services": [
+      "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1516733968668-dbdce39c0f6e?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=350&h=350&fit=crop"
+    ],
+    "about": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop",
+    "fullwidth": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&h=700&fit=crop"
+  },
+
+  "landing2-family-kids": {
+    "hero": {
+      "main": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=600&h=600&fit=crop",
+      "secondary": "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=400&h=400&fit=crop"
+    },
+    "promo": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=500&h=600&fit=crop",
+    "gallery": [
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop"
+    ],
+    "services": [
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1516733968668-dbdce39c0f6e?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=350&h=350&fit=crop"
+    ],
+    "about": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop",
+    "fullwidth": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=1400&h=700&fit=crop"
+  },
+
+  "landing3-dogs": {
+    "hero": {
+      "banner": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&h=800&fit=crop",
+      "sidebar": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=500&h=400&fit=crop"
+    },
+    "features": [
+      "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=400&h=300&fit=crop"
+    ],
+    "gallery": {
+      "main": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1300&h=700&fit=crop",
+      "decorTop": "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=350&h=250&fit=crop",
+      "decorBottom": "https://images.unsplash.com/photo-1583511655826-05700442b31b?w=350&h=250&fit=crop"
+    },
+    "services": [
+      "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1558788353-f76d92427f16?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1583511655826-05700442b31b?w=350&h=350&fit=crop",
+      "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=350&h=350&fit=crop"
+    ],
+    "about": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop",
+    "fullwidth": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1400&h=700&fit=crop"
+  },
+
+  "landing4-kids": {
+    "hero": {
+      "gallery": [
+        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=350&h=400&fit=crop",
+        "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=350&h=400&fit=crop"
+      ]
+    },
+    "slider": [
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1300&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=1300&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1533483595632-c5f0e57a1936?w=1300&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1300&h=800&fit=crop",
+      "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=1300&h=800&fit=crop"
+    ],
+    "steps": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=650&fit=crop",
+    "services": [
+      "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop"
+    ],
+    "about": [
+      "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=350&h=400&fit=crop"
+    ],
+    "fullwidth": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1400&h=700&fit=crop",
+    "quiz": {
+      "form": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=500&fit=crop",
+      "success": "https://images.unsplash.com/photo-1596401057633-54a8fe8ef647?w=400&h=500&fit=crop"
+    }
+  }
+}

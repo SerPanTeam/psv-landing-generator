@@ -1066,12 +1066,30 @@
   .faq__question {
     min-height: 44px;
     padding: 16px 0;
+    gap: 12px;
+    font-size: 16px; /* Smaller for mobile */
+  }
+
+  /* Fix: Allow question text to wrap properly */
+  .faq__question > span:first-child {
+    flex: 1;
+    min-width: 0; /* Allow flex item to shrink below content size */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
+    line-height: 1.4;
   }
 
   .faq__icon {
     min-width: 44px;
     min-height: 44px;
     padding: 7px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+  }
+
+  .faq__answer-inner {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -1205,11 +1223,29 @@
     grid-template-columns: 1fr;
     max-width: 600px;
   }
+
+  /* Fix: Override fixed 600px grid columns for .row */
+  .steps--rounded .row {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 0 16px;
+  }
 }
 
 @media (max-width: 767.98px) {
+  .steps--rounded .row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .steps--rounded .step-card {
     padding: 24px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .steps--rounded .step-card__header {
+    flex-wrap: nowrap;
   }
 
   .steps--rounded .step-card__title {
@@ -1217,7 +1253,8 @@
   }
 
   .steps--rounded .step-card__text {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 
@@ -2087,8 +2124,8 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 8px;
-    min-width: 36px;
-    min-height: 36px;
+    min-width: 44px;
+    min-height: 44px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     display: flex;
@@ -2123,9 +2160,9 @@
   }
 
   .gallery-slider-v4__arrow {
-    min-width: 32px;
-    min-height: 32px;
-    padding: 6px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
   }
 
   .gallery-slider-v4__arrow--prev {

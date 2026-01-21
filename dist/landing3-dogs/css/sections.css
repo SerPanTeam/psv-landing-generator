@@ -2825,6 +2825,11 @@
   border: none;
   cursor: pointer;
   padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #3D3D3D;
   transition: opacity 0.2s ease;
   z-index: 10;
