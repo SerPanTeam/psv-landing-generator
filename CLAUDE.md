@@ -551,6 +551,43 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 
 **Пример ошибки:** Landing 3 Gallery - использовал `gallery-slider.html` (3 видимых слайда 400x400), а в Figma одно большое изображение 1233x746 со стрелками. Правильный шаблон: `gallery-single-slider.html`.
 
+### ⚠️ КРИТИЧНО: Позиционирование стрелок галереи
+
+**Стрелки должны быть ЗА пределами картинки, не НА картинке!**
+
+В Figma (node 369:268) стрелки расположены на бежевом фоне рядом с картинкой:
+- Левая стрелка: ~45px от левого края секции
+- Картинка: начинается на ~105px (центрирована в секции 1440px)
+- Правая стрелка: ~45px от правого края секции
+
+**Правильная реализация (flex, НЕ absolute):**
+```css
+.gallery-single-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 46px;  /* место для левой стрелки */
+  padding-right: 46px; /* место для правой стрелки */
+}
+
+.gallery-single-slider__arrow {
+  /* НЕ position: absolute! */
+  flex-shrink: 0;
+  /* стрелки как flex-элементы рядом с контейнером */
+}
+```
+
+**Неправильная реализация (вызывает наложение стрелок на картинку):**
+```css
+/* ❌ НЕ ДЕЛАТЬ ТАК: */
+.gallery-single-slider__arrow {
+  position: absolute;
+  left: 45px; /* стрелка окажется НА картинке если секция уже 1440px */
+}
+```
+
+**Пример ошибки:** Стрелки были `position: absolute` с `left/right: 45px`, но при ширине секции 1440px они оказывались поверх картинки вместо бежевого фона рядом с ней.
+
 ---
 
 ## ✅ Чеклист соответствия Figma
@@ -561,6 +598,7 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 - [ ] Галерея - **слайдер** или **статика**? (используй `gallery-slider`, `gallery-single-slider` или `gallery-strip`)
 - [ ] Сколько изображений видно одновременно? 1 → `gallery-single-slider`, 3+ → `gallery-slider`
 - [ ] Есть ли **fullwidth галерея** между секциями? (используй `gallery-fullwidth`)
+- [ ] **Стрелки навигации**: расположены НА картинке или ЗА ней? (используй flex, не absolute!)
 
 ### Выравнивание
 - [ ] Выравнивание текста: **left** или **center**?
@@ -840,14 +878,16 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 | Small | <576px | Маленькие телефоны |
 
 ### Типографика по breakpoints
-| Элемент | Desktop | Tablet | Mobile | Small |
+| Элемент | Desktop | Tablet | Mobile (<768px) | Small (<576px) |
 |---------|---------|--------|--------|-------|
 | h1/hero | 55px | 36-40px | 26-28px | 22-24px |
 | h2/section | 45px | 32-36px | 22-26px | 20-22px |
 | h3/card | 28-35px | 24-28px | 18-20px | 16-18px |
 | Body text | 22px | 18px | 15-16px | 14-15px |
 | Small text | 16px | 14px | 13-14px | 12-13px |
-| Button | 22px | 18px | 15-16px | 14px |
+| **Button** | 22px | 18px | **16px** | **15px** |
+
+**Важно:** Размеры шрифтов кнопок (16px/15px) соответствуют UX-стандартам (iOS HIG 17pt, WCAG 2.0 min 14pt bold).
 
 ### Кнопки на мобильных
 - **Минимальная высота touch target**: 44px (Apple HIG), 48px (Material)
@@ -866,6 +906,14 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
     min-height: 55px;
     padding: 12px 20px;
     line-height: 1.3;
+    font-size: 16px; /* UX стандарт */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn {
+    font-size: 15px;
+    min-height: 50px;
   }
 }
 ```
