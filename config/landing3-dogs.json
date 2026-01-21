@@ -266,7 +266,7 @@
       "template": "features/features-grid.html",
       "data": {
         "paddingTop": 0,
-        "paddingBottom": 86,
+        "paddingBottom": 208,
         "items": [
           { "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=120&h=120&fit=crop", "text": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund" },
           { "image": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=120&h=120&fit=crop", "text": "Professionelle Fotografin aus Leidenschaft und Professionalität" },
@@ -279,7 +279,7 @@
       "template": "gallery/gallery-decorated.html",
       "data": {
         "paddingTop": 0,
-        "paddingBottom": 72,
+        "paddingBottom": 112,
         "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1300&h=600&fit=crop",
         "alt": "Hunde-Fotoshooting",
         "decorTopRight": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=350&h=250&fit=crop",
@@ -318,7 +318,7 @@
         "rounded": true,
         "primaryButton": true,
         "paddingTop": 115,
-        "paddingBottom": 137,
+        "paddingBottom": 38,
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "services": [
           {
