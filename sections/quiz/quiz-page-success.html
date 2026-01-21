@@ -87,7 +87,7 @@
   </main>
 
   <!-- About Section -->
-  <section class="quiz-success__about section--bg-secondary">
+  <section class="quiz-success__about {{#if aboutBgClass}}{{aboutBgClass}}{{else}}section--bg-secondary{{/if}}">
     <div class="container">
       <h2 class="quiz-success__about-name">{{aboutName}}</h2>
       <p class="quiz-success__about-tagline text-accent">{{aboutTagline}}</p>

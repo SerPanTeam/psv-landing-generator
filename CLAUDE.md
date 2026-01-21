@@ -395,9 +395,11 @@ Figma:get_variable_defs fileKey=qGiP8ZP2Ot8Tut1faJDl4p nodeId=1:3
 □ Определи цвет фона КАЖДОЙ секции визуально
 □ Сравни с дефолтами шаблонов (см. таблицу ниже)
 □ Добавь bgClass если фон отличается от дефолта
+□ КВИЗ: Проверь фоны ВСЕХ quiz-страниц (step1-4, form, success)
+□ КВИЗ: Проверь фон About секции на quiz-success отдельно!
 ```
 
-**Дефолты шаблонов:**
+**Дефолты шаблонов (главная страница):**
 | Шаблон | Default | Если нужен другой → |
 |--------|---------|---------------------|
 | `hero-v1/v2/v3` | primary | — |
@@ -410,6 +412,16 @@ Figma:get_variable_defs fileKey=qGiP8ZP2Ot8Tut1faJDl4p nodeId=1:3
 | `services-grid` | **secondary** | `bgClass: "section--bg-primary"` |
 | `about-v1` | primary | — |
 | `gallery-slider` | primary | — |
+
+**Дефолты квиз-страниц:**
+| Шаблон | Элемент | Default | Если нужен другой → |
+|--------|---------|---------|---------------------|
+| `quiz-page-step.html` | body | primary | — (не настраивается) |
+| `quiz-page-form.html` | body | primary | — (не настраивается) |
+| `quiz-page-success.html` | body | primary | — (не настраивается) |
+| `quiz-page-success.html` | **About section** | **secondary** | `aboutBgClass: "section--bg-primary"` |
+
+**Landing 3: ВСЕ фоны primary!** Добавь `aboutBgClass: "section--bg-primary"` в success конфиг.
 
 ### 2️⃣ КНОПКИ — Проверь ВСЕ параметры!
 ```
@@ -793,6 +805,42 @@ Button: top=1491, left=47   → левая колонка ПОД title (разн
 3. Добавить `bgClass` в JSON если фон отличается от default
 
 **Пример ошибки:** Landing 3 - все секции использовали дефолтные фоны (чередование), а в Figma ВСЯ страница имеет единый фон #F5EDE0.
+
+### ⚠️ КРИТИЧНО: Проверяй фоны КВИЗ-страниц
+
+**Квиз-страницы имеют СВОИ фоны, отличные от главной!**
+
+| Страница | Шаблон | Default фон | Конфигурируемые элементы |
+|----------|--------|-------------|--------------------------|
+| quiz-step1-4 | `quiz-page-step.html` | primary (#F5EDE0) | — (фон body) |
+| quiz-form | `quiz-page-form.html` | primary (#F5EDE0) | — (фон body) |
+| quiz-success | `quiz-page-success.html` | primary (#F5EDE0) | About section: `aboutBgClass` |
+
+**Шаблон quiz-page-success.html поддерживает:**
+```json
+{
+  "success": {
+    "aboutBgClass": "section--bg-primary",  // переопределяет default secondary для About
+    "rounded": true,
+    ...
+  }
+}
+```
+
+**Фоны About секции на quiz-success по лендингам:**
+| Лендинг | About section фон | aboutBgClass в конфиге |
+|---------|-------------------|------------------------|
+| Landing 1 | secondary (#EEE3D0) | — (default OK) |
+| Landing 2 | secondary (#EEE3D0) | — (default OK) |
+| Landing 3 | **primary (#F5EDE0)** | `"aboutBgClass": "section--bg-primary"` ⚠️ |
+| Landing 4 | secondary (#EEE3D0) | — (default OK) |
+
+**Что проверять для КАЖДОГО лендинга:**
+1. Получи screenshot quiz-success: `get_screenshot nodeId=XXX:XXX`
+2. Определи цвет фона About секции визуально
+3. Сравни с default (secondary) — если отличается, добавь `aboutBgClass`
+
+**Пример ошибки:** Landing 3 quiz-success - About секция была secondary (#EEE3D0), а в Figma primary (#F5EDE0). Исправлено добавлением `aboutBgClass: "section--bg-primary"` в конфиг.
 
 ### Контент
 - [ ] Социальные иконки: **показывать** или **скрыть**?

@@ -746,13 +746,40 @@
     padding-bottom: 40px;
   }
 
+  /* Mobile font sizes - quiz steps */
+  .quiz-page__progress {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .quiz-page__question {
+    font-size: 24px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
   .quiz-page__options--2col {
     grid-template-columns: 1fr;
     max-width: 400px;
   }
 
-  .quiz-page__question {
-    margin-bottom: 30px;
+  /* Mobile font sizes - quiz form */
+  .quiz-form__label {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .quiz-form__title-line1 {
+    font-size: 20px;
+  }
+
+  .quiz-form__title-line2 {
+    font-size: 26px;
+  }
+
+  .quiz-form__note {
+    font-size: 15px;
+    line-height: 1.4;
   }
 
   .quiz-form__form {
@@ -766,12 +793,51 @@
     margin-bottom: 30px;
   }
 
+  /* Mobile font sizes - quiz success */
+  .quiz-success__title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .quiz-success__subtitle {
+    font-size: 16px;
+  }
+
+  .quiz-success__text {
+    font-size: 15px;
+  }
+
+  .quiz-success__alternative {
+    font-size: 15px;
+  }
+
+  .quiz-success__about-name {
+    font-size: 22px;
+  }
+
+  .quiz-success__about-tagline {
+    font-size: 16px;
+  }
+
+  .quiz-success__about-text {
+    font-size: 15px;
+  }
+
   .quiz-success__buttons {
     flex-direction: column;
   }
 
   .quiz-success__buttons .btn {
     width: 100%;
+  }
+
+  /* Image spacing on mobile */
+  .quiz-success__image {
+    margin-top: 40px;
+  }
+
+  .quiz-form__image {
+    margin-top: 40px;
   }
 
   .quiz-page__map {
@@ -785,6 +851,31 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  /* Small mobile font sizes */
+  .quiz-page__progress {
+    font-size: 15px;
+  }
+
+  .quiz-page__question {
+    font-size: 22px;
+  }
+
+  .quiz-form__label {
+    font-size: 15px;
+  }
+
+  .quiz-form__title-line1 {
+    font-size: 18px;
+  }
+
+  .quiz-form__title-line2 {
+    font-size: 22px;
+  }
+
+  .quiz-form__note {
+    font-size: 14px;
+  }
+
   /* Fix text truncation on small mobile - allow wrapping */
   .quiz-form__title {
     white-space: normal;
@@ -794,7 +885,28 @@
 
   .quiz-success__title {
     white-space: normal;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.2;
+  }
+
+  .quiz-success__subtitle {
+    font-size: 15px;
+  }
+
+  .quiz-success__text,
+  .quiz-success__alternative {
+    font-size: 14px;
+  }
+
+  .quiz-success__about-name {
+    font-size: 20px;
+  }
+
+  .quiz-success__about-tagline {
+    font-size: 15px;
+  }
+
+  .quiz-success__about-text {
+    font-size: 14px;
   }
 }
