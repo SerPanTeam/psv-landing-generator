@@ -13,7 +13,7 @@
      ============================================ -->
 
 <section class="hero hero--v4{{paddingClasses}}">
-  <div class="hero__dark-section">
+  <div class="hero__dark-section"{{#if backgroundImage}} style="background-image: url('{{backgroundImage}}');"{{/if}}>
     <div class="container">
       {{#if logoText}}
       <p class="hero__logo">{{logoText}}</p>

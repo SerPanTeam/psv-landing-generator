@@ -139,6 +139,7 @@
     {
       "template": "hero/hero-v4.html",
       "data": {
+        "backgroundImage": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1920&h=900&fit=crop&crop=top",
         "logoText": "Logo",
         "label": "Kostenloses",
         "title": "Kinder - Fotoshooting",
