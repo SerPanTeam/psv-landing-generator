@@ -2563,7 +2563,7 @@
   .about--images-right .col-lg-5,
   .about--images-right .col-lg-6 {
     width: 100%;
-    padding: 0 12px;
+    padding: 0;
   }
 
   .about--images-right .offset-lg-1 {
@@ -2589,6 +2589,11 @@
     padding: 40px 0;
   }
 
+  .about--images-right .col-lg-5,
+  .about--images-right .col-lg-6 {
+    padding: 0;
+  }
+
   .about--images-right .about__content {
     text-align: left;
     padding-top: 0;
@@ -2611,7 +2616,7 @@
     margin-top: 25px;
   }
 
-  .about--images-right .btn-primary {
+  .about--images-right .about__cta .btn-primary {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -2654,7 +2659,9 @@
     text-align: left;
   }
 
-  .about--images-right .btn-primary {
+  .about--images-right .about__cta .btn-primary {
+    width: 100%;
+    max-width: 100%;
     font-size: 14px;
     min-height: 48px;
   }
