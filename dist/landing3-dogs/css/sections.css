@@ -2791,6 +2791,10 @@
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  /* Flex layout to vertically center arrows with content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-single-slider__container {
@@ -2870,21 +2874,33 @@
 }
 
 @media (max-width: 767px) {
+  /* FIXED: Use flex layout for proper arrow centering on mobile */
+  .gallery-single-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
   .gallery-single-slider__image {
-    height: 300px;
-    border-radius: 25px;
+    height: 250px;
+    border-radius: 20px;
   }
 
   .gallery-single-slider__container {
+    flex: 1;
     max-width: calc(100% - 80px);
   }
 
-  .gallery-single-slider__arrow--prev {
-    left: 10px;
-  }
-
-  .gallery-single-slider__arrow--next {
-    right: 10px;
+  /* Arrows as flex items, not absolute */
+  .gallery-single-slider__arrow {
+    position: static;
+    transform: none;
+    flex-shrink: 0;
+    padding: 8px;
+    min-width: 36px;
+    min-height: 44px;
   }
 
   .gallery-single-slider__arrow svg {
