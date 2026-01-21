@@ -1764,9 +1764,9 @@
    LANDING 4 V4 SECTIONS RESPONSIVE
    ============================================ */
 
-/* ===== LANDING 4 MOBILE - Единые отступы для всех секций (кроме Hero) ===== */
+/* ===== LANDING 4 MOBILE - Единые отступы 16px для всех секций (кроме Hero) ===== */
 @media (max-width: 767.98px) {
-  /* Все секции Landing 4 кроме Hero имеют одинаковый padding 16px */
+  /* Контейнеры: 16px padding */
   .content-section--2col .container,
   .cta--left .container,
   .steps--v4 .container,
@@ -1778,12 +1778,22 @@
     padding-right: 16px;
   }
 
-  /* Убираем дополнительные отступы колонок */
+  /* Row: убираем negative margin Bootstrap */
+  .content-section--2col .row,
+  .steps--v4 .row,
+  .about--images-right .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Columns: убираем padding Bootstrap */
   .content-section--2col .col-lg-5,
   .content-section--2col .col-lg-6,
+  .content-section--2col .offset-lg-1,
   .steps--v4 .col-lg-6,
   .about--images-right .col-lg-5,
-  .about--images-right .col-lg-6 {
+  .about--images-right .col-lg-6,
+  .about--images-right .offset-lg-1 {
     padding-left: 0;
     padding-right: 0;
   }
