@@ -8,7 +8,7 @@
      - Smooth slide transitions
      ============================================ -->
 
-<section class="gallery-slider section--bg-primary{{#if rounded}} gallery-slider--rounded{{/if}}{{paddingClasses}}">
+<section class="gallery-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} gallery-slider--rounded{{/if}}{{paddingClasses}}">
   <div class="gallery-slider__wrapper">
     <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
       <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">

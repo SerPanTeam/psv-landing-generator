@@ -110,7 +110,7 @@
     font-size: 24px;
   }
 
-  /* Hero V1 - Mobile order: Logo (header) → Image → Text → Button */
+  /* Hero V1 - Mobile order: Title → Images → Text → Button */
   .hero {
     min-height: auto !important;
     padding: 0 0 40px;
@@ -118,65 +118,98 @@
 
   .hero--v1 {
     padding-bottom: 40px;
-    overflow-x: clip; /* Prevent horizontal scroll from extended image wrapper */
+    overflow-x: clip;
   }
 
-  /* Меняем порядок: картинка первая, контент второй */
+  /* Flexbox column для переупорядочивания */
   .hero--v1 .row {
+    display: flex;
     flex-direction: column;
   }
 
+  /* Разворачиваем col-lg-6 чтобы дети участвовали в flex */
   .hero--v1 .row > .col-lg-6:first-child {
-    order: 2; /* Контент идёт вторым */
+    display: contents;
   }
 
   .hero--v1 .row > .col-lg-6:last-child {
-    order: 1; /* Картинка идёт первой */
+    display: contents;
   }
 
+  /* Разворачиваем hero__content чтобы управлять order детей */
   .hero--v1 .hero__content {
-    padding-top: 24px;
-    padding-bottom: 0;
-    text-align: center;
-    min-height: auto;
+    display: contents;
+  }
+
+  /* Порядок: 1-Title, 2-Images, 3-Subtitle, 4-Button */
+  .hero--v1 .hero__label {
+    order: 1;
+    font-size: 24px !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
   .hero--v1 .hero__title {
+    order: 1;
     max-width: 100%;
-    margin-bottom: 16px !important; /* Убираем 115px gap */
-    font-size: 28px;
-    line-height: 1.2;
+    margin-bottom: 20px !important;
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero--v1 .hero__image-wrapper {
+    order: 2;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    position: relative !important;
+    padding-bottom: 40px !important;
+    height: auto !important;
   }
 
   .hero--v1 .hero__subtitle {
+    order: 3;
     max-width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-size: 16px;
     height: auto !important;
     line-height: 1.4;
+    text-align: left;
+    padding-top: 16px;
+    width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
-  /* Hero картинки с наложением для мобильного */
-  .hero--v1 .hero__image-wrapper {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: calc(100% + 32px); /* Выходим за контейнер */
-    margin-left: -16px;
-    margin-right: -16px;
-    position: relative;
-    padding-bottom: 45px; /* Место для выступающей части secondary image (3/4 внутри main) */
+  .hero--v1 .hero__content > .btn {
+    order: 4;
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 
+  /* Главная картинка - справа */
   .hero--v1 .hero__image-main {
-    width: 85%;
-    max-width: 85%;
+    width: 70% !important;
+    max-width: 70% !important;
     height: auto !important;
-    aspect-ratio: 428/394; /* Сохраняем пропорции как на десктопе */
+    aspect-ratio: 428/394 !important;
     position: relative !important;
-    margin-left: auto; /* Прижимаем вправо */
-    right: auto;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    right: auto !important;
     top: auto !important;
+    left: auto !important;
   }
 
   .hero--v1 .hero__image-main img {
@@ -185,21 +218,20 @@
     object-fit: cover;
   }
 
-  /* Вторичное изображение - наложение на main, ~1/4 выходит за границу */
+  /* Вторичное изображение - слева внизу, опущено */
   .hero--v1 .hero__image-secondary {
     display: block !important;
-    width: 55% !important;
+    width: 45% !important;
     height: auto !important;
-    aspect-ratio: 306/290;
+    aspect-ratio: 306/290 !important;
     position: absolute !important;
     bottom: 0 !important;
-    left: 16px !important;
+    left: 0 !important;
     right: auto !important;
     top: auto !important;
-    z-index: 2;
-    box-shadow: var(--shadow-lg); /* Тень для глубины */
-    /* Поднимаем выше: transform сдвигает вверх на 75% высоты изображения */
-    transform: translateY(-25%);
+    z-index: 2 !important;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(5%) !important;
   }
 
   .hero--v1 .hero__image-secondary img {
@@ -247,11 +279,21 @@
   }
 
   .promo__content {
-    text-align: center;
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .promo__title {
+    text-align: center !important;
   }
 
   .promo__link {
     justify-content: center;
+  }
+
+  .promo__text {
+    text-align: left;
   }
 
   /* Content Section - картинка на всю ширину */
@@ -297,9 +339,26 @@
     padding: 40px 0;
   }
 
+  .features__title {
+    text-align: center !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Вертикальный layout для feature cards */
+  .features__wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+
   .feature-card {
+    width: 100% !important;
+    max-width: 100% !important;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .feature-card__icon {
@@ -308,9 +367,32 @@
     margin: 0 auto 16px;
   }
 
+  .feature-card__title {
+    text-align: center !important;
+  }
+
+  .feature-card__text,
+  .feature-card p,
+  .features .feature-card__text {
+    text-align: center !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .feature-card__title {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
   .feature-card__divider {
     width: 120px;
     margin: 10px auto;
+  }
+
+  .feature-card {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   /* Features Grid (Landing 3) */
@@ -359,21 +441,120 @@
     padding: 40px 0;
   }
 
-  .steps__title {
+  .steps .container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .steps__title,
+  .steps__title--full {
+    order: 1 !important;
     margin-bottom: 24px;
+    text-align: center !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Заголовок с кнопкой справа - разделяем на мобильном */
+  .steps .row.align-items-center.mb-5 {
+    display: contents !important;
+  }
+
+  .steps .row.align-items-center.mb-5 .col-lg-6:first-child {
+    order: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: 24px !important;
+  }
+
+  .steps .row.align-items-center.mb-5 .col-lg-6:last-child {
+    order: 10 !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-top: 20px !important;
+  }
+
+  /* Пункты */
+  .steps > .container > .row {
+    order: 2 !important;
+  }
+
+  /* Кнопка внизу */
+  .steps__cta-bottom {
+    order: 3 !important;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 20px;
+  }
+
+  .steps__cta-bottom .btn,
+  .steps__cta-bottom .btn-primary {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Кнопка сверху (ctaTop) - переносим вниз, на всю ширину */
+  .steps__cta-btn,
+  .steps .btn,
+  .steps .btn-outline,
+  .steps .btn-primary {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   .steps__cta {
     margin-bottom: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .steps__cta .btn,
+  .steps__cta .btn-outline {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   .step-card {
     margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .step-card__header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px;
+  }
+
+  .step-card__number {
+    flex-shrink: 0;
+  }
+
+  .step-card__title {
+    text-align: left !important;
+  }
+
+  .step-card__text {
+    text-align: left !important;
   }
 
   .step-card__icon {
     width: 50px;
     height: 55px;
+  }
+
+  .step-card__divider {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* Gallery Strip */
@@ -388,6 +569,14 @@
 
   .faq__title {
     margin-bottom: 24px;
+    text-align: center !important;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .faq__list {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .faq__question {
@@ -430,15 +619,35 @@
 
   .services__header {
     margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .services__title {
+    text-align: center !important;
+  }
+
+  .services__subtitle {
+    text-align: left;
   }
 
   .service-card {
     text-align: center;
     margin-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .service-card__title {
+    text-align: center !important;
+  }
+
+  .service-card__text {
+    text-align: left;
   }
 
   .service-card__image {
-    max-width: 280px;
+    max-width: 100%;
     margin: 0 auto 16px;
   }
 
@@ -454,7 +663,8 @@
   .about .row > .col-lg-5 {
     order: 1;
     width: 100%;
-    padding: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .about .row > .col-lg-6 {
@@ -463,23 +673,40 @@
   }
 
   .about__image {
-    width: calc(100% + 32px); /* Выходим за контейнер */
-    max-width: none;
-    margin-left: -16px;
-    margin-right: -16px;
-    margin-bottom: 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 24px 0;
     height: auto;
     aspect-ratio: 466/560;
   }
 
   .about__content {
-    text-align: center;
+    text-align: left;
     padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about__label,
+  .about__name {
+    text-align: center !important;
+  }
+
+  .about__tagline {
+    text-align: center !important;
+  }
+
+  .about__text {
+    text-align: left;
   }
 
   .about__divider {
     max-width: 100%;
     margin: 24px auto;
+  }
+
+  .about__cta {
+    text-align: center;
   }
 
   .about__text {
@@ -489,6 +716,11 @@
   /* Footer - FIXED: More compact layout */
   .footer__map {
     height: 250px;
+  }
+
+  .footer__content {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .footer__nav {
@@ -516,7 +748,38 @@
   /* CTA */
   .cta {
     padding: 40px 0;
-    text-align: center;
+  }
+
+  .cta__content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .cta__title {
+    text-align: center !important;
+  }
+
+  .cta__subtitle,
+  .cta__text {
+    text-align: left;
+  }
+
+  /* CTA section buttons (Landing 1/2) */
+  .cta .btn,
+  .cta .btn-primary,
+  .cta .btn-outline {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   /* Buttons */
@@ -533,29 +796,22 @@
 
 /* ===== SMALL MOBILE (< 576px) ===== */
 @media (max-width: 575.98px) {
-  /* Hero V1 - изображения с наложением для маленьких экранов */
-  .hero--v1 .hero__image-wrapper {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding-bottom: 40px; /* Чуть меньше места для secondary */
+  /* Hero V1 - маленькие экраны */
+  .hero--v1 .hero__title {
+    font-size: 24px;
+  }
+
+  .hero--v1 .hero__label {
+    font-size: 20px;
   }
 
   .hero--v1 .hero__image-main {
-    width: 80%;
-    max-width: 80%;
+    width: 70%;
+    max-width: 70%;
   }
 
-  .hero--v1 .hero__image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* Вторичное изображение - немного меньше на маленьких экранах */
   .hero--v1 .hero__image-secondary {
-    width: 50% !important;
-    left: 8px !important;
+    width: 55% !important;
   }
 
   /* Features */
@@ -595,6 +851,16 @@
   /* About */
   .about__image {
     max-width: 100%;
+  }
+
+  /* CTA section buttons small mobile */
+  .cta .btn,
+  .cta .btn-primary,
+  .cta .btn-outline {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
   }
 }
 
@@ -984,20 +1250,29 @@
     align-items: center;
   }
 
+  /* Services - Zigzag layout */
   .service-card {
+    display: grid !important;
+    grid-template-columns: 40% 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 8px 16px !important;
+    align-items: center !important;
     width: 100%;
-    max-width: 100%; /* На всю ширину */
-    text-align: center;
+    max-width: 100%;
+    margin-bottom: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
+  /* Картинка занимает 2 ряда слева */
   .service-card__image {
-    width: calc(100% + 32px); /* Выходим за контейнер */
-    max-width: none;
-    margin-left: -16px;
-    margin-right: -16px;
-    margin-bottom: 16px;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto;
     aspect-ratio: 1;
+    margin: 0 !important;
   }
 
   .service-card__image img {
@@ -1006,16 +1281,66 @@
     object-fit: cover;
   }
 
+  /* Заголовок справа сверху */
+  .service-card__title {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left !important;
+    font-size: 18px;
+    margin-bottom: 0;
+    align-self: end;
+  }
+
+  /* Текст справа снизу */
+  .service-card__text {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left !important;
+    font-size: 14px;
+    align-self: start;
+  }
+
+  /* Чётные карточки - картинка справа */
+  .service-card:nth-child(even) .service-card__image {
+    grid-column: 2;
+  }
+
+  .service-card:nth-child(even) .service-card__title,
+  .service-card:nth-child(even) .service-card__text {
+    grid-column: 1;
+  }
+
   /* CTA button full width */
   .services__cta {
     text-align: center;
   }
 
-  .services__cta .btn-outline {
-    width: 100%;
-    max-width: 320px;
+  .services__cta .btn-outline,
+  .services__cta .btn-primary {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
   }
 }
+
+/* Services CTA small mobile fix */
+@media (max-width: 575.98px) {
+  .services__cta .btn-outline,
+  .services__cta .btn-primary {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
+  }
 
 /* ===== STEPS RESPONSIVE ===== */
 @media (max-width: 991.98px) {
@@ -1103,8 +1428,18 @@
 /* ===== HERO V1 BUTTON & LABEL FIX ===== */
 @media (max-width: 767.98px) {
   .hero--v1 .btn-primary {
-    width: 100%;
-    max-width: 320px;
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
   }
 
   .hero--v1 .hero__label {
@@ -1114,11 +1449,129 @@
 
 @media (max-width: 575.98px) {
   .hero--v1 .btn-primary {
-    max-width: 280px;
+    max-width: 100%;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
   }
 
   .hero--v1 .hero__label {
     font-size: 20px;
+  }
+}
+
+/* ===== HERO V2 BUTTON FIX (Landing 2) ===== */
+@media (max-width: 767.98px) {
+  .hero--v2 .btn-primary {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .hero--v2 .hero__label {
+    font-size: 24px;
+  }
+
+  .hero--v2 .hero__title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .hero--v2 .hero__subtitle {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero--v2 .btn-primary {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  .hero--v2 .hero__label {
+    font-size: 20px;
+  }
+
+  .hero--v2 .hero__title {
+    font-size: 24px;
+  }
+
+  .hero--v2 .hero__subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ===== PROMO BUTTON FIX (Landing 1/2) ===== */
+@media (max-width: 767.98px) {
+  .promo .btn,
+  .promo .btn-primary,
+  .promo .btn-outline {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .promo .btn,
+  .promo .btn-primary,
+  .promo .btn-outline {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+/* ===== ABOUT CTA BUTTON FIX (Landing 1/2) ===== */
+@media (max-width: 767.98px) {
+  .about__cta .btn,
+  .about__cta .btn-primary,
+  .about__cta .btn-outline {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    line-height: 1.3;
+    font-size: 16px;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about__cta .btn,
+  .about__cta .btn-primary,
+  .about__cta .btn-outline {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
   }
 }
 
@@ -2952,7 +3405,7 @@
     margin-top: 30px;
   }
 
-  /* === SERVICES ROUNDED - карточки на всю ширину === */
+  /* === SERVICES ROUNDED - Zigzag layout === */
   .services--rounded .services__title {
     font-size: 20px;
     line-height: 1.3;
@@ -2965,20 +3418,28 @@
     gap: 24px;
   }
 
+  /* Zigzag grid для rounded карточек */
   .services--rounded .service-card {
+    display: grid !important;
+    grid-template-columns: 40% 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 8px 16px !important;
+    align-items: center !important;
     width: 100%;
     max-width: 100%;
-    text-align: center;
     margin-bottom: 0;
   }
 
+  /* Картинка занимает 2 ряда */
   .services--rounded .service-card__image {
-    width: 100%;
-    max-width: 100%;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto;
     aspect-ratio: 1;
-    margin: 0 auto 16px;
-    border-radius: 20px;
+    margin: 0 !important;
+    border-radius: 16px;
     overflow: hidden;
   }
 
@@ -2989,15 +3450,34 @@
     object-position: center top; /* Головы не обрезаются */
   }
 
+  /* Заголовок справа сверху */
   .services--rounded .service-card__title {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left !important;
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    align-self: end;
   }
 
+  /* Текст справа снизу */
   .services--rounded .service-card__text {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left !important;
     font-size: 14px;
     line-height: 1.5;
-    text-align: left;
+    align-self: start;
+  }
+
+  /* Чётные карточки - картинка справа */
+  .services--rounded .service-card:nth-child(even) .service-card__image {
+    grid-column: 2;
+  }
+
+  .services--rounded .service-card:nth-child(even) .service-card__title,
+  .services--rounded .service-card:nth-child(even) .service-card__text {
+    grid-column: 1;
   }
 
   .services--rounded .services__cta {
@@ -3008,11 +3488,15 @@
   /* === ABOUT ROUNDED - картинка и текст === */
   .about--rounded .row {
     flex-direction: column;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .about--rounded .col-lg-5,
   .about--rounded .col-lg-6 {
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .about--rounded .offset-lg-1 {

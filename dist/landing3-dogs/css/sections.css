@@ -1026,6 +1026,25 @@
   text-decoration: none;
 }
 
+/* Content button style - outline button with arrow */
+.content-section__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 448px; /* FIGMA: exact width */
+  height: 60px; /* FIGMA: exact height */
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+}
+
+.content-section__btn svg {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
 /* ===== CONTENT SECTION 2-COL (Landing 4) ===== */
 /* FIGMA (479:47): Title left, text right, button below
    - Title: 28px Bold
@@ -1655,8 +1674,8 @@
 /* FIGMA: Полноширинная галерея между Steps и FAQ */
 .gallery-fullwidth {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: none; /* Полная ширина экрана */
+  padding: 0; /* Без отступов - картинка edge-to-edge */
   /* background-color убран - используем section--bg-* классы */
 }
 
