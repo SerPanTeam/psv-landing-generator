@@ -1,22 +1,23 @@
 <!-- ============================================
      GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 369:268):
-     - Single large image: 1233px x 746px
-     - Border-radius: 50px
-     - Small chevron arrows at page edges (left: 45px, right: ~64px)
-     - One image visible at a time, click to navigate
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
      ============================================ -->
 
 <section class="gallery-single-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
-  <!-- FIGMA: Arrow left at 45px from page edge -->
   <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 
-  <!-- FIGMA: Image 1233x746px centered -->
   <div class="gallery-single-slider__container" data-gallery-single-slider>
     {{#each images}}
     <div class="gallery-single-slider__slide{{#if @first}} is-active{{/if}}">
@@ -25,7 +26,6 @@
     {{/each}}
   </div>
 
-  <!-- FIGMA: Arrow right at ~64px from page edge -->
   <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

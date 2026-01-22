@@ -1,12 +1,17 @@
 <!-- ============================================
      FAQ V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 479:124):
-     - 2-column layout
-     - Left: 2 cards, Right: 2 cards
-     - White cards with rounded corners (15-25px)
-     - Expand/collapse with +/- icons
-     - Button at bottom left (432x60px, radius 40px)
+     Layout:
+     - 2 колонки карточек (по 2 в каждой)
+     - Белые карточки со скруглёнными углами
+     - Раскрытие/закрытие с иконками +/-
+
+     Данные:
+     - title: заголовок секции
+     - questionsLeft[]: вопросы левой колонки {question, answer}
+     - questionsRight[]: вопросы правой колонки
+     - ctaText/ctaLink: кнопка внизу (опционально)
+     - bgClass: переопределение фона (default: secondary)
      ============================================ -->
 
 <section class="faq faq--v4 {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{paddingClasses}}">

@@ -30,15 +30,9 @@
   min-height: 634px; /* FIGMA: Hero section height */
 }
 
-/* Hero V1 - Лендинг 1 (Familien-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 1:3):
-   - Page width: 1440px, left padding: 101px
-   - Logo: top 53px (handled by header)
-   - Title: top 183px, font-size 55px, width 629px
-   - Subtitle: top 353px, font-size 22px, height 49px, width 386px
-   - Button: top 433px, width 286px, height 70px
-   - Main image: left calc(58.33%+70px), top 80px, 428x394px
-   - Secondary image: left calc(50%+98px), top 258px, 306x290px
+/* Hero V1 - Landing 1, 2 (Familien-Fotoshooting)
+   Размеры: Main image 428x394px, Secondary image 306x290px
+   Button: 286x70px
 */
 .hero--v1 {
   padding-bottom: 80px; /* Space for secondary image overflow */
@@ -91,7 +85,7 @@
 .hero--v1 .hero__image-main {
   width: 428px; /* FIGMA: exact */
   height: 394px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder color */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder color */
   position: absolute;
   top: 27px; /* FIGMA: 80px - 53px (header) = 27px from section top */
   right: 0;
@@ -101,7 +95,7 @@
 .hero--v1 .hero__image-secondary {
   width: 306px; /* FIGMA: exact */
   height: 290px; /* FIGMA: exact */
-  background-color: #7f7f7f; /* FIGMA: placeholder color */
+  background-color: var(--color-placeholder-dark); /* FIGMA: placeholder color */
   position: absolute;
   top: 205px; /* FIGMA: 258px - 53px (header) = 205px from section top */
   right: calc(428px / 2 + 306px / 2 - 98px); /* FIGMA: calc(50%+98px) adjusted */
@@ -115,16 +109,9 @@
   object-fit: cover;
 }
 
-/* Hero V2 - Лендинг 2 (Familien und Kinder - Kostenlos)
-   FIGMA PIXEL-PERFECT VALUES (from node 233:22):
-   - Page: 1440px, height 674px
-   - Title: left 101px, top 157px, width 593px, 55px
-     - First line "Kostenloses" in #E2C08D (accent)
-     - Rest in #3D3D3D
-   - Subtitle: left 101px, top 403px, width 386px, height 49px
-   - Button: left 101px, top 513px, 286x70px
-   - Main image: left calc(58.33%+70px), top 80px, 428x394px
-   - Secondary image: left calc(50%+98px), top 258px, 306x290px
+/* Hero V2 - Landing 2 (Familien und Kinder - Kostenlos)
+   Label акцентный цвет, Title max-width 593px
+   Размеры: Main image 428x394px, Secondary image 306x290px
 */
 .hero--v2 {
   min-height: 674px; /* FIGMA: section height */
@@ -178,7 +165,7 @@
 .hero--v2 .hero__image-main {
   width: 428px; /* FIGMA: exact */
   height: 394px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder */
   position: absolute;
   top: 27px; /* FIGMA: 80px - 53px = 27px */
   right: 0;
@@ -188,7 +175,7 @@
 .hero--v2 .hero__image-secondary {
   width: 306px; /* FIGMA: exact */
   height: 290px; /* FIGMA: exact */
-  background-color: #7f7f7f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder-dark); /* FIGMA: placeholder */
   position: absolute;
   top: 205px; /* FIGMA: 258px - 53px */
   right: calc(428px / 2 + 306px / 2 - 98px);
@@ -272,12 +259,9 @@
   flex-shrink: 0;
 }
 
-/* Hero V3 - Лендинг 3 (Hunde-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 369:256):
-   - Full-width banner: 1237x641px, rounded-50px
-   - Text overlay on banner in white
-   - Below banner: sidebar image (left) + "Warum kostenlos?" (right)
-   - 3 feature cards at bottom
+/* Hero V3 - Landing 3 (Hunde-Fotoshooting)
+   Banner: 1237x641px, rounded-50px, текст поверх
+   Below: sidebar image + "Warum kostenlos?" + feature cards
 */
 .hero--v3 {
   padding-top: 30px;
@@ -315,7 +299,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 5px;
 }
 
@@ -323,7 +307,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 25px;
 }
 
@@ -331,7 +315,7 @@
   font-size: 22px;
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 20px;
 }
 
@@ -492,7 +476,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 5px;
 }
 
@@ -500,7 +484,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 25px;
 }
 
@@ -508,7 +492,7 @@
   font-size: 22px;
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 20px;
 }
 
@@ -544,7 +528,7 @@
   flex-shrink: 0;
   width: 507px;
   height: 448px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   border-radius: 30px;
   overflow: hidden;
 }
@@ -614,7 +598,7 @@
   width: 100%;
   max-width: 350px;
   height: 300px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   border-radius: 35px;
   overflow: hidden;
   margin-bottom: 36px; /* FIGMA: 1847 - 1811 = 36px */
@@ -641,16 +625,10 @@
   color: var(--color-text-primary);
 }
 
-/* Hero V4 - Лендинг 4 (Kinder-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 479:30):
-   - Dark hero background: #3D3D3D, height 709px
-   - Logo: left 46px, top 20px, 45px, color #F5EDE0
-   - Title: left 47px, top 166px, 45px, color #E2C08D, width 564px
-   - Subtitle: left 47px, top 301px, 22px white, width 450px
-   - Date notice: left 47px, top 376px, 16px #E2C08D, width 426px
-   - Button: left 47px, top 453px, 406x60px, rounded-40px
-   - "Warum kostenlos?": top 558px, 22px white/bold
-   - Gallery cards: 4 cards, 293x348px, rounded-30px, rotated
+/* Hero V4 - Landing 4 (Kinder-Fotoshooting)
+   Тёмный фон с лого внутри секции
+   Галерея изображений: 4 карточки 293x348px, rounded-30px, с наклоном
+   Button: 406x60px, rounded-40px
 */
 .hero--v4 {
   padding-top: 0;
@@ -659,7 +637,7 @@
 }
 
 .hero--v4 .hero__dark-section {
-  background-color: #3D3D3D; /* FIGMA: dark background */
+  background-color: var(--color-dark-bg); /* FIGMA: dark background */
   min-height: 709px; /* FIGMA: hero section height */
   padding-top: 20px;
   padding-bottom: 40px;
@@ -692,11 +670,11 @@
   z-index: 2;
 }
 
-/* FIGMA: Logo inside dark hero section (top: 20px, left: 46px) */
+/* Logo inside dark hero section */
 .hero--v4 .hero__logo {
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
-  color: #F5EDE0; /* FIGMA: light on dark */
+  color: var(--color-bg-primary); /* FIGMA: light on dark */
   margin: 0;
   line-height: 1;
 }
@@ -731,7 +709,7 @@
   max-width: 450px; /* FIGMA: exact */
   height: 49px; /* FIGMA: exact */
   margin-bottom: 26px; /* FIGMA: 376 - 301 - 49 */
-  color: #FFFFFF; /* FIGMA: white text */
+  color: var(--color-text-white); /* FIGMA: white text */
 }
 
 .hero--v4 .hero__date-notice {
@@ -757,14 +735,14 @@
 .hero--v4 .hero__why-free-title {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-bold);
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 16px;
 }
 
 .hero--v4 .hero__why-free-text {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
-  color: #FFFFFF;
+  color: var(--color-text-white);
 }
 
 /* Gallery section below dark hero */
@@ -792,7 +770,7 @@
 .hero--v4 .hero__gallery-item {
   width: 293px; /* FIGMA: exact */
   height: 348px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder */
   border-radius: 30px; /* FIGMA: rounded-30px */
   overflow: hidden;
   flex-shrink: 0;
@@ -848,23 +826,9 @@
 }
 
 /* ===== PROMO SECTION ===== */
-/* FIGMA: Secondary background #EEE3D0, height 692px
-   Image: 428x533px (Landing 2) or 428x440px (Landing 1)
+/* Image: 428x533px (Landing 2) or 428x440px (Landing 1, shortImage: true)
    Title: 28px bold, Text: 22px medium
    Divider: 588px width
-   ВАЖНО: Текст справа должен занимать всю высоту картинки!
-*/
-/* FIGMA Landing 1 (node 6:6):
-   - Section: y=634, height=692
-   - Image: x=101, y=750, 428x440px
-   - Title: x=731, y=739, font 28px Bold, line-height 100%
-   - Text: x=730, y=824, font 22px Medium, line-height 100%
-   - Divider: x=730, y=1103, width=588px
-   - Link: x=731, y=1162, font 22px Bold
-
-   Calculated gaps:
-   - Top padding: 750-634 = 116px
-   - Divider to link: 1162-1103 = 59px
 */
 .promo {
   padding: 116px 0; /* FIGMA: exact */
@@ -874,7 +838,7 @@
 .promo__image {
   width: 428px; /* FIGMA: exact */
   height: 533px; /* FIGMA: Landing 2 value */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .promo__image--short {
@@ -970,19 +934,8 @@
 }
 
 /* ===== CONTENT SECTION (текст + изображение) ===== */
-/* FIGMA Landing 1 (node 7:15):
-   - Section: y=1326, height=722
-   - Title (7:22): x=101, y=1460, width=539, font 28px Bold, line-height 100%
-   - Text (7:23): x=98, y=1577, width=520, font 22px Medium, line-height 100%
-   - Divider (7:24): x=101, y=1831, width=618
-   - Link (7:26): x=101, y=1889, font 22px Bold
-   - Frame (7:17): x=845, y=1386, 493x593px
-   - Image (7:19): x=876, y=1418, 428x440px
-   - Accent (7:21): x=876, y=1894, font 22px Medium, color accent
-
-   Calculated:
-   - Top padding: 1460-1326 = 134px
-   - Divider to link: 1889-1831 = 58px
+/* Frame: 493x593px, Image inside: 428x440px
+   Title: 28px Bold, Text: 22px Medium
 */
 .content-section {
   padding: 134px 0 100px; /* FIGMA: top padding exact, bottom adjusted */
@@ -993,7 +946,7 @@
 }
 
 .content-section__image-frame {
-  background-color: #f8f8f8; /* FIGMA: exact */
+  background-color: var(--color-bg-light); /* FIGMA: exact */
   width: 493px; /* FIGMA: exact */
   padding: 31px 32px; /* FIGMA: padding around image */
   margin-left: auto; /* Прижать вправо */
@@ -1002,7 +955,7 @@
 .content-section__image {
   width: 428px; /* FIGMA: exact */
   height: 440px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .content-section__image img {
@@ -1116,21 +1069,8 @@
 }
 
 /* ===== FEATURES SECTION ===== */
-/* FIGMA Landing 1 (node 7:60):
-   - Section background (7:43): y=2681, height=545
-   - Icons: 150x150px, left aligned
-   - Title: 22px Bold, line-height 100%
-   - Divider: 158px width
-   - Text: 22px Medium, line-height 100%
-
-   Positions (first column):
-   - Icon (7:46): x=226, y=2766
-   - Title (7:50): x=226, y=2968 → gap from icon = 52px
-   - Divider (7:61): x=225.77, y=3047
-   - Text (7:51): x=224, y=3069
-
-   Calculated:
-   - Top padding: 2766-2681 = 85px
+/* Icons: 150x150px, Title: 22px Bold, Text: 22px Medium
+   Divider: 158px width
 */
 .features {
   padding: 85px 0; /* FIGMA: exact */
@@ -1157,7 +1097,7 @@
 .feature-card__icon {
   width: 150px; /* FIGMA: exact */
   height: 150px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   margin-bottom: 52px; /* FIGMA: 52px gap to title, aligned left */
 }
 
@@ -1189,12 +1129,7 @@
 }
 
 /* ===== FEATURES GRID (Landing 3) ===== */
-/* FIGMA Landing 3 (node 369:285):
-   - 2x2 grid layout
-   - Icon: 74x75px
-   - Text: 22px Bold
-   - Gap between icon and text: ~30px
-*/
+/* 2x2 grid layout, Icon: 74x75px, Text: 22px Bold */
 .features--grid {
   padding: 60px 0 80px 0; /* Extra bottom padding before next section */
 }
@@ -1217,7 +1152,7 @@
   flex-shrink: 0;
   width: 74px;
   height: 75px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .feature-item__icon img {
@@ -1235,18 +1170,8 @@
 }
 
 /* ===== STEPS SECTION ===== */
-/* FIGMA Landing 1 (node 7:66):
-   - Section bg: y=3226, height=964
-   - Title (7:85): x=102, y=3288, 35px Bold, line-height 100%
-   - Icon (7:70): x=103, y=3442, 76x75px
-   - Step title (7:72): x=101, y=3563, 22px Bold, line-height 100%
-   - Step text (7:75): x=102, y=3614, 22px Medium, line-height 100%
-   - Divider (7:86): x=102, y=3746, width=521px
-   - CTA button: width=500px, height=60px
-
-   Calculated:
-   - Top padding: 3288-3226 = 62px
-   - Header to icons: 3442-3288-60(title height) = 94px
+/* Title: 35px Bold, Icon: 76x75px, Step title: 22px Bold
+   CTA button: 500x60px, Divider: 521px width
 */
 .steps {
   padding: 62px 0 80px; /* FIGMA: top exact, bottom adjusted */
@@ -1495,7 +1420,7 @@
   flex: 0 0 400px; /* FIGMA: 400x400px exact */
   width: 400px;
   height: 400px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   overflow: hidden;
 }
 
@@ -1537,10 +1462,7 @@
 }
 
 /* ===== GALLERY SLIDER V4 - Single Image with Arrows ===== */
-/* FIGMA node 479:107:
-   - Single large image: 1233px x 746px, rounded 40px
-   - Small chevron arrows on left/right edges
-*/
+/* Image: 1233x746px, rounded 40px, arrows on edges */
 .gallery-slider-v4 {
   padding: 40px 0;
   overflow: visible;
@@ -1588,7 +1510,7 @@
   border: none;
   cursor: pointer;
   padding: 15px;
-  color: #3D3D3D; /* FIGMA: dark color */
+  color: var(--color-text-primary); /* FIGMA: dark color */
   transition: opacity 0.2s ease;
   z-index: 100;
 }
@@ -1708,7 +1630,7 @@
   flex: 0 0 auto;
   width: 25%; /* FIGMA: 4 equal images */
   height: 100%;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .gallery-strip__item img {
@@ -1833,7 +1755,7 @@
   border-radius: 30px;
 }
 
-/* FAQ Rounded - Landing 4 (FIGMA node 479:146) */
+/* FAQ Rounded - Landing 4 */
 .faq--rounded .faq__cta {
   text-align: left; /* FIGMA: left=54px */
 }
@@ -1846,13 +1768,9 @@
 }
 
 /* ===== FAQ V4 - 2 Column Layout (Landing 4) ===== */
-/* FIGMA node 479:124:
-   - 2 columns: left 659px, right 652px
-   - Cards: white bg, rounded 15-25px
-   - Expanded card: 133px height, radius 25px
-   - Collapsed card: ~80px height, radius 15px
-   - Icon: 35x35px circle with +/-
-   - Button: 432x60px, left aligned
+/* 2 колонки, белые карточки
+   Expanded: radius 25px, Collapsed: radius 15px
+   Button: 432x60px, left aligned
 */
 .faq--v4 {
   padding: 85px 0 91px; /* FIGMA: adjusted */
@@ -2002,23 +1920,9 @@
 }
 
 /* ===== SERVICES SECTION ===== */
-/* FIGMA Landing 1 (node 7:130):
-   - Section bg: y=5565, height=1035
-   - Title (7:133): x=106, y=5674, 35px Bold, line-height 100%
-   - First card image (7:134): x=106, y=5831, 300x300px
-   - First card title (7:141): x=106, y=6160, 22px Bold
-   - First card text (7:145): x=106, y=6206, 22px Medium
-   - CTA button (7:149): x=100, y=6438, 448x60px
-
-   Staggered layout (margin-tops):
-   - Card 1: y=5831 → margin-top: 0
-   - Card 2: y=5857 → margin-top: 26px
-   - Card 3: y=5887 → margin-top: 56px
-   - Card 4: y=5917 → margin-top: 86px
-
-   Calculated:
-   - Top padding: 5674-5565 = 109px
-   - Title to cards: 5831-5674-84 = 73px
+/* Title: 35px Bold, Card image: 300x300px
+   Staggered layout: cards offset by 0/26/56/86px
+   CTA button: 448x60px
 */
 .services {
   padding: 109px 0 80px; /* FIGMA: top exact */
@@ -2064,7 +1968,7 @@
 .service-card__image {
   width: 300px; /* FIGMA: exact */
   height: 300px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   margin-bottom: 29px; /* FIGMA: 6160-5831-300 = 29px gap to title */
 }
 
@@ -2099,13 +2003,8 @@
 }
 
 /* ===== SERVICES V4 - Landing 4 ===== */
-/* FIGMA node 479:77:
-   - Title: 45px Bold, left-aligned
-   - 3 white cards (424x596px, radius 15px)
-   - Card image: 339x257px, radius 15px
-   - Card title: 28px Bold
-   - Card text: 22px Medium
-   - No CTA button
+/* 3 white cards (424x596px, radius 15px)
+   Card image: 339x257px, Card title: 28px Bold
 */
 .services-v4 {
   padding: 91px 0 80px;
@@ -2190,20 +2089,8 @@
 }
 
 /* ===== ABOUT SECTION ===== */
-/* FIGMA Landing 1 (node 7:153):
-   - Section bg: y=6599, height=760
-   - Image (7:155): x=106, y=6698, 466x560px
-   - Label (7:156): x=720, y=6729, 28px Medium, line-height 100%
-   - Name (7:157): x=720, y=6774, 28px Bold, line-height 100%
-   - Divider (7:158): x=720, y=6864, width=471px
-   - Text (7:160): x=720, y=6922, 22px Medium, line-height 100%
-
-   Calculated:
-   - Top padding: 6698-6599 = 99px
-   - Content padding-top: 6729-6698 = 31px
-   - Label to name: 6774-6729-28 = 17px (small gap)
-   - Name to divider: 6864-6774-28 = 62px
-   - Divider to text: 6922-6864 = 58px
+/* Image: 466x560px, Label: 28px Medium, Name: 28px Bold
+   Divider: 471px width, Text: 22px Medium
 */
 .about {
   padding: 99px 0; /* FIGMA: exact */
@@ -2212,7 +2099,7 @@
 .about__image {
   width: 466px; /* FIGMA: exact */
   height: 560px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .about__image img {
@@ -2419,7 +2306,7 @@
   white-space: nowrap;
 }
 
-/* CTA Left-aligned - Landing 4 (FIGMA node 479:117) */
+/* CTA Left-aligned - Landing 4 */
 .cta--left .cta__content {
   text-align: left;
 }
@@ -2525,7 +2412,7 @@
 }
 
 .faq--cards .faq__item {
-  background: #F8F8F8;
+  background: var(--color-bg-light);
   border-radius: 30px;
   padding: 30px;
   border: none;
@@ -2576,7 +2463,7 @@
 }
 
 .faq__card {
-  background: #F8F8F8;
+  background: var(--color-bg-light);
   border-radius: 30px;
   padding: 40px;
   min-height: 117px;
@@ -2786,7 +2673,7 @@
   height: 360px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #a19f9f;
+  background-color: var(--color-placeholder);
 }
 
 .about__image-stacked img {
@@ -2802,10 +2689,8 @@
 }
 
 /* ===== GALLERY SINGLE SLIDER (Landing 3) ===== */
-/* FIGMA node 369:268:
-   - Single large image: 1233px x 746px, radius 50px
-   - Small chevron arrows OUTSIDE image on left/right
-   - Total wrapper: ~1346px (arrows + image)
+/* Image: 1233x746px, radius 50px
+   Arrows outside image on left/right
 */
 .gallery-single-slider {
   padding: 0; /* FIGMA: Hero-v3 handles the 56px gap above */
@@ -2853,7 +2738,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #3D3D3D;
+  color: var(--color-text-primary);
   transition: opacity 0.2s ease;
   flex-shrink: 0;
 }

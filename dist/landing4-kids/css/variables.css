@@ -35,7 +35,21 @@
   /* Состояния */
   --color-error: #FF6B6B;
   --color-success: #4CAF50;
-  
+
+  /* Дополнительные цвета */
+  --color-bg-light: #F8F8F8;            /* Светло-серый фон (карточки FAQ) */
+  --color-placeholder: #a19f9f;         /* Placeholder изображений (светлый) */
+  --color-placeholder-dark: #7f7f7f;    /* Placeholder изображений (тёмный) */
+  --color-dark-bg: #3D3D3D;             /* Тёмный фон (Hero V4) */
+  --color-overlay-dark: rgba(61, 61, 61, 0.9); /* Overlay для градиентов */
+
+  /* Тени */
+  --shadow-xs: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 4px 15px rgba(0, 0, 0, 0.18);
+
   /* ===== ТИПОГРАФИКА ===== */
   
   --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

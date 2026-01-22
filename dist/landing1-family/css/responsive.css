@@ -197,7 +197,7 @@
     right: auto !important;
     top: auto !important;
     z-index: 2;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Тень для глубины */
+    box-shadow: var(--shadow-lg); /* Тень для глубины */
     /* Поднимаем выше: transform сдвигает вверх на 75% высоты изображения */
     transform: translateY(-25%);
   }
@@ -2871,7 +2871,7 @@
     height: 125px;
     border-radius: 15px;
     object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+    box-shadow: var(--shadow-xl);
   }
 
   .gallery-decorated__decor--top-right {

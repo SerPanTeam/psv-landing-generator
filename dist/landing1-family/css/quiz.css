@@ -99,7 +99,7 @@
 
 .quiz-option--square .quiz-option__image {
   aspect-ratio: 1;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   overflow: hidden;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .quiz-option--square:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ===== ROUNDED STYLE (Лендинги 3, 4) ===== */
@@ -126,12 +126,12 @@
   background: var(--color-bg-white);
   border-radius: var(--card-border-radius-rounded);
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-xs);
 }
 
 .quiz-option--rounded .quiz-option__image {
   aspect-ratio: 1;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   border-radius: var(--card-border-radius-rounded) var(--card-border-radius-rounded) 0 0;
   overflow: hidden;
 }
@@ -158,7 +158,7 @@
 }
 
 .quiz-option--rounded:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-md);
 }
 
 /* ===== QUIZ FORM ===== */
@@ -217,7 +217,7 @@
   width: 100%;
   max-width: 549px;
   aspect-ratio: 549 / 822; /* FIGMA: 549x822px */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   margin-bottom: 20px;
 }
 
@@ -295,7 +295,7 @@
   width: 100%;
   max-width: 428px;
   aspect-ratio: 1;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .quiz-success__image img {
@@ -649,7 +649,7 @@
   width: 100%;
   max-width: 550px;
   aspect-ratio: 550 / 529;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .quiz-success__image img {

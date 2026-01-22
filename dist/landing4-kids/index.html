@@ -30,21 +30,21 @@
 </head>
 <body>
   <!-- ============================================
-     HERO V4 - Лендинг 4 (Kinder-Fotoshooting)
+     HERO V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 479:30):
-     - Dark background: #3D3D3D, height 709px
-     - Logo: #F5EDE0 (light on dark)
-     - Label + Title: #E2C08D (yellow/gold)
-     - Subtitle: white, 22px
-     - Date notice: #E2C08D, 16px
-     - Button: 406x60px, rounded-40px
-     - "Warum kostenlos?" section
-     - Below: 4 tilted image cards + title
+     Особенности:
+     - Тёмный фон (#3D3D3D) с лого внутри секции
+     - Галерея наклонённых изображений снизу
+
+     Флаги:
+     - logoText: показать лого внутри hero (не отдельный header!)
+     - dateNotice: текст с датой акции (опционально)
+     - whyFreeTitle/whyFreeText: блок "Warum kostenlos?"
+     - images[]: массив изображений для галереи
      ============================================ -->
 
 <section class="hero hero--v4">
-  <div class="hero__dark-section" style="background-image: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1920&h=900&fit=crop&crop=top');">
+  <div class="hero__dark-section" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=900&fit=crop&crop=faces');">
     <div class="container">
       
       <p class="hero__logo">Logo</p>
@@ -102,13 +102,16 @@
 
 
 <!-- ============================================
-     CONTENT V2 - Landing 4 Style (2-column text)
+     CONTENT V2 - Landing 4 (2-column layout)
 
-     PIXEL-PERFECT ПО FIGMA (node 479:47):
-     - Background: #F5EDE0 (primary)
-     - Title left: Inter Bold 28px
-     - Text right: Inter Medium 22px
-     - Button: rounded style
+     Layout:
+     - Левая колонка: заголовок + кнопка
+     - Правая колонка: текстовые параграфы
+
+     Данные:
+     - title: заголовок секции
+     - texts[]: массив параграфов
+     - buttonText/buttonLink: CTA кнопка (опционально)
      ============================================ -->
 
 <section class="content-section content-section--2col section--bg-primary pb-103">
@@ -163,13 +166,15 @@
 <!-- ============================================
      STEPS V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 479:52):
-     - Primary background
-     - Title: 45px Bold
-     - 3 vertical cards on LEFT (white bg, 15px radius)
-     - Each card: number badge + title + description
-     - Large rotated image on RIGHT
-     - CTA button at bottom right
+     Layout:
+     - 3 карточки шагов слева (белый фон, скруглённые)
+     - Большое изображение + кнопка справа
+
+     Данные:
+     - title: заголовок секции
+     - steps[]: массив шагов {number, title, text}
+     - image/imageAlt: изображение справа
+     - ctaText/ctaLink: кнопка под изображением
      ============================================ -->
 
 <section class="steps steps--v4 section--bg-primary pb-104">
@@ -229,12 +234,17 @@
 <!-- ============================================
      FAQ V4 - Landing 4 (Kinder-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 479:124):
-     - 2-column layout
-     - Left: 2 cards, Right: 2 cards
-     - White cards with rounded corners (15-25px)
-     - Expand/collapse with +/- icons
-     - Button at bottom left (432x60px, radius 40px)
+     Layout:
+     - 2 колонки карточек (по 2 в каждой)
+     - Белые карточки со скруглёнными углами
+     - Раскрытие/закрытие с иконками +/-
+
+     Данные:
+     - title: заголовок секции
+     - questionsLeft[]: вопросы левой колонки {question, answer}
+     - questionsRight[]: вопросы правой колонки
+     - ctaText/ctaLink: кнопка внизу (опционально)
+     - bgClass: переопределение фона (default: secondary)
      ============================================ -->
 
 <section class="faq faq--v4 section--bg-secondary pb-88">
@@ -315,22 +325,23 @@
 <!-- ============================================
      GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
 
-     PIXEL-PERFECT ПО FIGMA (node 369:268):
-     - Single large image: 1233px x 746px
-     - Border-radius: 50px
-     - Small chevron arrows at page edges (left: 45px, right: ~64px)
-     - One image visible at a time, click to navigate
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
      ============================================ -->
 
 <section class="gallery-single-slider section--bg-primary pb-120">
-  <!-- FIGMA: Arrow left at 45px from page edge -->
   <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </button>
 
-  <!-- FIGMA: Image 1233x746px centered -->
   <div class="gallery-single-slider__container" data-gallery-single-slider>
     
     <div class="gallery-single-slider__slide is-active">
@@ -359,7 +370,6 @@
     
   </div>
 
-  <!-- FIGMA: Arrow right at ~64px from page edge -->
   <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -844,7 +854,7 @@ Schnell sein lohnt sich - wir freuen uns auf euch!</p>
         <span class="footer__separator">·</span>
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 09:17</p>
+      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 13:09</p>
     </div>
   </div>
 </footer>
