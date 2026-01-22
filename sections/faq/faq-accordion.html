@@ -1,23 +1,34 @@
 <!-- ============================================
-     FAQ ACCORDION - Landing Generator
+     FAQ - Часто задаваемые вопросы
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #F5EDE0 (primary)
-     - Title: Inter Bold 35px
-     - Question: Inter Bold 28px
-     - Answer: Inter Medium 22px
-     - Plus/minus icon: 30x30px
-     - Divider lines between questions
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="faq__title"
+     • Вопросы → class="faq__question"
+     • Ответы → class="faq__answer-inner"
+     • Кнопка (опционально) → class="faq__cta"
+
+     ДОБАВИТЬ/УДАЛИТЬ ВОПРОС:
+     Скопируйте или удалите блок <div class="faq__item">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Размер шрифта → --font-size-text-lg (вопрос)
      ============================================ -->
 
 <section class="faq {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if cardStyle}} faq--{{cardStyle}}{{/if}}{{paddingClasses}}">
   <div class="container">
+    <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
     <h2 class="faq__title">{{title}}</h2>
 
+    <!-- ====== СПИСОК ВОПРОСОВ ====== -->
     <div class="faq__list">
       {{#each questions}}
+      <!-- ВОПРОС: скопируйте для добавления нового -->
       <div class="faq__item" data-faq-item>
         <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
           <span>{{this.question}}</span>
           <span class="faq__icon">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +39,7 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
             <p>{{this.answer}}</p>
           </div>
         </div>
@@ -37,6 +49,7 @@
 
     {{#if ctaText}}
     <div class="faq__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
     </div>
     {{/if}}

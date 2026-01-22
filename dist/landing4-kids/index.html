@@ -30,37 +30,63 @@
 </head>
 <body>
   <!-- ============================================
-     HERO V4 - Landing 4 (Kinder-Fotoshooting)
+     HERO V4 - Главный баннер (Landing 4)
 
-     Особенности:
-     - Тёмный фон (#3D3D3D) с лого внутри секции
-     - Галерея наклонённых изображений снизу
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Логотип → найдите class="hero__logo"
+     • Акцентный текст → найдите class="hero__label"
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите class="hero__subtitle"
+     • Дата акции → найдите class="hero__date-notice"
+     • Кнопка → найдите class="btn btn-primary"
+     • Блок "Почему бесплатно" → hero__why-free
 
-     Флаги:
-     - logoText: показать лого внутри hero (не отдельный header!)
-     - dateNotice: текст с датой акции (опционально)
-     - whyFreeTitle/whyFreeText: блок "Warum kostenlos?"
-     - images[]: массив изображений для галереи
+     КАРТИНКИ:
+     • Фон: hero__dark-section background-image
+     • Галерея: 4 картинки в hero__gallery-item (если showGallery: true)
+
+     ФЛАГИ:
+     • showGallery: true/false - показать галерею под тёмной секцией
+
+     СТИЛИ:
+     • Тёмный фон → css/variables.css → --color-dark-bg
+     • Светлый фон галереи → --color-bg-primary
      ============================================ -->
 
 <section class="hero hero--v4">
+  <!-- ====== ТЁМНАЯ СЕКЦИЯ С ЛОГО ====== -->
   <div class="hero__dark-section" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=900&fit=crop&crop=faces');">
     <div class="container">
       
+      <!-- РЕДАКТИРОВАТЬ: Текст логотипа -->
       <p class="hero__logo">Logo</p>
       
       <div class="hero__content">
+        <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
         <span class="hero__label">Kostenloses</span>
+
+        <!-- РЕДАКТИРОВАТЬ: Главный заголовок -->
         <h1 class="hero__title">Kinder - Fotoshooting</h1>
+
+        <!-- РЕДАКТИРОВАТЬ: Описание -->
         <p class="hero__subtitle">Emotionale Bilder – ein persönliches Geschenk zu Weihnachten.</p>
+
         
+        <!-- РЕДАКТИРОВАТЬ: Дата акции (опционально) -->
         <p class="hero__date-notice">Die kostenlosen Kinder- Fotoshootings finden nur vom 01.11. bis 29.11.2025 statt!</p>
         
+
+        <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
         <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
 
         
+        <!-- ====== БЛОК "ПОЧЕМУ БЕСПЛАТНО" ====== -->
         <div class="hero__why-free">
+          <!-- РЕДАКТИРОВАТЬ: Заголовок блока -->
           <h3 class="hero__why-free-title">Warum kostenlos?</h3>
+          <!-- РЕДАКТИРОВАТЬ: Текст блока -->
           <p class="hero__why-free-text">Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.</p>
         </div>
         
@@ -68,71 +94,76 @@
     </div>
   </div>
 
-  <!-- Gallery section with tilted images -->
-  <div class="hero__gallery-section section--bg-primary">
-    <div class="container">
-      
-      <h2 class="hero__gallery-title">Echte Kinderlachen, echte Erinnerungen!</h2>
-      
-      <div class="hero__gallery">
-        
-        <div class="hero__gallery-item hero__gallery-item--1">
-          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop" alt="Kind 1">
-        </div>
-        
-
-        <div class="hero__gallery-item hero__gallery-item--2">
-          <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop" alt="Kind 2">
-        </div>
-        
-
-        <div class="hero__gallery-item hero__gallery-item--3">
-          <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=350&h=400&fit=crop" alt="Kind 3">
-        </div>
-        
-
-        <div class="hero__gallery-item hero__gallery-item--4">
-          <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=350&h=400&fit=crop" alt="Kind 4">
-        </div>
-        
-      </div>
-    </div>
-  </div>
+  
 </section>
 
 
 <!-- ============================================
-     CONTENT V2 - Landing 4 (2-column layout)
+     CONTENT GALLERY V4 - Landing 4
 
-     Layout:
-     - Левая колонка: заголовок + кнопка
-     - Правая колонка: текстовые параграфы
+     Комбинированная секция:
+     - Заголовок галереи
+     - 4 наклонённых фото
+     - 2-колоночный контент (заголовок+кнопка слева, текст справа)
 
      Данные:
-     - title: заголовок секции
-     - texts[]: массив параграфов
-     - buttonText/buttonLink: CTA кнопка (опционально)
+     - galleryTitle: заголовок галереи
+     - images[]: массив из 4 фото {src, alt}
+     - contentTitle: заголовок контента
+     - texts[]: массив параграфов для правой колонки
+     - buttonText/buttonLink: CTA кнопка
      ============================================ -->
 
-<section class="content-section content-section--2col section--bg-primary pb-103">
+<section class="content-gallery-v4 section--bg-primary pb-103">
   <div class="container">
-    <div class="row">
-      <!-- Title + Button on left -->
-      <div class="col-lg-5">
-        <h2 class="content-section__title content-section__title--bold">Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich</h2>
-        
-        <a href="quiz-step1.html" class="btn btn-primary content-section__btn">Fotoshooting sichern</a>
-        
-      </div>
-      <!-- Text on right -->
-      <div class="col-lg-6 offset-lg-1">
-        <div class="content-section__text-block">
-          
-          <p class="content-section__text">In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.</p>
-          
+    <!-- ====== GALLERY PART ====== -->
+    
+    <h2 class="content-gallery-v4__gallery-title">Echte Kinderlachen, echte Erinnerungen!</h2>
+    
 
-          <p class="content-section__text">Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!</p>
+    <div class="content-gallery-v4__gallery">
+      
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--1">
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop" alt="Kind 1">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--2">
+        <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop" alt="Kind 2">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--3">
+        <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=350&h=400&fit=crop" alt="Kind 3">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--4">
+        <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=350&h=400&fit=crop" alt="Kind 4">
+      </div>
+      
+    </div>
+
+    <!-- ====== CONTENT PART (2 columns) ====== -->
+    <div class="content-gallery-v4__content">
+      <div class="row">
+        <!-- Left column: Title + Button -->
+        <div class="col-lg-5">
+          <h3 class="content-gallery-v4__content-title">Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich</h3>
           
+          <a href="quiz-step1.html" class="btn btn-primary content-gallery-v4__btn">Fotoshooting sichern</a>
+          
+        </div>
+        <!-- Right column: Text paragraphs -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="content-gallery-v4__text-block">
+            
+            <p class="content-gallery-v4__text">In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.</p>
+            
+
+            <p class="content-gallery-v4__text">Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!</p>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -141,22 +172,30 @@
 
 
 <!-- ============================================
-     CTA V1 - Landing Generator
+     CTA - Призыв к действию
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold
-     - Subtitle: Inter Medium
-     - Layout: default (center) or layoutRow (text left, button right)
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → class="cta__title"
+     • Подзаголовок → class="cta__subtitle"
+     • Кнопка → class="btn btn-primary cta__btn"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Цвет кнопки → --color-button-primary
      ============================================ -->
 
 <section class="cta section--bg-secondary cta--rounded cta--left pb-80">
   <div class="container">
     <div class="cta__content">
       <div class="cta__text">
-        <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.</h2>
+        <!-- РЕДАКТИРОВАТЬ: Заголовок -->
+        <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-<br>Fotoshooting in Bremen-Findorff.</h2>
+        <!-- РЕДАКТИРОВАТЬ: Подзаголовок (опционально) -->
         <p class="cta__subtitle">Dauer bis zum Gutschein: ≈ 30 Sekunden</p>
       </div>
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
     </div>
   </div>
@@ -389,7 +428,7 @@
      - Background: secondary (#EEE3D0)
      ============================================ -->
 
-<section class="services-v4 section--bg-secondary pb-0">
+<section class="services-v4 section--bg-secondary">
   <div class="container">
     <h2 class="services-v4__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
 
@@ -819,19 +858,31 @@ Schnell sein lohnt sich - wir freuen uns auf euch!</p>
 
 
 <!-- ============================================
-     FOOTER V1 - Landing Generator
+     FOOTER - Подвал сайта
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Map: full width, ~300px height
-     - Background: #FFFFFF
-     - Links: Inter Regular 16px, underlined
-     - Centered navigation
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
      ============================================ -->
 
 <footer class="footer">
-  <!-- Google Maps -->
+  <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
     <iframe
       src="https://maps.google.com/maps?q=Bremen-Findorff&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%"
@@ -844,17 +895,19 @@ Schnell sein lohnt sich - wir freuen uns auf euch!</p>
     
   </div>
 
-  <!-- Footer Navigation -->
+  <!-- ====== НАВИГАЦИЯ ====== -->
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
         <a href="#">Impressum</a>
         <span class="footer__separator">·</span>
         <a href="#">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 13:09</p>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 15:51</p>
     </div>
   </div>
 </footer>

@@ -1060,8 +1060,103 @@
 
 /* FIGMA: Button in left column under title, gap ~40px */
 .content-section--2col .content-section__btn {
-  display: inline-block;
+  /* display: inline-flex наследуется от .btn с центрированием текста */
   margin-top: 40px; /* FIGMA: 1491 - 1394 - ~56 (title height) */
+  width: 287px;
+  height: 60px;
+  border-radius: 100px;
+  font-size: var(--font-size-text);
+}
+
+/* ===== CONTENT GALLERY V4 (Landing 4) ===== */
+/* Комбинированная секция: галерея + 2-колоночный контент */
+.content-gallery-v4 {
+  padding: 40px 0 50px;
+}
+
+/* Gallery Title - centered */
+.content-gallery-v4__gallery-title {
+  font-size: var(--font-size-h2); /* 45px */
+  font-weight: var(--font-weight-bold);
+  text-align: left; /* FIGMA: left-[47px] */
+  margin-bottom: 50px;
+  color: var(--color-text-primary);
+}
+
+/* Gallery Grid - 4 tilted images */
+.content-gallery-v4__gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.content-gallery-v4__gallery-item {
+  width: 293px;
+  height: 348px;
+  overflow: hidden;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
+/* FIGMA: Tilted images at different angles */
+.content-gallery-v4__gallery-item--1 {
+  transform: rotate(-6deg);
+}
+
+.content-gallery-v4__gallery-item--2 {
+  transform: rotate(3deg);
+  margin-top: 30px;
+}
+
+.content-gallery-v4__gallery-item--3 {
+  transform: rotate(-4deg);
+}
+
+.content-gallery-v4__gallery-item--4 {
+  transform: rotate(5deg);
+  margin-top: 20px;
+}
+
+.content-gallery-v4__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Part - 2 columns like content-v2 */
+.content-gallery-v4__content {
+  margin-top: 0;
+}
+
+.content-gallery-v4__content-title {
+  font-size: var(--font-size-text-lg); /* 28px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  max-width: 535px;
+  color: var(--color-text-primary);
+}
+
+.content-gallery-v4__text-block {
+  max-width: 641px;
+}
+
+.content-gallery-v4__text {
+  font-size: var(--font-size-text); /* 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin-bottom: 22px;
+  color: var(--color-text-primary);
+}
+
+.content-gallery-v4__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Button under title in left column */
+.content-gallery-v4__btn {
+  margin-top: 40px;
   width: 287px;
   height: 60px;
   border-radius: 100px;
@@ -1301,6 +1396,15 @@
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   max-width: 736px;
   margin-bottom: 60px;
+}
+
+/* FIGMA: Custom layout - cards 666px, gap 91px, image 565px */
+.steps--v4 .row {
+  --bs-gutter-x: 91px; /* FIGMA: 807 - 716 = 91px gap */
+}
+
+.steps--v4 .row > .col-lg-6:first-child {
+  max-width: 666px; /* FIGMA: cards width */
 }
 
 .steps--v4 .steps__cards {
@@ -2007,7 +2111,7 @@
    Card image: 339x257px, Card title: 28px Bold
 */
 .services-v4 {
-  padding: 91px 0 80px;
+  padding: 91px 0 121px; /* FIGMA: 121px bottom gap after cards */
 }
 
 .services-v4__title {

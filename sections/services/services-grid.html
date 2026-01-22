@@ -1,35 +1,52 @@
 <!-- ============================================
-     SERVICES GRID - Landing Generator
+     SERVICES GRID - Секция услуг
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold 35px
-     - 4 service cards in row
-     - Card image: 300x300px
-     - Card title: Inter Bold 22px
-     - Card text: Inter Medium 22px
-     - CTA button with outline style
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="services__title"
+     • Карточки услуг → class="service-card"
+       - Название услуги → service-card__title
+       - Описание → service-card__text
+     • Кнопка внизу → class="btn"
+
+     КАРТИНКИ:
+     • Карточки: 300x300px → service-card__image
+
+     ДОБАВИТЬ/УДАЛИТЬ УСЛУГУ:
+     Скопируйте или удалите блок <div class="service-card">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Размер шрифта → --font-size-h3 (заголовок)
      ============================================ -->
 
 <section class="services {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} services--rounded{{/if}}{{paddingClasses}}">
   <div class="container">
     <div class="services__header">
+      <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
       <h2 class="services__title">{{title}}</h2>
     </div>
 
+    <!-- ====== КАРТОЧКИ УСЛУГ ====== -->
     <div class="services__grid">
       {{#each services}}
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="{{this.image}}" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">{{this.title}}</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">{{this.text}}</p>
       </div>
       {{/each}}
     </div>
 
     <div class="services__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="{{ctaLink}}" class="btn {{#if primaryButton}}btn-primary{{else}}btn-outline{{/if}}">{{ctaText}}</a>
     </div>
   </div>

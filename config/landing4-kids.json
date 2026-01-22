@@ -149,20 +149,21 @@
         "buttonLink": "quiz-step1.html",
         "whyFreeTitle": "Warum kostenlos?",
         "whyFreeText": "Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.",
+        "showGallery": false
+      }
+    },
+    {
+      "template": "content/content-gallery-v4.html",
+      "data": {
+        "paddingBottom": 103,
+        "galleryTitle": "Echte Kinderlachen, echte Erinnerungen!",
         "images": [
           { "src": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop", "alt": "Kind 1" },
           { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop", "alt": "Kind 2" },
           { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=350&h=400&fit=crop", "alt": "Kind 3" },
           { "src": "https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=350&h=400&fit=crop", "alt": "Kind 4" }
         ],
-        "sectionTitle": "Echte Kinderlachen, echte Erinnerungen!"
-      }
-    },
-    {
-      "template": "content/content-v2.html",
-      "data": {
-        "paddingBottom": 103,
-        "title": "Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich",
+        "contentTitle": "Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich",
         "texts": [
           "In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.",
           "Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!"
@@ -175,7 +176,7 @@
       "template": "cta/cta-v1.html",
       "data": {
         "paddingBottom": 80,
-        "title": "Sichert euch jetzt ein kostenloses Kinder-Fotoshooting in Bremen-Findorff.",
+        "title": "Sichert euch jetzt ein kostenloses Kinder-<br>Fotoshooting in Bremen-Findorff.",
         "subtitle": "Dauer bis zum Gutschein: ≈ 30 Sekunden",
         "buttonText": "Jetzt Gutschein sichern",
         "buttonLink": "quiz-step1.html",
@@ -257,7 +258,6 @@
     {
       "template": "services/services-v4.html",
       "data": {
-        "paddingBottom": 0,
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "bgClass": "section--bg-secondary",
         "services": [

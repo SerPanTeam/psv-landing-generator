@@ -1,35 +1,53 @@
 <!-- ============================================
-     HERO V1 - Landing 1, 2 (Family Fotoshooting)
+     HERO V1 - Главный баннер (Landing 1, 2)
 
-     Размеры изображений:
-     - Main image: 428x394px
-     - Secondary image: 306x290px
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите <p class="hero__subtitle">
+     • Кнопка → найдите class="btn btn-primary"
 
-     Флаги:
-     - label: акцентный текст над заголовком (опционально)
+     КАРТИНКИ:
+     • Главная картинка: 428x394px → hero__image-main
+     • Вторая картинка: 306x290px → hero__image-secondary
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Цвет кнопки → css/variables.css → --color-button-primary
+     • Размер шрифта → css/variables.css → --font-size-h1
      ============================================ -->
 
 <section class="hero hero--v1 section--bg-primary{{paddingClasses}}">
   <div class="container">
     <div class="row align-items-start">
-      <!-- Контент слева -->
+      <!-- ====== КОНТЕНТ СЛЕВА ====== -->
       <div class="col-lg-6">
         <div class="hero__content">
           {{#if label}}
+          <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
           <span class="hero__label">{{label}}</span>
           {{/if}}
+
+          <!-- РЕДАКТИРОВАТЬ: Главный заголовок страницы -->
           <h1 class="hero__title">{{title}}</h1>
+
+          <!-- РЕДАКТИРОВАТЬ: Описание под заголовком -->
           <p class="hero__subtitle">{{subtitle}}</p>
+
+          <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка (href) -->
           <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
         </div>
       </div>
 
-      <!-- Изображения справа -->
+      <!-- ====== КАРТИНКИ СПРАВА ====== -->
       <div class="col-lg-6">
         <div class="hero__image-wrapper">
+          <!-- КАРТИНКА: 428x394px - замените src на свой файл -->
           <div class="hero__image-main">
             <img src="{{imageMain}}" alt="{{imageAlt}}">
           </div>
+          <!-- КАРТИНКА: 306x290px - замените src на свой файл -->
           <div class="hero__image-secondary">
             <img src="{{imageSecondary}}" alt="{{imageAlt}}">
           </div>

@@ -1,156 +1,190 @@
 /* ============================================
-   CSS VARIABLES - LANDING GENERATOR
-   
-   Этот файл содержит все переменные для кастомизации.
-   Измените значения здесь для настройки под конкретного клиента.
+   CSS VARIABLES - НАСТРОЙКИ ЛЕНДИНГА
+   ============================================
+
+   КАК МЕНЯТЬ ЦВЕТА САЙТА:
+   ─────────────────────────────────────────────
+   1. Найдите нужную переменную ниже
+   2. Измените значение цвета (например: #F5EDE0 → #FFFFFF)
+   3. Сохраните файл - изменения применятся ко всему сайту
+
+   ЧАСТЫЕ ЗАДАЧИ:
+   • Сменить фон сайта → --color-bg-primary
+   • Сменить цвет кнопок → --color-button-primary
+   • Сменить цвет текста → --color-text-primary
+
+   ФОРМАТ ЦВЕТОВ:
+   • HEX: #F5EDE0 (можно найти в Figma или любом редакторе)
+   • RGB: rgb(245, 237, 224)
+   • RGBA: rgba(61, 61, 61, 0.9) для прозрачности
    ============================================ */
 
 :root {
-  /* ===== ЦВЕТА ===== */
-  
+  /* =============================================
+     ЦВЕТА САЙТА - Меняйте значения здесь!
+     ============================================= */
+
   /* Фоновые цвета */
   --color-bg-primary: #F5EDE0;        /* Основной фон (бежевый) */
   --color-bg-secondary: #EEE3D0;      /* Вторичный фон (темнее) */
   --color-bg-white: #FFFFFF;          /* Белый фон */
-  
+
   /* Текст */
   --color-text-primary: #3D3D3D;      /* Основной текст */
   --color-text-secondary: #666666;    /* Вторичный текст */
   --color-text-light: #7F7F7F;        /* Светлый текст */
   --color-text-white: #FFFFFF;        /* Белый текст */
-  
-  /* Кнопки */
-  --color-button-primary: #E2C08D;    /* Основная кнопка */
-  --color-button-primary-hover: #D4A574;
-  --color-button-primary-text: #FFFFFF;
-  
-  /* Акценты */
+
+  /* Кнопки - ВАЖНО для CTA! */
+  --color-button-primary: #E2C08D;    /* Цвет кнопки */
+  --color-button-primary-hover: #D4A574; /* Цвет при наведении */
+  --color-button-primary-text: #FFFFFF;  /* Текст на кнопке */
+
+  /* Акцентный цвет (для выделений) */
   --color-accent: #D4A574;            /* Акцентный цвет (золотистый) */
   --color-accent-text: #D4A574;       /* Текст акцентного цвета */
-  
+
   /* Границы */
   --color-border: #3D3D3D;            /* Основные границы */
   --color-border-light: rgba(61, 61, 61, 0.2);
-  
-  /* Состояния */
-  --color-error: #FF6B6B;
-  --color-success: #4CAF50;
 
-  /* Дополнительные цвета */
-  --color-bg-light: #F8F8F8;            /* Светло-серый фон (карточки FAQ) */
-  --color-placeholder: #a19f9f;         /* Placeholder изображений (светлый) */
-  --color-placeholder-dark: #7f7f7f;    /* Placeholder изображений (тёмный) */
+  /* Состояния форм */
+  --color-error: #FF6B6B;             /* Ошибка (красный) */
+  --color-success: #4CAF50;           /* Успех (зелёный) */
+
+  /* Дополнительные цвета (редко меняются) */
+  --color-bg-light: #F8F8F8;            /* Светло-серый фон */
+  --color-placeholder: #a19f9f;         /* Placeholder изображений */
+  --color-placeholder-dark: #7f7f7f;    /* Placeholder тёмный */
   --color-dark-bg: #3D3D3D;             /* Тёмный фон (Hero V4) */
-  --color-overlay-dark: rgba(61, 61, 61, 0.9); /* Overlay для градиентов */
+  --color-overlay-dark: rgba(61, 61, 61, 0.9);
 
-  /* Тени */
+  /* Тени (обычно не меняются) */
   --shadow-xs: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.15);
   --shadow-xl: 0 4px 15px rgba(0, 0, 0, 0.18);
 
-  /* ===== ТИПОГРАФИКА ===== */
-  
-  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Desktop размеры */
-  --font-size-h1: 55px;
-  --font-size-h2: 45px;
-  --font-size-h3: 35px;
-  --font-size-text-lg: 28px;
-  --font-size-text: 22px;
-  --font-size-text-sm: 18px;
-  --font-size-small: 16px;
-  --font-size-xs: 14px;
-  
-  /* Font weights */
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-medium: 500;
-  --font-weight-regular: 400;
-  
-  /* Line heights */
-  --line-height-none: 1;        /* FIGMA: 100% */
-  --line-height-tight: 1.2;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.7;
-  
-  /* ===== РАЗМЕРЫ И ОТСТУПЫ ===== */
-  /* FIGMA: Page width 1440px, left padding 101px */
+  /* =============================================
+     ШРИФТЫ - Размеры текста
+     ============================================= */
 
-  --container-max-width: 1238px;  /* 1440px - 101px*2 = 1238px */
-  --container-padding: 15px;      /* Default Bootstrap padding */
-  --container-padding-figma: 101px; /* FIGMA exact padding for full-width */
+  /* Шрифт сайта (Google Fonts Inter) */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Размеры заголовков и текста (Desktop) */
+  --font-size-h1: 55px;           /* Главный заголовок */
+  --font-size-h2: 45px;           /* Заголовок секции */
+  --font-size-h3: 35px;           /* Подзаголовок */
+  --font-size-text-lg: 28px;      /* Крупный текст */
+  --font-size-text: 22px;         /* Обычный текст */
+  --font-size-text-sm: 18px;      /* Мелкий текст */
+  --font-size-small: 16px;        /* Подписи */
+  --font-size-xs: 14px;           /* Самый мелкий */
+
+  /* Жирность шрифта */
+  --font-weight-bold: 700;        /* Жирный (заголовки) */
+  --font-weight-semibold: 600;    /* Полужирный */
+  --font-weight-medium: 500;      /* Средний (кнопки) */
+  --font-weight-regular: 400;     /* Обычный (текст) */
+
+  /* Межстрочный интервал */
+  --line-height-none: 1;
+  --line-height-tight: 1.2;       /* Заголовки */
+  --line-height-normal: 1.5;      /* Текст */
+  --line-height-relaxed: 1.7;     /* Длинный текст */
   
-  /* Секции */
-  --section-padding-y: 80px;
-  --section-padding-y-lg: 100px;
-  --section-padding-y-sm: 60px;
-  
-  /* Контент */
+  /* =============================================
+     ОТСТУПЫ И РАЗМЕРЫ
+     ============================================= */
+
+  --container-max-width: 1238px;  /* Ширина контента */
+  --container-padding: 15px;
+  --container-padding-figma: 101px;
+
+  /* Отступы секций */
+  --section-padding-y: 80px;      /* Стандартный отступ */
+  --section-padding-y-lg: 100px;  /* Большой отступ */
+  --section-padding-y-sm: 60px;   /* Маленький отступ */
+
+  /* Отступы между элементами */
   --content-gap: 40px;
   --content-gap-lg: 60px;
   --content-gap-sm: 20px;
   --content-gap-xs: 12px;
-  
-  /* ===== КОМПОНЕНТЫ ===== */
-  
-  /* Кнопки */
-  --button-height: 70px;
-  --button-height-sm: 50px;
-  --button-padding-x: 40px;
+
+  /* =============================================
+     КНОПКИ - Размеры и скругления
+     ============================================= */
+
+  --button-height: 70px;          /* Высота кнопки */
+  --button-height-sm: 50px;       /* Маленькая кнопка */
+  --button-padding-x: 40px;       /* Отступы по бокам */
   --button-padding-x-sm: 24px;
-  --button-border-radius: 0;
+  --button-border-radius: 0;      /* 0 = прямоугольные, 30px = скруглённые */
   --button-font-size: var(--font-size-text);
   --button-font-weight: var(--font-weight-bold);
-  
-  /* Карточки */
-  --card-border-radius: 0;            /* Прямоугольные (Лендинги 1, 2) */
-  --card-border-radius-rounded: 20px; /* Скруглённые (Лендинги 3, 4) */
+
+  /* =============================================
+     КАРТОЧКИ (услуги, FAQ и др.)
+     ============================================= */
+
+  --card-border-radius: 0;            /* Прямоугольные (Landing 1, 2) */
+  --card-border-radius-rounded: 20px; /* Скруглённые (Landing 3, 4) */
   --card-padding: 24px;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  
-  /* Формы */
-  --input-height: 60px;
+
+  /* =============================================
+     ФОРМЫ (input, select, checkbox)
+     ============================================= */
+
+  --input-height: 60px;           /* Высота поля ввода */
   --input-padding: 16px 20px;
-  --input-border-radius: 0;
+  --input-border-radius: 0;       /* Скругление полей */
   --input-border-color: var(--color-border);
   --input-bg: var(--color-bg-white);
   --input-focus-border-color: var(--color-accent);
   
-  /* ===== ХЕДЕР ===== */
-  /* FIGMA: Logo at top 53px, left 101px */
+  /* =============================================
+     ШАПКА САЙТА (Header)
+     ============================================= */
 
-  --header-padding-y: 53px;
-  --header-bg: var(--color-bg-primary); /* FIGMA: #F5EDE0 */
-  --logo-font-size: 45px; /* FIGMA: 45px */
+  --header-padding-y: 53px;       /* Отступ сверху */
+  --header-bg: var(--color-bg-primary);
+  --logo-font-size: 45px;         /* Размер логотипа */
   --logo-font-weight: var(--font-weight-bold);
   --logo-color: var(--color-text-primary);
-  
-  /* ===== ФУТЕР ===== */
-  
+
+  /* =============================================
+     ПОДВАЛ САЙТА (Footer)
+     ============================================= */
+
   --footer-bg: var(--color-bg-white);
   --footer-padding-y: 40px;
   --footer-text-color: var(--color-text-primary);
   --footer-link-color: var(--color-text-primary);
-  
-  /* ===== АНИМАЦИИ ===== */
-  
+
+  /* =============================================
+     АНИМАЦИИ (обычно не меняются)
+     ============================================= */
+
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s ease;
   --transition-slow: 0.4s ease;
-  
-  /* ===== Z-INDEX ===== */
-  
+
+  /* Z-INDEX (порядок слоёв) */
   --z-header: 100;
   --z-modal: 1000;
   --z-tooltip: 500;
 }
 
-/* ===== АДАПТИВНЫЕ ПЕРЕОПРЕДЕЛЕНИЯ ===== */
+/* =============================================
+   АДАПТИВНОСТЬ - Автоматические размеры
+   (обычно не нужно менять)
+   ============================================= */
 
-/* Tablet */
+/* Планшет (768-991px) */
 @media (max-width: 991.98px) {
   :root {
     --font-size-h1: 42px;
@@ -168,7 +202,7 @@
   }
 }
 
-/* Mobile */
+/* Мобильные (до 767px) */
 @media (max-width: 767.98px) {
   :root {
     --font-size-h1: 32px;
@@ -190,7 +224,7 @@
   }
 }
 
-/* Small Mobile */
+/* Маленькие экраны (до 575px) */
 @media (max-width: 575.98px) {
   :root {
     --font-size-h1: 28px;

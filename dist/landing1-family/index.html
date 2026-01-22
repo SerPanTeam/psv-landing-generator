@@ -48,37 +48,55 @@
 
 
 <!-- ============================================
-     HERO V1 - Landing 1, 2 (Family Fotoshooting)
+     HERO V1 - Главный баннер (Landing 1, 2)
 
-     Размеры изображений:
-     - Main image: 428x394px
-     - Secondary image: 306x290px
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите <p class="hero__subtitle">
+     • Кнопка → найдите class="btn btn-primary"
 
-     Флаги:
-     - label: акцентный текст над заголовком (опционально)
+     КАРТИНКИ:
+     • Главная картинка: 428x394px → hero__image-main
+     • Вторая картинка: 306x290px → hero__image-secondary
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Цвет кнопки → css/variables.css → --color-button-primary
+     • Размер шрифта → css/variables.css → --font-size-h1
      ============================================ -->
 
 <section class="hero hero--v1 section--bg-primary">
   <div class="container">
     <div class="row align-items-start">
-      <!-- Контент слева -->
+      <!-- ====== КОНТЕНТ СЛЕВА ====== -->
       <div class="col-lg-6">
         <div class="hero__content">
           
+          <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
           <span class="hero__label">Weihnachts-Aktion:</span>
           
+
+          <!-- РЕДАКТИРОВАТЬ: Главный заголовок страницы -->
           <h1 class="hero__title">Familien-Fotoshooting zu Weihnachten!</h1>
+
+          <!-- РЕДАКТИРОВАТЬ: Описание под заголовком -->
           <p class="hero__subtitle">Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein.</p>
+
+          <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка (href) -->
           <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
         </div>
       </div>
 
-      <!-- Изображения справа -->
+      <!-- ====== КАРТИНКИ СПРАВА ====== -->
       <div class="col-lg-6">
         <div class="hero__image-wrapper">
+          <!-- КАРТИНКА: 428x394px - замените src на свой файл -->
           <div class="hero__image-main">
             <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=500&h=500&fit=crop" alt="Familien-Fotoshooting">
           </div>
+          <!-- КАРТИНКА: 306x290px - замените src на свой файл -->
           <div class="hero__image-secondary">
             <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?w=400&h=380&fit=crop" alt="Familien-Fotoshooting">
           </div>
@@ -430,25 +448,36 @@
 
 
 <!-- ============================================
-     FAQ ACCORDION - Landing Generator
+     FAQ - Часто задаваемые вопросы
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #F5EDE0 (primary)
-     - Title: Inter Bold 35px
-     - Question: Inter Bold 28px
-     - Answer: Inter Medium 22px
-     - Plus/minus icon: 30x30px
-     - Divider lines between questions
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="faq__title"
+     • Вопросы → class="faq__question"
+     • Ответы → class="faq__answer-inner"
+     • Кнопка (опционально) → class="faq__cta"
+
+     ДОБАВИТЬ/УДАЛИТЬ ВОПРОС:
+     Скопируйте или удалите блок <div class="faq__item">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Размер шрифта → --font-size-text-lg (вопрос)
      ============================================ -->
 
 <section class="faq section--bg-primary">
   <div class="container">
+    <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
     <h2 class="faq__title">Häufige Fragen zum Fotoshooting</h2>
 
+    <!-- ====== СПИСОК ВОПРОСОВ ====== -->
     <div class="faq__list">
       
+      <!-- ВОПРОС: скопируйте для добавления нового -->
       <div class="faq__item" data-faq-item>
         <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
           <span>Wie lange dauert das Familien-Fotoshooting?</span>
           <span class="faq__icon">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -459,14 +488,17 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
             <p>Das Fotoshooting dauert ca. 30 Minuten. In dieser Zeit entstehen vielfältige Aufnahmen, damit ihr eine große Auswahl an Bildern habt.</p>
           </div>
         </div>
       </div>
       
 
+      <!-- ВОПРОС: скопируйте для добавления нового -->
       <div class="faq__item" data-faq-item>
         <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
           <span>Was sollen wir zum Fotoshooting anziehen?</span>
           <span class="faq__icon">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -477,14 +509,17 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
             <p>Wählt bequeme Kleidung in abgestimmten Farben. Neutrale Töne wie Beige, Weiß oder Dunkelblau harmonieren besonders gut. Vermeidet große Logos oder sehr auffällige Muster.</p>
           </div>
         </div>
       </div>
       
 
+      <!-- ВОПРОС: скопируйте для добавления нового -->
       <div class="faq__item" data-faq-item>
         <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
           <span>Können wir unsere Haustiere mitbringen?</span>
           <span class="faq__icon">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,6 +530,7 @@
         </button>
         <div class="faq__answer" data-faq-answer>
           <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
             <p>Ja, eure Haustiere sind herzlich willkommen! Teilt uns das einfach bei der Terminbuchung mit, damit wir genügend Zeit einplanen können.</p>
           </div>
         </div>
@@ -508,64 +544,93 @@
 
 
 <!-- ============================================
-     SERVICES GRID - Landing Generator
+     SERVICES GRID - Секция услуг
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold 35px
-     - 4 service cards in row
-     - Card image: 300x300px
-     - Card title: Inter Bold 22px
-     - Card text: Inter Medium 22px
-     - CTA button with outline style
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="services__title"
+     • Карточки услуг → class="service-card"
+       - Название услуги → service-card__title
+       - Описание → service-card__text
+     • Кнопка внизу → class="btn"
+
+     КАРТИНКИ:
+     • Карточки: 300x300px → service-card__image
+
+     ДОБАВИТЬ/УДАЛИТЬ УСЛУГУ:
+     Скопируйте или удалите блок <div class="service-card">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Размер шрифта → --font-size-h3 (заголовок)
      ============================================ -->
 
 <section class="services section--bg-secondary">
   <div class="container">
     <div class="services__header">
+      <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
       <h2 class="services__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
     </div>
 
+    <!-- ====== КАРТОЧКИ УСЛУГ ====== -->
     <div class="services__grid">
       
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=350&h=350&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Family Time</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=350&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Kinder-Fotoshooting</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=350&h=350&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Babybauch & Newborn</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=350&h=350&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Portraitfotografie</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest.</p>
       </div>
       
     </div>
 
     <div class="services__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="quiz-step1.html" class="btn btn-outline">Jetzt Familien-Fotoshooting anfragen</a>
     </div>
   </div>
@@ -573,42 +638,69 @@
 
 
 <!-- ============================================
-     ABOUT V1 - Default layout (image left, content right)
+     ABOUT - Секция "О фотографе"
 
-     Для layout с изображениями справа используйте about-v2.html
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Подзаголовок → class="about__label"
+     • Имя фотографа → class="about__name"
+     • Описание → class="about__text" (можно несколько)
+     • Соцсети → class="social-icon" (ссылки)
+
+     КАРТИНКА:
+     • Фото автора: 466x560px → class="about__image"
+
+     ДОБАВИТЬ/УДАЛИТЬ ТЕКСТ:
+     Скопируйте или удалите блок <p class="about__text">
+
+     СОЦСЕТИ:
+     Скопируйте или удалите блок <a class="social-icon">
+     Измените href и src иконки
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
      ============================================ -->
 
 <section class="about section--bg-primary">
   <div class="container">
     <div class="row align-items-start">
-      <!-- Изображение слева -->
+      <!-- ====== ФОТО АВТОРА СЛЕВА ====== -->
       <div class="col-lg-5">
+        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop" alt="Dorett Dornbusch">
         </div>
       </div>
 
-      <!-- Контент справа -->
+      <!-- ====== ИНФОРМАЦИЯ СПРАВА ====== -->
       <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
           
+          <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
           <p class="about__label">Willkommen bei</p>
+          <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">Dorett Dornbusch</h2>
           <div class="about__divider"></div>
           
 
+          <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
           
 
           
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.</p>
           
 
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">In meinem Studio in Dortmund-Huckarde sorge ich für eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen.</p>
           
 
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">Mit meiner positiven Art nehme ich dir die Nervosität und mache das Shooting zu einem entspannten Erlebnis – gerne per Du!</p>
           
 
+          <!-- ====== СОЦСЕТИ (опционально) ====== -->
           
         </div>
       </div>
@@ -917,19 +1009,31 @@
 
 
 <!-- ============================================
-     FOOTER V1 - Landing Generator
+     FOOTER - Подвал сайта
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Map: full width, ~300px height
-     - Background: #FFFFFF
-     - Links: Inter Regular 16px, underlined
-     - Centered navigation
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
      ============================================ -->
 
 <footer class="footer">
-  <!-- Google Maps -->
+  <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
     <iframe
       src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%"
@@ -942,17 +1046,19 @@
     
   </div>
 
-  <!-- Footer Navigation -->
+  <!-- ====== НАВИГАЦИЯ ====== -->
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
         <a href="#">Impressum</a>
         <span class="footer__separator">·</span>
         <a href="#">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 13:09</p>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 15:51</p>
     </div>
   </div>
 </footer>

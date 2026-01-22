@@ -1,0 +1,53 @@
+<!-- ============================================
+     CONTENT GALLERY V4 - Landing 4
+
+     Комбинированная секция:
+     - Заголовок галереи
+     - 4 наклонённых фото
+     - 2-колоночный контент (заголовок+кнопка слева, текст справа)
+
+     Данные:
+     - galleryTitle: заголовок галереи
+     - images[]: массив из 4 фото {src, alt}
+     - contentTitle: заголовок контента
+     - texts[]: массив параграфов для правой колонки
+     - buttonText/buttonLink: CTA кнопка
+     ============================================ -->
+
+<section class="content-gallery-v4 section--bg-primary{{paddingClasses}}">
+  <div class="container">
+    <!-- ====== GALLERY PART ====== -->
+    {{#if galleryTitle}}
+    <h2 class="content-gallery-v4__gallery-title">{{galleryTitle}}</h2>
+    {{/if}}
+
+    <div class="content-gallery-v4__gallery">
+      {{#each images}}
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--{{@number}}">
+        <img src="{{this.src}}" alt="{{this.alt}}">
+      </div>
+      {{/each}}
+    </div>
+
+    <!-- ====== CONTENT PART (2 columns) ====== -->
+    <div class="content-gallery-v4__content">
+      <div class="row">
+        <!-- Left column: Title + Button -->
+        <div class="col-lg-5">
+          <h3 class="content-gallery-v4__content-title">{{contentTitle}}</h3>
+          {{#if buttonText}}
+          <a href="{{buttonLink}}" class="btn btn-primary content-gallery-v4__btn">{{buttonText}}</a>
+          {{/if}}
+        </div>
+        <!-- Right column: Text paragraphs -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="content-gallery-v4__text-block">
+            {{#each texts}}
+            <p class="content-gallery-v4__text">{{this}}</p>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

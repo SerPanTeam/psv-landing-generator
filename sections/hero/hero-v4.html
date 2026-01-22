@@ -1,35 +1,61 @@
 <!-- ============================================
-     HERO V4 - Landing 4 (Kinder-Fotoshooting)
+     HERO V4 - Главный баннер (Landing 4)
 
-     Особенности:
-     - Тёмный фон (#3D3D3D) с лого внутри секции
-     - Галерея наклонённых изображений снизу
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Логотип → найдите class="hero__logo"
+     • Акцентный текст → найдите class="hero__label"
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите class="hero__subtitle"
+     • Дата акции → найдите class="hero__date-notice"
+     • Кнопка → найдите class="btn btn-primary"
+     • Блок "Почему бесплатно" → hero__why-free
 
-     Флаги:
-     - logoText: показать лого внутри hero (не отдельный header!)
-     - dateNotice: текст с датой акции (опционально)
-     - whyFreeTitle/whyFreeText: блок "Warum kostenlos?"
-     - images[]: массив изображений для галереи
+     КАРТИНКИ:
+     • Фон: hero__dark-section background-image
+     • Галерея: 4 картинки в hero__gallery-item (если showGallery: true)
+
+     ФЛАГИ:
+     • showGallery: true/false - показать галерею под тёмной секцией
+
+     СТИЛИ:
+     • Тёмный фон → css/variables.css → --color-dark-bg
+     • Светлый фон галереи → --color-bg-primary
      ============================================ -->
 
 <section class="hero hero--v4{{paddingClasses}}">
+  <!-- ====== ТЁМНАЯ СЕКЦИЯ С ЛОГО ====== -->
   <div class="hero__dark-section"{{#if backgroundImage}} style="background-image: url('{{backgroundImage}}');"{{/if}}>
     <div class="container">
       {{#if logoText}}
+      <!-- РЕДАКТИРОВАТЬ: Текст логотипа -->
       <p class="hero__logo">{{logoText}}</p>
       {{/if}}
       <div class="hero__content">
+        <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
         <span class="hero__label">{{label}}</span>
+
+        <!-- РЕДАКТИРОВАТЬ: Главный заголовок -->
         <h1 class="hero__title">{{title}}</h1>
+
+        <!-- РЕДАКТИРОВАТЬ: Описание -->
         <p class="hero__subtitle">{{subtitle}}</p>
+
         {{#if dateNotice}}
+        <!-- РЕДАКТИРОВАТЬ: Дата акции (опционально) -->
         <p class="hero__date-notice">{{dateNotice}}</p>
         {{/if}}
+
+        <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
         <a href="{{buttonLink}}" class="btn btn-primary">{{buttonText}}</a>
 
         {{#if whyFreeTitle}}
+        <!-- ====== БЛОК "ПОЧЕМУ БЕСПЛАТНО" ====== -->
         <div class="hero__why-free">
+          <!-- РЕДАКТИРОВАТЬ: Заголовок блока -->
           <h3 class="hero__why-free-title">{{whyFreeTitle}}</h3>
+          <!-- РЕДАКТИРОВАТЬ: Текст блока -->
           <p class="hero__why-free-text">{{whyFreeText}}</p>
         </div>
         {{/if}}
@@ -37,14 +63,17 @@
     </div>
   </div>
 
-  <!-- Gallery section with tilted images -->
+  {{#if showGallery}}
+  <!-- ====== ГАЛЕРЕЯ КАРТИНОК (опционально) ====== -->
   <div class="hero__gallery-section section--bg-primary">
     <div class="container">
       {{#if sectionTitle}}
+      <!-- РЕДАКТИРОВАТЬ: Заголовок галереи -->
       <h2 class="hero__gallery-title">{{sectionTitle}}</h2>
       {{/if}}
       <div class="hero__gallery">
         {{#each images}}
+        <!-- КАРТИНКА: замените src на свой файл -->
         <div class="hero__gallery-item hero__gallery-item--{{@number}}">
           <img src="{{this.src}}" alt="{{this.alt}}">
         </div>
@@ -52,4 +81,5 @@
       </div>
     </div>
   </div>
+  {{/if}}
 </section>

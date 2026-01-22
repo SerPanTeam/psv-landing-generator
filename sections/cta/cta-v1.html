@@ -1,20 +1,28 @@
 <!-- ============================================
-     CTA V1 - Landing Generator
+     CTA - Призыв к действию
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold
-     - Subtitle: Inter Medium
-     - Layout: default (center) or layoutRow (text left, button right)
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → class="cta__title"
+     • Подзаголовок → class="cta__subtitle"
+     • Кнопка → class="btn btn-primary cta__btn"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Цвет кнопки → --color-button-primary
      ============================================ -->
 
 <section class="cta {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} cta--rounded{{/if}}{{#if layoutRow}} cta--row{{/if}}{{#if alignLeft}} cta--left{{/if}}{{paddingClasses}}">
   <div class="container">
     <div class="cta__content">
       <div class="cta__text">
+        <!-- РЕДАКТИРОВАТЬ: Заголовок -->
         <h2 class="cta__title">{{title}}</h2>
+        <!-- РЕДАКТИРОВАТЬ: Подзаголовок (опционально) -->
         <p class="cta__subtitle">{{subtitle}}</p>
       </div>
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="{{buttonLink}}" class="btn btn-primary cta__btn">{{buttonText}}</a>
     </div>
   </div>

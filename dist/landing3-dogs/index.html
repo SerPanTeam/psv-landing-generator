@@ -227,22 +227,30 @@
 
 
 <!-- ============================================
-     CTA V1 - Landing Generator
+     CTA - Призыв к действию
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold
-     - Subtitle: Inter Medium
-     - Layout: default (center) or layoutRow (text left, button right)
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → class="cta__title"
+     • Подзаголовок → class="cta__subtitle"
+     • Кнопка → class="btn btn-primary cta__btn"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Цвет кнопки → --color-button-primary
      ============================================ -->
 
 <section class="cta section--bg-primary cta--rounded cta--row pt-0 pb-98">
   <div class="container">
     <div class="cta__content">
       <div class="cta__text">
+        <!-- РЕДАКТИРОВАТЬ: Заголовок -->
         <h2 class="cta__title">Sichert euch jetzt einen Gutschein für ein kostenloses Hunde-Fotoshooting.</h2>
+        <!-- РЕДАКТИРОВАТЬ: Подзаголовок (опционально) -->
         <p class="cta__subtitle">Dauer bis zum Gutschein: ≈ 30 Sekunden</p>
       </div>
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
     </div>
   </div>
@@ -518,64 +526,93 @@
 
 
 <!-- ============================================
-     SERVICES GRID - Landing Generator
+     SERVICES GRID - Секция услуг
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #EEE3D0 (secondary)
-     - Title: Inter Bold 35px
-     - 4 service cards in row
-     - Card image: 300x300px
-     - Card title: Inter Bold 22px
-     - Card text: Inter Medium 22px
-     - CTA button with outline style
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="services__title"
+     • Карточки услуг → class="service-card"
+       - Название услуги → service-card__title
+       - Описание → service-card__text
+     • Кнопка внизу → class="btn"
+
+     КАРТИНКИ:
+     • Карточки: 300x300px → service-card__image
+
+     ДОБАВИТЬ/УДАЛИТЬ УСЛУГУ:
+     Скопируйте или удалите блок <div class="service-card">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Размер шрифта → --font-size-h3 (заголовок)
      ============================================ -->
 
 <section class="services section--bg-primary services--rounded pt-115 pb-38">
   <div class="container">
     <div class="services__header">
+      <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
       <h2 class="services__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
     </div>
 
+    <!-- ====== КАРТОЧКИ УСЛУГ ====== -->
     <div class="services__grid">
       
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=280&h=280&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Family Time</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Haltet die unbeschwerte Freude eurer Familie in liebevollen, natürlichen Bildern fest – voller Nähe, Lachen und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und eure Verbundenheit authentisch zeigen.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1559181567-c3190ca9959b?w=280&h=280&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Babybauch & Newborn</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Vom wachsenden Babybauch bis zu den ersten zauberhaften Momenten mit deinem Neugeborenen – ich halte diese unwiederbringliche Zeit in liebevollen Bildern fest, die ein Leben lang begleiten.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=280&h=280&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Hunde-Fotoshooting</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Ein kreatives Shooting voller unvergesslicher Erinnerungen – perfekt für dich und deinen vierbeinigen Freund – mit ganz viel Herz, Persönlichkeit und Emotion.</p>
       </div>
       
 
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
       <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
         <div class="service-card__image">
           <img src="https://images.unsplash.com/photo-1492725764893-90b379c2b6e7?w=280&h=280&fit=crop" alt="">
         </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
         <h3 class="service-card__title">Kinder-Fotoshooting</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
         <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest – voller Lachen, Neugier und echter Momente. Mit viel Feingefühl entstehen Aufnahmen, die euch ein Leben lang begleiten und die Persönlichkeit eurer Kleinen authentisch zeigen.</p>
       </div>
       
     </div>
 
     <div class="services__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="quiz-step1.html" class="btn btn-primary">Jetzt kostenloses Fotoshooting sichern</a>
     </div>
   </div>
@@ -583,43 +620,70 @@
 
 
 <!-- ============================================
-     ABOUT V1 - Default layout (image left, content right)
+     ABOUT - Секция "О фотографе"
 
-     Для layout с изображениями справа используйте about-v2.html
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Подзаголовок → class="about__label"
+     • Имя фотографа → class="about__name"
+     • Описание → class="about__text" (можно несколько)
+     • Соцсети → class="social-icon" (ссылки)
+
+     КАРТИНКА:
+     • Фото автора: 466x560px → class="about__image"
+
+     ДОБАВИТЬ/УДАЛИТЬ ТЕКСТ:
+     Скопируйте или удалите блок <p class="about__text">
+
+     СОЦСЕТИ:
+     Скопируйте или удалите блок <a class="social-icon">
+     Измените href и src иконки
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
      ============================================ -->
 
 <section class="about section--bg-primary about--rounded pb-115">
   <div class="container">
     <div class="row align-items-start">
-      <!-- Изображение слева -->
+      <!-- ====== ФОТО АВТОРА СЛЕВА ====== -->
       <div class="col-lg-5">
+        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop" alt="Möst Fotografie">
         </div>
       </div>
 
-      <!-- Контент справа -->
+      <!-- ====== ИНФОРМАЦИЯ СПРАВА ====== -->
       <div class="col-lg-6 offset-lg-1">
         <div class="about__content">
           
           <h2 class="about__title-compact">
+            <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
             <span class="about__title-line">Willkommen bei</span>
+            <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
             <span class="about__title-line">Möst Fotografie</span>
           </h2>
           
 
+          <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
           
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">Ich bin Maren Möst – ausgebildete Fotografin und Mediengestalterin mit einem Bachelor in Medienwirtschaft. Nach mehreren Jahren im Medienbereich, unter anderem beim SWR und bei Bavaria Film, habe ich mich ganz der Fotografie verschrieben.</p>
           
 
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">In meinem Studio kombiniere ich technisches Know-how mit einem künstlerischen Blick fürs Detail. Ich liebe es, echte Momente einzufangen – ruhig, authentisch und mit Gefühl. Meine Erfahrung aus der Filmwelt und der Mediengestaltung hilft mir dabei, Geschichten nicht nur festzuhalten, sondern sichtbar zu machen.</p>
           
 
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">Ob Babybauch, Familie oder Porträt – für mich steht der Mensch im Mittelpunkt. Mit viel Ruhe und einem sicheren Gespür für Atmosphäre entstehen Bilder, die bleiben.</p>
           
 
           
 
+          <!-- ====== СОЦСЕТИ (опционально) ====== -->
           
         </div>
       </div>
@@ -936,19 +1000,31 @@
 
 
 <!-- ============================================
-     FOOTER V1 - Landing Generator
+     FOOTER - Подвал сайта
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Map: full width, ~300px height
-     - Background: #FFFFFF
-     - Links: Inter Regular 16px, underlined
-     - Centered navigation
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
      ============================================ -->
 
 <footer class="footer">
-  <!-- Google Maps -->
+  <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
     <iframe
       src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%"
@@ -961,17 +1037,19 @@
     
   </div>
 
-  <!-- Footer Navigation -->
+  <!-- ====== НАВИГАЦИЯ ====== -->
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
         <a href="#">Impressum</a>
         <span class="footer__separator">·</span>
         <a href="#">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 13:09</p>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 15:51</p>
     </div>
   </div>
 </footer>

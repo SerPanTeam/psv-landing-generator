@@ -1,17 +1,29 @@
 <!-- ============================================
-     FOOTER V1 - Landing Generator
+     FOOTER - Подвал сайта
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Map: full width, ~300px height
-     - Background: #FFFFFF
-     - Links: Inter Regular 16px, underlined
-     - Centered navigation
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
      ============================================ -->
 
 <footer class="footer">
-  <!-- Google Maps -->
+  <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     {{#if mapEmbedUrl}}
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
     <iframe
       src="{{mapEmbedUrl}}"
       width="100%"
@@ -29,16 +41,18 @@
     {{/if}}
   </div>
 
-  <!-- Footer Navigation -->
+  <!-- ====== НАВИГАЦИЯ ====== -->
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
         <a href="{{impressumUrl}}">Impressum</a>
         <span class="footer__separator">·</span>
         <a href="{{datenschutzUrl}}">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
         <a href="{{cookieUrl}}">Cookie Richtlinien</a>
       </nav>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
       <p class="footer__updated">Letzte Aktualisierung: {{lastUpdated}}</p>
     </div>
   </div>
