@@ -179,12 +179,14 @@
         "text": "Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.",
         "accentText": "Familienmomente, die das Herz berühren",
         "linkText": "Kostenloses Fotoshooting sichern",
-        "linkUrl": "quiz-step1.html"
+        "linkUrl": "quiz-step1.html",
+        "linkAsButton": true
       }
     },
     {
       "template": "gallery/gallery-slider.html",
       "data": {
+        "bgClass": "section--bg-secondary",
         "images": [
           { "src": "https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=400&fit=crop", "alt": "Familien-Foto 1" },
           { "src": "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=400&fit=crop", "alt": "Familien-Foto 2" },
@@ -199,7 +201,7 @@
         "sectionTitle": "Was dich erwartet",
         "items": [
           {
-            "image": "https://images.unsplash.com/photo-1513725673171-2e266e379ffa?w=120&h=120&fit=crop",
+            "image": "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=120&h=120&fit=crop",
             "title": "Liebevoll dekoriertes Set mit Weihnachtszauber",
             "text": "Gemütliche Atmosphäre mit stimmungsvoller Deko – perfekt für eure festlichen Familienfotos."
           },
@@ -254,6 +256,7 @@
     {
       "template": "gallery/gallery-fullwidth.html",
       "data": {
+        "bgClass": "section--bg-secondary",
         "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1400&h=600&fit=crop",
         "alt": "Familien-Fotoshooting"
       }

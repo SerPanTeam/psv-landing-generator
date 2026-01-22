@@ -334,6 +334,20 @@
     justify-content: center;
   }
 
+  /* Content Section Button (Landing 1/2) */
+  .content-section__btn {
+    width: calc(100% - 32px) !important;
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    white-space: normal;
+    height: auto;
+    min-height: 55px;
+    padding: 12px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
   /* Features */
   .features {
     padding: 40px 0;
@@ -857,6 +871,14 @@
   .cta .btn,
   .cta .btn-primary,
   .cta .btn-outline {
+    max-width: 280px;
+    min-height: 50px;
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+
+  /* Content Section Button small mobile (Landing 1/2) */
+  .content-section__btn {
     max-width: 280px;
     min-height: 50px;
     font-size: 15px;
