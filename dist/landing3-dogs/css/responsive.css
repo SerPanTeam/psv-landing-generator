@@ -1129,20 +1129,32 @@
 /* ===== HERO V3 RESPONSIVE (mobile) ===== */
 @media (max-width: 767.98px) {
   .hero--v3 {
-    padding-top: 20px;
+    padding-top: 0;
     padding-bottom: 40px;
     overflow-x: clip; /* Prevent horizontal scroll */
   }
 
   .hero--v3 .hero__image-banner {
-    height: 350px;
-    border-radius: 25px;
+    /* Full-width: выходим за контейнер на всю ширину экрана */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: auto;
+    min-height: 320px;
+    aspect-ratio: 16/10;
+    border-radius: 0;
+  }
+
+  .hero--v3 .hero__image-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .hero--v3 .hero__content-overlay {
-    left: 20px;
-    bottom: 40px;
-    max-width: calc(100% - 40px);
+    left: 16px;
+    right: 16px;
+    bottom: 30px;
+    max-width: none;
   }
 
   .hero--v3 .hero__label,
@@ -3103,24 +3115,41 @@
 
 @media (max-width: 767.98px) {
   .hero-banner--v3 {
-    padding-top: 16px;
-    padding-bottom: 40px !important;
+    padding-top: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .hero-banner--v3 .container {
+    padding: 0;
+    max-width: 100%;
   }
 
   .hero-banner--v3 .hero-banner__image {
-    width: 100%;
+    width: calc(100vw - 32px);
+    margin-left: calc(-50vw + 50% + 16px);
     height: auto;
-    min-height: 380px; /* Enough space for labels + subtitle + button */
-    aspect-ratio: auto;
     border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .hero-banner--v3 .hero-banner__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .hero-banner--v3 .hero-banner__overlay {
-    left: 16px;
-    right: 16px;
-    bottom: 20px;
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
     max-width: none;
-    width: calc(100% - 32px);
+    width: 100%;
+    padding: 60px 20px 40px;
   }
 
   /* FIXED: Increased text sizes for better readability */
