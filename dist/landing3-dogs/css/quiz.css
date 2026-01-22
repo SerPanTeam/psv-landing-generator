@@ -823,6 +823,13 @@
     font-size: 15px;
   }
 
+  .quiz-success__cta .btn,
+  .quiz-success__cta .btn-primary {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+  }
+
   .quiz-success__buttons {
     flex-direction: column;
   }

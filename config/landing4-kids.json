@@ -24,7 +24,7 @@
     "impressumUrl": "#",
     "datenschutzUrl": "#",
     "cookieUrl": "#",
-    "mapEmbedUrl": "",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Bremen-Findorff&t=&z=15&ie=UTF8&iwloc=&output=embed",
 
     "steps": [
       {
