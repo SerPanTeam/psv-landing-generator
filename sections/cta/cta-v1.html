@@ -13,8 +13,24 @@
      • Цвет кнопки → --color-button-primary
      ============================================ -->
 
-<section class="cta {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} cta--rounded{{/if}}{{#if layoutRow}} cta--row{{/if}}{{#if alignLeft}} cta--left{{/if}}{{paddingClasses}}">
+<section class="cta {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if rounded}} cta--rounded{{/if}}{{#if layoutRow}} cta--row{{/if}}{{#if alignLeft}} cta--left{{/if}}{{#if image}} cta--with-image{{/if}}{{paddingClasses}}">
   <div class="container">
+    {{#if image}}
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="cta__image">
+          <img src="{{image}}" alt="{{title}}">
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <div class="cta__text">
+          <h2 class="cta__title">{{title}}</h2>
+          <p class="cta__subtitle">{{subtitle}}</p>
+          <a href="{{buttonLink}}" class="btn btn-primary cta__btn">{{buttonText}}</a>
+        </div>
+      </div>
+    </div>
+    {{else}}
     <div class="cta__content">
       <div class="cta__text">
         <!-- РЕДАКТИРОВАТЬ: Заголовок -->
@@ -25,5 +41,6 @@
       <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
       <a href="{{buttonLink}}" class="btn btn-primary cta__btn">{{buttonText}}</a>
     </div>
+    {{/if}}
   </div>
 </section>

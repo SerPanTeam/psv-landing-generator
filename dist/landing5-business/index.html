@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!">
+  <meta name="keywords" content="Fotografie, Hochzeit, Familie, Business, Tierfotografie">
+  <title>Karin Himml Fotografie | Professionelle Fotoshootings</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karin Himml Fotografie | Professionelle Fotoshootings">
+  <meta property="og:description" content="Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+</head>
+<body>
+  <!-- ============================================
+     HERO V5 - Business Hub Landing
+
+     FIGMA (node 585:34):
+     - Full-width gray/image background: 1440x746px
+     - Logo inside hero (beige/gold color)
+     - Title: BLACK text
+     - Subtitle with accent "Herz & Seele"
+     - Gold CTA button "Mehr erfahren"
+     ============================================ -->
+
+<section class="hero hero--v5">
+  <div class="hero__banner" style="background-image: url('https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1440&h=746&fit=crop');">
+    <div class="container">
+      <!-- Logo внутри hero -->
+      <p class="hero__logo">Logo</p>
+
+      <div class="hero__content">
+        <!-- Главный заголовок - ЧЁРНЫЙ -->
+        <h1 class="hero__title">Wunderschöne Erinnerungen, die für die Ewigkeit schaffen.</h1>
+
+        <!-- Подзаголовок с акцентным текстом -->
+        
+        <p class="hero__subtitle">Hallo, ich bin Karin Himml - leidenschaftliche Fotografin mit <span class="text-accent">Herz & Seele</span></p>
+        
+
+        <!-- Кнопка -->
+        <a href="#services" class="btn btn-primary hero__btn">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CONTENT V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Image: 428x440px in white frame
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Accent text: #E2C08D
+     - Divider + link with arrow
+     ============================================ -->
+
+<section class="content-section content-section--v5 section--bg-primary">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row">
+      <!-- Изображение -->
+      <div class="col-lg-5">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=474&h=493&fit=crop" alt="Karin Himml Fotografie">
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div class="col-lg-6 ms-auto">
+        <div class="content-section__content">
+          
+          
+          
+          <p class="content-section__text">Mit geschultem Blick, viel Einfühlungsvermögen und einem stilvollen Fotostudio erschaffe ich Bilder, die dich berühren.</p>
+          
+
+          <p class="content-section__text">Ob draußen in der Natur oder in liebevoll gestalteten Sets – ich halte eure echten Emotionen fest: ehrlich, lebendig und voller Gefühl.</p>
+          
+
+          <p class="content-section__text">Lasst uns gemeinsam Erinnerungen schaffen, die ein Leben lang bleiben.</p>
+          
+
+          <p class="content-section__text">Laßt uns gemeinsam wunderschöne Erinnerungen für die Ewigkeit erschaffen!</p>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     SERVICES CARDS V5 - Business Landing Hub
+
+     4 высокие карточки услуг с изображениями.
+     Каждая карточка: изображение + заголовок + описание.
+     Используется на главной странице (хаб).
+
+     DATA:
+     - title: Заголовок секции
+     - cards: Array of {image, imageAlt, title, text}
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="services-cards-v5 section--bg-secondary" id="services">
+  <div class="container">
+    
+    <h2 class="services-cards-v5__title">Worauf du dich freuen kannst...</h2>
+    
+
+    <div class="services-cards-v5__grid">
+      
+      <div class="services-cards-v5__card">
+        <div class="services-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=230&h=160&fit=crop" alt="Hochzeitsfotografie">
+        </div>
+        <div class="services-cards-v5__body">
+          <h3 class="services-cards-v5__card-title">Hochzeiten</h3>
+          
+          <p class="services-cards-v5__card-subtitle">Eure Liebe – für immer festgehalten.</p>
+          
+          <p class="services-cards-v5__card-text">Ich begleite euren Hochzeitstag mit Herz und Erfahrung. Mit einem feinen Gespür für Emotionen halte ich echte Momente voller Liebe, Freude und Nähe fest – damit ihr diesen Tag für immer neu erleben könnt.</p>
+        </div>
+      </div>
+      
+
+      <div class="services-cards-v5__card">
+        <div class="services-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=230&h=160&fit=crop" alt="Familienfotografie">
+        </div>
+        <div class="services-cards-v5__body">
+          <h3 class="services-cards-v5__card-title">Familien-Fotoshooting</h3>
+          
+          <p class="services-cards-v5__card-subtitle">Ich halte eure Familienmomente in Bildern fest, die berühren.</p>
+          
+          <p class="services-cards-v5__card-text">Mit Feingefühl und einem Blick für das Verbindende schaffe ich Erinnerungen voller Nähe, Liebe und Echtheit – damit eure Familiengeschichte für immer sichtbar bleibt.</p>
+        </div>
+      </div>
+      
+
+      <div class="services-cards-v5__card">
+        <div class="services-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=230&h=160&fit=crop" alt="Tierfotografie">
+        </div>
+        <div class="services-cards-v5__body">
+          <h3 class="services-cards-v5__card-title">Tier-Fotoshooting</h3>
+          
+          <p class="services-cards-v5__card-subtitle">Ich halte die besondere Verbindung zwischen dir und deinem Haustier in ausdrucksstarken Bildern fest.</p>
+          
+          <p class="services-cards-v5__card-text">Ob verspielt, treu oder neugierig – ich fange den Charakter deines Lieblings mit viel Geduld und Liebe ein. Für Erinnerungen, die bleiben – voller Herz und Persönlichkeit.</p>
+        </div>
+      </div>
+      
+
+      <div class="services-cards-v5__card">
+        <div class="services-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=230&h=160&fit=crop" alt="Businessfotografie">
+        </div>
+        <div class="services-cards-v5__body">
+          <h3 class="services-cards-v5__card-title">Business-Fotoshooting</h3>
+          
+          <p class="services-cards-v5__card-subtitle">Zeig dich und dein Business von der besten Seite – mit Bildern, die Professionalität und Persönlichkeit ausstrahlen.</p>
+          
+          <p class="services-cards-v5__card-text">Ob Porträt, Teamfoto oder Imageaufnahme – ich setze dich und dein Unternehmen authentisch, stilvoll und überzeugend in Szene. Für einen starken Auftritt mit Wirkung.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CTA CARDS V5 - Business Landing Hub
+
+     4 карточки с изображениями и CTA-ссылками
+     на подлендинги. Каждая карточка ведёт на
+     отдельный подлендинг (свадьбы, семья и т.д.)
+
+     DATA:
+     - title: Заголовок секции (optional)
+     - cards: Array of {image, imageAlt, title, text, linkText, linkUrl}
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="cta-cards-v5 section--bg-secondary">
+  <div class="container">
+    
+    <h2 class="cta-cards-v5__title">Wähle dein Fotoshooting</h2>
+    
+
+    <div class="cta-cards-v5__grid">
+      
+      <a href="hochzeit/" class="cta-cards-v5__card">
+        <div class="cta-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=195&fit=crop" alt="Hochzeitsfotografie">
+        </div>
+        <div class="cta-cards-v5__body">
+          <h3 class="cta-cards-v5__card-title">Hochzeitsfotografie</h3>
+          <p class="cta-cards-v5__card-text">Kostenloses Probe-Fotoshooting sichern!</p>
+        </div>
+      </a>
+      
+
+      <a href="familie/" class="cta-cards-v5__card">
+        <div class="cta-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=195&fit=crop" alt="Familienfotografie">
+        </div>
+        <div class="cta-cards-v5__body">
+          <h3 class="cta-cards-v5__card-title">Familien-Fotoshooting</h3>
+          <p class="cta-cards-v5__card-text">Jetzt Familienmomente festhalten!</p>
+        </div>
+      </a>
+      
+
+      <a href="tier/" class="cta-cards-v5__card">
+        <div class="cta-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=195&fit=crop" alt="Tierfotografie">
+        </div>
+        <div class="cta-cards-v5__body">
+          <h3 class="cta-cards-v5__card-title">Tier-Fotoshooting</h3>
+          <p class="cta-cards-v5__card-text">Tierische Erinnerungen buchen!</p>
+        </div>
+      </a>
+      
+
+      <a href="business/" class="cta-cards-v5__card">
+        <div class="cta-cards-v5__image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=195&fit=crop" alt="Businessfotografie">
+        </div>
+        <div class="cta-cards-v5__body">
+          <h3 class="cta-cards-v5__card-title">Business-Fotografie</h3>
+          <p class="cta-cards-v5__card-text">Jetzt professionellen Auftritt planen!</p>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CTA - Призыв к действию
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → class="cta__title"
+     • Подзаголовок → class="cta__subtitle"
+     • Кнопка → class="btn btn-primary cta__btn"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Цвет кнопки → --color-button-primary
+     ============================================ -->
+
+<section class="cta section--bg-secondary cta--with-image">
+  <div class="container">
+    
+    <div class="row align-items-center">
+      <div class="col-lg-5">
+        <div class="cta__image">
+          <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=508&h=493&fit=crop" alt="Kein passendes Fotoshooting gefunden?">
+        </div>
+      </div>
+      <div class="col-lg-6 offset-lg-1">
+        <div class="cta__text">
+          <h2 class="cta__title">Kein passendes Fotoshooting gefunden?</h2>
+          <p class="cta__subtitle">Kein Problem – beschreibe einfach kurz deine Wünsche und Vorstellungen. So kann ich ein individuelles Fotoshooting für dich kreieren, das genau zu dir und deinen Wünschen passt.</p>
+          <a href="hochzeit/quiz-step1.html" class="btn btn-primary cta__btn">Mehr erfahren</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY FULLWIDTH - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Max-width: 1440px
+     - Height: 656px
+     - Full-width image (no container for Landing 1/2)
+     - Между Steps и FAQ
+     - Rounded: 30px radius + container (Landing 3)
+
+     ФЛАГИ:
+     - title: Заголовок над изображением (опционально)
+     - rounded: Скруглённые углы + container
+     ============================================ -->
+
+<section class="gallery-fullwidth section--bg-primary">
+  
+  <div class="container">
+    <h2 class="gallery-fullwidth__title">Nicht nur ein Fotoshooting, sondern ein Erlebnis!</h2>
+  </div>
+  
+  
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1327&h=521&fit=crop" alt="Fotografie Portfolio" class="gallery-fullwidth__image">
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     FEATURES GRID - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA (Landing 3):
+     - Background: #F5EDE0 (primary)
+     - 2x2 grid layout
+     - Icon: 74x75px (left)
+     - Text: Inter Bold 22px (right)
+     ============================================ -->
+
+<section class="features features--grid section--bg-secondary">
+  <div class="container">
+    
+    <h2 class="features__title">Was du bei mir genießen wirst...</h2>
+    
+    <div class="features__grid">
+      
+      <div class="feature-item feature-item--card">
+        <div class="feature-item__icon">
+          <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=80&h=80&fit=crop" alt="Spaß und Wohlfühlen - Individuell angepasst{{else}}Meine Shootings sind Erlebnisse voller Spaß und Wohlfühlen. Ich schaffe eine entspannte Atmosphäre und gehe individuell auf Wünsche ein, damit authentische Fotos entstehen.">
+        </div>
+        <div class="feature-item__content">
+          
+          <h3 class="feature-item__title">Spaß und Wohlfühlen - Individuell angepasst</h3>
+          
+          <p class="feature-item__text">Meine Shootings sind Erlebnisse voller Spaß und Wohlfühlen. Ich schaffe eine entspannte Atmosphäre und gehe individuell auf Wünsche ein, damit authentische Fotos entstehen.</p>
+        </div>
+      </div>
+      
+
+      <div class="feature-item feature-item--card">
+        <div class="feature-item__icon">
+          <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=80&h=80&fit=crop" alt="Hohe Qualität zu fairen Preisen{{else}}Ich biete höchste Qualität zu fairen Preisen. Modernstes Equipment und neueste Techniken gewährleisten beeindruckende Fotos, ohne das Budget zu sprengen.">
+        </div>
+        <div class="feature-item__content">
+          
+          <h3 class="feature-item__title">Hohe Qualität zu fairen Preisen</h3>
+          
+          <p class="feature-item__text">Ich biete höchste Qualität zu fairen Preisen. Modernstes Equipment und neueste Techniken gewährleisten beeindruckende Fotos, ohne das Budget zu sprengen.</p>
+        </div>
+      </div>
+      
+
+      <div class="feature-item feature-item--card">
+        <div class="feature-item__icon">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop" alt="Kreativ und zuverlässig{{else}}Ich kombiniere Kreativität mit Zuverlässigkeit. Mit innovativen Ideen und festen Plänen sorge ich dafür, dass deine Bilder einzigartig und termingerecht geliefert werden.">
+        </div>
+        <div class="feature-item__content">
+          
+          <h3 class="feature-item__title">Kreativ und zuverlässig</h3>
+          
+          <p class="feature-item__text">Ich kombiniere Kreativität mit Zuverlässigkeit. Mit innovativen Ideen und festen Plänen sorge ich dafür, dass deine Bilder einzigartig und termingerecht geliefert werden.</p>
+        </div>
+      </div>
+      
+
+      <div class="feature-item feature-item--card">
+        <div class="feature-item__icon">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Zufriedenheit und vielfältige Möglichkeiten{{else}}Zufriedenheit steht an erster Stelle. Ich biete vielfältige Möglichkeiten und passe mich flexibel deinen Anforderungen an.">
+        </div>
+        <div class="feature-item__content">
+          
+          <h3 class="feature-item__title">Zufriedenheit und vielfältige Möglichkeiten</h3>
+          
+          <p class="feature-item__text">Zufriedenheit steht an erster Stelle. Ich biete vielfältige Möglichkeiten und passe mich flexibel deinen Anforderungen an.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
+
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
+     ============================================ -->
+
+<section class="gallery-single-slider section--bg-secondary">
+  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <div class="gallery-single-slider__container" data-gallery-single-slider>
+    
+    <div class="gallery-single-slider__slide is-active">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop" alt="Hochzeitsfotografie" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop" alt="Familienfotografie" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=746&fit=crop" alt="Tierfotografie" class="gallery-single-slider__image">
+    </div>
+    
+
+    <div class="gallery-single-slider__slide">
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop" alt="Businessfotografie" class="gallery-single-slider__image">
+    </div>
+    
+  </div>
+
+  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</section>
+
+
+<!-- ============================================
+     ABOUT - Секция "О фотографе"
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Подзаголовок → class="about__label"
+     • Имя фотографа → class="about__name"
+     • Описание → class="about__text" (можно несколько)
+     • Соцсети → class="social-icon" (ссылки)
+
+     КАРТИНКА:
+     • Фото автора: 466x560px → class="about__image"
+
+     ДОБАВИТЬ/УДАЛИТЬ ТЕКСТ:
+     Скопируйте или удалите блок <p class="about__text">
+
+     СОЦСЕТИ:
+     Скопируйте или удалите блок <a class="social-icon">
+     Измените href и src иконки
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     ============================================ -->
+
+<section class="about section--bg-primary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- ====== ФОТО АВТОРА СЛЕВА ====== -->
+      <div class="col-lg-5">
+        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
+        <div class="about__image">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=550&h=550&fit=crop" alt="Karin Himml">
+        </div>
+      </div>
+
+      <!-- ====== ИНФОРМАЦИЯ СПРАВА ====== -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__content">
+          
+          <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
+          <p class="about__label">Willkommen bei</p>
+          <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
+          <h2 class="about__name">Karin Himml</h2>
+          
+          <p class="about__tagline">Fotografin, Visagistin und Make-up-Stylistin</p>
+          
+          <div class="about__divider"></div>
+          
+
+          <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
+          
+
+          
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">Meine fotografische Reise begann 1979 mit einer Ausbildung zur Fotografin.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">In den 1980er-Jahren konnte ich mein Können in renommierten Werbestudios wie bei Neckermann sowie als Studioleiterin in verschiedenen Portraitstudios vertiefen.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">1989 legte ich erfolgreich meine Meisterprüfung ab und eröffnete 1990 mein eigenes Fotostudio – seither lebe ich meine Leidenschaft für kreative, hochwertige Fotografie.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">Durch kontinuierliche Fortbildungen in digitaler Bildbearbeitung, Beauty-Retusche und Workshops bleibe ich am Puls der Zeit – für Bilder, die mit Professionalität, Gefühl und Ästhetik überzeugen.</p>
+          
+
+          
+          <!-- КНОПКА (опционально) -->
+          <a href="hochzeit/quiz-step1.html" class="btn btn-primary about__btn">Kontakt aufnehmen</a>
+          
+
+          <!-- ====== СОЦСЕТИ (опционально) ====== -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     FOOTER - Подвал сайта
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
+     ============================================ -->
+
+<footer class="footer">
+  <!-- ====== GOOGLE КАРТА ====== -->
+  <div class="footer__map">
+    
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
+    <iframe
+      src="https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </div>
+
+  <!-- ====== НАВИГАЦИЯ ====== -->
+  <div class="footer__bottom">
+    <div class="container">
+      <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
+        <a href="#">Impressum</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Datenschutzerklärung</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Cookie Richtlinien</a>
+      </nav>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 27.01.2026 21:50</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/faq.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/gallery-slider.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

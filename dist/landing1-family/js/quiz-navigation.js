@@ -11,7 +11,20 @@
 (function() {
   'use strict';
 
-  const STORAGE_KEY = 'quiz_answers';
+  /**
+   * Get sublanding-specific storage key based on URL path
+   * e.g., /hochzeit/ -> quiz_answers_hochzeit
+   */
+  function getStorageKey() {
+    const path = window.location.pathname;
+    const sublandingMatch = path.match(/\/(hochzeit|familie|tier|business)\//);
+    if (sublandingMatch) {
+      return 'quiz_answers_' + sublandingMatch[1];
+    }
+    return 'quiz_answers';
+  }
+
+  const STORAGE_KEY = getStorageKey();
 
   /**
    * Get saved answers from localStorage
@@ -141,19 +154,186 @@
   }
 
   /**
+   * Handle multiselect checkbox options
+   */
+  function handleMultiselect() {
+    const checkboxes = document.querySelectorAll('.quiz-multiselect__checkbox');
+    const continueBtn = document.getElementById('multiselect-continue');
+
+    if (!checkboxes.length || !continueBtn) return;
+
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function() {
+        const label = this.closest('.quiz-multiselect__option');
+        if (this.checked) {
+          label.classList.add('is-checked');
+        } else {
+          label.classList.remove('is-checked');
+        }
+      });
+    });
+
+    continueBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const stepNumber = document.body.dataset.quizStep;
+      const selected = [];
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) selected.push(cb.value);
+      });
+
+      // Save multiselect answers
+      const answers = getAnswers();
+      answers[`step_${stepNumber}`] = selected;
+      answers.lastUpdated = new Date().toISOString();
+      saveAnswers(answers);
+
+      console.log('Multiselect saved:', { step: stepNumber, values: selected });
+
+      // Navigate to next page
+      window.location.href = this.getAttribute('href');
+    });
+  }
+
+  /**
+   * Handle date input
+   */
+  function handleDateInput() {
+    const dateInput = document.getElementById('quiz-date-input');
+    const continueBtn = document.getElementById('date-continue');
+
+    if (!dateInput || !continueBtn) return;
+
+    continueBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const stepNumber = document.body.dataset.quizStep;
+      const dateValue = dateInput.value;
+
+      // Save date answer
+      const answers = getAnswers();
+      answers[`step_${stepNumber}`] = dateValue;
+      answers.lastUpdated = new Date().toISOString();
+      saveAnswers(answers);
+
+      console.log('Date saved:', { step: stepNumber, value: dateValue });
+
+      // Navigate to next page
+      window.location.href = this.getAttribute('href');
+    });
+  }
+
+  /**
+   * Handle textarea input
+   */
+  function handleTextarea() {
+    const textarea = document.getElementById('quiz-textarea-input');
+    const continueBtn = document.getElementById('textarea-continue');
+
+    if (!textarea || !continueBtn) return;
+
+    continueBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const stepNumber = document.body.dataset.quizStep;
+      const textValue = textarea.value;
+
+      // Save textarea answer
+      const answers = getAnswers();
+      answers[`step_${stepNumber}`] = textValue;
+      answers.lastUpdated = new Date().toISOString();
+      saveAnswers(answers);
+
+      console.log('Textarea saved:', { step: stepNumber, value: textValue });
+
+      // Navigate to next page
+      window.location.href = this.getAttribute('href');
+    });
+  }
+
+  /**
+   * Handle conditional navigation for options with per-option nextPage
+   * Options can have data-next-page attribute that overrides the default href
+   */
+  function handleConditionalNavigation(option) {
+    const nextPage = option.dataset.nextPage;
+    if (nextPage) {
+      return nextPage;
+    }
+    return option.getAttribute('href');
+  }
+
+  /**
+   * Handle form V5 submission (with timeslots)
+   */
+  function handleFormV5Submit(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    const successPage = form.getAttribute('action') || 'quiz-success.html';
+
+    // Get all quiz answers
+    const answers = getAnswers();
+
+    // Collect timeslots
+    const timeslots = formData.getAll('timeslot[]');
+
+    // Add form data to answers
+    const data = {
+      ...answers,
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      timeslots: timeslots,
+      privacy: formData.get('privacy') === 'on',
+      submittedAt: new Date().toISOString(),
+      source: window.location.href
+    };
+
+    console.log('='.repeat(50));
+    console.log('QUIZ FORM V5 SUBMITTED');
+    console.log('='.repeat(50));
+    console.log('All collected data:', data);
+    console.log('='.repeat(50));
+
+    saveAnswers(data);
+
+    trackEvent('quiz_form_submit', {
+      event_category: 'quiz',
+      event_label: 'lead_capture_v5'
+    });
+
+    window.location.href = successPage;
+  }
+
+  /**
    * Initialize on page load
    */
   function init() {
-    // Bind quiz option clicks
-    const options = document.querySelectorAll('.quiz-option');
+    // Bind quiz option clicks (standard step pages)
+    const options = document.querySelectorAll('.quiz-option:not(.quiz-multiselect__option)');
     options.forEach(option => {
       option.addEventListener('click', handleOptionClick);
     });
 
-    // Bind form submission
+    // Handle multiselect page
+    handleMultiselect();
+
+    // Handle date page
+    handleDateInput();
+
+    // Handle textarea page
+    handleTextarea();
+
+    // Bind form submission (standard)
     const form = document.getElementById('quiz-form');
     if (form) {
       form.addEventListener('submit', handleFormSubmit);
+    }
+
+    // Bind form V5 submission
+    const formV5 = document.getElementById('quiz-form-v5');
+    if (formV5) {
+      formV5.addEventListener('submit', handleFormV5Submit);
     }
 
     // On success page, log final answers and clear storage
@@ -162,15 +342,10 @@
       const answers = getAnswers();
       console.log('Quiz completed! Final answers:', answers);
 
-      // Track completion
       trackEvent('quiz_complete', {
         event_category: 'quiz',
         event_label: 'completion'
       });
-
-      // Clear answers after displaying on success page
-      // Uncomment if you want to clear on success:
-      // clearAnswers();
     }
 
     // Log current step

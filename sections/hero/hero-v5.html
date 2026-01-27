@@ -1,0 +1,32 @@
+<!-- ============================================
+     HERO V5 - Business Hub Landing
+
+     FIGMA (node 585:34):
+     - Full-width gray/image background: 1440x746px
+     - Logo inside hero (beige/gold color)
+     - Title: BLACK text
+     - Subtitle with accent "Herz & Seele"
+     - Gold CTA button "Mehr erfahren"
+     ============================================ -->
+
+<section class="hero hero--v5{{paddingClasses}}">
+  <div class="hero__banner"{{#if backgroundImage}} style="background-image: url('{{backgroundImage}}');"{{/if}}>
+    <div class="container">
+      <!-- Logo внутри hero -->
+      <p class="hero__logo">{{logoText}}</p>
+
+      <div class="hero__content">
+        <!-- Главный заголовок - ЧЁРНЫЙ -->
+        <h1 class="hero__title">{{title}}</h1>
+
+        <!-- Подзаголовок с акцентным текстом -->
+        {{#if subtitle}}
+        <p class="hero__subtitle">{{{subtitle}}}</p>
+        {{/if}}
+
+        <!-- Кнопка -->
+        <a href="{{buttonLink}}" class="btn btn-primary hero__btn">{{buttonText}}</a>
+      </div>
+    </div>
+  </div>
+</section>

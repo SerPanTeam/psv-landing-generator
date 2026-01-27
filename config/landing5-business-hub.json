@@ -1,0 +1,215 @@
+{
+  "name": "Лендинг 5 - Business Hub (Karin Himml Fotografie)",
+  "output": "landing5-business",
+  "lang": "de",
+
+  "cssVariables": {
+    "--color-bg-primary": "#F5EDE0",
+    "--color-bg-secondary": "#EEE3D0",
+    "--color-button-primary": "#E2C08D",
+    "--color-accent": "#D4A574"
+  },
+
+  "meta": {
+    "title": "Karin Himml Fotografie | Professionelle Fotoshootings",
+    "description": "Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!",
+    "keywords": "Fotografie, Hochzeit, Familie, Business, Tierfotografie"
+  },
+
+  "sublandings": [
+    "landing5-hochzeit.json",
+    "landing5-familie.json",
+    "landing5-tier.json",
+    "landing5-business.json"
+  ],
+
+  "sections": [
+    {
+      "template": "hero/hero-v5.html",
+      "data": {
+        "backgroundImage": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1440&h=746&fit=crop",
+        "logoText": "Logo",
+        "title": "Wunderschöne Erinnerungen, die für die Ewigkeit schaffen.",
+        "subtitle": "Hallo, ich bin Karin Himml - leidenschaftliche Fotografin mit <span class=\"text-accent\">Herz & Seele</span>",
+        "buttonText": "Mehr erfahren",
+        "buttonLink": "#services"
+      }
+    },
+    {
+      "template": "content/content-v1.html",
+      "data": {
+        "variant": "v5",
+        "imageLeft": true,
+        "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=474&h=493&fit=crop",
+        "imageAlt": "Karin Himml Fotografie",
+        "paragraphs": [
+          "Mit geschultem Blick, viel Einfühlungsvermögen und einem stilvollen Fotostudio erschaffe ich Bilder, die dich berühren.",
+          "Ob draußen in der Natur oder in liebevoll gestalteten Sets – ich halte eure echten Emotionen fest: ehrlich, lebendig und voller Gefühl.",
+          "Lasst uns gemeinsam Erinnerungen schaffen, die ein Leben lang bleiben.",
+          "Laßt uns gemeinsam wunderschöne Erinnerungen für die Ewigkeit erschaffen!"
+        ]
+      }
+    },
+    {
+      "template": "services/services-cards-v5.html",
+      "data": {
+        "sectionId": "services",
+        "bgClass": "section--bg-secondary",
+        "title": "Worauf du dich freuen kannst...",
+        "cards": [
+          {
+            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=230&h=160&fit=crop",
+            "imageAlt": "Hochzeitsfotografie",
+            "title": "Hochzeiten",
+            "subtitle": "Eure Liebe – für immer festgehalten.",
+            "text": "Ich begleite euren Hochzeitstag mit Herz und Erfahrung. Mit einem feinen Gespür für Emotionen halte ich echte Momente voller Liebe, Freude und Nähe fest – damit ihr diesen Tag für immer neu erleben könnt."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=230&h=160&fit=crop",
+            "imageAlt": "Familienfotografie",
+            "title": "Familien-Fotoshooting",
+            "subtitle": "Ich halte eure Familienmomente in Bildern fest, die berühren.",
+            "text": "Mit Feingefühl und einem Blick für das Verbindende schaffe ich Erinnerungen voller Nähe, Liebe und Echtheit – damit eure Familiengeschichte für immer sichtbar bleibt."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=230&h=160&fit=crop",
+            "imageAlt": "Tierfotografie",
+            "title": "Tier-Fotoshooting",
+            "subtitle": "Ich halte die besondere Verbindung zwischen dir und deinem Haustier in ausdrucksstarken Bildern fest.",
+            "text": "Ob verspielt, treu oder neugierig – ich fange den Charakter deines Lieblings mit viel Geduld und Liebe ein. Für Erinnerungen, die bleiben – voller Herz und Persönlichkeit."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=230&h=160&fit=crop",
+            "imageAlt": "Businessfotografie",
+            "title": "Business-Fotoshooting",
+            "subtitle": "Zeig dich und dein Business von der besten Seite – mit Bildern, die Professionalität und Persönlichkeit ausstrahlen.",
+            "text": "Ob Porträt, Teamfoto oder Imageaufnahme – ich setze dich und dein Unternehmen authentisch, stilvoll und überzeugend in Szene. Für einen starken Auftritt mit Wirkung."
+          }
+        ]
+      }
+    },
+    {
+      "template": "cta/cta-cards-v5.html",
+      "data": {
+        "title": "Wähle dein Fotoshooting",
+        "cards": [
+          {
+            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=195&fit=crop",
+            "imageAlt": "Hochzeitsfotografie",
+            "title": "Hochzeitsfotografie",
+            "text": "Kostenloses Probe-Fotoshooting sichern!",
+            "linkUrl": "hochzeit/"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=195&fit=crop",
+            "imageAlt": "Familienfotografie",
+            "title": "Familien-Fotoshooting",
+            "text": "Jetzt Familienmomente festhalten!",
+            "linkUrl": "familie/"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=195&fit=crop",
+            "imageAlt": "Tierfotografie",
+            "title": "Tier-Fotoshooting",
+            "text": "Tierische Erinnerungen buchen!",
+            "linkUrl": "tier/"
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=195&fit=crop",
+            "imageAlt": "Businessfotografie",
+            "title": "Business-Fotografie",
+            "text": "Jetzt professionellen Auftritt planen!",
+            "linkUrl": "business/"
+          }
+        ]
+      }
+    },
+    {
+      "template": "cta/cta-v1.html",
+      "data": {
+        "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=508&h=493&fit=crop",
+        "title": "Kein passendes Fotoshooting gefunden?",
+        "subtitle": "Kein Problem – beschreibe einfach kurz deine Wünsche und Vorstellungen. So kann ich ein individuelles Fotoshooting für dich kreieren, das genau zu dir und deinen Wünschen passt.",
+        "buttonText": "Mehr erfahren",
+        "buttonLink": "hochzeit/quiz-step1.html"
+      }
+    },
+    {
+      "template": "gallery/gallery-fullwidth.html",
+      "data": {
+        "bgClass": "section--bg-primary",
+        "title": "Nicht nur ein Fotoshooting, sondern ein Erlebnis!",
+        "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1327&h=521&fit=crop",
+        "alt": "Fotografie Portfolio"
+      }
+    },
+    {
+      "template": "features/features-grid.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "title": "Was du bei mir genießen wirst...",
+        "items": [
+          {
+            "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=80&h=80&fit=crop",
+            "title": "Spaß und Wohlfühlen - Individuell angepasst",
+            "text": "Meine Shootings sind Erlebnisse voller Spaß und Wohlfühlen. Ich schaffe eine entspannte Atmosphäre und gehe individuell auf Wünsche ein, damit authentische Fotos entstehen."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=80&h=80&fit=crop",
+            "title": "Hohe Qualität zu fairen Preisen",
+            "text": "Ich biete höchste Qualität zu fairen Preisen. Modernstes Equipment und neueste Techniken gewährleisten beeindruckende Fotos, ohne das Budget zu sprengen."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=80&h=80&fit=crop",
+            "title": "Kreativ und zuverlässig",
+            "text": "Ich kombiniere Kreativität mit Zuverlässigkeit. Mit innovativen Ideen und festen Plänen sorge ich dafür, dass deine Bilder einzigartig und termingerecht geliefert werden."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop",
+            "title": "Zufriedenheit und vielfältige Möglichkeiten",
+            "text": "Zufriedenheit steht an erster Stelle. Ich biete vielfältige Möglichkeiten und passe mich flexibel deinen Anforderungen an."
+          }
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-single-slider.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Hochzeitsfotografie" },
+          { "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop", "alt": "Familienfotografie" },
+          { "src": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=746&fit=crop", "alt": "Tierfotografie" },
+          { "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop", "alt": "Businessfotografie" }
+        ]
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "showDivider": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=550&h=550&fit=crop",
+        "label": "Willkommen bei",
+        "name": "Karin Himml",
+        "tagline": "Fotografin, Visagistin und Make-up-Stylistin",
+        "paragraphs": [
+          "Meine fotografische Reise begann 1979 mit einer Ausbildung zur Fotografin.",
+          "In den 1980er-Jahren konnte ich mein Können in renommierten Werbestudios wie bei Neckermann sowie als Studioleiterin in verschiedenen Portraitstudios vertiefen.",
+          "1989 legte ich erfolgreich meine Meisterprüfung ab und eröffnete 1990 mein eigenes Fotostudio – seither lebe ich meine Leidenschaft für kreative, hochwertige Fotografie.",
+          "Durch kontinuierliche Fortbildungen in digitaler Bildbearbeitung, Beauty-Retusche und Workshops bleibe ich am Puls der Zeit – für Bilder, die mit Professionalität, Gefühl und Ästhetik überzeugen."
+        ],
+        "buttonText": "Kontakt aufnehmen",
+        "buttonLink": "hochzeit/quiz-step1.html"
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

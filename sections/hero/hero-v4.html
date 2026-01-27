@@ -33,14 +33,18 @@
       <p class="hero__logo">{{logoText}}</p>
       {{/if}}
       <div class="hero__content">
+        {{#if label}}
         <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
         <span class="hero__label">{{label}}</span>
+        {{/if}}
 
         <!-- РЕДАКТИРОВАТЬ: Главный заголовок -->
         <h1 class="hero__title">{{title}}</h1>
 
+        {{#if subtitle}}
         <!-- РЕДАКТИРОВАТЬ: Описание -->
         <p class="hero__subtitle">{{subtitle}}</p>
+        {{/if}}
 
         {{#if dateNotice}}
         <!-- РЕДАКТИРОВАТЬ: Дата акции (опционально) -->

@@ -1,0 +1,32 @@
+<!-- ============================================
+     GALLERY CARDS V5 - Business Landing (Subpages)
+
+     3 карточки с большими фото.
+     Каждая карточка: большое фото + заголовок (optional).
+
+     DATA:
+     - title: Заголовок секции (optional)
+     - cards: Array of {image, imageAlt, title}
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="gallery-cards {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+  <div class="container">
+    {{#if title}}
+    <h2 class="gallery-cards__title">{{title}}</h2>
+    {{/if}}
+
+    <div class="gallery-cards__grid">
+      {{#each cards}}
+      <div class="gallery-cards__card">
+        <div class="gallery-cards__image">
+          <img src="{{image}}" alt="{{imageAlt}}">
+        </div>
+        {{#if title}}
+        <h3 class="gallery-cards__card-title">{{title}}</h3>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,379 @@
+{
+  "name": "Подлендинг - Hochzeitsfotografie",
+  "sublanding": "hochzeit",
+  "lang": "de",
+
+  "meta": {
+    "title": "Hochzeitsfotografie | Karin Himml Fotografie",
+    "description": "Professionelle Hochzeitsfotografie – euer großer Tag in einzigartigen, emotionalen Bildern festgehalten.",
+    "keywords": "Hochzeitsfotografie, Hochzeit, Brautpaar, Trauung, Hochzeitsfotograf"
+  },
+
+  "quiz": {
+    "cardStyle": "square",
+    "logoText": "Karin Himml",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "type": "multiselect",
+        "progress": "Schritt 1 von 6",
+        "question": "Welche Momente sollen festgehalten werden?",
+        "subtitle": "Du kannst mehrere auswählen",
+        "columns": 4,
+        "nextPage": "quiz-step2.html",
+        "continueText": "Weiter",
+        "options": [
+          { "value": "getting_ready", "text": "Getting Ready", "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=300&fit=crop" },
+          { "value": "trauung", "text": "Trauung", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop" },
+          { "value": "paarfotos", "text": "Paarfotos", "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=300&h=300&fit=crop" },
+          { "value": "feier", "text": "Feier & Party", "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "type": "options",
+        "progress": "Schritt 2 von 6",
+        "question": "Wie lange soll die fotografische Begleitung dauern?",
+        "columns": 4,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "2_stunden", "text": "Ca. 2 Stunden", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop" },
+          { "value": "4_stunden", "text": "Ca. 4 Stunden", "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=300&h=300&fit=crop" },
+          { "value": "ganzer_tag", "text": "Ganzer Tag", "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=300&fit=crop" },
+          { "value": "noch_unsicher", "text": "Noch unsicher", "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "type": "date",
+        "progress": "Schritt 3 von 6",
+        "question": "Wann ist euer Hochzeitstag?",
+        "placeholder": "Datum auswählen",
+        "continueText": "Weiter",
+        "nextPage": "quiz-step4.html",
+        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=450&h=400&fit=crop",
+        "imageAlt": "Hochzeitsfotografie"
+      },
+      {
+        "stepNumber": 4,
+        "type": "options",
+        "progress": "Schritt 4 von 6",
+        "question": "Hast du besondere Wünsche oder Vorstellungen?",
+        "columns": 2,
+        "options": [
+          { "value": "ja", "text": "Ja, ich habe Wünsche", "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=300&h=300&fit=crop", "nextPage": "quiz-step5.html" },
+          { "value": "nein", "text": "Nein, überrasche mich!", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop", "nextPage": "quiz-step6.html" }
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "type": "textarea",
+        "progress": "Schritt 5 von 6",
+        "question": "Beschreibe deine Wünsche und Vorstellungen",
+        "placeholder": "Erzähl mir von eurer Traumhochzeit, besonderen Locations, Stilwünschen oder speziellen Momenten, die ich festhalten soll...",
+        "continueText": "Weiter",
+        "nextPage": "quiz-step6.html",
+        "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=450&h=400&fit=crop",
+        "imageAlt": "Hochzeitsplanung"
+      },
+      {
+        "stepNumber": 6,
+        "type": "options",
+        "progress": "Schritt 6 von 6",
+        "question": "Kennst du mich bereits?",
+        "columns": 4,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" },
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=300&h=300&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=300&h=300&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=300&h=300&fit=crop" }
+        ]
+      }
+    ],
+
+    "form": {
+      "templateVersion": "v5",
+      "formLabel": "Lass uns mal telefonieren!",
+      "formTitle": "Du bist fast am Ziel!",
+      "formDescription": "Trage deine Kontaktdaten ein und ich melde mich bei dir, um alle Details zu besprechen.",
+      "formImage": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=549&h=516&fit=crop",
+      "formImageAlt": "Hochzeitsfotografie",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "showAvailability": true,
+      "availabilityLabel": "Wann bist du erreichbar? (Mehrfachauswahl)",
+      "timeslots": [
+        { "value": "8-9", "label": "8:00 - 9:00" },
+        { "value": "9-10", "label": "9:00 - 10:00" },
+        { "value": "10-11", "label": "10:00 - 11:00" },
+        { "value": "11-12", "label": "11:00 - 12:00" },
+        { "value": "12-13", "label": "12:00 - 13:00" },
+        { "value": "13-14", "label": "13:00 - 14:00" },
+        { "value": "14-15", "label": "14:00 - 15:00" },
+        { "value": "15-16", "label": "15:00 - 16:00" },
+        { "value": "16-17", "label": "16:00 - 17:00" },
+        { "value": "17-18", "label": "17:00 - 18:00" },
+        { "value": "18-19", "label": "18:00 - 19:00" },
+        { "value": "kein_slot", "label": "Keine Präferenz" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Absenden",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.",
+      "rightTitle": "Frage dein Fotoshooting an",
+      "rightSubtitle": "Hochzeitsfotografie mit Herz",
+      "rightDescription": "Ich begleite euch an eurem besonderen Tag und halte die schönsten Momente in natürlichen, emotionalen Bildern fest."
+    },
+
+    "success": {
+      "templateVersion": "v5",
+      "successTitle": "Super, vielen Dank!",
+      "successSubtitle": "Deine Anfrage ist eingegangen!",
+      "successTexts": [
+        "Ich melde mich in Kürze bei dir, um alle Details zu besprechen.",
+        "In der Zwischenzeit kannst du dir direkt einen Termin in meinem Kalender sichern!"
+      ],
+      "successImage": "https://images.unsplash.com/photo-1519741497674-611481863552?w=550&h=529&fit=crop",
+      "successImageAlt": "Hochzeitsfotografie",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "callButtonText": "Anrufen",
+      "whatsappText": "WhatsApp",
+      "whatsappUrl": "https://wa.me/49123456789",
+      "emailButtonText": "Mail",
+      "phoneNumber": "+49123456789",
+      "email": "info@karinhimml.de",
+      "aboutName": "Karin Himml Fotografie",
+      "aboutQuestion": "Offene Fragen?",
+      "workingHours": [
+        "Mo - Fr: 9:00 - 18:00 Uhr",
+        "Sa: Nach Vereinbarung",
+        "So: Geschlossen"
+      ],
+      "aboutTexts": [
+        "Ich freue mich darauf, euch an eurem besonderen Tag zu begleiten und eure Geschichte in Bildern festzuhalten."
+      ],
+      "aboutImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+      "aboutImageAlt": "Karin Himml",
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Karin Himml",
+        "logoLink": "../"
+      }
+    },
+    {
+      "template": "hero/hero-v1.html",
+      "data": {
+        "label": "Hochzeitsfotografie",
+        "title": "Euer großer Tag in einzigartigen Bildern",
+        "subtitle": "Emotionale, authentische Hochzeitsfotografie – von der Trauung bis zur Party.",
+        "buttonText": "Jetzt Hochzeits-Shooting anfragen",
+        "buttonLink": "quiz-step1.html",
+        "imageMain": "https://images.unsplash.com/photo-1519741497674-611481863552?w=428&h=394&fit=crop",
+        "imageSecondary": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=306&h=290&fit=crop",
+        "imageAlt": "Hochzeitsfotografie"
+      }
+    },
+    {
+      "template": "content/content-v1.html",
+      "data": {
+        "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=428&h=533&fit=crop",
+        "title": "Eure Liebe verdient die schönsten Bilder",
+        "paragraphs": [
+          "Als Hochzeitsfotografin begleite ich euch durch euren besonderen Tag und halte die emotionalsten Momente fest.",
+          "Vom Getting Ready über die Trauung bis hin zur ausgelassenen Feier – ich bin für euch da und sorge dafür, dass kein besonderer Augenblick verloren geht."
+        ],
+        "linkText": "Shooting anfragen",
+        "linkUrl": "quiz-step1.html",
+        "linkAsButton": true
+      }
+    },
+    {
+      "template": "gallery/gallery-collage-v5.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop", "alt": "Hochzeitspaar" },
+          { "src": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&h=300&fit=crop", "alt": "Brautstrauß" },
+          { "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=300&fit=crop", "alt": "Getting Ready" },
+          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=300&fit=crop", "alt": "Hochzeitsfeier" }
+        ]
+      }
+    },
+    {
+      "template": "features/features-cards-v3.html",
+      "data": {
+        "features": [
+          {
+            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
+            "title": "Emotionale Momente",
+            "text": "Ich fange die echten, ungestellten Emotionen eures Tages ein – vom ersten Blick bis zum letzten Tanz."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=400&h=300&fit=crop",
+            "title": "Professionelle Begleitung",
+            "text": "Den ganzen Tag an eurer Seite, diskret im Hintergrund und doch immer am richtigen Ort zur richtigen Zeit."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=300&fit=crop",
+            "title": "Zeitlose Bildsprache",
+            "text": "Natürliche Farben und eine zeitlose Ästhetik, die auch in 20 Jahren noch genauso schön ist wie heute."
+          }
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-single-slider.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Hochzeit 1" },
+          { "src": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1233&h=746&fit=crop", "alt": "Hochzeit 2" },
+          { "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1233&h=746&fit=crop", "alt": "Hochzeit 3" }
+        ]
+      }
+    },
+    {
+      "template": "services/services-list-v5.html",
+      "data": {
+        "title": "Was ihr bei mir bekommt",
+        "items": [
+          {
+            "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=60&h=60&fit=crop",
+            "title": "Vorgespräch & Planung",
+            "text": "Persönliches Kennenlernen und detaillierte Planung eures Hochzeitstages."
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1452802447250-470a88ac82bc?w=60&h=60&fit=crop",
+            "title": "Professionelle Begleitung",
+            "text": "Diskrete, professionelle Begleitung während der gesamten Feierlichkeiten."
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=60&h=60&fit=crop",
+            "title": "Bildbearbeitung & Retusche",
+            "text": "Liebevolle Nachbearbeitung aller Bilder für ein perfektes Ergebnis."
+          },
+          {
+            "icon": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop",
+            "title": "Online-Galerie",
+            "text": "Private Online-Galerie zum Teilen mit Familie und Freunden."
+          }
+        ],
+        "ctaText": "Jetzt Hochzeits-Shooting anfragen",
+        "ctaLink": "quiz-step1.html"
+      }
+    },
+    {
+      "template": "steps/steps-6.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "title": "So läuft euer Hochzeitsshooting ab",
+        "steps": [
+          {
+            "number": "1",
+            "title": "Anfrage senden",
+            "text": "Füllt das Quiz aus und erzählt mir von eurem Traumtag."
+          },
+          {
+            "number": "2",
+            "title": "Kennenlernen",
+            "text": "Wir treffen uns persönlich oder per Videocall zum Vorgespräch."
+          },
+          {
+            "number": "3",
+            "title": "Planung",
+            "text": "Gemeinsam planen wir den Ablauf und besprechen eure Wünsche."
+          },
+          {
+            "number": "4",
+            "title": "Der große Tag",
+            "text": "Ich begleite euch entspannt und halte die schönsten Momente fest."
+          },
+          {
+            "number": "5",
+            "title": "Bildauswahl",
+            "text": "In eurer privaten Galerie wählt ihr eure Lieblingsbilder aus."
+          },
+          {
+            "number": "6",
+            "title": "Übergabe",
+            "text": "Ihr erhaltet eure fertigen, bearbeiteten Hochzeitsbilder."
+          }
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-single-slider.html",
+      "data": {
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1233&h=746&fit=crop", "alt": "Hochzeitsfeier" },
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Brautpaar" }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "title": "Häufige Fragen zur Hochzeitsfotografie",
+        "questions": [
+          {
+            "question": "Wie lange begleitest du uns am Hochzeitstag?",
+            "answer": "Das hängt ganz von euren Wünschen ab. Ich biete Pakete von 2 Stunden bis zur ganzen Tagesbegleitung an. Im Vorgespräch finden wir gemeinsam heraus, was am besten zu euch passt."
+          },
+          {
+            "question": "Wann bekommen wir unsere Bilder?",
+            "answer": "In der Regel erhaltet ihr eure fertig bearbeiteten Hochzeitsbilder innerhalb von 4-6 Wochen nach dem Hochzeitstag in einer privaten Online-Galerie."
+          },
+          {
+            "question": "Können wir ein Engagement-Shooting dazubuchen?",
+            "answer": "Ja, sehr gerne! Ein Engagement-Shooting vorab ist eine tolle Möglichkeit, sich kennenzulernen und entspannt vor der Kamera zu üben."
+          },
+          {
+            "question": "Wie viele Bilder erhalten wir?",
+            "answer": "Die genaue Anzahl hängt von der Begleitdauer ab. Bei einer ganztägigen Begleitung erhaltet ihr in der Regel 300-500 bearbeitete Bilder."
+          }
+        ]
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "showDivider": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop",
+        "label": "Eure Fotografin",
+        "name": "Karin Himml",
+        "paragraphs": [
+          "Als Hochzeitsfotografin ist es mir wichtig, eure Geschichte authentisch und emotional festzuhalten.",
+          "Ich arbeite diskret im Hintergrund und sorge dafür, dass ihr euren Tag in vollen Zügen genießen könnt – die schönsten Momente halte ich dabei für euch fest."
+        ]
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

@@ -10,21 +10,35 @@
      - Divider + link with arrow
      ============================================ -->
 
-<section class="content-section {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+<section class="content-section{{#if variant}} content-section--{{variant}}{{/if}} {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Контент слева -->
-      <div class="col-lg-5">
+    <div class="row align-items-center{{#if imageLeft}} flex-lg-row{{else}} flex-lg-row-reverse{{/if}}">
+      <!-- Изображение -->
+      <div class="col-lg-5{{#if imageLeft}}{{else}} ms-auto{{/if}}">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <img src="{{image}}" alt="{{#if imageAlt}}{{imageAlt}}{{else}}{{title}}{{/if}}">
+          </div>
+          {{#if accentText}}
+          <p class="content-section__accent">{{accentText}}</p>
+          {{/if}}
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div class="col-lg-6{{#if imageLeft}} ms-auto{{/if}}">
         <div class="content-section__content">
-          <h2 class="content-section__title">{{title}}</h2>
+          {{#if title}}
+          <h2 class="content-section__title">{{{title}}}</h2>
+          {{/if}}
           {{#if subtitle}}
           <p class="content-section__subtitle">{{subtitle}}</p>
           {{/if}}
           {{#each paragraphs}}
           <p class="content-section__text">{{this}}</p>
           {{/each}}
-          <div class="content-section__divider"></div>
           {{#if linkAsButton}}
+          <div class="content-section__divider"></div>
           <a href="{{linkUrl}}" class="btn btn-outline content-section__btn">
             {{linkText}}
             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +46,9 @@
               <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </a>
-          {{else}}
+          {{/if}}
+          {{#if linkAsSimple}}
+          <div class="content-section__divider"></div>
           <a href="{{linkUrl}}" class="content-section__link">
             {{linkText}}
             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,18 +56,6 @@
               <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </a>
-          {{/if}}
-        </div>
-      </div>
-
-      <!-- Изображение справа в рамке -->
-      <div class="col-lg-6 ms-auto">
-        <div class="content-section__image-frame">
-          <div class="content-section__image">
-            <img src="{{image}}" alt="">
-          </div>
-          {{#if accentText}}
-          <p class="content-section__accent">{{accentText}}</p>
           {{/if}}
         </div>
       </div>

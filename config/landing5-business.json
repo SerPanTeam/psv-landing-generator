@@ -1,0 +1,285 @@
+{
+  "name": "Подлендинг - Businessfotografie",
+  "sublanding": "business",
+  "lang": "de",
+
+  "meta": {
+    "title": "Businessfotografie | Karin Himml Fotografie",
+    "description": "Professionelle Business-Portraits und Teamfotos für einen überzeugenden Auftritt.",
+    "keywords": "Businessfotografie, Portrait, Bewerbungsfoto, Teamfoto, LinkedIn"
+  },
+
+  "quiz": {
+    "cardStyle": "square",
+    "logoText": "Karin Himml",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "type": "options",
+        "progress": "Schritt 1 von 6",
+        "question": "Welche Art von Business-Fotos brauchst du?",
+        "columns": 4,
+        "nextPage": "quiz-step2.html",
+        "options": [
+          { "value": "portrait", "text": "Business Portrait", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" },
+          { "value": "team", "text": "Teamfotos", "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop" },
+          { "value": "bewerbung", "text": "Bewerbungsfotos", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" },
+          { "value": "corporate", "text": "Corporate Branding", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "type": "options",
+        "progress": "Schritt 2 von 6",
+        "question": "Wo soll das Shooting stattfinden?",
+        "columns": 4,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "studio", "text": "Im Studio", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" },
+          { "value": "buero", "text": "In eurem Büro", "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=300&h=300&fit=crop" },
+          { "value": "outdoor", "text": "Outdoor / Urban", "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop" },
+          { "value": "flexibel", "text": "Bin flexibel", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "type": "options",
+        "progress": "Schritt 3 von 6",
+        "question": "Wie möchtest du die Bilder verwenden?",
+        "columns": 4,
+        "nextPage": "quiz-step4.html",
+        "options": [
+          { "value": "linkedin", "text": "LinkedIn / XING", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" },
+          { "value": "website", "text": "Firmenwebsite", "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop" },
+          { "value": "print", "text": "Print / Visitenkarten", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" },
+          { "value": "alles", "text": "Von allem etwas", "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "type": "options",
+        "progress": "Schritt 4 von 6",
+        "question": "Hast du besondere Wünsche oder Vorstellungen?",
+        "columns": 2,
+        "options": [
+          { "value": "ja", "text": "Ja, ich habe Wünsche", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop", "nextPage": "quiz-step5.html" },
+          { "value": "nein", "text": "Nein, überrasche mich!", "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop", "nextPage": "quiz-step6.html" }
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "type": "textarea",
+        "progress": "Schritt 5 von 6",
+        "question": "Beschreibe deine Wünsche und Vorstellungen",
+        "placeholder": "Erzähl mir von deiner Branche, deinem Unternehmen, gewünschtem Stil oder besonderen Anforderungen...",
+        "continueText": "Weiter",
+        "nextPage": "quiz-step6.html",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=450&h=400&fit=crop",
+        "imageAlt": "Businessfotografie"
+      },
+      {
+        "stepNumber": 6,
+        "type": "options",
+        "progress": "Schritt 6 von 6",
+        "question": "Kennst du mich bereits?",
+        "columns": 4,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" },
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" }
+        ]
+      }
+    ],
+
+    "form": {
+      "templateVersion": "v5",
+      "formLabel": "Lass uns mal telefonieren!",
+      "formTitle": "Du bist fast am Ziel!",
+      "formDescription": "Trage deine Kontaktdaten ein und ich melde mich bei dir.",
+      "formImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=549&h=516&fit=crop",
+      "formImageAlt": "Businessfotografie",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "showAvailability": true,
+      "availabilityLabel": "Wann bist du erreichbar? (Mehrfachauswahl)",
+      "timeslots": [
+        { "value": "8-9", "label": "8:00 - 9:00" },
+        { "value": "9-10", "label": "9:00 - 10:00" },
+        { "value": "10-11", "label": "10:00 - 11:00" },
+        { "value": "11-12", "label": "11:00 - 12:00" },
+        { "value": "12-13", "label": "12:00 - 13:00" },
+        { "value": "13-14", "label": "13:00 - 14:00" },
+        { "value": "14-15", "label": "14:00 - 15:00" },
+        { "value": "15-16", "label": "15:00 - 16:00" },
+        { "value": "16-17", "label": "16:00 - 17:00" },
+        { "value": "17-18", "label": "17:00 - 18:00" },
+        { "value": "18-19", "label": "18:00 - 19:00" },
+        { "value": "kein_slot", "label": "Keine Präferenz" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Absenden",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher.",
+      "rightTitle": "Frage dein Fotoshooting an",
+      "rightSubtitle": "Professionelle Businessfotografie",
+      "rightDescription": "Für einen überzeugenden Auftritt in der digitalen und analogen Welt."
+    },
+
+    "success": {
+      "templateVersion": "v5",
+      "successTitle": "Super, vielen Dank!",
+      "successSubtitle": "Deine Anfrage ist eingegangen!",
+      "successTexts": [
+        "Ich melde mich in Kürze bei dir.",
+        "Du kannst dir direkt einen Termin sichern!"
+      ],
+      "successImage": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=550&h=529&fit=crop",
+      "successImageAlt": "Businessfotografie",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "callButtonText": "Anrufen",
+      "whatsappText": "WhatsApp",
+      "whatsappUrl": "https://wa.me/49123456789",
+      "emailButtonText": "Mail",
+      "phoneNumber": "+49123456789",
+      "email": "info@karinhimml.de",
+      "aboutName": "Karin Himml Fotografie",
+      "aboutQuestion": "Offene Fragen?",
+      "workingHours": [
+        "Mo - Fr: 9:00 - 18:00 Uhr",
+        "Sa: Nach Vereinbarung"
+      ],
+      "aboutTexts": [
+        "Ich freue mich auf die Zusammenarbeit!"
+      ],
+      "aboutImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+      "aboutImageAlt": "Karin Himml",
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Karin Himml",
+        "logoLink": "../"
+      }
+    },
+    {
+      "template": "hero/hero-v1.html",
+      "data": {
+        "label": "Businessfotografie",
+        "title": "Professionelle Portraits für deinen Auftritt",
+        "subtitle": "Überzeugende Business-Fotos für LinkedIn, Website und mehr.",
+        "buttonText": "Jetzt Business-Shooting anfragen",
+        "buttonLink": "quiz-step1.html",
+        "imageMain": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=428&h=394&fit=crop",
+        "imageSecondary": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=306&h=290&fit=crop",
+        "imageAlt": "Businessfotografie"
+      }
+    },
+    {
+      "template": "content/content-v1.html",
+      "data": {
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=428&h=533&fit=crop",
+        "title": "Dein professioneller Auftritt beginnt hier",
+        "paragraphs": [
+          "Der erste Eindruck zählt – besonders im Business. Mit professionellen Portraits zeigst du Kompetenz und Persönlichkeit.",
+          "Ob für LinkedIn, deine Website oder Bewerbungen – ich sorge dafür, dass du authentisch und überzeugend rüberkommst."
+        ],
+        "linkText": "Shooting anfragen",
+        "linkUrl": "quiz-step1.html",
+        "linkAsButton": true
+      }
+    },
+    {
+      "template": "gallery/gallery-cards-v5.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "cards": [
+          { "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop", "imageAlt": "Business Portrait Mann" },
+          { "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop", "imageAlt": "Business Portrait Frau" },
+          { "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop", "imageAlt": "Team Meeting" }
+        ]
+      }
+    },
+    {
+      "template": "features/features-grid.html",
+      "data": {
+        "items": [
+          { "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop", "text": "Professionelle Ausstattung & Beleuchtung" },
+          { "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop", "text": "Schnelle Lieferung der fertigen Bilder" },
+          { "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop", "text": "Verschiedene Looks & Hintergründe" },
+          { "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=120&h=120&fit=crop", "text": "Auch Teamshootings möglich" }
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-single-slider.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop", "alt": "Business Portrait 1" },
+          { "src": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1233&h=746&fit=crop", "alt": "Business Portrait 2" },
+          { "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1233&h=746&fit=crop", "alt": "Team Shooting" }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "title": "Häufige Fragen zur Businessfotografie",
+        "questions": [
+          {
+            "question": "Was soll ich zum Shooting anziehen?",
+            "answer": "Kleidung in gedeckten Farben ohne große Muster wirkt professionell. Bringe gerne 2-3 Outfits mit."
+          },
+          {
+            "question": "Wie viele Bilder erhalte ich?",
+            "answer": "Je nach Paket erhältst du 5-15 professionell bearbeitete Bilder in verschiedenen Formaten."
+          },
+          {
+            "question": "Können auch Teamfotos gemacht werden?",
+            "answer": "Ja, ich biete auch Teamshootings für Unternehmen an – bei euch vor Ort oder im Studio."
+          }
+        ]
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "showDivider": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop",
+        "label": "Eure Fotografin",
+        "name": "Karin Himml",
+        "paragraphs": [
+          "Professionelle Businessfotos müssen nicht steif sein – ich sorge für eine entspannte Atmosphäre.",
+          "So entstehen authentische Portraits, die Kompetenz und Persönlichkeit zeigen."
+        ]
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

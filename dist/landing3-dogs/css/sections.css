@@ -825,6 +825,104 @@
   font-weight: var(--font-weight-bold);
 }
 
+/* Hero V5 - Business Hub Landing (Landing 5)
+   FIGMA (node 585:34):
+   - Full-width background: 1440x746px
+   - Logo inside hero (beige/gold)
+   - Title: BLACK text
+   - Subtitle with accent "Herz & Seele"
+   - Gold CTA button
+*/
+.hero--v5 {
+  padding: 0;
+}
+
+.hero--v5 .hero__banner {
+  width: 100%;
+  height: 746px; /* FIGMA: exact */
+  background-color: #7f7f7f; /* FIGMA: placeholder gray */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero--v5 .hero__logo {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-text); /* FIGMA: beige/gold */
+  margin: 0;
+  padding-top: 54px; /* FIGMA: top-[54px] */
+  margin-bottom: 87px; /* FIGMA: gap to title (195 - 54 - 45 - some spacing) */
+}
+
+.hero--v5 .hero__content {
+  max-width: 526px; /* FIGMA: exact title width */
+}
+
+.hero--v5 .hero__title {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: var(--color-text-primary); /* FIGMA: BLACK text #3D3D3D */
+  margin-bottom: 20px;
+}
+
+.hero--v5 .hero__subtitle {
+  font-size: 28px; /* FIGMA: exact 28px */
+  font-weight: var(--font-weight-bold); /* FIGMA: Bold */
+  line-height: 1.4;
+  color: var(--color-text-primary); /* FIGMA: black */
+  margin-bottom: 30px;
+}
+
+.hero--v5 .hero__btn {
+  min-width: 222px; /* FIGMA: approx */
+  height: 70px;
+  border-radius: 10px;
+  font-size: var(--font-size-text);
+}
+
+@media (max-width: 991.98px) {
+  .hero--v5 .hero__banner {
+    height: auto;
+    min-height: 500px;
+    padding-bottom: 60px;
+  }
+
+  .hero--v5 .hero__logo {
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .hero--v5 .hero__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero--v5 .hero__banner {
+    min-height: 400px;
+    padding-bottom: 40px;
+  }
+
+  .hero--v5 .hero__logo {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hero--v5 .hero__title {
+    font-size: 28px;
+  }
+
+  .hero--v5 .hero__subtitle {
+    font-size: 16px;
+  }
+
+  .hero--v5 .hero__btn {
+    width: 100%;
+  }
+}
+
 /* ===== PROMO SECTION ===== */
 /* Image: 428x533px (Landing 2) or 428x440px (Landing 1, shortImage: true)
    Title: 28px bold, Text: 22px medium
@@ -962,6 +1060,80 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ===== CONTENT V5 VARIANT - декоративная подложка вместо рамки ===== */
+/* Landing 5: изображение с бежевой подложкой позади (смещена вниз-вправо) */
+.content-section--v5 .content-section__image-frame {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  width: 474px; /* FIGMA: exact */
+  margin-left: 0;
+  z-index: 1; /* Создаём stacking context */
+}
+
+.content-section--v5 .content-section__image-frame::after {
+  content: '';
+  position: absolute;
+  width: 474px; /* FIGMA: same as image */
+  height: 340px; /* FIGMA: exact */
+  background: var(--color-bg-secondary); /* FIGMA: #EEE3D0 */
+  border-radius: 10px; /* FIGMA: exact */
+  bottom: -50px; /* Смещение вниз */
+  right: -63px; /* Смещение вправо */
+  z-index: 1; /* За изображением, но видимый */
+}
+
+.content-section--v5 .content-section__image {
+  position: relative;
+  width: 474px; /* FIGMA: exact */
+  height: 493px; /* FIGMA: exact */
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  z-index: 2; /* Выше подложки */
+}
+
+/* Убираем overflow чтобы подложка была видна */
+.content-section--v5 .row,
+.content-section--v5 [class*="col-"] {
+  overflow: visible;
+}
+
+/* Добавляем отступ снизу для подложки */
+.content-section--v5 {
+  padding-bottom: 80px; /* Место для подложки */
+}
+
+.content-section--v5 .content-section__content {
+  min-height: auto;
+}
+
+.content-section--v5 .content-section__text {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium); /* FIGMA: Medium */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .content-section--v5 .content-section__image-frame {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 60px;
+  }
+
+  .content-section--v5 .content-section__image-frame::after {
+    width: 100%;
+    right: -30px;
+    bottom: -30px;
+  }
+
+  .content-section--v5 .content-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 474 / 493;
+  }
 }
 
 /* FIGMA: Контент распределён, но КОРОЧЕ рамки справа */
@@ -1242,10 +1414,18 @@
   max-width: 316px; /* FIGMA L2: text width */
 }
 
-/* ===== FEATURES GRID (Landing 3) ===== */
+/* ===== FEATURES GRID (Landing 3, 5) ===== */
 /* 2x2 grid layout, Icon: 74x75px, Text: 22px Bold */
 .features--grid {
-  padding: 60px 0 80px 0; /* Extra bottom padding before next section */
+  padding: var(--section-padding-y) 0;
+}
+
+.features__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .features__grid {
@@ -1281,6 +1461,52 @@
   line-height: 1.4;
   color: var(--color-text-primary);
   max-width: 400px;
+}
+
+/* Feature Item Card Variant (Landing 5) - with title + text */
+/* Применяется через :has() когда есть title */
+.feature-item:has(.feature-item__title),
+.feature-item--card {
+  background: var(--color-bg-white);
+  border-radius: 10px; /* FIGMA: exact */
+  padding: 25px 25px 30px; /* FIGMA: approx */
+  gap: 25px;
+}
+
+.feature-item:has(.feature-item__title) .feature-item__icon,
+.feature-item--card .feature-item__icon {
+  width: 80px; /* FIGMA: exact */
+  height: 80px;
+  border-radius: 10px; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.feature-item:has(.feature-item__title) .feature-item__content,
+.feature-item--card .feature-item__content {
+  flex: 1;
+}
+
+/* Заголовок feature-item (для Landing 5 и карточек с title) */
+.feature-item__title {
+  font-size: var(--font-size-text); /* FIGMA: 22px Bold */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.feature-item:has(.feature-item__title) .feature-item__text,
+.feature-item--card .feature-item__text {
+  font-size: var(--font-size-small); /* FIGMA: 16px Regular */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  max-width: none;
+}
+
+@media (max-width: 991.98px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
 
 /* ===== STEPS SECTION ===== */
@@ -1679,11 +1905,19 @@
   /* background-color убран - используем section--bg-* классы */
 }
 
+.gallery-fullwidth__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+}
+
 .gallery-fullwidth__image {
   width: 100%;
-  height: 656px; /* FIGMA: exact */
+  height: 521px; /* FIGMA L5: 521px */
   object-fit: cover;
   display: block;
+  border-radius: 15px;
 }
 
 /* Gallery Fullwidth Rounded (Landing 3) */
@@ -2289,6 +2523,29 @@
   height: auto;
 }
 
+/* About Tagline (Landing 5) */
+.about__tagline {
+  font-size: var(--font-size-text-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-text);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* About Button (Landing 5) */
+.about__btn {
+  margin-top: 30px;
+  min-width: 285px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .about__btn {
+    width: 100%;
+  }
+}
+
 /* ===== FOOTER ===== */
 /* FIGMA: White background, map area + centered nav links
    Map placeholder area or map section
@@ -2453,6 +2710,60 @@
   width: 341px; /* FIGMA: exact */
   height: 60px;
   border-radius: 40px;
+}
+
+/* CTA with Image - Image left, text right (Landing 5) */
+.cta--with-image {
+  padding: var(--section-padding-y) 0;
+}
+
+.cta--with-image .cta__image {
+  width: 100%;
+  max-width: 508px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cta--with-image .cta__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cta--with-image .cta__text {
+  text-align: left;
+}
+
+.cta--with-image .cta__title {
+  font-size: var(--font-size-h2);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.cta--with-image .cta__subtitle {
+  font-size: var(--font-size-text);
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.cta--with-image .cta__btn {
+  min-width: 222px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .cta--with-image .cta__image {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta--with-image .cta__btn {
+    width: 100%;
+  }
 }
 
 /* ============================================
@@ -2961,3 +3272,489 @@
 .pb-137 { padding-bottom: 137px !important; }
 .pb-172 { padding-bottom: 172px !important; }
 .pb-208 { padding-bottom: 208px !important; }
+
+/* ============================================
+   SERVICES CARDS V5 - Business Landing Hub
+   4 high cards with images
+   ============================================ */
+.services-cards-v5 {
+  padding: var(--section-padding-y) 0;
+}
+
+.services-cards-v5__title {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 54px; /* FIGMA: ~54px (1657-1524-79) */
+  text-align: left; /* FIGMA: left-aligned */
+}
+
+.services-cards-v5__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 43px; /* FIGMA: 398-55-300=43px */
+}
+
+.services-cards-v5__card {
+  background: var(--color-bg-white);
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.services-cards-v5__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.services-cards-v5__image {
+  width: calc(100% - 70px); /* FIGMA: 230px in 300px card = margin 35px each side */
+  margin: 35px auto 0; /* FIGMA: 35px top */
+  aspect-ratio: 230 / 160; /* FIGMA: exact ratio */
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.services-cards-v5__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-cards-v5__body {
+  padding: 37px 35px 35px; /* FIGMA: ~37px top (1889-1692-160), 35px sides */
+}
+
+.services-cards-v5__card-title {
+  font-size: var(--font-size-text-lg); /* FIGMA: 28px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 7px; /* FIGMA: 1948-1889-52=7px */
+  line-height: 1; /* FIGMA: 100% */
+}
+
+.services-cards-v5__card-subtitle {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 26px; /* FIGMA: 2012-1948-38=26px */
+  line-height: 1.4; /* FIGMA: normal */
+}
+
+.services-cards-v5__card-text {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  line-height: 1.4; /* FIGMA: normal */
+}
+
+/* ============================================
+   CTA CARDS V5 - Business Landing Hub
+   4 cards with images and CTA links
+   ============================================ */
+.cta-cards-v5 {
+  padding: var(--section-padding-y) 0;
+}
+
+.cta-cards-v5__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cta-cards-v5__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cta-cards-v5__card {
+  display: block;
+  background: var(--color-bg-white);
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cta-cards-v5__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-cards-v5__image {
+  width: 100%;
+  aspect-ratio: 300 / 195; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.cta-cards-v5__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-cards-v5__body {
+  padding: 24px 20px;
+}
+
+.cta-cards-v5__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.cta-cards-v5__card-text {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-regular); /* FIGMA: Regular */
+  color: var(--color-text-primary); /* FIGMA: black */
+  line-height: var(--line-height-normal);
+  margin-bottom: 0;
+}
+
+.cta-cards-v5__link {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.cta-cards-v5__link:hover {
+  color: var(--color-button-primary-hover);
+}
+
+/* ============================================
+   GALLERY COLLAGE V5 - Business Landing
+   4 photos in collage layout (2 large + 2 small)
+   ============================================ */
+.gallery-collage {
+  padding: var(--section-padding-y) 0;
+}
+
+.gallery-collage__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 16px;
+}
+
+.gallery-collage__item {
+  overflow: hidden;
+}
+
+.gallery-collage__item--1 {
+  grid-row: 1 / 3;
+}
+
+.gallery-collage__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   GALLERY CARDS V5 - Business Landing
+   3 large photo cards
+   ============================================ */
+.gallery-cards {
+  padding: var(--section-padding-y) 0;
+}
+
+.gallery-cards__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.gallery-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-cards__card {
+  overflow: hidden;
+}
+
+.gallery-cards__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.gallery-cards__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-cards__card:hover .gallery-cards__image img {
+  transform: scale(1.05);
+}
+
+.gallery-cards__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ============================================
+   SERVICES LIST V5 - Business Landing (Hochzeit)
+   List of services with icons
+   ============================================ */
+.services-list {
+  padding: var(--section-padding-y) 0;
+}
+
+.services-list__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.services-list__subtitle {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: 50px;
+}
+
+.services-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.services-list__icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.services-list__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.services-list__content {
+  flex: 1;
+}
+
+.services-list__item-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.services-list__item-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+.services-list__cta {
+  margin-top: 50px;
+}
+
+/* ============================================
+   STEPS 6 - Business Landing (Hochzeit)
+   6 steps in 2x3 grid
+   ============================================ */
+.steps-6 {
+  padding: var(--section-padding-y) 0;
+}
+
+.steps-6__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.steps-6__cta--top {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.steps-6__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.steps-6__card {
+  padding: 24px;
+  background: var(--color-bg-white);
+  transition: box-shadow var(--transition-normal);
+}
+
+.steps-6__card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.steps-6__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.steps-6__number {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.steps-6__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.steps-6__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.steps-6__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.steps-6__card-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   MAP SECTION V5 - Business Landing
+   Full-width Google Maps
+   ============================================ */
+.map-section {
+  padding: 0;
+}
+
+.section--bg-white {
+  background-color: var(--color-bg-white);
+}
+
+.map-section__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+  padding-top: var(--section-padding-y);
+  text-align: center;
+}
+
+.map-section__map {
+  width: 100%;
+  height: 400px;
+}
+
+.map-section__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map-section__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-text-lg);
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+}
+
+/* ============================================
+   RESPONSIVE - V5 SECTIONS
+   ============================================ */
+@media (max-width: 991.98px) {
+  .services-cards-v5__grid,
+  .cta-cards-v5__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-cards__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-6__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-cards-v5__grid,
+  .cta-cards-v5__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .gallery-collage__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery-collage__item--1 {
+    grid-row: auto;
+  }
+
+  .gallery-cards__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .services-list__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .steps-6__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-list__cta {
+    text-align: center;
+  }
+
+  .services-list__cta .btn {
+    width: 100%;
+  }
+
+  .map-section__map {
+    height: 300px;
+  }
+}

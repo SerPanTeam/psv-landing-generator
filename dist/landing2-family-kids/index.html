@@ -40,7 +40,7 @@
 
 <header class="header">
   <div class="container">
-    <a href="/" class="header__logo">
+    <a href="{{logoLink}}" class="header__logo">
       <span class="logo-text">Logo</span>
     </a>
   </div>
@@ -195,17 +195,31 @@
 
 <section class="content-section section--bg-primary">
   <div class="container">
-    <div class="row align-items-center">
-      <!-- Контент слева -->
-      <div class="col-lg-5">
+    <div class="row align-items-center flex-lg-row-reverse">
+      <!-- Изображение -->
+      <div class="col-lg-5 ms-auto">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=600&fit=crop" alt="Für die schönsten Erinnerungen mit deinen Liebsten!">
+          </div>
+          
+          <p class="content-section__accent">Familienmomente, die das Herz berühren</p>
+          
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div class="col-lg-6">
         <div class="content-section__content">
+          
           <h2 class="content-section__title">Für die schönsten Erinnerungen mit deinen Liebsten!</h2>
+          
           
           <p class="content-section__subtitle">Familien-Fotoshooting – liebevoll & natürlich</p>
           
           
-          <div class="content-section__divider"></div>
           
+          <div class="content-section__divider"></div>
           <a href="quiz-step1.html" class="btn btn-outline content-section__btn">
             Kostenloses Fotoshooting sichern
             <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -214,17 +228,6 @@
             </svg>
           </a>
           
-        </div>
-      </div>
-
-      <!-- Изображение справа в рамке -->
-      <div class="col-lg-6 ms-auto">
-        <div class="content-section__image-frame">
-          <div class="content-section__image">
-            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=500&h=600&fit=crop" alt="">
-          </div>
-          
-          <p class="content-section__accent">Familienmomente, die das Herz berühren</p>
           
         </div>
       </div>
@@ -445,11 +448,18 @@
      - Full-width image (no container for Landing 1/2)
      - Между Steps и FAQ
      - Rounded: 30px radius + container (Landing 3)
+
+     ФЛАГИ:
+     - title: Заголовок над изображением (опционально)
+     - rounded: Скруглённые углы + container
      ============================================ -->
 
 <section class="gallery-fullwidth section--bg-secondary">
   
-  <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1400&h=600&fit=crop" alt="Familien-Fotoshooting" class="gallery-fullwidth__image">
+  
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1400&h=600&fit=crop" alt="Familien-Fotoshooting" class="gallery-fullwidth__image">
+  </div>
   
 </section>
 
@@ -709,6 +719,7 @@
           <p class="about__label">Hi, ich bin Jenni – dein Kameramädle!</p>
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name"></h2>
+          
           <div class="about__divider"></div>
           
 
@@ -724,6 +735,8 @@
 
           <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">Über 500 Babys durfte ich schon fotografieren und jede Familie, jedes Paar ist für mich einzigartig. Genau diese Emotionen will ich für dich in liebevollen Bildern festhalten – Erinnerungen, die dich ein Leben lang begleiten.</p>
+          
+
           
 
           
@@ -1069,7 +1082,8 @@
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
     </iframe>
     
   </div>
@@ -1086,7 +1100,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 22.01.2026 21:30</p>
+      <p class="footer__updated">Letzte Aktualisierung: 27.01.2026 21:50</p>
     </div>
   </div>
 </footer>

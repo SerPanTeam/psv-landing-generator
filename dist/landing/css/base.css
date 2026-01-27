@@ -43,6 +43,11 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* ===== UTILITY CLASSES ===== */
+.text-accent {
+  color: var(--color-accent-text);
+}
+
 /* ===== HEADER & LOGO (Shared across all pages) ===== */
 /* FIGMA: Logo at top 53px, font-size 45px Inter Bold */
 
@@ -432,7 +437,7 @@ select {
 .placeholder-image {
   width: 100%;
   height: 100%;
-  background-color: #7F7F7F;
+  background-color: var(--color-placeholder-dark);
   display: flex;
   align-items: center;
   justify-content: center;

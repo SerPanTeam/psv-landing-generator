@@ -1,0 +1,42 @@
+<!-- ============================================
+     STEPS 6 - Business Landing (Hochzeit)
+
+     6 шагов в сетке 2x3.
+     Каждый шаг: номер + иконка + заголовок + описание.
+
+     DATA:
+     - title: Заголовок секции
+     - steps: Array of {number, icon, title, text}
+     - ctaText: Текст кнопки (optional)
+     - ctaLink: Ссылка кнопки (optional)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="steps-6 {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+  <div class="container">
+    <h2 class="steps-6__title">{{title}}</h2>
+
+    {{#if ctaText}}
+    <div class="steps-6__cta steps-6__cta--top">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
+
+    <div class="steps-6__grid">
+      {{#each steps}}
+      <div class="steps-6__card">
+        <div class="steps-6__card-header">
+          <span class="steps-6__number">{{number}}</span>
+          {{#if icon}}
+          <div class="steps-6__icon">
+            <img src="{{icon}}" alt="{{title}}">
+          </div>
+          {{/if}}
+        </div>
+        <h3 class="steps-6__card-title">{{title}}</h3>
+        <p class="steps-6__card-text">{{text}}</p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

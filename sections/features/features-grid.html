@@ -8,15 +8,23 @@
      - Text: Inter Bold 22px (right)
      ============================================ -->
 
-<section class="features features--grid section--bg-primary{{#if rounded}} features--rounded{{/if}}{{paddingClasses}}">
+<section class="features features--grid {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} features--rounded{{/if}}{{paddingClasses}}">
   <div class="container">
+    {{#if title}}
+    <h2 class="features__title">{{title}}</h2>
+    {{/if}}
     <div class="features__grid">
       {{#each items}}
-      <div class="feature-item">
+      <div class="feature-item{{#if this.title}} feature-item--card{{/if}}">
         <div class="feature-item__icon">
-          <img src="{{this.image}}" alt="">
+          <img src="{{this.image}}" alt="{{#if this.title}}{{this.title}}{{else}}{{this.text}}{{/if}}">
         </div>
-        <p class="feature-item__text">{{this.text}}</p>
+        <div class="feature-item__content">
+          {{#if this.title}}
+          <h3 class="feature-item__title">{{this.title}}</h3>
+          {{/if}}
+          <p class="feature-item__text">{{this.text}}</p>
+        </div>
       </div>
       {{/each}}
     </div>

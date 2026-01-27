@@ -7,14 +7,25 @@
      - Full-width image (no container for Landing 1/2)
      - Между Steps и FAQ
      - Rounded: 30px radius + container (Landing 3)
+
+     ФЛАГИ:
+     - title: Заголовок над изображением (опционально)
+     - rounded: Скруглённые углы + container
      ============================================ -->
 
 <section class="gallery-fullwidth {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} gallery-fullwidth--rounded{{/if}}{{paddingClasses}}">
+  {{#if title}}
+  <div class="container">
+    <h2 class="gallery-fullwidth__title">{{title}}</h2>
+  </div>
+  {{/if}}
   {{#if rounded}}
   <div class="container">
     <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
   </div>
   {{else}}
-  <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
+  <div class="container">
+    <img src="{{image}}" alt="{{alt}}" class="gallery-fullwidth__image">
+  </div>
   {{/if}}
 </section>

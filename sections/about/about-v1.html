@@ -49,6 +49,9 @@
           <p class="about__label">{{label}}</p>
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">{{name}}</h2>
+          {{#if tagline}}
+          <p class="about__tagline">{{tagline}}</p>
+          {{/if}}
           {{#if showDivider}}<div class="about__divider"></div>{{/if}}
           {{/if}}
 
@@ -62,6 +65,11 @@
           <!-- РЕДАКТИРОВАТЬ: Текст описания -->
           <p class="about__text">{{this}}</p>
           {{/each}}
+
+          {{#if buttonText}}
+          <!-- КНОПКА (опционально) -->
+          <a href="{{buttonLink}}" class="btn btn-primary about__btn">{{buttonText}}</a>
+          {{/if}}
 
           <!-- ====== СОЦСЕТИ (опционально) ====== -->
           {{#each socials}}

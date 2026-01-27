@@ -50,22 +50,24 @@ function replacePlaceholders(template, data) {
   // 2. Сначала обрабатываем ПРОСТЫЕ условия {{#if key}}...{{/if}} (без else)
   // Используем негативный lookahead чтобы не захватывать блоки с {{else}} или вложенными {{#if}}
   // Обрабатываем многократно пока есть совпадения (для вложенных - от внутренних к внешним)
+  // ВАЖНО: НЕ обрабатываем {{#if this.xxx}} - они обрабатываются внутри #each
   let prevResult;
   do {
     prevResult = result;
     // Матчим только если между {{#if}} и {{/if}} НЕТ {{else}} и НЕТ вложенных {{#if}}
     // Это обеспечивает обработку от внутренних блоков к внешним
-    // Поддержка nested.path в условиях
-    const simpleIfRegex = /\{\{#if\s+([\w.]+)\}\}((?:(?!\{\{else\}\})(?!\{\{#if\s)[\s\S])*?)\{\{\/if\}\}/g;
+    // Поддержка nested.path в условиях, но НЕ this.xxx (они для #each)
+    const simpleIfRegex = /\{\{#if\s+((?!this\.)[\w.]+)\}\}((?:(?!\{\{else\}\})(?!\{\{#if\s)[\s\S])*?)\{\{\/if\}\}/g;
     result = result.replace(simpleIfRegex, (match, key, content) => {
       return getValueByPath(data, key) ? content : '';
     });
   } while (result !== prevResult);
 
   // 3. Теперь обрабатываем условия с {{else}}: {{#if key}}...{{else}}...{{/if}}
+  // ВАЖНО: НЕ обрабатываем {{#if this.xxx}} - они обрабатываются внутри #each
   do {
     prevResult = result;
-    const ifElseRegex = /\{\{#if\s+([\w.]+)\}\}([\s\S]*?)\{\{else\}\}([\s\S]*?)\{\{\/if\}\}/g;
+    const ifElseRegex = /\{\{#if\s+((?!this\.)[\w.]+)\}\}([\s\S]*?)\{\{else\}\}([\s\S]*?)\{\{\/if\}\}/g;
     result = result.replace(ifElseRegex, (match, key, ifContent, elseContent) => {
       return getValueByPath(data, key) ? ifContent : elseContent;
     });
@@ -142,6 +144,19 @@ function replacePlaceholders(template, data) {
           if (typeof item !== 'object' || item === null) {
             itemResult = itemResult.replace(/\{\{this\}\}/g, item);
           } else {
+            // Обрабатываем {{#if this.key}}...{{/if}} внутри item
+            Object.keys(item).forEach(key => {
+              const value = item[key];
+              // Условие {{#if this.key}}
+              const ifThisRegex = new RegExp(`\\{\\{#if this\\.${key}\\}\\}([\\s\\S]*?)\\{\\{\\/if\\}\\}`, 'g');
+              itemResult = itemResult.replace(ifThisRegex, (match, content) => {
+                return value ? content : '';
+              });
+            });
+
+            // Удаляем оставшиеся {{#if this.key}} для несуществующих ключей
+            itemResult = itemResult.replace(/\{\{#if this\.(\w+)\}\}[\s\S]*?\{\{\/if\}\}/g, '');
+
             // Если item — объект, заменяем {{this.key}} и {{key}}
             Object.keys(item).forEach(key => {
               const value = item[key];
@@ -182,7 +197,18 @@ function replacePlaceholders(template, data) {
 
   result = processEachRecursive(result, data);
 
-  // 5. Простые плейсхолдеры {{key}} и {{nested.key}}
+  // 5. Тройные скобки {{{key}}} для raw HTML (без экранирования)
+  // Обрабатываем ДО обычных плейсхолдеров
+  const tripleRegex = /\{\{\{(\w+)\}\}\}/g;
+  result = result.replace(tripleRegex, (match, key) => {
+    const value = data[key];
+    if (typeof value === 'string' || typeof value === 'number') {
+      return value; // Raw output без экранирования
+    }
+    return match;
+  });
+
+  // 6. Простые плейсхолдеры {{key}} и {{nested.key}}
   // Сначала обрабатываем вложенные пути ({{form.formLabel}}, {{success.title}})
   const nestedPlaceholderRegex = /\{\{(\w+)\.(\w+)\}\}/g;
   result = result.replace(nestedPlaceholderRegex, (match, objKey, propKey) => {
@@ -259,7 +285,7 @@ function buildSection(sectionConfig, globalConfig = {}) {
 }
 
 /**
- * Генерирует quiz step страницу
+ * Генерирует quiz step страницу (options type - default)
  */
 function generateQuizStepPage(stepConfig, quizConfig, globalConfig) {
   const template = loadSection('quiz/quiz-page-step.html');
@@ -280,9 +306,106 @@ function generateQuizStepPage(stepConfig, quizConfig, globalConfig) {
     cardStyle: quizConfig.cardStyle || 'square',
     options: stepConfig.options.map(opt => ({
       ...opt,
-      nextPage: stepConfig.nextPage,
+      nextPage: opt.nextPage || stepConfig.nextPage,
       cardStyle: quizConfig.cardStyle || 'square'
     })),
+    impressumUrl: quizConfig.impressumUrl || '#',
+    datenschutzUrl: quizConfig.datenschutzUrl || '#',
+    cookieUrl: quizConfig.cookieUrl || '#',
+    stepNumber: stepConfig.stepNumber
+  };
+
+  return replacePlaceholders(template, data);
+}
+
+/**
+ * Генерирует quiz multiselect страницу
+ */
+function generateQuizMultiselectPage(stepConfig, quizConfig, globalConfig) {
+  const template = loadSection('quiz/quiz-page-multiselect.html');
+  if (!template) {
+    console.warn('Quiz multiselect template not found');
+    return '';
+  }
+
+  const data = {
+    lang: globalConfig.lang || 'de',
+    metaTitle: `${globalConfig.meta?.title || 'Quiz'} - Schritt ${stepConfig.stepNumber}`,
+    metaDescription: globalConfig.meta?.description || '',
+    logoText: quizConfig.logoText || 'Logo',
+    progress: stepConfig.progress,
+    question: stepConfig.question,
+    subtitle: stepConfig.subtitle || '',
+    columns: stepConfig.columns || 4,
+    cardStyle: quizConfig.cardStyle || 'square',
+    nextPage: stepConfig.nextPage,
+    continueText: stepConfig.continueText || 'Weiter',
+    options: stepConfig.options.map(opt => ({
+      ...opt,
+      cardStyle: quizConfig.cardStyle || 'square'
+    })),
+    impressumUrl: quizConfig.impressumUrl || '#',
+    datenschutzUrl: quizConfig.datenschutzUrl || '#',
+    cookieUrl: quizConfig.cookieUrl || '#',
+    stepNumber: stepConfig.stepNumber
+  };
+
+  return replacePlaceholders(template, data);
+}
+
+/**
+ * Генерирует quiz date страницу
+ */
+function generateQuizDatePage(stepConfig, quizConfig, globalConfig) {
+  const template = loadSection('quiz/quiz-page-date.html');
+  if (!template) {
+    console.warn('Quiz date template not found');
+    return '';
+  }
+
+  const data = {
+    lang: globalConfig.lang || 'de',
+    metaTitle: `${globalConfig.meta?.title || 'Quiz'} - Schritt ${stepConfig.stepNumber}`,
+    metaDescription: globalConfig.meta?.description || '',
+    logoText: quizConfig.logoText || 'Logo',
+    progress: stepConfig.progress,
+    question: stepConfig.question,
+    placeholder: stepConfig.placeholder || 'Datum auswählen',
+    continueText: stepConfig.continueText || 'Weiter',
+    nextPage: stepConfig.nextPage,
+    image: stepConfig.image || '',
+    imageAlt: stepConfig.imageAlt || '',
+    impressumUrl: quizConfig.impressumUrl || '#',
+    datenschutzUrl: quizConfig.datenschutzUrl || '#',
+    cookieUrl: quizConfig.cookieUrl || '#',
+    stepNumber: stepConfig.stepNumber
+  };
+
+  return replacePlaceholders(template, data);
+}
+
+/**
+ * Генерирует quiz textarea страницу
+ */
+function generateQuizTextareaPage(stepConfig, quizConfig, globalConfig) {
+  const template = loadSection('quiz/quiz-page-textarea.html');
+  if (!template) {
+    console.warn('Quiz textarea template not found');
+    return '';
+  }
+
+  const data = {
+    lang: globalConfig.lang || 'de',
+    metaTitle: `${globalConfig.meta?.title || 'Quiz'} - Schritt ${stepConfig.stepNumber}`,
+    metaDescription: globalConfig.meta?.description || '',
+    logoText: quizConfig.logoText || 'Logo',
+    progress: stepConfig.progress,
+    question: stepConfig.question,
+    placeholder: stepConfig.placeholder || 'Deine Antwort...',
+    continueText: stepConfig.continueText || 'Weiter',
+    nextPage: stepConfig.nextPage,
+    image: stepConfig.image || '',
+    imageAlt: stepConfig.imageAlt || '',
     impressumUrl: quizConfig.impressumUrl || '#',
     datenschutzUrl: quizConfig.datenschutzUrl || '#',
     cookieUrl: quizConfig.cookieUrl || '#',
@@ -296,9 +419,14 @@ function generateQuizStepPage(stepConfig, quizConfig, globalConfig) {
  * Генерирует quiz form страницу
  */
 function generateQuizFormPage(formConfig, quizConfig, globalConfig) {
-  const template = loadSection('quiz/quiz-page-form.html');
+  // Support v5 form template
+  const templateName = formConfig.templateVersion === 'v5'
+    ? 'quiz/quiz-page-form-v5.html'
+    : 'quiz/quiz-page-form.html';
+
+  const template = loadSection(templateName);
   if (!template) {
-    console.warn('Quiz form template not found');
+    console.warn(`Quiz form template not found: ${templateName}`);
     return '';
   }
 
@@ -321,9 +449,14 @@ function generateQuizFormPage(formConfig, quizConfig, globalConfig) {
  * Генерирует quiz success страницу
  */
 function generateQuizSuccessPage(successConfig, quizConfig, globalConfig) {
-  const template = loadSection('quiz/quiz-page-success.html');
+  // Support v5 success template
+  const templateName = successConfig.templateVersion === 'v5'
+    ? 'quiz/quiz-page-success-v5.html'
+    : 'quiz/quiz-page-success.html';
+
+  const template = loadSection(templateName);
   if (!template) {
-    console.warn('Quiz success template not found');
+    console.warn(`Quiz success template not found: ${templateName}`);
     return '';
   }
 
@@ -357,10 +490,28 @@ function generateQuizPages(config, landingDir) {
   // Generate step pages
   if (quizConfig.steps && Array.isArray(quizConfig.steps)) {
     quizConfig.steps.forEach((step, index) => {
-      const html = generateQuizStepPage(step, quizConfig, config);
+      let html;
+      const stepType = step.type || 'options';
+
+      switch (stepType) {
+        case 'multiselect':
+          html = generateQuizMultiselectPage(step, quizConfig, config);
+          break;
+        case 'date':
+          html = generateQuizDatePage(step, quizConfig, config);
+          break;
+        case 'textarea':
+          html = generateQuizTextareaPage(step, quizConfig, config);
+          break;
+        case 'options':
+        default:
+          html = generateQuizStepPage(step, quizConfig, config);
+          break;
+      }
+
       const fileName = `quiz-step${index + 1}.html`;
       fs.writeFileSync(path.join(destDir, fileName), html, 'utf-8');
-      console.log(`  ✓ Generated: ${fileName}`);
+      console.log(`  ✓ Generated: ${fileName} (${stepType})`);
     });
   }
 
@@ -381,9 +532,16 @@ function generateQuizPages(config, landingDir) {
 
 /**
  * Генерирует HTML страницу
+ * @param {object} config - Landing config
+ * @param {string} basePath - Base path for assets (e.g., "../" for sublandings)
  */
-function generatePage(config) {
-  const sections = config.sections.map(section => buildSection(section, config)).join('\n\n');
+function generatePage(config, basePath = '') {
+  let sections = config.sections.map(section => buildSection(section, config)).join('\n\n');
+
+  // Заменяем корневые ссылки "/" на basePath для sublandings
+  if (basePath) {
+    sections = sections.replace(/href="\/"/g, `href="${basePath}"`);
+  }
 
   // Базовый HTML шаблон
   const html = `<!DOCTYPE html>
@@ -409,12 +567,12 @@ function generatePage(config) {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/quiz.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  ${config.customCss ? `<link rel="stylesheet" href="${config.customCss}">` : ''}
+  <link rel="stylesheet" href="${basePath}css/variables.css">
+  <link rel="stylesheet" href="${basePath}css/base.css">
+  <link rel="stylesheet" href="${basePath}css/sections.css">
+  <link rel="stylesheet" href="${basePath}css/quiz.css">
+  <link rel="stylesheet" href="${basePath}css/responsive.css">
+  ${config.customCss ? `<link rel="stylesheet" href="${basePath}${config.customCss}">` : ''}
 </head>
 <body>
   ${sections}
@@ -423,10 +581,10 @@ function generatePage(config) {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="js/faq.js"></script>
-  <script src="js/quiz.js"></script>
-  <script src="js/gallery-slider.js"></script>
-  <script src="js/analytics.js"></script>
+  <script src="${basePath}js/faq.js"></script>
+  <script src="${basePath}js/quiz.js"></script>
+  <script src="${basePath}js/gallery-slider.js"></script>
+  <script src="${basePath}js/analytics.js"></script>
 </body>
 </html>`;
 
@@ -559,6 +717,126 @@ function buildLanding(configFile) {
 
   // Генерируем quiz страницы
   generateQuizPages(config, landingDir);
+
+  // Генерируем подлендинги (если есть)
+  if (config.sublandings && Array.isArray(config.sublandings)) {
+    buildSublandings(config, landingDir);
+  }
+}
+
+/**
+ * Собирает подлендинги для hub-страницы
+ */
+function buildSublandings(hubConfig, parentDir) {
+  const sublandings = hubConfig.sublandings;
+  if (!sublandings || !Array.isArray(sublandings)) return;
+
+  sublandings.forEach(subEntry => {
+    let subConfig;
+
+    // Support both inline config and config file reference
+    if (typeof subEntry === 'string') {
+      // It's a config filename
+      const configPath = path.join(CONFIG_DIR, subEntry);
+      if (!fs.existsSync(configPath)) {
+        console.warn(`  Sublanding config not found: ${subEntry}`);
+        return;
+      }
+      subConfig = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
+    } else {
+      subConfig = subEntry;
+    }
+
+    const subDir = subConfig.sublanding || subConfig.output || 'sub';
+    const subPath = path.join(parentDir, subDir);
+    const fullSubPath = path.join(DIST_DIR, subPath);
+
+    // Создаём папку подлендинга
+    if (!fs.existsSync(fullSubPath)) {
+      fs.mkdirSync(fullSubPath, { recursive: true });
+    }
+
+    // Генерируем HTML с basePath="../" для ссылок на CSS/JS
+    const html = generatePage(subConfig, '../');
+
+    // Сохраняем index.html
+    fs.writeFileSync(path.join(fullSubPath, 'index.html'), html, 'utf-8');
+    console.log(`  ✓ Built sublanding: ${subPath}/index.html`);
+
+    // Генерируем quiz страницы для подлендинга
+    if (subConfig.quiz) {
+      generateQuizPagesWithBasePath(subConfig, subPath, '../');
+    }
+  });
+}
+
+/**
+ * Генерирует quiz страницы с учётом basePath для вложенных лендингов
+ */
+function generateQuizPagesWithBasePath(config, landingDir, basePath) {
+  const quizConfig = config.quiz;
+  if (!quizConfig) return;
+
+  const destDir = path.join(DIST_DIR, landingDir);
+
+  // Generate step pages
+  if (quizConfig.steps && Array.isArray(quizConfig.steps)) {
+    quizConfig.steps.forEach((step, index) => {
+      let html;
+      const stepType = step.type || 'options';
+
+      switch (stepType) {
+        case 'multiselect':
+          html = generateQuizMultiselectPage(step, quizConfig, config);
+          break;
+        case 'date':
+          html = generateQuizDatePage(step, quizConfig, config);
+          break;
+        case 'textarea':
+          html = generateQuizTextareaPage(step, quizConfig, config);
+          break;
+        case 'options':
+        default:
+          html = generateQuizStepPage(step, quizConfig, config);
+          break;
+      }
+
+      // Fix asset paths for sublanding quiz pages
+      html = html.replace(/href="css\//g, `href="${basePath}css/`);
+      html = html.replace(/src="css\//g, `src="${basePath}css/`);
+      html = html.replace(/href="js\//g, `href="${basePath}js/`);
+      html = html.replace(/src="js\//g, `src="${basePath}js/`);
+      html = html.replace(/src="assets\//g, `src="${basePath}assets/`);
+
+      const fileName = `quiz-step${index + 1}.html`;
+      fs.writeFileSync(path.join(destDir, fileName), html, 'utf-8');
+      console.log(`    ✓ Generated: ${landingDir}/${fileName} (${stepType})`);
+    });
+  }
+
+  // Generate form page
+  if (quizConfig.form) {
+    let html = generateQuizFormPage(quizConfig.form, quizConfig, config);
+    html = html.replace(/href="css\//g, `href="${basePath}css/`);
+    html = html.replace(/src="css\//g, `src="${basePath}css/`);
+    html = html.replace(/href="js\//g, `href="${basePath}js/`);
+    html = html.replace(/src="js\//g, `src="${basePath}js/`);
+    html = html.replace(/src="assets\//g, `src="${basePath}assets/`);
+    fs.writeFileSync(path.join(destDir, 'quiz-form.html'), html, 'utf-8');
+    console.log(`    ✓ Generated: ${landingDir}/quiz-form.html`);
+  }
+
+  // Generate success page
+  if (quizConfig.success) {
+    let html = generateQuizSuccessPage(quizConfig.success, quizConfig, config);
+    html = html.replace(/href="css\//g, `href="${basePath}css/`);
+    html = html.replace(/src="css\//g, `src="${basePath}css/`);
+    html = html.replace(/href="js\//g, `href="${basePath}js/`);
+    html = html.replace(/src="js\//g, `src="${basePath}js/`);
+    html = html.replace(/src="assets\//g, `src="${basePath}assets/`);
+    fs.writeFileSync(path.join(destDir, 'quiz-success.html'), html, 'utf-8');
+    console.log(`    ✓ Generated: ${landingDir}/quiz-success.html`);
+  }
 }
 
 /**
@@ -689,7 +967,8 @@ function buildByNumber(num) {
     1: 'landing1-family.json',
     2: 'landing2-family-kids.json',
     3: 'landing3-dogs.json',
-    4: 'landing4-kids.json'
+    4: 'landing4-kids.json',
+    5: 'landing5-business-hub.json'
   };
 
   if (!configs[num]) {

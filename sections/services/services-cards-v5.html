@@ -1,0 +1,37 @@
+<!-- ============================================
+     SERVICES CARDS V5 - Business Landing Hub
+
+     4 высокие карточки услуг с изображениями.
+     Каждая карточка: изображение + заголовок + описание.
+     Используется на главной странице (хаб).
+
+     DATA:
+     - title: Заголовок секции
+     - cards: Array of {image, imageAlt, title, text}
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="services-cards-v5 {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}"{{#if sectionId}} id="{{sectionId}}"{{/if}}>
+  <div class="container">
+    {{#if title}}
+    <h2 class="services-cards-v5__title">{{title}}</h2>
+    {{/if}}
+
+    <div class="services-cards-v5__grid">
+      {{#each cards}}
+      <div class="services-cards-v5__card">
+        <div class="services-cards-v5__image">
+          <img src="{{image}}" alt="{{imageAlt}}">
+        </div>
+        <div class="services-cards-v5__body">
+          <h3 class="services-cards-v5__card-title">{{title}}</h3>
+          {{#if this.subtitle}}
+          <p class="services-cards-v5__card-subtitle">{{subtitle}}</p>
+          {{/if}}
+          <p class="services-cards-v5__card-text">{{text}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

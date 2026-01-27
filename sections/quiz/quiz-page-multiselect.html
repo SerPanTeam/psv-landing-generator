@@ -1,0 +1,97 @@
+<!-- ============================================
+     QUIZ PAGE MULTISELECT - Landing Generator
+
+     Multiple choice step with checkboxes.
+     User can select multiple options before proceeding.
+
+     DATA:
+     - stepNumber, progress, question
+     - options: Array of {value, text, image}
+     - columns: 2-4
+     - nextPage: URL of next page
+     - cardStyle: "square" or "rounded"
+     - logoText, impressumUrl, datenschutzUrl, cookieUrl
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{metaDescription}}">
+  <title>{{metaTitle}}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--multiselect" data-quiz-step="{{stepNumber}}">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">{{logoText}}</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <!-- Progress -->
+      <p class="quiz-page__progress">{{progress}}</p>
+
+      <!-- Question -->
+      <h1 class="quiz-page__question">{{question}}</h1>
+
+      {{#if subtitle}}
+      <p class="quiz-page__subtitle">{{subtitle}}</p>
+      {{/if}}
+
+      <!-- Options (checkboxes) -->
+      <div class="quiz-page__options quiz-page__options--{{columns}}col quiz-multiselect__options">
+        {{#each options}}
+        <label class="quiz-option quiz-option--{{cardStyle}} quiz-multiselect__option" data-value="{{value}}">
+          <input type="checkbox" name="multiselect[]" value="{{value}}" class="quiz-multiselect__checkbox">
+          <div class="quiz-option__image">
+            <img src="{{image}}" alt="{{text}}">
+          </div>
+          <span class="quiz-option__text">{{text}}</span>
+          <span class="quiz-multiselect__check"></span>
+        </label>
+        {{/each}}
+      </div>
+
+      <!-- Continue Button -->
+      <div class="quiz-multiselect__cta">
+        <a href="{{nextPage}}" class="btn btn-primary quiz-multiselect__continue" id="multiselect-continue">{{continueText}}</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="{{impressumUrl}}">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="{{datenschutzUrl}}">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="{{cookieUrl}}">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/quiz-navigation.js"></script>
+</body>
+</html>

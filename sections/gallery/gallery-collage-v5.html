@@ -1,0 +1,22 @@
+<!-- ============================================
+     GALLERY COLLAGE V5 - Business Landing (Hochzeit)
+
+     Галерея-коллаж с 4 фото разных размеров.
+     Layout: 2 больших + 2 маленьких в сетке.
+
+     DATA:
+     - images: Array of {src, alt} (4 images)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="gallery-collage {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+  <div class="container">
+    <div class="gallery-collage__grid">
+      {{#each images}}
+      <div class="gallery-collage__item gallery-collage__item--{{@number}}">
+        <img src="{{src}}" alt="{{alt}}">
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

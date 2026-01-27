@@ -1,0 +1,34 @@
+<!-- ============================================
+     CTA CARDS V5 - Business Landing Hub
+
+     4 карточки с изображениями и CTA-ссылками
+     на подлендинги. Каждая карточка ведёт на
+     отдельный подлендинг (свадьбы, семья и т.д.)
+
+     DATA:
+     - title: Заголовок секции (optional)
+     - cards: Array of {image, imageAlt, title, text, linkText, linkUrl}
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="cta-cards-v5 {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{paddingClasses}}">
+  <div class="container">
+    {{#if title}}
+    <h2 class="cta-cards-v5__title">{{title}}</h2>
+    {{/if}}
+
+    <div class="cta-cards-v5__grid">
+      {{#each cards}}
+      <a href="{{linkUrl}}" class="cta-cards-v5__card">
+        <div class="cta-cards-v5__image">
+          <img src="{{image}}" alt="{{imageAlt}}">
+        </div>
+        <div class="cta-cards-v5__body">
+          <h3 class="cta-cards-v5__card-title">{{title}}</h3>
+          <p class="cta-cards-v5__card-text">{{text}}</p>
+        </div>
+      </a>
+      {{/each}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+<!-- ============================================
+     QUIZ PAGE STEP - Landing Generator
+
+     Universal template for quiz step pages.
+     Each option is a link that saves answer to localStorage
+     and redirects to the next page.
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Logo: Inter Bold, 45px
+     - Progress: Inter Medium, 22px
+     - Question: Inter Bold, 45px
+     - Options: Cards with images (300x300px) + text below
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Tierfotografie – die einzigartige Persönlichkeit eures Vierbeiners in liebevollen Bildern.">
+  <title>Tierfotografie | Karin Himml Fotografie - Schritt 3</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="quiz-page" data-quiz-step="3">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Karin Himml</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <!-- Progress -->
+      <p class="quiz-page__progress">Schritt 3 von 6</p>
+
+      <!-- Question -->
+      <h1 class="quiz-page__question">Wie möchtest du die Bilder verwenden?</h1>
+
+      <!-- Options -->
+      <div class="quiz-page__options quiz-page__options--4col">
+        
+        <a href="quiz-step4.html" class="quiz-option quiz-option--square" data-value="privat">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300&h=300&fit=crop" alt="Privat / Erinnerung">
+          </div>
+          <span class="quiz-option__text">Privat / Erinnerung</span>
+        </a>
+        
+
+        <a href="quiz-step4.html" class="quiz-option quiz-option--square" data-value="geschenk">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=300&h=300&fit=crop" alt="Als Geschenk">
+          </div>
+          <span class="quiz-option__text">Als Geschenk</span>
+        </a>
+        
+
+        <a href="quiz-step4.html" class="quiz-option quiz-option--square" data-value="wandbilder">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=300&h=300&fit=crop" alt="Wandbilder / Druck">
+          </div>
+          <span class="quiz-option__text">Wandbilder / Druck</span>
+        </a>
+        
+
+        <a href="quiz-step4.html" class="quiz-option quiz-option--square" data-value="alles">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=300&h=300&fit=crop" alt="Von allem etwas">
+          </div>
+          <span class="quiz-option__text">Von allem etwas</span>
+        </a>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/quiz-navigation.js"></script>
+</body>
+</html>

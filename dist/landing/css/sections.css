@@ -30,15 +30,9 @@
   min-height: 634px; /* FIGMA: Hero section height */
 }
 
-/* Hero V1 - Лендинг 1 (Familien-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 1:3):
-   - Page width: 1440px, left padding: 101px
-   - Logo: top 53px (handled by header)
-   - Title: top 183px, font-size 55px, width 629px
-   - Subtitle: top 353px, font-size 22px, height 49px, width 386px
-   - Button: top 433px, width 286px, height 70px
-   - Main image: left calc(58.33%+70px), top 80px, 428x394px
-   - Secondary image: left calc(50%+98px), top 258px, 306x290px
+/* Hero V1 - Landing 1, 2 (Familien-Fotoshooting)
+   Размеры: Main image 428x394px, Secondary image 306x290px
+   Button: 286x70px
 */
 .hero--v1 {
   padding-bottom: 80px; /* Space for secondary image overflow */
@@ -91,7 +85,7 @@
 .hero--v1 .hero__image-main {
   width: 428px; /* FIGMA: exact */
   height: 394px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder color */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder color */
   position: absolute;
   top: 27px; /* FIGMA: 80px - 53px (header) = 27px from section top */
   right: 0;
@@ -101,7 +95,7 @@
 .hero--v1 .hero__image-secondary {
   width: 306px; /* FIGMA: exact */
   height: 290px; /* FIGMA: exact */
-  background-color: #7f7f7f; /* FIGMA: placeholder color */
+  background-color: var(--color-placeholder-dark); /* FIGMA: placeholder color */
   position: absolute;
   top: 205px; /* FIGMA: 258px - 53px (header) = 205px from section top */
   right: calc(428px / 2 + 306px / 2 - 98px); /* FIGMA: calc(50%+98px) adjusted */
@@ -115,16 +109,9 @@
   object-fit: cover;
 }
 
-/* Hero V2 - Лендинг 2 (Familien und Kinder - Kostenlos)
-   FIGMA PIXEL-PERFECT VALUES (from node 233:22):
-   - Page: 1440px, height 674px
-   - Title: left 101px, top 157px, width 593px, 55px
-     - First line "Kostenloses" in #E2C08D (accent)
-     - Rest in #3D3D3D
-   - Subtitle: left 101px, top 403px, width 386px, height 49px
-   - Button: left 101px, top 513px, 286x70px
-   - Main image: left calc(58.33%+70px), top 80px, 428x394px
-   - Secondary image: left calc(50%+98px), top 258px, 306x290px
+/* Hero V2 - Landing 2 (Familien und Kinder - Kostenlos)
+   Label акцентный цвет, Title max-width 593px
+   Размеры: Main image 428x394px, Secondary image 306x290px
 */
 .hero--v2 {
   min-height: 674px; /* FIGMA: section height */
@@ -178,7 +165,7 @@
 .hero--v2 .hero__image-main {
   width: 428px; /* FIGMA: exact */
   height: 394px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder */
   position: absolute;
   top: 27px; /* FIGMA: 80px - 53px = 27px */
   right: 0;
@@ -188,7 +175,7 @@
 .hero--v2 .hero__image-secondary {
   width: 306px; /* FIGMA: exact */
   height: 290px; /* FIGMA: exact */
-  background-color: #7f7f7f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder-dark); /* FIGMA: placeholder */
   position: absolute;
   top: 205px; /* FIGMA: 258px - 53px */
   right: calc(428px / 2 + 306px / 2 - 98px);
@@ -272,16 +259,13 @@
   flex-shrink: 0;
 }
 
-/* Hero V3 - Лендинг 3 (Hunde-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 369:256):
-   - Full-width banner: 1237x641px, rounded-50px
-   - Text overlay on banner in white
-   - Below banner: sidebar image (left) + "Warum kostenlos?" (right)
-   - 3 feature cards at bottom
+/* Hero V3 - Landing 3 (Hunde-Fotoshooting)
+   Banner: 1237x641px, rounded-50px, текст поверх
+   Below: sidebar image + "Warum kostenlos?" + feature cards
 */
 .hero--v3 {
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 56px; /* FIGMA: 2238 - 2182 = 56px gap to gallery */
 }
 
 /* Full-width banner */
@@ -290,7 +274,6 @@
   width: 100%;
   max-width: 1237px;
   height: 641px;
-  background-color: #7f7f7f;
   border-radius: 50px;
   overflow: hidden;
   margin: 0 auto;
@@ -316,7 +299,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 5px;
 }
 
@@ -324,7 +307,7 @@
   font-size: 45px;
   font-weight: var(--font-weight-bold);
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 25px;
 }
 
@@ -332,7 +315,7 @@
   font-size: 22px;
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 20px;
 }
 
@@ -353,10 +336,11 @@
 }
 
 /* Below banner section */
+/* FIGMA: Image right edge 609px, text left 728px → gap = 119px */
 .hero--v3 .hero__below-banner {
   display: flex;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 119px; /* FIGMA: exact */
+  margin-top: 92px; /* FIGMA: 921 - 829 = 92px */
   align-items: flex-start;
 }
 
@@ -365,7 +349,6 @@
   flex-shrink: 0;
   width: 507px;
   height: 448px;
-  background-color: #7f7f7f;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -421,7 +404,7 @@
 .hero--v3 .hero__features {
   display: flex;
   gap: 40px;
-  margin-top: 60px;
+  margin-top: 195px; /* FIGMA: 1511 - 1316 = 195px */
 }
 
 .hero--v3 .hero__feature-card {
@@ -432,10 +415,9 @@
   width: 100%;
   max-width: 350px;
   height: 300px;
-  background-color: #7f7f7f;
   border-radius: 35px;
   overflow: hidden;
-  margin-bottom: 25px;
+  margin-bottom: 36px; /* FIGMA: 1847 - 1811 = 36px */
 }
 
 .hero--v3 .hero__feature-image img {
@@ -459,16 +441,194 @@
   color: var(--color-text-primary);
 }
 
-/* Hero V4 - Лендинг 4 (Kinder-Fotoshooting)
-   FIGMA PIXEL-PERFECT VALUES (from node 479:30):
-   - Dark hero background: #3D3D3D, height 709px
-   - Logo: left 46px, top 20px, 45px, color #F5EDE0
-   - Title: left 47px, top 166px, 45px, color #E2C08D, width 564px
-   - Subtitle: left 47px, top 301px, 22px white, width 450px
-   - Date notice: left 47px, top 376px, 16px #E2C08D, width 426px
-   - Button: left 47px, top 453px, 406x60px, rounded-40px
-   - "Warum kostenlos?": top 558px, 22px white/bold
-   - Gallery cards: 4 cards, 293x348px, rounded-30px, rotated
+/* ===== HERO BANNER V3 (standalone) ===== */
+.hero-banner--v3 {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+.hero-banner--v3 .hero-banner__image {
+  position: relative;
+  width: 100%;
+  max-width: 1237px;
+  height: 641px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.hero-banner--v3 .hero-banner__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner--v3 .hero-banner__overlay {
+  position: absolute;
+  left: 50px;
+  bottom: 70px;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.hero-banner--v3 .hero-banner__label {
+  display: block;
+  font-size: 45px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--color-text-white);
+  margin-bottom: 5px;
+}
+
+.hero-banner--v3 .hero-banner__title {
+  font-size: 45px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  color: var(--color-text-white);
+  margin-bottom: 25px;
+}
+
+.hero-banner--v3 .hero-banner__subtitle {
+  font-size: 22px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-white);
+  margin-bottom: 20px;
+}
+
+.hero-banner--v3 .hero-banner__subtitle p {
+  margin-bottom: 0;
+}
+
+.hero-banner--v3 .hero-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 382px;
+  height: 70px;
+  padding: 0 40px;
+  font-size: 22px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* ===== CONTENT SIDEBAR (Warum kostenlos?) ===== */
+.content-sidebar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.content-sidebar__inner {
+  display: flex;
+  gap: 119px; /* FIGMA: exact */
+  align-items: flex-start;
+}
+
+.content-sidebar__image {
+  flex-shrink: 0;
+  width: 507px;
+  height: 448px;
+  background-color: var(--color-placeholder-dark);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.content-sidebar__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-sidebar__content {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.content-sidebar__title {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+}
+
+.content-sidebar__text {
+  font-size: 22px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+}
+
+.content-sidebar__text p {
+  margin-bottom: 20px;
+}
+
+.content-sidebar__text p:last-child {
+  margin-bottom: 0;
+}
+
+.content-sidebar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 413px;
+  height: 70px;
+  padding: 0 40px;
+  font-size: 22px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* ===== FEATURES CARDS V3 (3 columns) ===== */
+.features-cards--v3 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.features-cards--v3 .features-cards__grid {
+  display: flex;
+  gap: 40px;
+}
+
+.features-cards--v3 .features-cards__item {
+  flex: 1;
+}
+
+.features-cards--v3 .features-cards__image {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  background-color: var(--color-placeholder-dark);
+  border-radius: 35px;
+  overflow: hidden;
+  margin-bottom: 36px; /* FIGMA: 1847 - 1811 = 36px */
+}
+
+.features-cards--v3 .features-cards__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.features-cards--v3 .features-cards__title {
+  font-size: 28px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 15px;
+  color: var(--color-text-primary);
+}
+
+.features-cards--v3 .features-cards__text {
+  font-size: 22px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+/* Hero V4 - Landing 4 (Kinder-Fotoshooting)
+   Тёмный фон с лого внутри секции
+   Галерея изображений: 4 карточки 293x348px, rounded-30px, с наклоном
+   Button: 406x60px, rounded-40px
 */
 .hero--v4 {
   padding-top: 0;
@@ -477,17 +637,44 @@
 }
 
 .hero--v4 .hero__dark-section {
-  background-color: #3D3D3D; /* FIGMA: dark background */
+  background-color: var(--color-dark-bg); /* FIGMA: dark background */
   min-height: 709px; /* FIGMA: hero section height */
   padding-top: 20px;
   padding-bottom: 40px;
+  /* Background image support */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-/* FIGMA: Logo inside dark hero section (top: 20px, left: 46px) */
+/* Dark overlay for text readability when background image is present */
+.hero--v4 .hero__dark-section[style*="background-image"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(61, 61, 61, 0.92) 0%,
+    rgba(61, 61, 61, 0.85) 45%,
+    rgba(61, 61, 61, 0.5) 100%
+  );
+  z-index: 1;
+}
+
+.hero--v4 .hero__dark-section > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo inside dark hero section */
 .hero--v4 .hero__logo {
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
-  color: #F5EDE0; /* FIGMA: light on dark */
+  color: var(--color-bg-primary); /* FIGMA: light on dark */
   margin: 0;
   line-height: 1;
 }
@@ -522,7 +709,7 @@
   max-width: 450px; /* FIGMA: exact */
   height: 49px; /* FIGMA: exact */
   margin-bottom: 26px; /* FIGMA: 376 - 301 - 49 */
-  color: #FFFFFF; /* FIGMA: white text */
+  color: var(--color-text-white); /* FIGMA: white text */
 }
 
 .hero--v4 .hero__date-notice {
@@ -548,14 +735,14 @@
 .hero--v4 .hero__why-free-title {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-bold);
-  color: #FFFFFF;
+  color: var(--color-text-white);
   margin-bottom: 16px;
 }
 
 .hero--v4 .hero__why-free-text {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
-  color: #FFFFFF;
+  color: var(--color-text-white);
 }
 
 /* Gallery section below dark hero */
@@ -583,7 +770,7 @@
 .hero--v4 .hero__gallery-item {
   width: 293px; /* FIGMA: exact */
   height: 348px; /* FIGMA: exact */
-  background-color: #a19f9f; /* FIGMA: placeholder */
+  background-color: var(--color-placeholder); /* FIGMA: placeholder */
   border-radius: 30px; /* FIGMA: rounded-30px */
   overflow: hidden;
   flex-shrink: 0;
@@ -638,24 +825,108 @@
   font-weight: var(--font-weight-bold);
 }
 
+/* Hero V5 - Business Hub Landing (Landing 5)
+   FIGMA (node 585:34):
+   - Full-width background: 1440x746px
+   - Logo inside hero (beige/gold)
+   - Title: BLACK text
+   - Subtitle with accent "Herz & Seele"
+   - Gold CTA button
+*/
+.hero--v5 {
+  padding: 0;
+}
+
+.hero--v5 .hero__banner {
+  width: 100%;
+  height: 746px; /* FIGMA: exact */
+  background-color: #7f7f7f; /* FIGMA: placeholder gray */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero--v5 .hero__logo {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-text); /* FIGMA: beige/gold */
+  margin: 0;
+  padding-top: 54px; /* FIGMA: top-[54px] */
+  margin-bottom: 87px; /* FIGMA: gap to title (195 - 54 - 45 - some spacing) */
+}
+
+.hero--v5 .hero__content {
+  max-width: 526px; /* FIGMA: exact title width */
+}
+
+.hero--v5 .hero__title {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.15;
+  color: var(--color-text-primary); /* FIGMA: BLACK text #3D3D3D */
+  margin-bottom: 20px;
+}
+
+.hero--v5 .hero__subtitle {
+  font-size: 28px; /* FIGMA: exact 28px */
+  font-weight: var(--font-weight-bold); /* FIGMA: Bold */
+  line-height: 1.4;
+  color: var(--color-text-primary); /* FIGMA: black */
+  margin-bottom: 30px;
+}
+
+.hero--v5 .hero__btn {
+  min-width: 222px; /* FIGMA: approx */
+  height: 70px;
+  border-radius: 10px;
+  font-size: var(--font-size-text);
+}
+
+@media (max-width: 991.98px) {
+  .hero--v5 .hero__banner {
+    height: auto;
+    min-height: 500px;
+    padding-bottom: 60px;
+  }
+
+  .hero--v5 .hero__logo {
+    padding-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .hero--v5 .hero__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero--v5 .hero__banner {
+    min-height: 400px;
+    padding-bottom: 40px;
+  }
+
+  .hero--v5 .hero__logo {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hero--v5 .hero__title {
+    font-size: 28px;
+  }
+
+  .hero--v5 .hero__subtitle {
+    font-size: 16px;
+  }
+
+  .hero--v5 .hero__btn {
+    width: 100%;
+  }
+}
+
 /* ===== PROMO SECTION ===== */
-/* FIGMA: Secondary background #EEE3D0, height 692px
-   Image: 428x533px (Landing 2) or 428x440px (Landing 1)
+/* Image: 428x533px (Landing 2) or 428x440px (Landing 1, shortImage: true)
    Title: 28px bold, Text: 22px medium
    Divider: 588px width
-   ВАЖНО: Текст справа должен занимать всю высоту картинки!
-*/
-/* FIGMA Landing 1 (node 6:6):
-   - Section: y=634, height=692
-   - Image: x=101, y=750, 428x440px
-   - Title: x=731, y=739, font 28px Bold, line-height 100%
-   - Text: x=730, y=824, font 22px Medium, line-height 100%
-   - Divider: x=730, y=1103, width=588px
-   - Link: x=731, y=1162, font 22px Bold
-
-   Calculated gaps:
-   - Top padding: 750-634 = 116px
-   - Divider to link: 1162-1103 = 59px
 */
 .promo {
   padding: 116px 0; /* FIGMA: exact */
@@ -665,7 +936,7 @@
 .promo__image {
   width: 428px; /* FIGMA: exact */
   height: 533px; /* FIGMA: Landing 2 value */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .promo__image--short {
@@ -761,19 +1032,8 @@
 }
 
 /* ===== CONTENT SECTION (текст + изображение) ===== */
-/* FIGMA Landing 1 (node 7:15):
-   - Section: y=1326, height=722
-   - Title (7:22): x=101, y=1460, width=539, font 28px Bold, line-height 100%
-   - Text (7:23): x=98, y=1577, width=520, font 22px Medium, line-height 100%
-   - Divider (7:24): x=101, y=1831, width=618
-   - Link (7:26): x=101, y=1889, font 22px Bold
-   - Frame (7:17): x=845, y=1386, 493x593px
-   - Image (7:19): x=876, y=1418, 428x440px
-   - Accent (7:21): x=876, y=1894, font 22px Medium, color accent
-
-   Calculated:
-   - Top padding: 1460-1326 = 134px
-   - Divider to link: 1889-1831 = 58px
+/* Frame: 493x593px, Image inside: 428x440px
+   Title: 28px Bold, Text: 22px Medium
 */
 .content-section {
   padding: 134px 0 100px; /* FIGMA: top padding exact, bottom adjusted */
@@ -784,7 +1044,7 @@
 }
 
 .content-section__image-frame {
-  background-color: #f8f8f8; /* FIGMA: exact */
+  background-color: var(--color-bg-light); /* FIGMA: exact */
   width: 493px; /* FIGMA: exact */
   padding: 31px 32px; /* FIGMA: padding around image */
   margin-left: auto; /* Прижать вправо */
@@ -793,13 +1053,87 @@
 .content-section__image {
   width: 428px; /* FIGMA: exact */
   height: 440px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .content-section__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ===== CONTENT V5 VARIANT - декоративная подложка вместо рамки ===== */
+/* Landing 5: изображение с бежевой подложкой позади (смещена вниз-вправо) */
+.content-section--v5 .content-section__image-frame {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  width: 474px; /* FIGMA: exact */
+  margin-left: 0;
+  z-index: 1; /* Создаём stacking context */
+}
+
+.content-section--v5 .content-section__image-frame::after {
+  content: '';
+  position: absolute;
+  width: 474px; /* FIGMA: same as image */
+  height: 340px; /* FIGMA: exact */
+  background: var(--color-bg-secondary); /* FIGMA: #EEE3D0 */
+  border-radius: 10px; /* FIGMA: exact */
+  bottom: -50px; /* Смещение вниз */
+  right: -63px; /* Смещение вправо */
+  z-index: 1; /* За изображением, но видимый */
+}
+
+.content-section--v5 .content-section__image {
+  position: relative;
+  width: 474px; /* FIGMA: exact */
+  height: 493px; /* FIGMA: exact */
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  z-index: 2; /* Выше подложки */
+}
+
+/* Убираем overflow чтобы подложка была видна */
+.content-section--v5 .row,
+.content-section--v5 [class*="col-"] {
+  overflow: visible;
+}
+
+/* Добавляем отступ снизу для подложки */
+.content-section--v5 {
+  padding-bottom: 80px; /* Место для подложки */
+}
+
+.content-section--v5 .content-section__content {
+  min-height: auto;
+}
+
+.content-section--v5 .content-section__text {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium); /* FIGMA: Medium */
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .content-section--v5 .content-section__image-frame {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 60px;
+  }
+
+  .content-section--v5 .content-section__image-frame::after {
+    width: 100%;
+    right: -30px;
+    bottom: -30px;
+  }
+
+  .content-section--v5 .content-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 474 / 493;
+  }
 }
 
 /* FIGMA: Контент распределён, но КОРОЧЕ рамки справа */
@@ -864,6 +1198,25 @@
   text-decoration: none;
 }
 
+/* Content button style - outline button with arrow */
+.content-section__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 448px; /* FIGMA: exact width */
+  height: 60px; /* FIGMA: exact height */
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+}
+
+.content-section__btn svg {
+  width: 20px;
+  height: auto;
+  flex-shrink: 0;
+}
+
 /* ===== CONTENT SECTION 2-COL (Landing 4) ===== */
 /* FIGMA (479:47): Title left, text right, button below
    - Title: 28px Bold
@@ -898,7 +1251,7 @@
 
 /* FIGMA: Button in left column under title, gap ~40px */
 .content-section--2col .content-section__btn {
-  display: inline-block;
+  /* display: inline-flex наследуется от .btn с центрированием текста */
   margin-top: 40px; /* FIGMA: 1491 - 1394 - ~56 (title height) */
   width: 287px;
   height: 60px;
@@ -906,22 +1259,104 @@
   font-size: var(--font-size-text);
 }
 
+/* ===== CONTENT GALLERY V4 (Landing 4) ===== */
+/* Комбинированная секция: галерея + 2-колоночный контент */
+.content-gallery-v4 {
+  padding: 40px 0 50px;
+}
+
+/* Gallery Title - centered */
+.content-gallery-v4__gallery-title {
+  font-size: var(--font-size-h2); /* 45px */
+  font-weight: var(--font-weight-bold);
+  text-align: left; /* FIGMA: left-[47px] */
+  margin-bottom: 50px;
+  color: var(--color-text-primary);
+}
+
+/* Gallery Grid - 4 tilted images */
+.content-gallery-v4__gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.content-gallery-v4__gallery-item {
+  width: 293px;
+  height: 348px;
+  overflow: hidden;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
+/* FIGMA: Tilted images at different angles */
+.content-gallery-v4__gallery-item--1 {
+  transform: rotate(-6deg);
+}
+
+.content-gallery-v4__gallery-item--2 {
+  transform: rotate(3deg);
+  margin-top: 30px;
+}
+
+.content-gallery-v4__gallery-item--3 {
+  transform: rotate(-4deg);
+}
+
+.content-gallery-v4__gallery-item--4 {
+  transform: rotate(5deg);
+  margin-top: 20px;
+}
+
+.content-gallery-v4__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content Part - 2 columns like content-v2 */
+.content-gallery-v4__content {
+  margin-top: 0;
+}
+
+.content-gallery-v4__content-title {
+  font-size: var(--font-size-text-lg); /* 28px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  max-width: 535px;
+  color: var(--color-text-primary);
+}
+
+.content-gallery-v4__text-block {
+  max-width: 641px;
+}
+
+.content-gallery-v4__text {
+  font-size: var(--font-size-text); /* 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  margin-bottom: 22px;
+  color: var(--color-text-primary);
+}
+
+.content-gallery-v4__text:last-child {
+  margin-bottom: 0;
+}
+
+/* Button under title in left column */
+.content-gallery-v4__btn {
+  margin-top: 40px;
+  width: 287px;
+  height: 60px;
+  border-radius: 100px;
+  font-size: var(--font-size-text);
+}
+
 /* ===== FEATURES SECTION ===== */
-/* FIGMA Landing 1 (node 7:60):
-   - Section background (7:43): y=2681, height=545
-   - Icons: 150x150px, left aligned
-   - Title: 22px Bold, line-height 100%
-   - Divider: 158px width
-   - Text: 22px Medium, line-height 100%
-
-   Positions (first column):
-   - Icon (7:46): x=226, y=2766
-   - Title (7:50): x=226, y=2968 → gap from icon = 52px
-   - Divider (7:61): x=225.77, y=3047
-   - Text (7:51): x=224, y=3069
-
-   Calculated:
-   - Top padding: 2766-2681 = 85px
+/* Icons: 150x150px, Title: 22px Bold, Text: 22px Medium
+   Divider: 158px width
 */
 .features {
   padding: 85px 0; /* FIGMA: exact */
@@ -948,7 +1383,7 @@
 .feature-card__icon {
   width: 150px; /* FIGMA: exact */
   height: 150px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   margin-bottom: 52px; /* FIGMA: 52px gap to title, aligned left */
 }
 
@@ -979,15 +1414,18 @@
   max-width: 316px; /* FIGMA L2: text width */
 }
 
-/* ===== FEATURES GRID (Landing 3) ===== */
-/* FIGMA Landing 3 (node 369:285):
-   - 2x2 grid layout
-   - Icon: 74x75px
-   - Text: 22px Bold
-   - Gap between icon and text: ~30px
-*/
+/* ===== FEATURES GRID (Landing 3, 5) ===== */
+/* 2x2 grid layout, Icon: 74x75px, Text: 22px Bold */
 .features--grid {
-  padding: 60px 0;
+  padding: var(--section-padding-y) 0;
+}
+
+.features__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 .features__grid {
@@ -1008,7 +1446,7 @@
   flex-shrink: 0;
   width: 74px;
   height: 75px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .feature-item__icon img {
@@ -1025,19 +1463,55 @@
   max-width: 400px;
 }
 
-/* ===== STEPS SECTION ===== */
-/* FIGMA Landing 1 (node 7:66):
-   - Section bg: y=3226, height=964
-   - Title (7:85): x=102, y=3288, 35px Bold, line-height 100%
-   - Icon (7:70): x=103, y=3442, 76x75px
-   - Step title (7:72): x=101, y=3563, 22px Bold, line-height 100%
-   - Step text (7:75): x=102, y=3614, 22px Medium, line-height 100%
-   - Divider (7:86): x=102, y=3746, width=521px
-   - CTA button: width=500px, height=60px
+/* Feature Item Card Variant (Landing 5) - with title + text */
+/* Применяется через :has() когда есть title */
+.feature-item:has(.feature-item__title),
+.feature-item--card {
+  background: var(--color-bg-white);
+  border-radius: 10px; /* FIGMA: exact */
+  padding: 25px 25px 30px; /* FIGMA: approx */
+  gap: 25px;
+}
 
-   Calculated:
-   - Top padding: 3288-3226 = 62px
-   - Header to icons: 3442-3288-60(title height) = 94px
+.feature-item:has(.feature-item__title) .feature-item__icon,
+.feature-item--card .feature-item__icon {
+  width: 80px; /* FIGMA: exact */
+  height: 80px;
+  border-radius: 10px; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.feature-item:has(.feature-item__title) .feature-item__content,
+.feature-item--card .feature-item__content {
+  flex: 1;
+}
+
+/* Заголовок feature-item (для Landing 5 и карточек с title) */
+.feature-item__title {
+  font-size: var(--font-size-text); /* FIGMA: 22px Bold */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.feature-item:has(.feature-item__title) .feature-item__text,
+.feature-item--card .feature-item__text {
+  font-size: var(--font-size-small); /* FIGMA: 16px Regular */
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  max-width: none;
+}
+
+@media (max-width: 991.98px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* ===== STEPS SECTION ===== */
+/* Title: 35px Bold, Icon: 76x75px, Step title: 22px Bold
+   CTA button: 500x60px, Divider: 521px width
 */
 .steps {
   padding: 62px 0 80px; /* FIGMA: top exact, bottom adjusted */
@@ -1064,6 +1538,11 @@
   margin-bottom: 60px;
 }
 
+/* Landing 3: centered title */
+.steps--rounded .steps__title--full {
+  text-align: center;
+}
+
 .steps__cta {
   margin-bottom: 0;
 }
@@ -1086,13 +1565,38 @@
 
 .step-card {
   margin-bottom: 40px;
+  min-height: 180px; /* Fixed min-height to prevent shifting */
 }
 
+/* Header with icon and title inline */
+.step-card__header {
+  display: flex;
+  align-items: flex-start; /* Иконка на уровне первой строки заголовка */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Checkmark icon in circle */
+.step-card__number {
+  width: 40px;
+  height: 40px;
+  min-width: 40px; /* Prevent shrinking */
+  border: 2px solid var(--color-text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+  margin-top: -7px; /* Выравнивание центра иконки с первой строкой текста */
+}
+
+/* Legacy icon support (if still used) */
 .step-card__icon {
-  width: 76px; /* FIGMA: max width */
-  height: 75px; /* FIGMA: exact */
-  background-color: #7f7f7f;
-  margin-bottom: 46px; /* FIGMA: 3563-3442-75 = 46px gap to title */
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  flex-shrink: 0;
 }
 
 .step-card__icon img {
@@ -1104,8 +1608,8 @@
 .step-card__title {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-none); /* FIGMA: 100% */
-  margin-bottom: 29px; /* FIGMA: 3614-3563-22 = 29px gap to text */
+  line-height: 1.2;
+  margin: 0; /* Reset margin when in header */
 }
 
 .step-card__text {
@@ -1137,6 +1641,15 @@
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   max-width: 736px;
   margin-bottom: 60px;
+}
+
+/* FIGMA: Custom layout - cards 666px, gap 91px, image 565px */
+.steps--v4 .row {
+  --bs-gutter-x: 91px; /* FIGMA: 807 - 716 = 91px gap */
+}
+
+.steps--v4 .row > .col-lg-6:first-child {
+  max-width: 666px; /* FIGMA: cards width */
 }
 
 .steps--v4 .steps__cards {
@@ -1194,7 +1707,6 @@
   border-radius: 40px;
   overflow: hidden;
   transform: rotate(1.2deg);
-  background-color: #a19f9f;
 }
 
 .steps--v4 .steps__image img {
@@ -1257,7 +1769,7 @@
   flex: 0 0 400px; /* FIGMA: 400x400px exact */
   width: 400px;
   height: 400px;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   overflow: hidden;
 }
 
@@ -1275,11 +1787,12 @@
   flex-shrink: 0;
   padding: 10px;
   color: var(--color-text-primary);
+  font-size: 24px;
   transition: opacity 0.2s ease;
 }
 
 .gallery-slider__arrow:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* Gallery Slider Rounded - Landing 3 */
@@ -1298,10 +1811,7 @@
 }
 
 /* ===== GALLERY SLIDER V4 - Single Image with Arrows ===== */
-/* FIGMA node 479:107:
-   - Single large image: 1233px x 746px, rounded 40px
-   - Small chevron arrows on left/right edges
-*/
+/* Image: 1233x746px, rounded 40px, arrows on edges */
 .gallery-slider-v4 {
   padding: 40px 0;
   overflow: visible;
@@ -1349,7 +1859,7 @@
   border: none;
   cursor: pointer;
   padding: 15px;
-  color: #3D3D3D; /* FIGMA: dark color */
+  color: var(--color-text-primary); /* FIGMA: dark color */
   transition: opacity 0.2s ease;
   z-index: 100;
 }
@@ -1390,16 +1900,24 @@
 /* FIGMA: Полноширинная галерея между Steps и FAQ */
 .gallery-fullwidth {
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: none; /* Полная ширина экрана */
+  padding: 0; /* Без отступов - картинка edge-to-edge */
   /* background-color убран - используем section--bg-* классы */
+}
+
+.gallery-fullwidth__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
 }
 
 .gallery-fullwidth__image {
   width: 100%;
-  height: 656px; /* FIGMA: exact */
+  height: 521px; /* FIGMA L5: 521px */
   object-fit: cover;
   display: block;
+  border-radius: 15px;
 }
 
 /* Gallery Fullwidth Rounded (Landing 3) */
@@ -1469,7 +1987,7 @@
   flex: 0 0 auto;
   width: 25%; /* FIGMA: 4 equal images */
   height: 100%;
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .gallery-strip__item img {
@@ -1594,7 +2112,7 @@
   border-radius: 30px;
 }
 
-/* FAQ Rounded - Landing 4 (FIGMA node 479:146) */
+/* FAQ Rounded - Landing 4 */
 .faq--rounded .faq__cta {
   text-align: left; /* FIGMA: left=54px */
 }
@@ -1607,13 +2125,9 @@
 }
 
 /* ===== FAQ V4 - 2 Column Layout (Landing 4) ===== */
-/* FIGMA node 479:124:
-   - 2 columns: left 659px, right 652px
-   - Cards: white bg, rounded 15-25px
-   - Expanded card: 133px height, radius 25px
-   - Collapsed card: ~80px height, radius 15px
-   - Icon: 35x35px circle with +/-
-   - Button: 432x60px, left aligned
+/* 2 колонки, белые карточки
+   Expanded: radius 25px, Collapsed: radius 15px
+   Button: 432x60px, left aligned
 */
 .faq--v4 {
   padding: 85px 0 91px; /* FIGMA: adjusted */
@@ -1763,23 +2277,9 @@
 }
 
 /* ===== SERVICES SECTION ===== */
-/* FIGMA Landing 1 (node 7:130):
-   - Section bg: y=5565, height=1035
-   - Title (7:133): x=106, y=5674, 35px Bold, line-height 100%
-   - First card image (7:134): x=106, y=5831, 300x300px
-   - First card title (7:141): x=106, y=6160, 22px Bold
-   - First card text (7:145): x=106, y=6206, 22px Medium
-   - CTA button (7:149): x=100, y=6438, 448x60px
-
-   Staggered layout (margin-tops):
-   - Card 1: y=5831 → margin-top: 0
-   - Card 2: y=5857 → margin-top: 26px
-   - Card 3: y=5887 → margin-top: 56px
-   - Card 4: y=5917 → margin-top: 86px
-
-   Calculated:
-   - Top padding: 5674-5565 = 109px
-   - Title to cards: 5831-5674-84 = 73px
+/* Title: 35px Bold, Card image: 300x300px
+   Staggered layout: cards offset by 0/26/56/86px
+   CTA button: 448x60px
 */
 .services {
   padding: 109px 0 80px; /* FIGMA: top exact */
@@ -1825,7 +2325,7 @@
 .service-card__image {
   width: 300px; /* FIGMA: exact */
   height: 300px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
   margin-bottom: 29px; /* FIGMA: 6160-5831-300 = 29px gap to title */
 }
 
@@ -1860,16 +2360,11 @@
 }
 
 /* ===== SERVICES V4 - Landing 4 ===== */
-/* FIGMA node 479:77:
-   - Title: 45px Bold, left-aligned
-   - 3 white cards (424x596px, radius 15px)
-   - Card image: 339x257px, radius 15px
-   - Card title: 28px Bold
-   - Card text: 22px Medium
-   - No CTA button
+/* 3 white cards (424x596px, radius 15px)
+   Card image: 339x257px, Card title: 28px Bold
 */
 .services-v4 {
-  padding: 91px 0 80px;
+  padding: 91px 0 121px; /* FIGMA: 121px bottom gap after cards */
 }
 
 .services-v4__title {
@@ -1951,20 +2446,8 @@
 }
 
 /* ===== ABOUT SECTION ===== */
-/* FIGMA Landing 1 (node 7:153):
-   - Section bg: y=6599, height=760
-   - Image (7:155): x=106, y=6698, 466x560px
-   - Label (7:156): x=720, y=6729, 28px Medium, line-height 100%
-   - Name (7:157): x=720, y=6774, 28px Bold, line-height 100%
-   - Divider (7:158): x=720, y=6864, width=471px
-   - Text (7:160): x=720, y=6922, 22px Medium, line-height 100%
-
-   Calculated:
-   - Top padding: 6698-6599 = 99px
-   - Content padding-top: 6729-6698 = 31px
-   - Label to name: 6774-6729-28 = 17px (small gap)
-   - Name to divider: 6864-6774-28 = 62px
-   - Divider to text: 6922-6864 = 58px
+/* Image: 466x560px, Label: 28px Medium, Name: 28px Bold
+   Divider: 471px width, Text: 22px Medium
 */
 .about {
   padding: 99px 0; /* FIGMA: exact */
@@ -1973,7 +2456,7 @@
 .about__image {
   width: 466px; /* FIGMA: exact */
   height: 560px; /* FIGMA: exact */
-  background-color: #7f7f7f;
+  background-color: var(--color-placeholder-dark);
 }
 
 .about__image img {
@@ -2040,6 +2523,29 @@
   height: auto;
 }
 
+/* About Tagline (Landing 5) */
+.about__tagline {
+  font-size: var(--font-size-text-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent-text);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* About Button (Landing 5) */
+.about__btn {
+  margin-top: 30px;
+  min-width: 285px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767.98px) {
+  .about__btn {
+    width: 100%;
+  }
+}
+
 /* ===== FOOTER ===== */
 /* FIGMA: White background, map area + centered nav links
    Map placeholder area or map section
@@ -2098,6 +2604,15 @@
 
 .footer__separator {
   color: var(--footer-text-color);
+}
+
+.footer__updated {
+  text-align: center;
+  font-size: 12px;
+  color: var(--footer-text-color);
+  opacity: 0.6;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 /* ===== CTA SECTION ===== */
@@ -2171,7 +2686,7 @@
   white-space: nowrap;
 }
 
-/* CTA Left-aligned - Landing 4 (FIGMA node 479:117) */
+/* CTA Left-aligned - Landing 4 */
 .cta--left .cta__content {
   text-align: left;
 }
@@ -2197,6 +2712,60 @@
   border-radius: 40px;
 }
 
+/* CTA with Image - Image left, text right (Landing 5) */
+.cta--with-image {
+  padding: var(--section-padding-y) 0;
+}
+
+.cta--with-image .cta__image {
+  width: 100%;
+  max-width: 508px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cta--with-image .cta__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cta--with-image .cta__text {
+  text-align: left;
+}
+
+.cta--with-image .cta__title {
+  font-size: var(--font-size-h2);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.cta--with-image .cta__subtitle {
+  font-size: var(--font-size-text);
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.cta--with-image .cta__btn {
+  min-width: 222px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+@media (max-width: 991.98px) {
+  .cta--with-image .cta__image {
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta--with-image .cta__btn {
+    width: 100%;
+  }
+}
+
 /* ============================================
    ROUNDED STYLES - Landing 3 & 4
 
@@ -2209,28 +2778,52 @@
   background-color: var(--color-bg-primary);
 }
 
-.steps--rounded .steps__grid {
+/* Override Bootstrap row with CSS Grid for rounded steps */
+.steps--rounded .row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 600px); /* FIGMA: exact card width */
+  column-gap: 33px; /* FIGMA: 735 - 702 = 33px */
+  row-gap: 32px; /* FIGMA: 3877 - 3845 = 32px */
+  max-width: 1233px; /* FIGMA: 600 + 33 + 600 = 1233px */
+  margin: 0 auto;
+  align-items: stretch; /* FIGMA: Cards in same row have equal height */
+}
+
+/* Reset Bootstrap col width and padding when using CSS Grid */
+.steps--rounded .row > .col-lg-6 {
+  width: 100%;
+  max-width: none;
+  flex: none;
+  padding: 0; /* Remove Bootstrap gutter */
 }
 
 .steps--rounded .step-card {
   background: var(--color-bg-white);
   border-radius: 20px;
   padding: 30px;
-  margin-top: 0; /* Remove staggered layout */
+  margin: 0; /* Remove all margins, gap handled by grid */
+  min-height: auto; /* Use grid stretch instead of fixed min-height */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Fill grid cell for equal heights */
+}
+
+.steps--rounded .step-card__header {
+  margin-bottom: 24px; /* FIGMA: 3683 - 3659 = 24px */
+}
+
+.steps--rounded .step-card__number {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .steps--rounded .step-card__icon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .steps--rounded .step-card__title {
-  margin-bottom: 16px;
+  margin-bottom: 0; /* Title inside header, gap controlled by header margin */
 }
 
 .steps--rounded .step-card__divider {
@@ -2253,7 +2846,7 @@
 }
 
 .faq--cards .faq__item {
-  background: #F8F8F8;
+  background: var(--color-bg-light);
   border-radius: 30px;
   padding: 30px;
   border: none;
@@ -2286,10 +2879,13 @@
 }
 
 .faq--cards-only .faq__title {
-  font-size: var(--font-size-h2); /* 45px */
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
   text-align: center;
   margin-bottom: 50px;
+  max-width: 963px; /* FIGMA: w-[963px] - override base max-width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faq__cards-grid {
@@ -2301,12 +2897,13 @@
 }
 
 .faq__card {
-  background: #F8F8F8;
+  background: var(--color-bg-light);
   border-radius: 30px;
   padding: 40px;
   min-height: 117px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .faq__card-text {
@@ -2315,6 +2912,55 @@
   color: var(--color-text-primary);
   margin: 0;
   line-height: 1.3;
+}
+
+/* FAQ Cards Accordion Styles */
+.faq--cards-only .faq__card-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  gap: 16px;
+}
+
+.faq--cards-only .faq__card-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-text-primary);
+  transition: transform 0.3s ease;
+}
+
+.faq--cards-only .faq__card.is-open .faq__card-icon {
+  transform: rotate(45deg); /* + becomes × */
+}
+
+/* Answer - hidden by default */
+.faq--cards-only .faq__card-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq--cards-only .faq__card.is-open .faq__card-answer {
+  max-height: 500px; /* enough for most answers */
+}
+
+.faq--cards-only .faq__card-answer-inner {
+  padding-top: 20px;
+}
+
+.faq--cards-only .faq__card-answer-inner p {
+  font-size: var(--font-size-small); /* 16px */
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .faq--cards-only .faq__cta {
@@ -2329,6 +2975,8 @@
 }
 
 /* ===== SERVICES ROUNDED ===== */
+/* Note: padding controlled via JSON config paddingTop/paddingBottom */
+
 .services--rounded .services__header {
   text-align: center;
 }
@@ -2339,6 +2987,8 @@
 }
 
 .services--rounded .service-card__image {
+  width: 280px; /* FIGMA Landing 3: exact size-[280px] */
+  height: 280px; /* FIGMA Landing 3: exact size-[280px] */
   border-radius: 25px;
   overflow: hidden;
 }
@@ -2457,7 +3107,7 @@
   height: 360px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #a19f9f;
+  background-color: var(--color-placeholder);
 }
 
 .about__image-stacked img {
@@ -2470,4 +3120,641 @@
 .cta--rounded .btn-outline,
 .cta--rounded .btn-primary {
   border-radius: 30px;
+}
+
+/* ===== GALLERY SINGLE SLIDER (Landing 3) ===== */
+/* Image: 1233x746px, radius 50px
+   Arrows outside image on left/right
+*/
+.gallery-single-slider {
+  padding: 0; /* FIGMA: Hero-v3 handles the 56px gap above */
+  /* Flex layout: arrows on sides, image in center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0; /* arrows flush against image */
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 46px; /* FIGMA: left arrow area */
+  padding-right: 46px; /* FIGMA: right arrow area */
+}
+
+.gallery-single-slider__container {
+  width: 1233px; /* FIGMA: exact */
+  max-width: 100%;
+  flex-shrink: 1;
+}
+
+.gallery-single-slider__slide {
+  display: none;
+}
+
+.gallery-single-slider__slide.is-active {
+  display: block;
+}
+
+.gallery-single-slider__image {
+  width: 100%;
+  height: 746px; /* FIGMA: exact */
+  object-fit: cover;
+  border-radius: 50px; /* FIGMA: rounded-50px */
+  display: block;
+}
+
+/* FIGMA: Arrows as flex items, positioned outside image */
+.gallery-single-slider__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.gallery-single-slider__arrow:hover {
+  opacity: 0.6;
+}
+
+.gallery-single-slider__arrow svg {
+  width: 15px; /* FIGMA: ~15px */
+  height: 29px; /* FIGMA: ~29px */
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .gallery-single-slider {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .gallery-single-slider__image {
+    height: 500px;
+    border-radius: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-single-slider {
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 8px;
+  }
+
+  .gallery-single-slider__image {
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  .gallery-single-slider__container {
+    flex: 1;
+    max-width: calc(100% - 80px);
+  }
+
+  .gallery-single-slider__arrow {
+    padding: 8px;
+    min-width: 36px;
+    min-height: 44px;
+  }
+
+  .gallery-single-slider__arrow svg {
+    width: 12px;
+    height: 24px;
+  }
+}
+
+/* ===== PADDING UTILITIES ===== */
+/* Pixel-perfect values from Figma for Landing 3 & 4 */
+/* Usage: Add paddingTop/paddingBottom to section data in JSON config */
+
+/* padding-top */
+.pt-0 { padding-top: 0 !important; }
+.pt-56 { padding-top: 56px !important; }
+.pt-72 { padding-top: 72px !important; }
+.pt-80 { padding-top: 80px !important; }
+.pt-86 { padding-top: 86px !important; }
+.pt-88 { padding-top: 88px !important; }
+.pt-89 { padding-top: 89px !important; }
+.pt-96 { padding-top: 96px !important; }
+.pt-98 { padding-top: 98px !important; }
+.pt-103 { padding-top: 103px !important; }
+.pt-104 { padding-top: 104px !important; }
+.pt-106 { padding-top: 106px !important; }
+.pt-115 { padding-top: 115px !important; }
+.pt-120 { padding-top: 120px !important; }
+.pt-137 { padding-top: 137px !important; }
+
+/* padding-bottom */
+.pb-0 { padding-bottom: 0 !important; }
+.pb-38 { padding-bottom: 38px !important; }
+.pb-56 { padding-bottom: 56px !important; }
+.pb-72 { padding-bottom: 72px !important; }
+.pb-80 { padding-bottom: 80px !important; }
+.pb-86 { padding-bottom: 86px !important; }
+.pb-88 { padding-bottom: 88px !important; }
+.pb-89 { padding-bottom: 89px !important; }
+.pb-92 { padding-bottom: 92px !important; }
+.pb-96 { padding-bottom: 96px !important; }
+.pb-98 { padding-bottom: 98px !important; }
+.pb-195 { padding-bottom: 195px !important; }
+.pb-103 { padding-bottom: 103px !important; }
+.pb-104 { padding-bottom: 104px !important; }
+.pb-106 { padding-bottom: 106px !important; }
+.pb-112 { padding-bottom: 112px !important; }
+.pb-115 { padding-bottom: 115px !important; }
+.pb-120 { padding-bottom: 120px !important; }
+.pb-137 { padding-bottom: 137px !important; }
+.pb-172 { padding-bottom: 172px !important; }
+.pb-208 { padding-bottom: 208px !important; }
+
+/* ============================================
+   SERVICES CARDS V5 - Business Landing Hub
+   4 high cards with images
+   ============================================ */
+.services-cards-v5 {
+  padding: var(--section-padding-y) 0;
+}
+
+.services-cards-v5__title {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 54px; /* FIGMA: ~54px (1657-1524-79) */
+  text-align: left; /* FIGMA: left-aligned */
+}
+
+.services-cards-v5__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 43px; /* FIGMA: 398-55-300=43px */
+}
+
+.services-cards-v5__card {
+  background: var(--color-bg-white);
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.services-cards-v5__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.services-cards-v5__image {
+  width: calc(100% - 70px); /* FIGMA: 230px in 300px card = margin 35px each side */
+  margin: 35px auto 0; /* FIGMA: 35px top */
+  aspect-ratio: 230 / 160; /* FIGMA: exact ratio */
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.services-cards-v5__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services-cards-v5__body {
+  padding: 37px 35px 35px; /* FIGMA: ~37px top (1889-1692-160), 35px sides */
+}
+
+.services-cards-v5__card-title {
+  font-size: var(--font-size-text-lg); /* FIGMA: 28px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 7px; /* FIGMA: 1948-1889-52=7px */
+  line-height: 1; /* FIGMA: 100% */
+}
+
+.services-cards-v5__card-subtitle {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 26px; /* FIGMA: 2012-1948-38=26px */
+  line-height: 1.4; /* FIGMA: normal */
+}
+
+.services-cards-v5__card-text {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  line-height: 1.4; /* FIGMA: normal */
+}
+
+/* ============================================
+   CTA CARDS V5 - Business Landing Hub
+   4 cards with images and CTA links
+   ============================================ */
+.cta-cards-v5 {
+  padding: var(--section-padding-y) 0;
+}
+
+.cta-cards-v5__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.cta-cards-v5__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cta-cards-v5__card {
+  display: block;
+  background: var(--color-bg-white);
+  border-radius: 15px; /* FIGMA: exact */
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cta-cards-v5__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-cards-v5__image {
+  width: 100%;
+  aspect-ratio: 300 / 195; /* FIGMA: exact */
+  overflow: hidden;
+}
+
+.cta-cards-v5__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-cards-v5__body {
+  padding: 24px 20px;
+}
+
+.cta-cards-v5__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.cta-cards-v5__card-text {
+  font-size: var(--font-size-small); /* FIGMA: 16px */
+  font-weight: var(--font-weight-regular); /* FIGMA: Regular */
+  color: var(--color-text-primary); /* FIGMA: black */
+  line-height: var(--line-height-normal);
+  margin-bottom: 0;
+}
+
+.cta-cards-v5__link {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+.cta-cards-v5__link:hover {
+  color: var(--color-button-primary-hover);
+}
+
+/* ============================================
+   GALLERY COLLAGE V5 - Business Landing
+   4 photos in collage layout (2 large + 2 small)
+   ============================================ */
+.gallery-collage {
+  padding: var(--section-padding-y) 0;
+}
+
+.gallery-collage__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 16px;
+}
+
+.gallery-collage__item {
+  overflow: hidden;
+}
+
+.gallery-collage__item--1 {
+  grid-row: 1 / 3;
+}
+
+.gallery-collage__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   GALLERY CARDS V5 - Business Landing
+   3 large photo cards
+   ============================================ */
+.gallery-cards {
+  padding: var(--section-padding-y) 0;
+}
+
+.gallery-cards__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.gallery-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.gallery-cards__card {
+  overflow: hidden;
+}
+
+.gallery-cards__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.gallery-cards__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-cards__card:hover .gallery-cards__image img {
+  transform: scale(1.05);
+}
+
+.gallery-cards__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ============================================
+   SERVICES LIST V5 - Business Landing (Hochzeit)
+   List of services with icons
+   ============================================ */
+.services-list {
+  padding: var(--section-padding-y) 0;
+}
+
+.services-list__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+}
+
+.services-list__subtitle {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-bottom: 50px;
+}
+
+.services-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-list__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.services-list__icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.services-list__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.services-list__content {
+  flex: 1;
+}
+
+.services-list__item-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.services-list__item-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+.services-list__cta {
+  margin-top: 50px;
+}
+
+/* ============================================
+   STEPS 6 - Business Landing (Hochzeit)
+   6 steps in 2x3 grid
+   ============================================ */
+.steps-6 {
+  padding: var(--section-padding-y) 0;
+}
+
+.steps-6__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.steps-6__cta--top {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.steps-6__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.steps-6__card {
+  padding: 24px;
+  background: var(--color-bg-white);
+  transition: box-shadow var(--transition-normal);
+}
+
+.steps-6__card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.steps-6__card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.steps-6__number {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.steps-6__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.steps-6__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.steps-6__card-title {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
+.steps-6__card-text {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   MAP SECTION V5 - Business Landing
+   Full-width Google Maps
+   ============================================ */
+.map-section {
+  padding: 0;
+}
+
+.section--bg-white {
+  background-color: var(--color-bg-white);
+}
+
+.map-section__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+  padding-top: var(--section-padding-y);
+  text-align: center;
+}
+
+.map-section__map {
+  width: 100%;
+  height: 400px;
+}
+
+.map-section__map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map-section__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-text-lg);
+  color: var(--color-text-light);
+  background-color: var(--color-bg-light);
+}
+
+/* ============================================
+   RESPONSIVE - V5 SECTIONS
+   ============================================ */
+@media (max-width: 991.98px) {
+  .services-cards-v5__grid,
+  .cta-cards-v5__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-cards__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps-6__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .services-cards-v5__grid,
+  .cta-cards-v5__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .gallery-collage__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .gallery-collage__item--1 {
+    grid-row: auto;
+  }
+
+  .gallery-cards__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .services-list__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .steps-6__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-list__cta {
+    text-align: center;
+  }
+
+  .services-list__cta .btn {
+    width: 100%;
+  }
+
+  .map-section__map {
+    height: 300px;
+  }
 }

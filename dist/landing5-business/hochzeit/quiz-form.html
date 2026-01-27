@@ -1,0 +1,218 @@
+<!-- ============================================
+     QUIZ PAGE FORM V5 - Business Landing
+
+     Two-column form layout with timeslot multiselect.
+     LEFT: Form with fields + timeslot grid
+     RIGHT: Description + photo
+
+     DATA:
+     - formLabel, formTitle, formDescription
+     - formImage, formImageAlt
+     - rightTitle, rightSubtitle, rightDescription
+     - timeslots: Array of {value, label}
+     - successPage: URL
+     - mapEmbedUrl: Google Maps embed
+     - logoText, impressumUrl, datenschutzUrl, cookieUrl
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Hochzeitsfotografie – euer großer Tag in einzigartigen, emotionalen Bildern festgehalten.">
+  <title>Hochzeitsfotografie | Karin Himml Fotografie - Formular</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--form-v5" data-quiz-step="form">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Karin Himml</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Form Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <div class="row">
+        <!-- LEFT: Form Column -->
+        <div class="col-lg-6">
+          <p class="quiz-form-v5__label">Lass uns mal telefonieren!</p>
+          <h1 class="quiz-form-v5__title">Du bist fast am Ziel!</h1>
+          
+          <p class="quiz-form-v5__description">Trage deine Kontaktdaten ein und ich melde mich bei dir, um alle Details zu besprechen.</p>
+          
+
+          <!-- Form -->
+          <form class="quiz-form-v5__form" id="quiz-form-v5" action="quiz-success.html" method="GET">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
+            </div>
+
+            
+            <!-- Erreichbarkeit Multiselect -->
+            <div class="form-group">
+              <p class="quiz-form-v5__timeslot-label">Wann bist du erreichbar? (Mehrfachauswahl)</p>
+              <div class="quiz-form-v5__timeslots">
+                
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="8-9">
+                  <span class="quiz-form-v5__timeslot-text">8:00 - 9:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="9-10">
+                  <span class="quiz-form-v5__timeslot-text">9:00 - 10:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="10-11">
+                  <span class="quiz-form-v5__timeslot-text">10:00 - 11:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="11-12">
+                  <span class="quiz-form-v5__timeslot-text">11:00 - 12:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="12-13">
+                  <span class="quiz-form-v5__timeslot-text">12:00 - 13:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="13-14">
+                  <span class="quiz-form-v5__timeslot-text">13:00 - 14:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="14-15">
+                  <span class="quiz-form-v5__timeslot-text">14:00 - 15:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="15-16">
+                  <span class="quiz-form-v5__timeslot-text">15:00 - 16:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="16-17">
+                  <span class="quiz-form-v5__timeslot-text">16:00 - 17:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="17-18">
+                  <span class="quiz-form-v5__timeslot-text">17:00 - 18:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="18-19">
+                  <span class="quiz-form-v5__timeslot-text">18:00 - 19:00</span>
+                </label>
+                
+
+                <label class="quiz-form-v5__timeslot">
+                  <input type="checkbox" name="timeslot[]" value="kein_slot">
+                  <span class="quiz-form-v5__timeslot-text">Keine Präferenz</span>
+                </label>
+                
+              </div>
+            </div>
+            
+
+            <div class="form-group form-group--checkbox">
+              <label>
+                <input type="checkbox" name="privacy" required>
+                <span>Ich akzeptiere die <a href="#" target="_blank">Datenschutzbestimmungen</a>.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+          </form>
+          
+          <p class="quiz-form-v5__privacy-note">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          
+        </div>
+
+        <!-- RIGHT: Info + Image Column -->
+        <div class="col-lg-5 offset-lg-1">
+          
+          <h2 class="quiz-form-v5__right-title">Frage dein Fotoshooting an</h2>
+          
+          
+          <p class="quiz-form-v5__right-subtitle">Hochzeitsfotografie mit Herz</p>
+          
+          
+          <p class="quiz-form-v5__right-description">Ich begleite euch an eurem besonderen Tag und halte die schönsten Momente in natürlichen, emotionalen Bildern fest.</p>
+          
+          <div class="quiz-form-v5__image">
+            <img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=549&h=516&fit=crop" alt="Hochzeitsfotografie">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Map Section -->
+  <section class="quiz-page__map">
+    
+    <iframe
+      src="https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/quiz-navigation.js"></script>
+</body>
+</html>

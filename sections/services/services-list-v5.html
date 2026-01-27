@@ -1,0 +1,45 @@
+<!-- ============================================
+     SERVICES LIST V5 - Business Landing (Hochzeit)
+
+     Список услуг с иконками.
+     Каждый пункт: иконка + заголовок + описание.
+
+     DATA:
+     - title: Заголовок секции
+     - subtitle: Подзаголовок (optional)
+     - items: Array of {icon, title, text}
+     - ctaText: Текст кнопки (optional)
+     - ctaLink: Ссылка кнопки (optional)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="services-list {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{paddingClasses}}">
+  <div class="container">
+    {{#if title}}
+    <h2 class="services-list__title">{{title}}</h2>
+    {{/if}}
+    {{#if subtitle}}
+    <p class="services-list__subtitle">{{subtitle}}</p>
+    {{/if}}
+
+    <div class="services-list__items">
+      {{#each items}}
+      <div class="services-list__item">
+        <div class="services-list__icon">
+          <img src="{{icon}}" alt="{{title}}">
+        </div>
+        <div class="services-list__content">
+          <h3 class="services-list__item-title">{{title}}</h3>
+          <p class="services-list__item-text">{{text}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    {{#if ctaText}}
+    <div class="services-list__cta">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
+  </div>
+</section>

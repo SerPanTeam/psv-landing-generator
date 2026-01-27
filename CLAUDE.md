@@ -24,7 +24,8 @@
 
 ## Figma
 
-**File Key:** `qGiP8ZP2Ot8Tut1faJDl4p`
+**File Key (L1-L4):** `qGiP8ZP2Ot8Tut1faJDl4p`
+**File Key (L5):** `SU5A4tONWqzVj80IvLo6oP`
 
 ### Node IDs
 
@@ -34,6 +35,7 @@
 | 2 Family-Kids | 233:22 | 313:26, 313:82, 313:47, 313:68 | 313:100 | 313:135 |
 | 3 Dogs | 369:256 | 370:441, 370:460, 370:479, 370:503 | 370:526 | 370:560 |
 | 4 Kids | 479:30 | 483:63, 483:85, 483:100, 483:122 | 483:144 | 483:180 |
+| **5 Business Hub** | 585:30 | — | — | — |
 
 ### Figma MCP команды
 

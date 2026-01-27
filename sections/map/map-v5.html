@@ -1,0 +1,38 @@
+<!-- ============================================
+     MAP V5 - Business Landing
+
+     Секция с Google Maps.
+     Полноширинная карта.
+
+     DATA:
+     - mapEmbedUrl: Google Maps embed URL
+     - title: Заголовок (optional)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="map-section {{#if bgClass}}{{bgClass}}{{else}}section--bg-white{{/if}}{{paddingClasses}}">
+  {{#if title}}
+  <div class="container">
+    <h2 class="map-section__title">{{title}}</h2>
+  </div>
+  {{/if}}
+
+  <div class="map-section__map">
+    {{#if mapEmbedUrl}}
+    <iframe
+      src="{{mapEmbedUrl}}"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    {{else}}
+    <div class="map-section__placeholder">
+      <p>Karte wird hier angezeigt</p>
+    </div>
+    {{/if}}
+  </div>
+</section>

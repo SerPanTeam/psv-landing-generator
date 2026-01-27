@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+  <!-- Wire-frame globe icon matching Figma icons8-www style -->
+  <circle cx="25" cy="25" r="20" stroke="#3D3D3D" stroke-width="2" fill="none"/>
+  <ellipse cx="25" cy="25" rx="8" ry="20" stroke="#3D3D3D" stroke-width="2" fill="none"/>
+  <line x1="5" y1="25" x2="45" y2="25" stroke="#3D3D3D" stroke-width="2"/>
+  <line x1="25" y1="5" x2="25" y2="45" stroke="#3D3D3D" stroke-width="2"/>
+  <path d="M8 15 Q25 18 42 15" stroke="#3D3D3D" stroke-width="1.5" fill="none"/>
+  <path d="M8 35 Q25 32 42 35" stroke="#3D3D3D" stroke-width="1.5" fill="none"/>
+</svg>

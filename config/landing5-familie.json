@@ -1,0 +1,285 @@
+{
+  "name": "Подлендинг - Familienfotografie",
+  "sublanding": "familie",
+  "lang": "de",
+
+  "meta": {
+    "title": "Familienfotografie | Karin Himml Fotografie",
+    "description": "Natürliche Familienfotos voller Nähe und Herzlichkeit. Jetzt Familien-Fotoshooting anfragen!",
+    "keywords": "Familienfotografie, Familie, Kinder, Familienbilder, Fotoshooting"
+  },
+
+  "quiz": {
+    "cardStyle": "square",
+    "logoText": "Karin Himml",
+    "impressumUrl": "#",
+    "datenschutzUrl": "#",
+    "cookieUrl": "#",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+
+    "steps": [
+      {
+        "stepNumber": 1,
+        "type": "options",
+        "progress": "Schritt 1 von 6",
+        "question": "Wo soll das Shooting stattfinden?",
+        "columns": 4,
+        "nextPage": "quiz-step2.html",
+        "options": [
+          { "value": "outdoor", "text": "Outdoor / Natur", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" },
+          { "value": "studio", "text": "Im Studio", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop" },
+          { "value": "zuhause", "text": "Bei euch Zuhause", "image": "https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=300&h=300&fit=crop" },
+          { "value": "noch_unsicher", "text": "Noch unsicher", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "type": "options",
+        "progress": "Schritt 2 von 6",
+        "question": "Wann wäre ein guter Zeitraum für euer Shooting?",
+        "columns": 4,
+        "nextPage": "quiz-step3.html",
+        "options": [
+          { "value": "bald", "text": "So bald wie möglich", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" },
+          { "value": "1_2_wochen", "text": "In 1-2 Wochen", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop" },
+          { "value": "1_monat", "text": "In ca. 1 Monat", "image": "https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=300&h=300&fit=crop" },
+          { "value": "flexibel", "text": "Bin flexibel", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "type": "options",
+        "progress": "Schritt 3 von 6",
+        "question": "Wie möchtest du die Bilder verwenden?",
+        "columns": 4,
+        "nextPage": "quiz-step4.html",
+        "options": [
+          { "value": "privat", "text": "Privat / Erinnerung", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" },
+          { "value": "geschenk", "text": "Als Geschenk", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop" },
+          { "value": "wandbilder", "text": "Wandbilder / Druck", "image": "https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=300&h=300&fit=crop" },
+          { "value": "alles", "text": "Von allem etwas", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop" }
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "type": "options",
+        "progress": "Schritt 4 von 6",
+        "question": "Hast du besondere Wünsche oder Vorstellungen?",
+        "columns": 2,
+        "options": [
+          { "value": "ja", "text": "Ja, ich habe Wünsche", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop", "nextPage": "quiz-step5.html" },
+          { "value": "nein", "text": "Nein, überrasche mich!", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop", "nextPage": "quiz-step6.html" }
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "type": "textarea",
+        "progress": "Schritt 5 von 6",
+        "question": "Beschreibe deine Wünsche und Vorstellungen",
+        "placeholder": "Erzähl mir von euren Vorstellungen, Lieblingsorten, Stilwünschen oder besonderen Momenten, die festgehalten werden sollen...",
+        "continueText": "Weiter",
+        "nextPage": "quiz-step6.html",
+        "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=450&h=400&fit=crop",
+        "imageAlt": "Familienfotografie"
+      },
+      {
+        "stepNumber": 6,
+        "type": "options",
+        "progress": "Schritt 6 von 6",
+        "question": "Kennst du mich bereits?",
+        "columns": 4,
+        "nextPage": "quiz-form.html",
+        "options": [
+          { "value": "ja_na_klar", "text": "Ja, na klar!", "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" },
+          { "value": "ja_vom_hoeren", "text": "Ja, vom Hören", "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" },
+          { "value": "schon_sehr_lang", "text": "Schon sehr lang", "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop" },
+          { "value": "nein_noch_nicht", "text": "Nein, noch nicht", "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop" }
+        ]
+      }
+    ],
+
+    "form": {
+      "templateVersion": "v5",
+      "formLabel": "Lass uns mal telefonieren!",
+      "formTitle": "Du bist fast am Ziel!",
+      "formDescription": "Trage deine Kontaktdaten ein und ich melde mich bei dir.",
+      "formImage": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=549&h=516&fit=crop",
+      "formImageAlt": "Familienfotografie",
+      "successPage": "quiz-success.html",
+      "placeholderName": "Dein Vor- und Nachname",
+      "placeholderEmail": "Deine E-Mail Adresse",
+      "placeholderPhone": "Deine Telefonnummer",
+      "showAvailability": true,
+      "availabilityLabel": "Wann bist du erreichbar? (Mehrfachauswahl)",
+      "timeslots": [
+        { "value": "8-9", "label": "8:00 - 9:00" },
+        { "value": "9-10", "label": "9:00 - 10:00" },
+        { "value": "10-11", "label": "10:00 - 11:00" },
+        { "value": "11-12", "label": "11:00 - 12:00" },
+        { "value": "12-13", "label": "12:00 - 13:00" },
+        { "value": "13-14", "label": "13:00 - 14:00" },
+        { "value": "14-15", "label": "14:00 - 15:00" },
+        { "value": "15-16", "label": "15:00 - 16:00" },
+        { "value": "16-17", "label": "16:00 - 17:00" },
+        { "value": "17-18", "label": "17:00 - 18:00" },
+        { "value": "18-19", "label": "18:00 - 19:00" },
+        { "value": "kein_slot", "label": "Keine Präferenz" }
+      ],
+      "privacyText": "Ich akzeptiere die",
+      "privacyLinkText": "Datenschutzbestimmungen",
+      "submitButtonText": "Absenden",
+      "privacyNote": "Deine Privatsphäre ist bei mir sicher.",
+      "rightTitle": "Frage dein Fotoshooting an",
+      "rightSubtitle": "Familienfotografie mit Herz",
+      "rightDescription": "Natürliche Familienmomente voller Nähe, Lachen und echtem Zusammenhalt."
+    },
+
+    "success": {
+      "templateVersion": "v5",
+      "successTitle": "Super, vielen Dank!",
+      "successSubtitle": "Deine Anfrage ist eingegangen!",
+      "successTexts": [
+        "Ich melde mich in Kürze bei dir.",
+        "Du kannst dir direkt einen Termin in meinem Kalender sichern!"
+      ],
+      "successImage": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=550&h=529&fit=crop",
+      "successImageAlt": "Familienfotografie",
+      "ctaText": "Jetzt Termin wählen & sichern!",
+      "ctaLink": "#",
+      "callButtonText": "Anrufen",
+      "whatsappText": "WhatsApp",
+      "whatsappUrl": "https://wa.me/49123456789",
+      "emailButtonText": "Mail",
+      "phoneNumber": "+49123456789",
+      "email": "info@karinhimml.de",
+      "aboutName": "Karin Himml Fotografie",
+      "aboutQuestion": "Offene Fragen?",
+      "workingHours": [
+        "Mo - Fr: 9:00 - 18:00 Uhr",
+        "Sa: Nach Vereinbarung"
+      ],
+      "aboutTexts": [
+        "Ich freue mich auf euch und eure Familie!"
+      ],
+      "aboutImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop",
+      "aboutImageAlt": "Karin Himml",
+      "showSocial": true,
+      "facebookUrl": "#",
+      "instagramUrl": "#",
+      "websiteUrl": "#"
+    }
+  },
+
+  "sections": [
+    {
+      "template": "header/header-v1.html",
+      "data": {
+        "logoText": "Karin Himml",
+        "logoLink": "../"
+      }
+    },
+    {
+      "template": "hero/hero-v1.html",
+      "data": {
+        "label": "Familienfotografie",
+        "title": "Natürliche Momente mit euren Liebsten",
+        "subtitle": "Authentische Familienbilder voller Nähe, Lachen und echtem Zusammenhalt.",
+        "buttonText": "Jetzt Familien-Shooting anfragen",
+        "buttonLink": "quiz-step1.html",
+        "imageMain": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=428&h=394&fit=crop",
+        "imageSecondary": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=306&h=290&fit=crop",
+        "imageAlt": "Familienfotografie"
+      }
+    },
+    {
+      "template": "content/content-v1.html",
+      "data": {
+        "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=428&h=533&fit=crop",
+        "title": "Für die schönsten Erinnerungen mit eurer Familie",
+        "paragraphs": [
+          "Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente entstehen.",
+          "Ob im Studio, outdoor oder bei euch zuhause – die Bilder zeigen eure Familie so, wie ihr wirklich seid."
+        ],
+        "linkText": "Shooting anfragen",
+        "linkUrl": "quiz-step1.html",
+        "linkAsButton": true
+      }
+    },
+    {
+      "template": "gallery/gallery-cards-v5.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "cards": [
+          { "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=300&fit=crop", "imageAlt": "Familie outdoor" },
+          { "image": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=300&fit=crop", "imageAlt": "Familie im Studio" },
+          { "image": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=400&h=300&fit=crop", "imageAlt": "Familie zuhause" }
+        ]
+      }
+    },
+    {
+      "template": "features/features-grid.html",
+      "data": {
+        "items": [
+          { "image": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=120&h=120&fit=crop", "text": "Viel Zeit & Raum für eure Familie" },
+          { "image": "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=120&h=120&fit=crop", "text": "Professionelle Fotografin mit Erfahrung" },
+          { "image": "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=120&h=120&fit=crop", "text": "Natürliche, authentische Bildsprache" },
+          { "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop", "text": "Schnelle Lieferung der Bilder" }
+        ]
+      }
+    },
+    {
+      "template": "gallery/gallery-single-slider.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "images": [
+          { "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop", "alt": "Familienfoto 1" },
+          { "src": "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1233&h=746&fit=crop", "alt": "Familienfoto 2" },
+          { "src": "https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=1233&h=746&fit=crop", "alt": "Familienfoto 3" }
+        ]
+      }
+    },
+    {
+      "template": "faq/faq-accordion.html",
+      "data": {
+        "bgClass": "section--bg-secondary",
+        "title": "Häufige Fragen zum Familien-Fotoshooting",
+        "questions": [
+          {
+            "question": "Wie lange dauert ein Familien-Fotoshooting?",
+            "answer": "In der Regel 45-60 Minuten. Genug Zeit, damit sich alle entspannen können und natürliche Aufnahmen entstehen."
+          },
+          {
+            "question": "Was sollen wir anziehen?",
+            "answer": "Bequeme Kleidung in abgestimmten Farben. Ich berate euch gerne vorab per Mail oder Telefon."
+          },
+          {
+            "question": "Ab welchem Alter können Kinder fotografiert werden?",
+            "answer": "Jedes Alter ist willkommen! Vom Neugeborenen bis zum Teenager – ich habe Erfahrung mit allen Altersgruppen."
+          }
+        ]
+      }
+    },
+    {
+      "template": "about/about-v1.html",
+      "data": {
+        "showDivider": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop",
+        "label": "Eure Fotografin",
+        "name": "Karin Himml",
+        "paragraphs": [
+          "Ich liebe es, natürliche Familienmomente festzuhalten – voller Lachen, Nähe und echter Emotionen.",
+          "Bei mir seid ihr in guten Händen, egal ob mit Baby, Kleinkind oder Teenager."
+        ]
+      }
+    },
+    {
+      "template": "footer/footer-v1.html",
+      "data": {
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed",
+        "impressumUrl": "#",
+        "datenschutzUrl": "#",
+        "cookieUrl": "#"
+      }
+    }
+  ]
+}

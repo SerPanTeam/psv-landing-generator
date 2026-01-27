@@ -1,0 +1,200 @@
+<!-- ============================================
+     QUIZ PAGE SUCCESS V5 - Business Landing
+
+     3-section success page:
+     Section 1 (#F5EDE0): Thank you + CTA + contact buttons
+     Section 2 (#EEE3D0): About photographer + social
+     Section 3 (white): Google Maps
+
+     DATA:
+     - successTitle, successSubtitle, successTexts
+     - successImage, successImageAlt
+     - ctaText, ctaLink
+     - contactButtons: Array of {text, url, type}
+     - aboutName, aboutTagline, aboutTexts
+     - aboutImage, aboutImageAlt
+     - workingHours: Array of strings
+     - showSocial, facebookUrl, instagramUrl, websiteUrl
+     - mapEmbedUrl
+     - logoText, impressumUrl, datenschutzUrl, cookieUrl
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Natürliche Familienfotos voller Nähe und Herzlichkeit. Jetzt Familien-Fotoshooting anfragen!">
+  <title>Familienfotografie | Karin Himml Fotografie - Erfolg</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--success-v5" data-quiz-step="success">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Karin Himml</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Section 1: Success Content -->
+  <section class="quiz-success-v5 section--bg-primary">
+    <div class="container">
+      <div class="row">
+        <!-- Content Column -->
+        <div class="col-lg-5">
+          <h1 class="quiz-success-v5__title">Super, vielen Dank!</h1>
+          <p class="quiz-success-v5__subtitle">Deine Anfrage ist eingegangen!</p>
+
+          <div class="quiz-success-v5__text">
+            
+            <p>Ich melde mich in Kürze bei dir.</p>
+            
+
+            <p>Du kannst dir direkt einen Termin in meinem Kalender sichern!</p>
+            
+          </div>
+
+          <!-- Primary CTA -->
+          <div class="quiz-success-v5__cta">
+            <a href="#" class="btn btn-primary">Jetzt Termin wählen & sichern!</a>
+          </div>
+
+          <!-- Contact Buttons -->
+          <div class="quiz-success-v5__contacts">
+            
+            <a href="tel:+49123456789" class="btn btn-outline quiz-success-v5__contact-btn">
+              <span>Anrufen</span>
+            </a>
+            
+            
+            <a href="https://wa.me/49123456789" class="btn btn-outline quiz-success-v5__contact-btn" target="_blank">
+              <span>WhatsApp</span>
+            </a>
+            
+            
+            <a href="mailto:info@karinhimml.de" class="btn btn-outline quiz-success-v5__contact-btn">
+              <span>Mail</span>
+            </a>
+            
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-success-v5__image">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=550&h=529&fit=crop" alt="Familienfotografie">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: About -->
+  <section class="quiz-success-v5__about section--bg-secondary">
+    <div class="container">
+      <div class="row">
+        <!-- About Content -->
+        <div class="col-lg-5">
+          <h2 class="quiz-success-v5__about-name">Karin Himml Fotografie</h2>
+          
+          <p class="quiz-success-v5__about-question">Offene Fragen?</p>
+          
+
+          
+          <div class="quiz-success-v5__hours">
+            
+            <p>Mo - Fr: 9:00 - 18:00 Uhr</p>
+            
+
+            <p>Sa: Nach Vereinbarung</p>
+            
+          </div>
+          
+
+          <div class="quiz-success-v5__about-text">
+            
+            <p>Ich freue mich auf euch und eure Familie!</p>
+            
+          </div>
+
+          <!-- Social Icons -->
+          
+          <div class="quiz-success-v5__social">
+            
+            <a href="#" class="social-icon" aria-label="Facebook" target="_blank">
+              <img src="../assets/icons/facebook.svg" alt="Facebook">
+            </a>
+            
+            
+            <a href="#" class="social-icon" aria-label="Instagram" target="_blank">
+              <img src="../assets/icons/instagram.svg" alt="Instagram">
+            </a>
+            
+            
+            <a href="#" class="social-icon" aria-label="Website" target="_blank">
+              <img src="../assets/icons/web.svg" alt="Website">
+            </a>
+            
+          </div>
+          
+        </div>
+
+        <!-- About Image -->
+        <div class="col-lg-6 offset-lg-1">
+          
+          <div class="quiz-success-v5__about-image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop" alt="Karin Himml">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Map -->
+  <section class="quiz-page__map">
+    
+    <iframe
+      src="https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/quiz-navigation.js"></script>
+</body>
+</html>
