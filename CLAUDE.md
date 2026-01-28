@@ -454,6 +454,107 @@ L5 делит шаблоны с L1-L4. Для изоляции L5 стилей �
 /* Также overflow: visible на row и col- контейнерах */
 ```
 
+---
+
+## Методология проверки: Отступы, Шрифты, Цвета
+
+### 1. Получить данные из Figma
+
+```bash
+# 1. Сначала получить metadata секции
+mcp__figma-desktop__get_metadata nodeId=810:30
+
+# 2. Найти node ID нужного элемента (text, image, etc)
+
+# 3. Получить design_context для элемента
+mcp__figma-desktop__get_design_context nodeId=xxx:xxx
+```
+
+### 2. Что искать для ШРИФТОВ
+
+| Figma свойство | CSS эквивалент | Пример |
+|----------------|----------------|--------|
+| `text-[N]px` | `font-size` | `text-45px` → `font-size: 45px` |
+| `font-bold` | `font-weight: 700` | Bold заголовки |
+| `font-medium` | `font-weight: 500` | Medium для body |
+| `font-normal` | `font-weight: 400` | Regular для мелких текстов |
+| `leading-[N]` | `line-height` | `leading-[120%]` → `line-height: 1.2` |
+| `text-left/center/right` | `text-align` | — |
+
+**Цвета текста:**
+- `text-black` → `--color-text-primary` (#3D3D3D)
+- `text-[#XXXXXX]` → соответствующий цвет
+- Проверять что CSS переменная равна Figma значению!
+
+### 3. Что искать для ОТСТУПОВ (margins, gaps)
+
+**Формула расчёта вертикального gap:**
+```
+gap = element2.y - (element1.y + element1.height)
+```
+
+**Пример:**
+```
+Имя "Karin Himml": y=8485, height=55 → нижний край = 8540
+Tagline: y=8565
+Gap = 8565 - 8540 = 25px → margin-top: 25px
+```
+
+**ВАЖНО: Bounding box ловушка!**
+- Figma text bounding box может быть больше визуального текста
+- Если расчётный gap кажется слишком маленьким — учитывать extra space
+- Формула: `real_gap = calculated_gap + (bbox_height - visual_height) / 2`
+
+### 4. Что искать для РАЗМЕРОВ
+
+| Элемент | Figma | CSS |
+|---------|-------|-----|
+| Изображение | `w-[N]px h-[N]px` | `width: Npx; height: Npx` |
+| Контейнер | `bounding box` | `max-width`, `padding` |
+| Карточка | размеры + radius | `width`, `height`, `border-radius` |
+
+### 5. Чеклист для КАЖДОГО элемента секции
+
+- [ ] **Текст:** font-size, font-weight, color, line-height, text-align
+- [ ] **Отступы:** margin-top, margin-bottom, gap
+- [ ] **Размеры:** width, height, padding
+- [ ] **Скругления:** border-radius
+- [ ] **Фон/границы:** background-color, border
+
+### 6. Частые ошибки при верификации
+
+| Симптом | Причина | Как проверить |
+|---------|---------|---------------|
+| Отступ больше/меньше | Bounding box ≠ visual | Сравнить font-size с bbox height |
+| Шрифт слишком жирный/тонкий | Неправильный weight | Проверить `font-bold` vs `font-medium` vs `font-normal` |
+| Текст не того цвета | CSS variable ≠ Figma | Проверить hex значение переменной |
+| Элемент не на месте | Неправильный margin/padding | Вычислить gap по координатам |
+| Элемент невидим | z-index или overflow | Проверить stacking context |
+
+### 7. Примеры реальных фиксов
+
+**Fix 1: Tagline margin (About V5)**
+```
+Figma: Karin Himml y=8485+55=8540, Tagline y=8565
+Gap = 25px
+CSS before: margin-top: 10px
+CSS after: margin-top: 25px
+```
+
+**Fix 2: Card text font-size (Features Cards V3)**
+```
+Figma: text-16px font-normal
+CSS before: font-size: var(--font-size-text) /* 22px */
+CSS after: font-size: 16px
+```
+
+**Fix 3: Section title alignment (Steps 6)**
+```
+Figma: text-left
+CSS before: text-align: center
+CSS after: text-align: left
+```
+
 ### Проверенные секции хаба (585:30)
 
 | Секция | Node | Статус |
