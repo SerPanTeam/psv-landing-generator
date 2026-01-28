@@ -27,7 +27,7 @@
 **File Key (L1-L4):** `qGiP8ZP2Ot8Tut1faJDl4p`
 **File Key (L5):** `SU5A4tONWqzVj80IvLo6oP`
 
-### Node IDs
+### Node IDs (L1-L4)
 
 | Landing | Главная | Quiz Step 1-4 | Form | Success |
 |---------|---------|---------------|------|---------|
@@ -35,7 +35,18 @@
 | 2 Family-Kids | 233:22 | 313:26, 313:82, 313:47, 313:68 | 313:100 | 313:135 |
 | 3 Dogs | 369:256 | 370:441, 370:460, 370:479, 370:503 | 370:526 | 370:560 |
 | 4 Kids | 479:30 | 483:63, 483:85, 483:100, 483:122 | 483:144 | 483:180 |
-| **5 Business Hub** | 585:30 | — | — | — |
+
+### Node IDs (L5 Business)
+
+| Страница | Node ID | Описание |
+|----------|---------|----------|
+| Hub (главная) | 585:30 | Выбор типа фотосессии |
+| Hochzeit (свадьба) | 810:30 | Подлендинг свадьбы |
+| Familie (семья) | — | Подлендинг семьи |
+| Tier (животные) | — | Подлендинг животных |
+| Business (бизнес) | — | Подлендинг бизнеса |
+| Quiz Form V5 | 818:459 | Форма квиза (2 колонки) |
+| Quiz Success V5 | 818:496 | Страница успеха |
 
 ### Figma MCP команды
 
@@ -43,6 +54,79 @@
 mcp__figma-desktop__get_design_context nodeId=1:3
 mcp__figma-desktop__get_screenshot nodeId=1:3
 ```
+
+---
+
+## L5 Hochzeit - Структура страницы
+
+**Важно:** Подлендинги L5 НЕ имеют отдельного header - логотип внутри hero-v5!
+
+| # | Секция | Шаблон | Фон | Особенности |
+|---|--------|--------|-----|-------------|
+| 1 | Hero | hero-v5.html | gray (image) | Logo внутри, description, широкая кнопка 511px |
+| 2 | Content | content-v1.html | primary | variant:v5, imageLeft:true, БЕЗ кнопки |
+| 3 | Gallery Slider | gallery-slider.html | secondary | variant:v5, центр с рамкой, + CTA |
+| 4 | Features Cards | features-cards-v3.html | primary | 4 карточки, title, subtitle, CTA |
+| 5 | Gallery Slider | gallery-single-slider.html | secondary | — |
+| 6 | Services List | services-list-v5.html | primary | + sideImage справа |
+| 7 | Steps 6 | steps-6.html | secondary | 6 карточек 2x3 |
+| 8 | Gallery Slider | gallery-single-slider.html | secondary | + CTA "Kontakt aufnehmen" |
+| 9 | FAQ | faq-accordion.html | primary | + CTA |
+| 10 | About | about-v1.html | secondary | imageRight: true |
+| 11 | Footer | footer-v1.html | white | Map |
+
+### Ключевые отличия L5 подлендингов
+
+1. **Нет отдельного header** - логотип в hero-v5
+2. **hero-v5** поддерживает: logoText, title (triple braces для `<br>`), subtitle, description (triple braces), button
+3. **content-v1 с variant:"v5"** - одно изображение + декоративная подложка (::after), одинаково для hub и sublandings
+4. **Content без CTA** - в Figma нет кнопки
+5. **gallery-slider с variant:"v5"** - центральный слайд с белой рамкой, боковые меньше, ctaText/ctaLink
+6. **gallery-single-slider** поддерживает ctaText/ctaLink, default bg=primary, `smallRadius: true` для 15px (vs 50px default)
+   - Структура: section (full-width bg) → __inner (max-width 1440px) → arrows + container
+7. **services-list-v5** поддерживает sideImage (картинка справа)
+8. **features-cards-v3** поддерживает title, subtitle, ctaText/ctaLink
+   - Карточки: 300x637px, white bg, radius 15px, padding 35px
+   - Изображения: 230x160px, radius 15px, centered
+   - Заголовок карточки: 22px Bold
+   - Текст карточки: 16px Regular (НЕ 22px!)
+   - Section padding: 70px top/bottom
+9. **steps-6** - сетка 2x3 (2 колонки, 3 ряда)
+   - Карточки: белые, radius 15px, padding 24px
+   - Номер: круг 80x80px с bg-secondary, шрифт h3 bold, цвет accent
+   - Заголовок секции: слева (не center!)
+10. **services-list-v5** размеры по Figma:
+    - Иконки: 62x62px, простые серые прямоугольники (#7F7F7F) - placeholder'ы
+    - Заголовок секции (h2): 45px Bold, margin-bottom: 50px
+    - Заголовок пункта: 22px Bold, line-height: 1
+    - Текст пункта: 22px Medium, margin-top: 8px (отступ от заголовка!)
+    - Gap между пунктами: 24px
+    - Gap между иконкой и текстом: 36px
+    - Рамка изображения: padding 60px 53px
+    - Layout: flex с gap 52px между текстом и картинкой
+11. **about-v1 с variant:"v5"** - декоративная подложка за изображением
+    - Изображение: 581x450px
+    - Декор: 595x383px, left -63px, top 241px
+    - `nameUnderImage: true` - имя и tagline под изображением (только Hochzeit)
+
+### Проверка фонов L5 по Figma
+
+| Секция | Figma Node | Цвет | CSS класс |
+|--------|------------|------|-----------|
+| Hero | — | image | — |
+| Content | — | #F5EDE0 | primary (default) |
+| Gallery Slider V5 | 810:175 | #EEE3D0 | section--bg-secondary |
+| Features Cards | — | #F5EDE0 | primary (default) |
+| Gallery Single | 811:34 | #EEE3D0 | section--bg-secondary |
+| Services List | — | #F5EDE0 | section--bg-primary |
+| Steps 6 | 812:64 | #EEE3D0 | section--bg-secondary |
+| Gallery Single 2 | 812:64 | #EEE3D0 | section--bg-secondary |
+| FAQ | — | #F5EDE0 | primary (default) |
+| About | — | #EEE3D0 | section--bg-secondary |
+| Footer | — | white | — |
+
+**Правило чередования L5:** Primary (#F5EDE0) → Secondary (#EEE3D0) → Primary → ...
+**Исключение:** Steps 6 + Gallery Single 2 делят ОДИН фон (Rectangle 812:64 spanning y=5394-7142)
 
 ---
 
@@ -54,6 +138,24 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 | 2 | landing2-family-kids.json | Прямые | Чередование | Отдельный |
 | 3 | landing3-dogs.json | Скруглённые 40px | Все primary | Отдельный |
 | 4 | landing4-kids.json | Скруглённые 40px | Чередование | Внутри hero |
+| 5 | landing5-business-hub.json | Скруглённые 10px (кнопки) | #F5EDE0/#EEE3D0 | Внутри hero-v5 |
+
+### L5: CSS переменные и наследование
+
+**Важно:** Подлендинги НЕ наследуют `cssVariables` от хаб-конфига. Каждый sublanding должен иметь свой блок `cssVariables`.
+
+L5 cssVariables (одинаковы для hub и всех sublandings):
+```json
+"cssVariables": {
+  "--color-bg-primary": "#F5EDE0",
+  "--color-bg-secondary": "#EEE3D0",
+  "--color-button-primary": "#E2C08D",
+  "--color-accent": "#D4A574",
+  "--button-border-radius": "10px"
+}
+```
+
+**Кнопки L5:** `border-radius: 10px` (через `--button-border-radius`). L1-L4 используют `0` (прямые углы).
 
 ---
 
@@ -73,7 +175,17 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 
 | Секция | Флаг | Описание |
 |--------|------|----------|
+| content-v1 | `variant: "v5"` | L5 стиль: декоративная подложка вместо белой рамки |
+| content-v1 | `imageLeft: true` | Изображение слева (default: справа) |
+| content-v1 | `imageSecondary` | (опционально) Второе реальное изображение вместо ::after подложки |
 | content-v1 | `linkAsButton: true` | Ссылка как кнопка с рамкой |
+| gallery-slider | `variant: "v5"` | L5 стиль: центральный слайд с белой рамкой, боковые меньше |
+| gallery-slider | `ctaText/ctaLink` | CTA кнопка под слайдером |
+| about-v1 | `variant: "v5"` | L5 стиль: декоративная подложка за изображением (581x450) |
+| about-v1 | `nameUnderImage: true` | Имя и tagline под изображением (для Hochzeit) |
+| about-v1 | `imageRight: true` | Изображение справа |
+| steps-6 | (default) | Сетка 2x3 (2 колонки), заголовок слева, карточки с номером-кругом |
+| services-list | `sideImage` | Изображение справа с декоративной рамкой |
 | steps-4 | `ctaBottom: true` | Кнопка внизу секции |
 | steps-4 | `ctaTop: true` | Кнопка вверху секции |
 | cta-v1 | `layoutRow: true` | Горизонтальный layout |
@@ -92,10 +204,18 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 | hero-v4 | dark #3D3D3D | — |
 | cta-v1 | **secondary** | `bgClass: "section--bg-primary"` |
 | steps-4 | **secondary** | `bgClass: "section--bg-primary"` |
+| steps-6 | primary | `bgClass: "section--bg-secondary"` |
 | steps-v4 | primary | — |
 | faq-accordion | primary | `bgClass: "section--bg-secondary"` |
 | services-grid | **secondary** | `bgClass: "section--bg-primary"` |
-| about-v1 | primary | — |
+| services-list-v5 | **secondary** | `bgClass: "section--bg-primary"` |
+| gallery-slider | primary | `bgClass: "section--bg-secondary"` |
+| gallery-single-slider | primary | `bgClass: "section--bg-secondary"` |
+| gallery-fullwidth | primary | `bgClass: "section--bg-secondary"` |
+| features-cards-v3 | primary | `bgClass: "section--bg-secondary"` |
+| about-v1 | primary | `bgClass: "section--bg-secondary"` |
+
+**L5 важно:** Многие секции L5 требуют `bgClass: "section--bg-secondary"` т.к. дефолт primary не соответствует Figma!
 
 ---
 
@@ -224,6 +344,11 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 | Острые углы в L3/L4 | Нет `rounded` | Добавить `rounded: true` |
 | Текст обрезается | Длинный текст | Проверить мобильные стили |
 | Заголовок не показан | Нет флага CTA | Добавить `ctaBottom: true` |
+| Вложенный `{{#if}}` не работает | Handlebars limitation | Упростить: `{{title}}` вместо вложенных условий |
+| `{{each}}` показывает section title | Scope issue | Использовать `{{this.title}}` внутри `{{#each}}` |
+| HTML `<br>` не рендерится | Double braces | Использовать triple braces: `{{{title}}}` |
+| Заголовок вплотную к контенту | Не проверен margin | В Figma text box может быть больше текста - проверять y-координаты |
+| Элементы списка слипаются | Нет gap/margin | Проверять отступы между title и text внутри item (margin-top) |
 
 ---
 
@@ -242,6 +367,9 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 | Что проверять | Как найти в Figma | Частые ошибки |
 |---------------|-------------------|---------------|
 | **font-size** | `text-[Npx]` в design_context | L5 использует 16px для body (не 22px как L1-L4) |
+| **section padding** | Позиция контента относительно секции | L5 features-cards-v3: 70px top/bottom |
+| **card dimensions** | `w-[N]px h-[N]px` | L5 cards: 300x637px, radius 15px, white bg |
+| **image in card** | Размеры image элемента | L5: 230x160px, radius 15px, centered |
 | **font-weight** | `font-bold`/`font-normal` | Regular(400) vs Medium(500) vs Bold(700) |
 | **text-align** | `text-center`/`text-left` | Заголовки секций: center в L1-L4, left в L5 |
 | **gap (grid)** | Разница координат между элементами | Вычислять: `element2.x - (element1.x + element1.width)` |

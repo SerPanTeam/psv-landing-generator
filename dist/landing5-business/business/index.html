@@ -129,6 +129,7 @@
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=428&h=533&fit=crop" alt="Dein professioneller Auftritt beginnt hier">
           </div>
           
+          
         </div>
       </div>
 
@@ -286,35 +287,39 @@
      ============================================ -->
 
 <section class="gallery-single-slider section--bg-secondary">
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-  <div class="gallery-single-slider__container" data-gallery-single-slider>
-    
-    <div class="gallery-single-slider__slide is-active">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop" alt="Business Portrait 1" class="gallery-single-slider__image">
-    </div>
-    
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop" alt="Business Portrait 1" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1233&h=746&fit=crop" alt="Business Portrait 2" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1233&h=746&fit=crop" alt="Business Portrait 2" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1233&h=746&fit=crop" alt="Team Shooting" class="gallery-single-slider__image">
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1233&h=746&fit=crop" alt="Team Shooting" class="gallery-single-slider__image">
+      </div>
+      
     </div>
-    
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  
 </section>
 
 
@@ -448,6 +453,7 @@
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop" alt="Karin Himml">
         </div>
+        
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
@@ -456,10 +462,13 @@
           
           <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
           <p class="about__label">Eure Fotografin</p>
+          {{#unless nameUnderImage}}
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">Karin Himml</h2>
           
+          
           <div class="about__divider"></div>
+          {{/unless}}
           
 
           <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
@@ -536,7 +545,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 08:47</p>
+      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 14:59</p>
     </div>
   </div>
 </footer>

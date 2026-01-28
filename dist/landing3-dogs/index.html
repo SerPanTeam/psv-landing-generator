@@ -126,17 +126,24 @@
 
 
 <!-- ============================================
-     FEATURES CARDS V3 - 3 карточки (image + title + text)
+     FEATURES CARDS V3 - 3-4 карточки (image + title + text)
 
      FIGMA (node 369:256):
-     - 3 columns, gap 40px
+     - 3-4 columns, gap 40px
      - Image: 350x300px, rounded-35px
      - Title: 28px bold
      - Text: 22px medium
+
+     Опционально:
+     - title: заголовок секции
+     - subtitle: подзаголовок секции
+     - ctaText/ctaLink: кнопка внизу
      ============================================ -->
 
 <section class="features-cards features-cards--v3 section--bg-primary pb-56">
   <div class="container">
+    
+    
     <div class="features-cards__grid">
       
       <div class="features-cards__item">
@@ -166,6 +173,7 @@
       </div>
       
     </div>
+    
   </div>
 </section>
 
@@ -184,45 +192,49 @@
      ============================================ -->
 
 <section class="gallery-single-slider section--bg-primary pt-0 pb-89">
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-  <div class="gallery-single-slider__container" data-gallery-single-slider>
-    
-    <div class="gallery-single-slider__slide is-active">
-      <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 1" class="gallery-single-slider__image">
-    </div>
-    
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 1" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 2" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 2" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 3" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 3" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 4" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 4" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 5" class="gallery-single-slider__image">
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=1233&h=746&fit=crop" alt="Hunde-Fotoshooting 5" class="gallery-single-slider__image">
+      </div>
+      
     </div>
-    
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  
 </section>
 
 
@@ -668,6 +680,7 @@
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop" alt="Möst Fotografie">
         </div>
+        
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
@@ -1067,7 +1080,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 08:47</p>
+      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 14:59</p>
     </div>
   </div>
 </footer>

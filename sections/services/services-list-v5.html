@@ -8,32 +8,43 @@
      - title: Заголовок секции
      - subtitle: Подзаголовок (optional)
      - items: Array of {icon, title, text}
+     - sideImage: (optional) Image on the right side
      - ctaText: Текст кнопки (optional)
      - ctaLink: Ссылка кнопки (optional)
      - bgClass: (optional) Override background
      ============================================ -->
 
-<section class="services-list {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{paddingClasses}}">
+<section class="services-list {{#if bgClass}}{{bgClass}}{{else}}section--bg-secondary{{/if}}{{#if sideImage}} services-list--with-image{{/if}}{{paddingClasses}}">
   <div class="container">
-    {{#if title}}
-    <h2 class="services-list__title">{{title}}</h2>
-    {{/if}}
-    {{#if subtitle}}
-    <p class="services-list__subtitle">{{subtitle}}</p>
-    {{/if}}
+    <div class="services-list__wrapper">
+      <div class="services-list__main">
+        {{#if title}}
+        <h2 class="services-list__title">{{title}}</h2>
+        {{/if}}
+        {{#if subtitle}}
+        <p class="services-list__subtitle">{{subtitle}}</p>
+        {{/if}}
 
-    <div class="services-list__items">
-      {{#each items}}
-      <div class="services-list__item">
-        <div class="services-list__icon">
-          <img src="{{icon}}" alt="{{title}}">
-        </div>
-        <div class="services-list__content">
-          <h3 class="services-list__item-title">{{title}}</h3>
-          <p class="services-list__item-text">{{text}}</p>
+        <div class="services-list__items">
+          {{#each items}}
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">{{this.title}}</h3>
+              <p class="services-list__item-text">{{this.text}}</p>
+            </div>
+          </div>
+          {{/each}}
         </div>
       </div>
-      {{/each}}
+
+      {{#if sideImage}}
+      <div class="services-list__image-wrapper">
+        <div class="services-list__image-frame">
+          <img src="{{sideImage}}" alt="{{title}}" class="services-list__image">
+        </div>
+      </div>
+      {{/if}}
     </div>
 
     {{#if ctaText}}

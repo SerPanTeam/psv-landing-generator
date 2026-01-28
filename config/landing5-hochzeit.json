@@ -3,6 +3,14 @@
   "sublanding": "hochzeit",
   "lang": "de",
 
+  "cssVariables": {
+    "--color-bg-primary": "#F5EDE0",
+    "--color-bg-secondary": "#EEE3D0",
+    "--color-button-primary": "#E2C08D",
+    "--color-accent": "#D4A574",
+    "--button-border-radius": "10px"
+  },
+
   "meta": {
     "title": "Hochzeitsfotografie | Karin Himml Fotografie",
     "description": "Professionelle Hochzeitsfotografie – euer großer Tag in einzigartigen, emotionalen Bildern festgehalten.",
@@ -172,69 +180,76 @@
 
   "sections": [
     {
-      "template": "header/header-v1.html",
+      "template": "hero/hero-v5.html",
       "data": {
-        "logoText": "Karin Himml",
-        "logoLink": "../"
-      }
-    },
-    {
-      "template": "hero/hero-v1.html",
-      "data": {
-        "label": "Hochzeitsfotografie",
-        "title": "Euer großer Tag in einzigartigen Bildern",
-        "subtitle": "Emotionale, authentische Hochzeitsfotografie – von der Trauung bis zur Party.",
-        "buttonText": "Jetzt Hochzeits-Shooting anfragen",
+        "logoText": "Logo",
+        "title": "Hochzeitsfotografie –<br>Emotionen für die Ewigkeit!",
+        "subtitle": "– Am besten mit einem<br><span class=\"text-accent\">KOSTENLOSEN Probe-Fotoshooting!</span>",
+        "description": "Lernt mich ganz unverbindlich bei einem 20-minütigen Probe-Fotoshooting kennen – kostenlos und risikofrei.<br>So könnt ihr euch selbst von meiner Arbeitsweise und Bildqualität überzeugen und herausfinden, ob ich die richtige Fotografin für euch bin, um euch an eurem großen Tag zu begleiten.",
+        "buttonText": "Kostenloses Probe-Fotoshooting sichern",
         "buttonLink": "quiz-step1.html",
-        "imageMain": "https://images.unsplash.com/photo-1519741497674-611481863552?w=428&h=394&fit=crop",
-        "imageSecondary": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=306&h=290&fit=crop",
-        "imageAlt": "Hochzeitsfotografie"
+        "backgroundImage": "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1440&h=746&fit=crop"
       }
     },
     {
       "template": "content/content-v1.html",
       "data": {
-        "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=428&h=533&fit=crop",
-        "title": "Eure Liebe verdient die schönsten Bilder",
+        "variant": "v5",
+        "imageLeft": true,
+        "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=474&h=493&fit=crop",
+        "title": "Eure Liebe, eure Geschichte – einzigartig und unvergesslich festgehalten.",
         "paragraphs": [
-          "Als Hochzeitsfotografin begleite ich euch durch euren besonderen Tag und halte die emotionalsten Momente fest.",
-          "Vom Getting Ready über die Trauung bis hin zur ausgelassenen Feier – ich bin für euch da und sorge dafür, dass kein besonderer Augenblick verloren geht."
-        ],
-        "linkText": "Shooting anfragen",
-        "linkUrl": "quiz-step1.html",
-        "linkAsButton": true
+          "Mit meiner Expertise von über 350 fotografischen Hochzeitsbegleitungen halte ich eure Liebe in einzigartigen Bildern fest, die euch ein Leben lang berühren.",
+          "Mit eurem ganz persönlichen Style, eurer Liebe und meinem Einfühlungsvermögen erschaffen wir gemeinsam den Tag eures Lebens!",
+          "Lernt mich und meine Arbeit kennen – mit echter Leidenschaft, die man in jedem Bild spürt."
+        ]
       }
     },
     {
-      "template": "gallery/gallery-collage-v5.html",
+      "template": "gallery/gallery-slider.html",
       "data": {
+        "variant": "v5",
         "bgClass": "section--bg-secondary",
         "images": [
-          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop", "alt": "Hochzeitspaar" },
-          { "src": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&h=300&fit=crop", "alt": "Brautstrauß" },
-          { "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=300&fit=crop", "alt": "Getting Ready" },
-          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&h=300&fit=crop", "alt": "Hochzeitsfeier" }
-        ]
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=350&h=350&fit=crop", "alt": "Hochzeitspaar" },
+          { "src": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=350&h=350&fit=crop", "alt": "Brautstrauß" },
+          { "src": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=350&h=350&fit=crop", "alt": "Getting Ready" },
+          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=350&h=350&fit=crop", "alt": "Hochzeitsfeier" },
+          { "src": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=350&h=350&fit=crop", "alt": "Trauung" },
+          { "src": "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=350&h=350&fit=crop", "alt": "Brautpaar" },
+          { "src": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=350&h=350&fit=crop", "alt": "Hochzeitslocation" }
+        ],
+        "ctaText": "Mehr erfahren",
+        "ctaLink": "quiz-step1.html"
       }
     },
     {
       "template": "features/features-cards-v3.html",
       "data": {
+        "title": "Was du bei mir genießen wirst...",
+        "subtitle": "Ich bin nicht nur eine Fotografin - ich bin deine Lösung für wunderschöne Erinnerungen!",
+        "ctaText": "Hochzeit anfragen",
+        "ctaLink": "quiz-step1.html",
         "features": [
           {
-            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
-            "title": "Emotionale Momente",
-            "text": "Ich fange die echten, ungestellten Emotionen eures Tages ein – vom ersten Blick bis zum letzten Tanz."
+            "image": "https://images.unsplash.com/photo-1519741497674-611481863552?w=230&h=160&fit=crop",
+            "title": "Spaß und Wohlfühlen - Individuell angepasst",
+            "text": "Meine Hochzeits-Fotoshootings sind Momente voller Freude und echter Emotionen. Ich schaffe eine entspannte Atmosphäre, in der ihr euch fallen lassen und ganz ihr selbst sein könnt. Auch wenn ihr vor der Kamera unsicher seid – ich begleite euch mit Feingefühl, damit eure Liebe authentisch und strahlend sichtbar wird."
           },
           {
-            "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=400&h=300&fit=crop",
-            "title": "Professionelle Begleitung",
-            "text": "Den ganzen Tag an eurer Seite, diskret im Hintergrund und doch immer am richtigen Ort zur richtigen Zeit."
+            "image": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=230&h=160&fit=crop",
+            "title": "Hohe Qualität zu fairen Preisen",
+            "text": "Meine Hochzeits-Fotoshootings stehen für höchste Qualität zu einem fairen Preis. Mit einem geschulten Blick fürs Detail und moderner Technik halte ich eure schönsten Momente authentisch fest. Vom ersten Gespräch bis zur abschließenden Bearbeitung könnt ihr auf meine Sorgfalt und Zuverlässigkeit zählen."
           },
           {
-            "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=300&fit=crop",
-            "title": "Zeitlose Bildsprache",
-            "text": "Natürliche Farben und eine zeitlose Ästhetik, die auch in 20 Jahren noch genauso schön ist wie heute."
+            "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=230&h=160&fit=crop",
+            "title": "Kreativ und zuverlässig",
+            "text": "Ich verbinde Kreativität mit Organisationstalent, um eure Hochzeitsbilder so einzigartig wie eure Liebe zu gestalten. Vom gefühlvollen Paar-Fotoshooting bis zu bewegenden Momenten mit Familie und Freunden – mit viel Liebe zum Detail setze ich euren großen Tag liebevoll in Szene."
+          },
+          {
+            "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=230&h=160&fit=crop",
+            "title": "Zufriedenheit und vielfältige Möglichkeiten",
+            "text": "Eure Zufriedenheit steht für mich an erster Stelle. Ob klassisch, modern oder ganz individuell – ich richte mich nach euren Wünschen und Vorstellungen. Gemeinsam gestalten wir ein Fotoshooting, das eure Liebe und Persönlichkeit ehrlich widerspiegelt und unvergessliche Erinnerungen schafft."
           }
         ]
       }
@@ -243,6 +258,7 @@
       "template": "gallery/gallery-single-slider.html",
       "data": {
         "bgClass": "section--bg-secondary",
+        "smallRadius": true,
         "images": [
           { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Hochzeit 1" },
           { "src": "https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1233&h=746&fit=crop", "alt": "Hochzeit 2" },
@@ -253,68 +269,63 @@
     {
       "template": "services/services-list-v5.html",
       "data": {
-        "title": "Was ihr bei mir bekommt",
+        "bgClass": "section--bg-primary",
+        "title": "Die Leistungen:",
+        "sideImage": "https://images.unsplash.com/photo-1519741497674-611481863552?w=501&h=728&fit=crop",
         "items": [
           {
-            "icon": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=60&h=60&fit=crop",
-            "title": "Vorgespräch & Planung",
-            "text": "Persönliches Kennenlernen und detaillierte Planung eures Hochzeitstages."
+            "title": "Ausführliche Beratung:",
+            "text": "Vom ersten Vorgespräch über die Feierlichkeit bis hin zum finalen Bild – ich bin für euch da."
           },
           {
-            "icon": "https://images.unsplash.com/photo-1452802447250-470a88ac82bc?w=60&h=60&fit=crop",
-            "title": "Professionelle Begleitung",
-            "text": "Diskrete, professionelle Begleitung während der gesamten Feierlichkeiten."
+            "title": "Rundum-Betreuung an eurem großen Tag:",
+            "text": "Vom Ankleiden und Stylen über die Hochzeitszeremonie bis zum letzten Tanz – ich begleite euch durch diesen Tag voller Ereignisse und Emotionen."
           },
           {
-            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=60&h=60&fit=crop",
-            "title": "Bildbearbeitung & Retusche",
-            "text": "Liebevolle Nachbearbeitung aller Bilder für ein perfektes Ergebnis."
+            "title": "Produktgarantie:",
+            "text": "Damit ihr ganz entspannt sein könnt: sichere ich eure Aufnahmen doppelt – so lange, bis ihr eure Bilder sicher gespeichert habt."
           },
           {
-            "icon": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop",
-            "title": "Online-Galerie",
-            "text": "Private Online-Galerie zum Teilen mit Familie und Freunden."
+            "title": "Erstklassige Qualität:",
+            "text": "Mit jahrelanger Erfahrung in der Fotografie, einem geschulten Blick fürs Detail und stets aktueller Technik garantiere ich euch anspruchsvolle und kreative Bilder."
+          },
+          {
+            "title": "Die Daten gehören euch:",
+            "text": "Ihr erhaltet alle entstandenen Fotos digital – in voller Auflösung. So könnt ihr eure Erinnerungen jederzeit ansehen, teilen und ganz nach Wunsch verwenden – egal wo ihr gerade seid."
           }
-        ],
-        "ctaText": "Jetzt Hochzeits-Shooting anfragen",
-        "ctaLink": "quiz-step1.html"
+        ]
       }
     },
     {
       "template": "steps/steps-6.html",
       "data": {
         "bgClass": "section--bg-secondary",
-        "title": "So läuft euer Hochzeitsshooting ab",
+        "title": "In 5 Schritten zum kostenlosen Probe-Fotoshooting!",
         "steps": [
           {
             "number": "1",
-            "title": "Anfrage senden",
-            "text": "Füllt das Quiz aus und erzählt mir von eurem Traumtag."
+            "text": "Beantworte die folgenden Fragen und melde dich für das Kennenlerngespräch an."
           },
           {
             "number": "2",
-            "title": "Kennenlernen",
-            "text": "Wir treffen uns persönlich oder per Videocall zum Vorgespräch."
+            "text": "Nach der Eintragung wird die Reservierung für euren Hochzeitstag sowie der Gutschein für das kostenlose Probe-Fotoshooting bei mir vermerkt."
           },
           {
             "number": "3",
-            "title": "Planung",
-            "text": "Gemeinsam planen wir den Ablauf und besprechen eure Wünsche."
+            "text": "Ich werde euch zu dem von euch angegebenen Zeitpunkt telefonisch kontaktieren. Natürlich könnt ihr mich auch jederzeit per Nachricht oder Anruf erreichen."
           },
           {
             "number": "4",
-            "title": "Der große Tag",
-            "text": "Ich begleite euch entspannt und halte die schönsten Momente fest."
+            "text": "Gemeinsam finden wir einen Termin für das unverbindliche Beratungsgespräch und das kostenlose, 20-minütige Probe-Fotoshooting."
           },
           {
             "number": "5",
-            "title": "Bildauswahl",
-            "text": "In eurer privaten Galerie wählt ihr eure Lieblingsbilder aus."
+            "text": "Ich stelle euch mein Angebot in Ruhe vor und schenke euch ein 20-minütiges Probeshooting. Wenn ihr mich für eure Hochzeit bucht, bekommt ihr die Bilder auch kostenlos dazu – andernfalls könnt ihr sie bei Gefallen ganz einfach erwerben."
           },
           {
-            "number": "6",
-            "title": "Übergabe",
-            "text": "Ihr erhaltet eure fertigen, bearbeiteten Hochzeitsbilder."
+            "number": "",
+            "title": "Fertig!",
+            "text": "Nach dem Kennenlern-Fotoshooting steht einer unvergesslichen Hochzeitsreportage nichts mehr im Weg – und ihr könnt sicher entscheiden, ob ich die richtige Begleiter für euren großen Tag bin."
           }
         ]
       }
@@ -322,17 +333,22 @@
     {
       "template": "gallery/gallery-single-slider.html",
       "data": {
+        "bgClass": "section--bg-secondary",
+        "smallRadius": true,
+        "ctaText": "Kontakt aufnehmen",
+        "ctaLink": "quiz-step1.html",
         "images": [
-          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1233&h=746&fit=crop", "alt": "Hochzeitsfeier" },
-          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Brautpaar" }
+          { "src": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1327&h=521&fit=crop", "alt": "Hochzeitsfeier" },
+          { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1327&h=521&fit=crop", "alt": "Brautpaar" }
         ]
       }
     },
     {
       "template": "faq/faq-accordion.html",
       "data": {
-        "bgClass": "section--bg-secondary",
-        "title": "Häufige Fragen zur Hochzeitsfotografie",
+        "title": "Häufige Fragen zum Fotoshooting",
+        "ctaText": "Kontakt aufnehmen",
+        "ctaLink": "quiz-step1.html",
         "questions": [
           {
             "question": "Wie lange begleitest du uns am Hochzeitstag?",
@@ -356,13 +372,19 @@
     {
       "template": "about/about-v1.html",
       "data": {
-        "showDivider": true,
-        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop",
-        "label": "Eure Fotografin",
+        "variant": "v5",
+        "bgClass": "section--bg-secondary",
+        "imageRight": true,
+        "nameUnderImage": true,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=581&h=450&fit=crop",
+        "label": "Über mich",
         "name": "Karin Himml",
+        "subtitle": "Fotografin, Visagistin und Make-up-Stylistin",
         "paragraphs": [
-          "Als Hochzeitsfotografin ist es mir wichtig, eure Geschichte authentisch und emotional festzuhalten.",
-          "Ich arbeite diskret im Hintergrund und sorge dafür, dass ihr euren Tag in vollen Zügen genießen könnt – die schönsten Momente halte ich dabei für euch fest."
+          "Meine fotografische Reise begann 1979 mit einer Ausbildung zur Fotografin.",
+          "In den 1980er-Jahren konnte ich mein Können in renommierten Werbestudios wie bei Neckermann sowie als Studioleiterin in verschiedenen Portraitstudios vertiefen.",
+          "1989 legte ich erfolgreich meine Meisterprüfung ab und eröffnete 1990 mein eigenes Fotostudio – seither lebe ich meine Leidenschaft für kreative, hochwertige Fotografie.",
+          "Durch kontinuierliche Fortbildungen in digitaler Bildbearbeitung, Beauty-Retusche und Workshops bleibe ich am Puls der Zeit – für Bilder, die mit Professionalität, Gefühl und Ästhetik überzeugen."
         ]
       }
     },

@@ -47,12 +47,15 @@
       <p class="hero__logo">Logo</p>
 
       <div class="hero__content">
-        <!-- Главный заголовок - ЧЁРНЫЙ -->
+        <!-- Главный заголовок - ЧЁРНЫЙ (triple braces for HTML line breaks) -->
         <h1 class="hero__title">Wunderschöne Erinnerungen, die für die Ewigkeit schaffen.</h1>
 
         <!-- Подзаголовок с акцентным текстом -->
         
         <p class="hero__subtitle">Hallo, ich bin Karin Himml - leidenschaftliche Fotografin mit <span class="text-accent">Herz & Seele</span></p>
+        
+
+        <!-- Описание (опционально, triple braces for HTML) -->
         
 
         <!-- Кнопка -->
@@ -84,6 +87,7 @@
           <div class="content-section__image">
             <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=474&h=493&fit=crop" alt="Karin Himml Fotografie">
           </div>
+          
           
         </div>
       </div>
@@ -417,40 +421,44 @@
      ============================================ -->
 
 <section class="gallery-single-slider section--bg-primary gallery-single-slider--small-radius">
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-  <div class="gallery-single-slider__container" data-gallery-single-slider>
-    
-    <div class="gallery-single-slider__slide is-active">
-      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop" alt="Hochzeitsfotografie" class="gallery-single-slider__image">
-    </div>
-    
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop" alt="Hochzeitsfotografie" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop" alt="Familienfotografie" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop" alt="Familienfotografie" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=746&fit=crop" alt="Tierfotografie" class="gallery-single-slider__image">
-    </div>
-    
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1233&h=746&fit=crop" alt="Tierfotografie" class="gallery-single-slider__image">
+      </div>
+      
 
-    <div class="gallery-single-slider__slide">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop" alt="Businessfotografie" class="gallery-single-slider__image">
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1233&h=746&fit=crop" alt="Businessfotografie" class="gallery-single-slider__image">
+      </div>
+      
     </div>
-    
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  
 </section>
 
 
@@ -488,6 +496,7 @@
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=550&h=550&fit=crop" alt="Karin Himml">
         </div>
+        
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
@@ -496,12 +505,15 @@
           
           <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
           <p class="about__label">Willkommen bei</p>
+          {{#unless nameUnderImage}}
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">Karin Himml</h2>
+          
           
           <p class="about__tagline">Fotografin, Visagistin und Make-up-Stylistin</p>
           
           <div class="about__divider"></div>
+          {{/unless}}
           
 
           <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
@@ -589,7 +601,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 08:47</p>
+      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 14:59</p>
     </div>
   </div>
 </footer>

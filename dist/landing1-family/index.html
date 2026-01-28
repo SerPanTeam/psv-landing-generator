@@ -194,6 +194,7 @@
             <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=428&h=533&fit=crop" alt="Für die schönsten Erinnerungen mit deinen Liebsten!">
           </div>
           
+          
           <p class="content-section__accent">– für dich, für dein Kind, für immer –</p>
           
         </div>
@@ -238,6 +239,11 @@
      - 3 visible slides
      - Navigation arrows
      - Smooth slide transitions
+
+     VARIANT V5 (L5 Business):
+     - Center slide larger with white frame
+     - Side slides smaller without frame
+     - CTA button support
      ============================================ -->
 
 <section class="gallery-slider section--bg-secondary">
@@ -289,6 +295,7 @@
       </svg>
     </button>
   </div>
+  
 </section>
 
 
@@ -693,6 +700,7 @@
         <div class="about__image">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop" alt="Dorett Dornbusch">
         </div>
+        
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
@@ -701,10 +709,13 @@
           
           <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
           <p class="about__label">Willkommen bei</p>
+          {{#unless nameUnderImage}}
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">Dorett Dornbusch</h2>
           
+          
           <div class="about__divider"></div>
+          {{/unless}}
           
 
           <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
@@ -1084,7 +1095,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 08:47</p>
+      <p class="footer__updated">Letzte Aktualisierung: 28.01.2026 14:59</p>
     </div>
   </div>
 </footer>

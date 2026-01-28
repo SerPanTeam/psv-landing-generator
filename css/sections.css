@@ -581,27 +581,31 @@
 
 /* ===== FEATURES CARDS V3 (3 columns) ===== */
 .features-cards--v3 {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 70px; /* FIGMA: section padding */
+  padding-bottom: 70px;
 }
 
 .features-cards--v3 .features-cards__grid {
   display: flex;
-  gap: 40px;
+  gap: 43px; /* FIGMA: ~43px between cards */
 }
 
 .features-cards--v3 .features-cards__item {
-  flex: 1;
+  flex: 0 0 300px; /* FIGMA: 300px card width */
+  width: 300px;
+  min-height: 637px; /* FIGMA: card height */
+  background-color: var(--color-bg-light); /* FIGMA: white cards */
+  border-radius: 15px; /* FIGMA: 15px radius */
+  padding: 35px; /* FIGMA: padding inside card */
 }
 
 .features-cards--v3 .features-cards__image {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
+  width: 230px; /* FIGMA: exact */
+  height: 160px; /* FIGMA: exact */
   background-color: var(--color-placeholder-dark);
-  border-radius: 35px;
+  border-radius: 15px; /* FIGMA: 15px radius */
   overflow: hidden;
-  margin-bottom: 36px; /* FIGMA: 1847 - 1811 = 36px */
+  margin: 0 auto 36px; /* Center image, FIGMA gap */
 }
 
 .features-cards--v3 .features-cards__image img {
@@ -611,18 +615,39 @@
 }
 
 .features-cards--v3 .features-cards__title {
-  font-size: 28px;
+  font-size: 22px; /* FIGMA: 22px Bold */
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: var(--color-text-primary);
 }
 
 .features-cards--v3 .features-cards__text {
-  font-size: 22px;
-  font-weight: var(--font-weight-medium);
+  font-size: 16px; /* FIGMA: 16px Regular */
+  font-weight: var(--font-weight-regular);
   line-height: 1.5;
   color: var(--color-text-primary);
+}
+
+.features-cards--v3 .features-cards__section-title {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: 33px; /* FIGMA: gap to subtitle */
+  text-align: left;
+}
+
+.features-cards--v3 .features-cards__section-subtitle {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin-bottom: 53px; /* FIGMA: gap to cards */
+  text-align: left;
+}
+
+.features-cards--v3 .features-cards__cta {
+  text-align: center;
+  margin-top: 56px; /* FIGMA: gap from cards to CTA */
 }
 
 /* Hero V4 - Landing 4 (Kinder-Fotoshooting)
@@ -856,7 +881,7 @@
 }
 
 .hero--v5 .hero__content {
-  max-width: 526px; /* FIGMA: exact title width */
+  max-width: 621px; /* FIGMA: title width 621px */
 }
 
 .hero--v5 .hero__title {
@@ -872,11 +897,21 @@
   font-weight: var(--font-weight-bold); /* FIGMA: Bold */
   line-height: 1.4;
   color: var(--color-text-primary); /* FIGMA: black */
+  margin-bottom: 20px;
+}
+
+.hero--v5 .hero__description {
+  font-size: 16px; /* FIGMA: exact 16px */
+  font-weight: var(--font-weight-regular); /* FIGMA: Regular */
+  line-height: 1.6;
+  color: var(--color-text-primary);
   margin-bottom: 30px;
+  max-width: 602px;
 }
 
 .hero--v5 .hero__btn {
-  min-width: 222px; /* FIGMA: approx */
+  width: 511px; /* FIGMA: exact for Hochzeit */
+  max-width: 100%;
   height: 70px;
   border-radius: 10px;
   font-size: var(--font-size-text);
@@ -919,6 +954,13 @@
 
   .hero--v5 .hero__subtitle {
     font-size: 16px;
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero--v5 .hero__description {
+    font-size: 14px;
     text-align: left;
     padding-left: 16px;
     padding-right: 16px;
@@ -1121,6 +1163,29 @@
   min-height: auto;
 }
 
+/* ===== CONTENT V5 STACKED IMAGES - два перекрывающихся изображения ===== */
+/* Когда есть imageSecondary - два реальных фото вместо декоративной подложки */
+.content-section--v5 .content-section__image-frame--stacked::after {
+  display: none; /* Убираем псевдо-элемент, используем реальное второе изображение */
+}
+
+.content-section--v5 .content-section__image-secondary {
+  position: absolute;
+  width: 474px; /* FIGMA: same as main image */
+  height: 340px; /* FIGMA: exact */
+  border-radius: 10px;
+  overflow: hidden;
+  bottom: -50px; /* FIGMA: смещение вниз */
+  right: -63px; /* FIGMA: смещение вправо */
+  z-index: 1; /* За основным изображением */
+}
+
+.content-section--v5 .content-section__image-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .content-section--v5 .content-section__text {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium); /* FIGMA: Medium */
@@ -1145,6 +1210,15 @@
     width: 100%;
     height: auto;
     aspect-ratio: 474 / 493;
+  }
+
+  /* Stacked images - tablet */
+  .content-section--v5 .content-section__image-secondary {
+    width: 100%;
+    right: -30px;
+    bottom: -30px;
+    height: auto;
+    aspect-ratio: 474 / 340;
   }
 }
 
@@ -1188,6 +1262,16 @@
     right: 0;
     left: auto;
     bottom: -20px;
+  }
+
+  /* Stacked images - mobile */
+  .content-section--v5 .content-section__image-secondary {
+    width: calc(100% - 30px);
+    right: 0;
+    left: auto;
+    bottom: -20px;
+    height: auto;
+    aspect-ratio: 474 / 340;
   }
 
   /* Content V5 - left aligned text */
@@ -1912,6 +1996,57 @@
   height: 15px;
 }
 
+/* Gallery Slider CTA */
+.gallery-slider__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ===== GALLERY SLIDER V5 - Center Highlight with Frame ===== */
+/* FIGMA: Center slide 450x450 with white frame, side slides 250x250 */
+/* При листании центральная картинка всегда в белой рамке */
+.gallery-slider--v5 .gallery-slider__wrapper {
+  max-width: 1346px;
+  align-items: center;
+}
+
+.gallery-slider--v5 .gallery-slider__viewport {
+  width: 1030px; /* 250 + 40 + 450 + 40 + 250 */
+  height: 450px; /* Fixed height = center slide height */
+  overflow: hidden;
+}
+
+.gallery-slider--v5 .gallery-slider__track {
+  align-items: center; /* Center vertically since slides have different heights */
+  height: 450px; /* Fixed height */
+  gap: 40px;
+  transition: transform 0.4s ease;
+}
+
+/* Все слайды по умолчанию маленькие */
+.gallery-slider--v5 .gallery-slider__slide {
+  flex: 0 0 250px;
+  width: 250px;
+  height: 250px;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  background-color: var(--color-placeholder-dark);
+}
+
+.gallery-slider--v5 .gallery-slider__slide img {
+  border-radius: 15px;
+}
+
+/* Центральный слайд - увеличенный с белой рамкой */
+.gallery-slider--v5 .gallery-slider__slide.is-center {
+  flex: 0 0 450px;
+  width: 450px;
+  height: 450px;
+  background-color: var(--color-bg-light);
+  padding: 50px;
+  border-radius: 20px;
+}
+
 /* ===== GALLERY SLIDER V4 - Single Image with Arrows ===== */
 /* Image: 1233x746px, rounded 40px, arrows on edges */
 .gallery-slider-v4 {
@@ -2588,6 +2723,14 @@
   margin-bottom: 0;
 }
 
+.about__subtitle {
+  font-size: var(--font-size-text); /* FIGMA L5: 22px */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
 .about__divider {
   width: 471px; /* FIGMA: exact */
   max-width: 100%;
@@ -2775,6 +2918,121 @@
   .about:has(.about__btn) .about__tagline,
   .about:has(.about__btn) .about__text {
     text-align: left;
+  }
+}
+
+/* About V5 - Hochzeit variant (no button, name under image) */
+.about--v5 .about__image {
+  width: 581px; /* FIGMA Hochzeit: 581x450 */
+  height: 450px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  background: transparent;
+}
+
+.about--v5 .about__image::after {
+  content: '';
+  position: absolute;
+  width: 595px; /* FIGMA: exact */
+  height: 383px;
+  background: var(--color-bg-primary);
+  border-radius: 10px;
+  left: -63px; /* FIGMA Hochzeit: 730-793=-63px */
+  top: 241px; /* FIGMA: same as hub */
+  z-index: 1;
+}
+
+.about--v5 .about__image img {
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.about--v5 .row,
+.about--v5 [class*="col-"] {
+  overflow: visible;
+}
+
+.about--v5 .about__label {
+  font-size: var(--font-size-h2); /* FIGMA Hochzeit: 45px */
+  font-weight: var(--font-weight-bold);
+}
+
+.about--v5 .about__name--under-image {
+  font-size: var(--font-size-h2); /* FIGMA: 45px */
+  font-weight: var(--font-weight-bold);
+  margin-top: 35px; /* FIGMA: gap below image */
+  margin-bottom: 0;
+}
+
+.about--v5 .about__tagline--under-image {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.about--v5 {
+  padding-bottom: 130px; /* Extra space for backdrop overflow */
+}
+
+/* About V5 Responsive */
+@media (max-width: 991.98px) {
+  .about--v5 .about__image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 581 / 450;
+    margin: 0 auto 60px;
+  }
+
+  .about--v5 .about__image::after {
+    width: calc(100% + 60px);
+    height: 200px;
+    left: -30px;
+    top: auto;
+    bottom: -30px;
+  }
+
+  .about--v5 .about__name--under-image,
+  .about--v5 .about__tagline--under-image {
+    text-align: center;
+  }
+
+  .about--v5 {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about--v5 .about__image {
+    max-width: 300px;
+  }
+
+  .about--v5 .about__image::after {
+    height: 150px;
+    left: -20px;
+    bottom: -20px;
+    width: calc(100% + 40px);
+  }
+
+  .about--v5 .about__name--under-image {
+    font-size: var(--font-size-h3);
+  }
+
+  .about--v5 .about__tagline--under-image {
+    font-size: 18px;
+  }
+
+  .about--v5 {
+    padding-bottom: 60px;
+  }
+
+  .about--v5 .about__content {
+    text-align: left;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -3366,7 +3624,10 @@
    Arrows outside image on left/right
 */
 .gallery-single-slider {
-  padding: 0; /* FIGMA: Hero-v3 handles the 56px gap above */
+  padding: var(--section-padding-y) 0; /* FIGMA L5: section padding */
+}
+
+.gallery-single-slider__inner {
   /* Flex layout: arrows on sides, image in center */
   display: flex;
   align-items: center;
@@ -3433,7 +3694,7 @@
 
 /* Responsive */
 @media (max-width: 1280px) {
-  .gallery-single-slider {
+  .gallery-single-slider__inner {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -3445,7 +3706,7 @@
 }
 
 @media (max-width: 767px) {
-  .gallery-single-slider {
+  .gallery-single-slider__inner {
     padding-left: 10px;
     padding-right: 10px;
     gap: 8px;
@@ -3471,6 +3732,14 @@
     width: 12px;
     height: 24px;
   }
+}
+
+.gallery-single-slider__cta {
+  text-align: center;
+  margin-top: 60px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== PADDING UTILITIES ===== */
@@ -3704,6 +3973,11 @@
   object-fit: cover;
 }
 
+.gallery-collage__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
 /* ============================================
    GALLERY CARDS V5 - Business Landing
    3 large photo cards
@@ -3767,7 +4041,7 @@
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
-  margin-bottom: 16px;
+  margin-bottom: 50px;
 }
 
 .services-list__subtitle {
@@ -3780,25 +4054,26 @@
 .services-list__items {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
 }
 
 .services-list__item {
   display: flex;
   align-items: flex-start;
-  gap: 24px;
+  gap: 36px;
 }
 
 .services-list__icon {
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   flex-shrink: 0;
+  background: #7F7F7F;
+  border-radius: 4px;
 }
 
-.services-list__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.services-list__icon img,
+.services-list__icon svg {
+  display: none;
 }
 
 .services-list__content {
@@ -3806,21 +4081,76 @@
 }
 
 .services-list__item-title {
-  font-size: var(--font-size-text);
+  font-size: 22px;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  line-height: 1;
 }
 
 .services-list__item-text {
-  font-size: var(--font-size-small);
+  font-size: 22px;
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+  margin-top: 8px;
 }
 
 .services-list__cta {
   margin-top: 50px;
+}
+
+/* Services List with side image (Hochzeit) */
+.services-list--with-image .services-list__wrapper {
+  display: flex;
+  gap: 52px;
+  align-items: flex-start;
+}
+
+.services-list--with-image .services-list__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.services-list--with-image .services-list__image-wrapper {
+  flex-shrink: 0;
+  width: 45%;
+  max-width: 607px;
+}
+
+.services-list--with-image .services-list__image-frame {
+  background: white;
+  border-radius: 10px;
+  padding: 60px 53px;
+}
+
+.services-list--with-image .services-list__image {
+  width: 501px;
+  height: 728px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .services-list--with-image .services-list__wrapper {
+    flex-direction: column;
+  }
+
+  .services-list--with-image .services-list__image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .services-list--with-image .services-list__image-frame {
+    padding: 20px;
+  }
+
+  .services-list--with-image .services-list__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 501 / 728;
+  }
 }
 
 /* ============================================
@@ -3836,7 +4166,6 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   margin-bottom: 50px;
-  text-align: center;
 }
 
 .steps-6__cta--top {
@@ -3846,56 +4175,50 @@
 
 .steps-6__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
 .steps-6__card {
-  padding: 24px;
-  background: var(--color-bg-white);
-  transition: box-shadow var(--transition-normal);
-}
-
-.steps-6__card:hover {
-  box-shadow: var(--shadow-sm);
-}
-
-.steps-6__card-header {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 26px;
+  background: var(--color-bg-white);
+  border-radius: 10px;
 }
 
 .steps-6__number {
-  font-size: var(--font-size-h3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #E2C08D;
+  font-size: 45px;
   font-weight: var(--font-weight-bold);
-  color: var(--color-accent);
+  color: var(--color-text-primary);
+  flex-shrink: 0;
 }
 
-.steps-6__icon {
-  width: 50px;
-  height: 50px;
-}
-
-.steps-6__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.steps-6__content {
+  flex: 1;
+  padding-top: 4px;
 }
 
 .steps-6__card-title {
-  font-size: var(--font-size-text);
+  font-size: 28px;
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   margin-bottom: 12px;
 }
 
 .steps-6__card-text {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-normal);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 /* ============================================
@@ -3951,10 +4274,6 @@
   }
 
   .gallery-cards__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .steps-6__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

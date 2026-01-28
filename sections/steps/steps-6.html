@@ -25,16 +25,13 @@
     <div class="steps-6__grid">
       {{#each steps}}
       <div class="steps-6__card">
-        <div class="steps-6__card-header">
-          <span class="steps-6__number">{{number}}</span>
-          {{#if icon}}
-          <div class="steps-6__icon">
-            <img src="{{icon}}" alt="{{title}}">
-          </div>
+        <span class="steps-6__number">{{this.number}}</span>
+        <div class="steps-6__content">
+          {{#if this.title}}
+          <h3 class="steps-6__card-title">{{this.title}}</h3>
           {{/if}}
+          <p class="steps-6__card-text">{{this.text}}</p>
         </div>
-        <h3 class="steps-6__card-title">{{title}}</h3>
-        <p class="steps-6__card-text">{{text}}</p>
       </div>
       {{/each}}
     </div>

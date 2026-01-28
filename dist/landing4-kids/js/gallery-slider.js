@@ -7,14 +7,18 @@
 class GallerySlider {
   constructor(element) {
     this.wrapper = element;
+    this.section = element.closest('.gallery-slider');
     this.track = element.querySelector('.gallery-slider__track');
     this.slides = element.querySelectorAll('.gallery-slider__slide');
     this.prevBtn = element.querySelector('.gallery-slider__arrow--prev');
     this.nextBtn = element.querySelector('.gallery-slider__arrow--next');
 
+    // V5 variant has different sized slides (center is bigger)
+    this.isV5 = this.section && this.section.classList.contains('gallery-slider--v5');
+
     this.currentIndex = 0;
     this.slidesToShow = this.calculateSlidesToShow(); // Responsive количество слайдов
-    this.slideGap = 22; // FIGMA: gap между слайдами
+    this.slideGap = this.isV5 ? 40 : 22; // FIGMA: gap между слайдами
 
     this.init();
   }
@@ -32,6 +36,11 @@ class GallerySlider {
 
   init() {
     if (this.slides.length === 0) return;
+
+    // V5: start with second slide as center (index 1)
+    if (this.isV5 && this.slides.length >= 3) {
+      this.currentIndex = 1;
+    }
 
     this.calculateSlideWidth();
     this.bindEvents();
@@ -67,6 +76,16 @@ class GallerySlider {
     const viewport = this.wrapper.querySelector('.gallery-slider__viewport');
     if (!viewport) return;
 
+    // V5 variant has CSS-defined slide widths, don't override
+    if (this.isV5) {
+      this.track.style.gap = `${this.slideGap}px`;
+      this.sideSlideWidth = 250;
+      this.centerSlideWidth = 450;
+      // Set initial center slide
+      this.updateCenterSlide();
+      return;
+    }
+
     const viewportWidth = viewport.offsetWidth;
     // Ширина одного слайда = (viewport - gaps) / slidesToShow
     this.slideWidth = (viewportWidth - this.slideGap * (this.slidesToShow - 1)) / this.slidesToShow;
@@ -79,6 +98,16 @@ class GallerySlider {
 
     // Устанавливаем gap для track
     this.track.style.gap = `${this.slideGap}px`;
+  }
+
+  // V5: Update which slide has the center highlight
+  updateCenterSlide() {
+    if (!this.isV5) return;
+
+    this.slides.forEach((slide, i) => {
+      // Center slide is currentIndex (the one in the middle of viewport)
+      slide.classList.toggle('is-center', i === this.currentIndex);
+    });
   }
 
   bindEvents() {
@@ -112,7 +141,8 @@ class GallerySlider {
   }
 
   prev() {
-    if (this.currentIndex > 0) {
+    const minIndex = this.isV5 ? 1 : 0;
+    if (this.currentIndex > minIndex) {
       this.currentIndex--;
       this.updatePosition();
       this.updateArrowsState();
@@ -120,7 +150,9 @@ class GallerySlider {
   }
 
   next() {
-    const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+    const maxIndex = this.isV5
+      ? this.slides.length - 2
+      : Math.max(0, this.slides.length - this.slidesToShow);
     if (this.currentIndex < maxIndex) {
       this.currentIndex++;
       this.updatePosition();
@@ -129,16 +161,35 @@ class GallerySlider {
   }
 
   updatePosition() {
-    const offset = this.currentIndex * (this.slideWidth + this.slideGap);
+    let offset = 0;
+
+    if (this.isV5) {
+      // V5: center the currentIndex slide in viewport
+      // All non-center slides are 250px, gaps are 40px
+      // offset = (currentIndex - 1) * (250 + 40) to keep center slide in middle
+      this.updateCenterSlide();
+      offset = (this.currentIndex - 1) * (this.sideSlideWidth + this.slideGap);
+      if (offset < 0) offset = 0;
+    } else {
+      offset = this.currentIndex * (this.slideWidth + this.slideGap);
+    }
+
     this.track.style.transform = `translateX(-${offset}px)`;
   }
 
   updateArrowsState() {
-    const maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+    let minIndex = 0;
+    let maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
+
+    // V5: need slides on both sides of center
+    if (this.isV5) {
+      minIndex = 1; // Need slide on left
+      maxIndex = this.slides.length - 2; // Need slide on right
+    }
 
     if (this.prevBtn) {
-      this.prevBtn.disabled = this.currentIndex === 0;
-      this.prevBtn.classList.toggle('is-disabled', this.currentIndex === 0);
+      this.prevBtn.disabled = this.currentIndex <= minIndex;
+      this.prevBtn.classList.toggle('is-disabled', this.currentIndex <= minIndex);
     }
 
     if (this.nextBtn) {

@@ -162,10 +162,14 @@ function replacePlaceholders(template, data) {
             // Удаляем оставшиеся {{#if this.key}} для несуществующих ключей
             itemResult = itemResult.replace(/\{\{#if this\.(\w+)\}\}[\s\S]*?\{\{\/if\}\}/g, '');
 
-            // Если item — объект, заменяем {{this.key}} и {{key}}
+            // Если item — объект, заменяем {{this.key}}, {{{this.key}}} и {{key}}
             Object.keys(item).forEach(key => {
               const value = item[key];
               if (typeof value === 'string' || typeof value === 'number') {
+                // Triple curly braces {{{this.key}}} - raw HTML output
+                itemResult = itemResult.replace(new RegExp(`\\{\\{\\{this\\.${key}\\}\\}\\}`, 'g'), value);
+                itemResult = itemResult.replace(new RegExp(`\\{\\{\\{${key}\\}\\}\\}`, 'g'), value);
+                // Double curly braces {{this.key}} - escaped output
                 itemResult = itemResult.replace(new RegExp(`\\{\\{this\\.${key}\\}\\}`, 'g'), value);
                 itemResult = itemResult.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
               }
