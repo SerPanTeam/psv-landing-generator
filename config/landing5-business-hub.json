@@ -91,6 +91,7 @@
     {
       "template": "cta/cta-cards-v5.html",
       "data": {
+        "bgClass": "section--bg-primary",
         "title": "Wähle dein Fotoshooting",
         "cards": [
           {
@@ -175,7 +176,8 @@
     {
       "template": "gallery/gallery-single-slider.html",
       "data": {
-        "bgClass": "section--bg-secondary",
+        "bgClass": "section--bg-primary",
+        "smallRadius": true,
         "images": [
           { "src": "https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop", "alt": "Hochzeitsfotografie" },
           { "src": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1233&h=746&fit=crop", "alt": "Familienfotografie" },
@@ -187,6 +189,7 @@
     {
       "template": "about/about-v1.html",
       "data": {
+        "imageRight": true,
         "showDivider": true,
         "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=550&h=550&fit=crop",
         "label": "Willkommen bei",

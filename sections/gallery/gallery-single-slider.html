@@ -11,7 +11,7 @@
      - bgClass: переопределение фона (default: primary)
      ============================================ -->
 
-<section class="gallery-single-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+<section class="gallery-single-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if smallRadius}} gallery-single-slider--small-radius{{/if}}{{paddingClasses}}">
   <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
     <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

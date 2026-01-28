@@ -2139,8 +2139,10 @@
 /* ===== CTA SECTION BUTTON MOBILE ===== */
 @media (max-width: 767.98px) {
   .cta__btn {
-    width: 100%;
-    max-width: 100%;
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
     white-space: normal;
     height: auto;
     min-height: 55px;
@@ -2165,8 +2167,10 @@
 
 @media (max-width: 575.98px) {
   .cta__btn {
-    width: 100%;
-    max-width: 100%;
+    width: calc(100% - 32px);
+    max-width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
     font-size: 15px !important;
     min-height: 48px;
   }
@@ -4239,6 +4243,13 @@
     padding-right: 0;
   }
 
+  .gallery-fullwidth__title {
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
   .gallery-fullwidth__image {
     width: 100%;
     height: auto;
@@ -4376,5 +4387,24 @@
 
   .services-v4__card-text {
     font-size: 13px;
+  }
+}
+
+/* ===== LANDING 5 - BUTTONS FULL WIDTH ===== */
+@media (max-width: 767.98px) {
+  /* Hero V5 button */
+  .hero--v5 .hero__btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* CTA with image button (L5) */
+  .cta--with-image .cta__btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }

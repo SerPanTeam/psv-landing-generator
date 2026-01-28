@@ -227,6 +227,146 @@ mcp__figma-desktop__get_screenshot nodeId=1:3
 
 ---
 
+## Pixel-perfect верификация по Figma
+
+### Алгоритм проверки секции
+
+1. **get_metadata** для родительской страницы → найти node ID секции
+2. **get_design_context** для секции → получить точные значения (шрифты, цвета, размеры, координаты)
+3. **get_screenshot** → визуальная верификация
+4. Сравнить каждое CSS свойство с Figma значениями
+5. Применить fix → `node generator.js` → проверить
+
+### Типичные расхождения и как их находить
+
+| Что проверять | Как найти в Figma | Частые ошибки |
+|---------------|-------------------|---------------|
+| **font-size** | `text-[Npx]` в design_context | L5 использует 16px для body (не 22px как L1-L4) |
+| **font-weight** | `font-bold`/`font-normal` | Regular(400) vs Medium(500) vs Bold(700) |
+| **text-align** | `text-center`/`text-left` | Заголовки секций: center в L1-L4, left в L5 |
+| **gap (grid)** | Разница координат между элементами | Вычислять: `element2.x - (element1.x + element1.width)` |
+| **margin-bottom** | Разница Y между bounding boxes | **ЛОВУШКА:** см. "Bounding Box vs Visual" ниже |
+| **border-radius** | `rounded-[Npx]` | L3: 40-50px, L5: 10-15px |
+| **padding** | Позиция первого/последнего дочернего элемента внутри родителя | `child.y - parent.y` = padding-top |
+| **max-width** | Ширина элемента | Grid max-width может ограничивать карточки |
+
+### КРИТИЧНО: Figma Bounding Box vs CSS Visual Height
+
+**Проблема:** В Figma высота текстового узла (bounding box) ≠ визуальной высоте текста.
+
+**Пример:**
+- Figma: заголовок 45px, bounding box height = 63px (18px лишних)
+- CSS line-height: 1 → line box = 45px
+
+**Формула расчёта gap:**
+```
+visual_text_height = lines × font_size × line_height
+extra_space = bounding_box_height - visual_text_height
+real_gap = figma_gap + extra_space / 2
+```
+
+**Правило:** Если `margin-bottom` из прямого расчёта координат даёт маленькое значение (< 10px),
+а на скриншоте виден заметный отступ — нужно учесть разницу bounding box.
+
+### Scoping L5-специфичных стилей
+
+L5 делит шаблоны с L1-L4. Для изоляции L5 стилей используем CSS `:has()`:
+
+| Секция | Скоупинг через | Пример |
+|--------|----------------|--------|
+| features-grid | `:has(.feature-item--card)` | `.features__grid:has(.feature-item--card) { gap: 32px 27px; }` |
+| about-v1 | `:has(.about__tagline)` | `.about:has(.about__tagline) .about__name { font-size: 45px; }` |
+| gallery-single-slider | `.section--bg-secondary` | `.gallery-single-slider.section--bg-secondary .gallery-single-slider__image { border-radius: 15px; }` |
+| content-v1 | `.content-section--{{variant}}` | `.content-section--v5 .content-section__image { ... }` |
+
+### Декоративные подложки (::after pseudo-elements)
+
+**Проблема:** `z-index: -1` помещает псевдоэлемент ЗА фон секции → не виден.
+
+**Решение:**
+```css
+.parent {
+  position: relative;
+  z-index: 1;        /* создаёт stacking context */
+  overflow: visible;  /* подложка может выходить за границы */
+}
+.parent::after {
+  z-index: 1;        /* за изображением, но видим */
+}
+.parent img {
+  position: relative;
+  z-index: 2;        /* над подложкой */
+}
+/* Также overflow: visible на row и col- контейнерах */
+```
+
+### Проверенные секции хаба (585:30)
+
+| Секция | Node | Статус |
+|--------|------|--------|
+| Hero V5 | — | ✅ |
+| Content V1 (v5) | — | ✅ |
+| Services Cards V5 | 585:194 | ✅ |
+| CTA Cards V5 | 585:195 | ✅ |
+| CTA V1 | 585:67 | ✅ |
+| Gallery Fullwidth | 592:32 | ✅ |
+| Features Grid | 592:35 | ✅ |
+| Gallery Single Slider | 585:144 | ✅ |
+| About V1 | 585:48 | ✅ |
+| Footer V1 | 585:58 | ⚠️ Нужны template changes для map sizing |
+
+### Фоны секций L5 Business Hub
+
+**Цвета:** primary=#F5EDE0 (светлый), secondary=#EEE3D0 (темнее)
+
+| Секция | Figma BG | Template Default | bgClass в конфиге |
+|--------|----------|------------------|-------------------|
+| Hero V5 | gray (image) | — | — |
+| Content V1 | primary | primary | — |
+| Services Cards V5 | secondary | secondary | `section--bg-secondary` |
+| **CTA Cards V5** | **primary** | **secondary** | **`section--bg-primary`** ← обязательно! |
+| CTA V1 | secondary | secondary | — |
+| Gallery Fullwidth | primary | primary | `section--bg-primary` |
+| Features Grid | secondary | primary | `section--bg-secondary` |
+| Gallery Slider | primary | primary | `section--bg-primary` |
+| About V1 | primary | primary | — |
+
+**Правило:** Если template default ≠ Figma, добавить `bgClass` в конфиг.
+
+---
+
+## Landing 5 Mobile: Кнопки на всю ширину контента
+
+### Проблема
+L5 кнопки конфликтовали с общими правилами в responsive.css (`max-width: 280px`).
+
+### Решение
+Добавлены `!important` переопределения в конец responsive.css:
+
+```css
+/* responsive.css - в самом конце */
+@media (max-width: 767.98px) {
+  .hero--v5 .hero__btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .cta--with-image .cta__btn {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+```
+
+### Паттерн для L5 кнопок
+1. Контейнер кнопки (`.hero__content`, `.cta__text`, `.about__content`) имеет `padding: 16px`
+2. Кнопка внутри `width: 100%` заполняет контейнер
+3. **НЕ использовать** `calc(100% - 32px)` + `margin: 16px` — это дублирует отступы
+
+---
+
 ## Правила работы
 
 1. **ВСЕГДА** проверять Figma перед изменениями

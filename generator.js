@@ -150,7 +150,12 @@ function replacePlaceholders(template, data) {
               // Условие {{#if this.key}}
               const ifThisRegex = new RegExp(`\\{\\{#if this\\.${key}\\}\\}([\\s\\S]*?)\\{\\{\\/if\\}\\}`, 'g');
               itemResult = itemResult.replace(ifThisRegex, (match, content) => {
-                return value ? content : '';
+                const parts = content.split('{{else}}');
+                if (value) {
+                  return parts[0];
+                } else {
+                  return parts.length > 1 ? parts[1] : '';
+                }
               });
             });
 
