@@ -349,6 +349,8 @@
       "template": "faq/faq-accordion.html",
       "data": {
         "title": "Häufige Fragen zum Fotoshooting",
+        "chevronIcon": true,
+        "noBorders": true,
         "ctaText": "Kontakt aufnehmen",
         "ctaLink": "quiz-step1.html",
         "questions": [

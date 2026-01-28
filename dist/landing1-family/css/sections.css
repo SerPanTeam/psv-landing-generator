@@ -2320,6 +2320,34 @@
   transition: opacity var(--transition-normal);
 }
 
+/* Chevron icon style (L5) */
+.faq__icon--chevron {
+  display: none;
+  width: 24px;
+  height: 14px;
+}
+
+.faq--chevron .faq__icon--plus {
+  display: none;
+}
+
+.faq--chevron .faq__icon--chevron {
+  display: flex;
+}
+
+.faq__icon--chevron svg {
+  transition: transform var(--transition-normal);
+}
+
+.faq__item.is-open .faq__icon--chevron svg {
+  transform: rotate(180deg);
+}
+
+/* No borders style (L5) */
+.faq--no-borders .faq__item {
+  border-bottom: none;
+}
+
 .faq__answer {
   max-height: 0;
   overflow: hidden;

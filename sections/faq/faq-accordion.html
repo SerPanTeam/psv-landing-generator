@@ -17,7 +17,7 @@
      • Размер шрифта → --font-size-text-lg (вопрос)
      ============================================ -->
 
-<section class="faq {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if cardStyle}} faq--{{cardStyle}}{{/if}}{{paddingClasses}}">
+<section class="faq {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if cardStyle}} faq--{{cardStyle}}{{/if}}{{#if noBorders}} faq--no-borders{{/if}}{{#if chevronIcon}} faq--chevron{{/if}}{{paddingClasses}}">
   <div class="container">
     <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
     <h2 class="faq__title">{{title}}</h2>
@@ -30,10 +30,15 @@
         <button class="faq__question" data-faq-toggle aria-expanded="false">
           <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
           <span>{{this.question}}</span>
-          <span class="faq__icon">
+          <span class="faq__icon faq__icon--plus">
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
         </button>
