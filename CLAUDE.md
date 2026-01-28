@@ -527,7 +527,8 @@ Gap = 8565 - 8540 = 25px → margin-top: 25px
 |---------|---------|---------------|
 | Отступ больше/меньше | Bounding box ≠ visual | Сравнить font-size с bbox height |
 | Шрифт слишком жирный/тонкий | Неправильный weight | Проверить `font-bold` vs `font-medium` vs `font-normal` |
-| Текст не того цвета | CSS variable ≠ Figma | Проверить hex значение переменной |
+| Текст не того цвета | CSS variable ≠ Figma hex | `text-black` в Figma = #000000, проверить --color-text-primary |
+| Текст серый вместо чёрного | Старое значение переменной | Figma: text-black=#000000, НЕ #3D3D3D! |
 | Элемент не на месте | Неправильный margin/padding | Вычислить gap по координатам |
 | Элемент невидим | z-index или overflow | Проверить stacking context |
 
