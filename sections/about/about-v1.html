@@ -29,8 +29,10 @@
       <!-- ====== ФОТО АВТОРА ====== -->
       <div class="col-lg-5{{#if imageRight}} offset-lg-1{{/if}}">
         <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
-        <div class="about__image">
-          <img src="{{image}}" alt="{{name}}">
+        <div class="about__image-wrapper">
+          <div class="about__image">
+            <img src="{{image}}" alt="{{name}}">
+          </div>
         </div>
         {{#if nameUnderImage}}
         <h2 class="about__name about__name--under-image">{{name}}</h2>

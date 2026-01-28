@@ -2950,6 +2950,11 @@
 }
 
 /* About V5 - Hochzeit variant (no button, name under image) */
+.about--v5 .about__image-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
 .about--v5 .about__image {
   width: 581px; /* FIGMA Hochzeit: 581x450 */
   height: 450px;
@@ -2964,11 +2969,16 @@
   position: absolute;
   width: 595px; /* FIGMA: exact */
   height: 383px;
-  background: var(--color-bg-primary);
+  background: var(--color-bg-secondary); /* FIGMA Hub: #EEE3D0 */
   border-radius: 10px;
   left: -63px; /* FIGMA Hochzeit: 730-793=-63px */
   top: 241px; /* FIGMA: same as hub */
   z-index: 1;
+}
+
+/* When About section has secondary background, backdrop should be primary (inverted) */
+.about--v5.section--bg-secondary .about__image::after {
+  background: var(--color-bg-primary); /* FIGMA Hochzeit: #F5EDE0 */
 }
 
 .about--v5 .about__image img {
