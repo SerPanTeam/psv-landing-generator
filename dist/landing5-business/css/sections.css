@@ -3748,7 +3748,9 @@
 
 /* padding-top */
 .pt-0 { padding-top: 0 !important; }
+.pt-40 { padding-top: 40px !important; }
 .pt-56 { padding-top: 56px !important; }
+.pt-70 { padding-top: 70px !important; }
 .pt-72 { padding-top: 72px !important; }
 .pt-80 { padding-top: 80px !important; }
 .pt-86 { padding-top: 86px !important; }

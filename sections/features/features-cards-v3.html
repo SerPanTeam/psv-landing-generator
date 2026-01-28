@@ -1,15 +1,26 @@
 <!-- ============================================
-     FEATURES CARDS V3 - 3 карточки (image + title + text)
+     FEATURES CARDS V3 - 3-4 карточки (image + title + text)
 
      FIGMA (node 369:256):
-     - 3 columns, gap 40px
+     - 3-4 columns, gap 40px
      - Image: 350x300px, rounded-35px
      - Title: 28px bold
      - Text: 22px medium
+
+     Опционально:
+     - title: заголовок секции
+     - subtitle: подзаголовок секции
+     - ctaText/ctaLink: кнопка внизу
      ============================================ -->
 
-<section class="features-cards features-cards--v3 section--bg-primary{{paddingClasses}}">
+<section class="features-cards features-cards--v3 {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
   <div class="container">
+    {{#if title}}
+    <h2 class="features-cards__section-title">{{title}}</h2>
+    {{/if}}
+    {{#if subtitle}}
+    <p class="features-cards__section-subtitle">{{subtitle}}</p>
+    {{/if}}
     <div class="features-cards__grid">
       {{#each features}}
       <div class="features-cards__item">
@@ -21,5 +32,10 @@
       </div>
       {{/each}}
     </div>
+    {{#if ctaText}}
+    <div class="features-cards__cta">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
   </div>
 </section>

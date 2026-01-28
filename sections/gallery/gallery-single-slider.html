@@ -12,23 +12,31 @@
      ============================================ -->
 
 <section class="gallery-single-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if smallRadius}} gallery-single-slider--small-radius{{/if}}{{paddingClasses}}">
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
 
-  <div class="gallery-single-slider__container" data-gallery-single-slider>
-    {{#each images}}
-    <div class="gallery-single-slider__slide{{#if @first}} is-active{{/if}}">
-      <img src="{{this.src}}" alt="{{this.alt}}" class="gallery-single-slider__image">
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      {{#each images}}
+      <div class="gallery-single-slider__slide{{#if @first}} is-active{{/if}}">
+        <img src="{{this.src}}" alt="{{this.alt}}" class="gallery-single-slider__image">
+      </div>
+      {{/each}}
     </div>
-    {{/each}}
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 
-  <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
-    <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </button>
+  {{#if ctaText}}
+  <div class="gallery-single-slider__cta">
+    <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+  </div>
+  {{/if}}
 </section>

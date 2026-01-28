@@ -6,6 +6,8 @@
 
      DATA:
      - images: Array of {src, alt} (4 images)
+     - ctaText: (optional) Button text
+     - ctaLink: (optional) Button link
      - bgClass: (optional) Override background
      ============================================ -->
 
@@ -18,5 +20,10 @@
       </div>
       {{/each}}
     </div>
+    {{#if ctaText}}
+    <div class="gallery-collage__cta">
+      <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+    </div>
+    {{/if}}
   </div>
 </section>

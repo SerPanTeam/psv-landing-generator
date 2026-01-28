@@ -6,9 +6,14 @@
      - 3 visible slides
      - Navigation arrows
      - Smooth slide transitions
+
+     VARIANT V5 (L5 Business):
+     - Center slide larger with white frame
+     - Side slides smaller without frame
+     - CTA button support
      ============================================ -->
 
-<section class="gallery-slider {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} gallery-slider--rounded{{/if}}{{paddingClasses}}">
+<section class="gallery-slider{{#if variant}} gallery-slider--{{variant}}{{/if}} {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} gallery-slider--rounded{{/if}}{{paddingClasses}}">
   <div class="gallery-slider__wrapper">
     <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
       <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,4 +37,9 @@
       </svg>
     </button>
   </div>
+  {{#if ctaText}}
+  <div class="gallery-slider__cta">
+    <a href="{{ctaLink}}" class="btn btn-primary">{{ctaText}}</a>
+  </div>
+  {{/if}}
 </section>

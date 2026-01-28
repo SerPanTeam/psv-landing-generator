@@ -15,10 +15,15 @@
     <div class="row align-items-center{{#if imageLeft}} flex-lg-row{{else}} flex-lg-row-reverse{{/if}}">
       <!-- Изображение -->
       <div class="col-lg-5{{#if imageLeft}}{{else}} ms-auto{{/if}}">
-        <div class="content-section__image-frame">
+        <div class="content-section__image-frame{{#if imageSecondary}} content-section__image-frame--stacked{{/if}}">
           <div class="content-section__image">
             <img src="{{image}}" alt="{{#if imageAlt}}{{imageAlt}}{{else}}{{title}}{{/if}}">
           </div>
+          {{#if imageSecondary}}
+          <div class="content-section__image-secondary">
+            <img src="{{imageSecondary}}" alt="{{title}}">
+          </div>
+          {{/if}}
           {{#if accentText}}
           <p class="content-section__accent">{{accentText}}</p>
           {{/if}}

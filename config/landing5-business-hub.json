@@ -7,7 +7,8 @@
     "--color-bg-primary": "#F5EDE0",
     "--color-bg-secondary": "#EEE3D0",
     "--color-button-primary": "#E2C08D",
-    "--color-accent": "#D4A574"
+    "--color-accent": "#D4A574",
+    "--button-border-radius": "10px"
   },
 
   "meta": {

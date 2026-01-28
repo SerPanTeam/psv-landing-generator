@@ -23,7 +23,7 @@
      • Цвет фона → css/variables.css → --color-bg-primary
      ============================================ -->
 
-<section class="about section--bg-primary{{#if rounded}} about--rounded{{/if}}{{paddingClasses}}">
+<section class="about {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{#if rounded}} about--rounded{{/if}}{{#if variant}} about--{{variant}}{{/if}}{{paddingClasses}}">
   <div class="container">
     <div class="row align-items-start{{#if imageRight}} flex-lg-row-reverse{{/if}}">
       <!-- ====== ФОТО АВТОРА ====== -->
@@ -32,6 +32,11 @@
         <div class="about__image">
           <img src="{{image}}" alt="{{name}}">
         </div>
+        {{#if nameUnderImage}}
+        <h2 class="about__name about__name--under-image">{{name}}</h2>
+        {{#if subtitle}}<p class="about__tagline about__tagline--under-image">{{subtitle}}</p>{{/if}}
+        {{#if tagline}}<p class="about__tagline about__tagline--under-image">{{tagline}}</p>{{/if}}
+        {{/if}}
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
@@ -47,12 +52,17 @@
           {{else}}
           <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
           <p class="about__label">{{label}}</p>
+          {{#unless nameUnderImage}}
           <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
           <h2 class="about__name">{{name}}</h2>
+          {{#if subtitle}}
+          <p class="about__subtitle">{{subtitle}}</p>
+          {{/if}}
           {{#if tagline}}
           <p class="about__tagline">{{tagline}}</p>
           {{/if}}
           {{#if showDivider}}<div class="about__divider"></div>{{/if}}
+          {{/unless}}
           {{/if}}
 
           <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->

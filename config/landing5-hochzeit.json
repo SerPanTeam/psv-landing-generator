@@ -300,6 +300,7 @@
       "template": "steps/steps-6.html",
       "data": {
         "bgClass": "section--bg-secondary",
+        "paddingBottom": 0,
         "title": "In 5 Schritten zum kostenlosen Probe-Fotoshooting!",
         "steps": [
           {
@@ -334,6 +335,7 @@
       "template": "gallery/gallery-single-slider.html",
       "data": {
         "bgClass": "section--bg-secondary",
+        "paddingTop": 70,
         "smallRadius": true,
         "ctaText": "Kontakt aufnehmen",
         "ctaLink": "quiz-step1.html",
