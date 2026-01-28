@@ -30,7 +30,7 @@
   --color-bg-white: #FFFFFF;          /* Белый фон */
 
   /* Текст */
-  --color-text-primary: #3D3D3D;      /* Основной текст */
+  --color-text-primary: #000000;      /* Основной текст (FIGMA: text-black) */
   --color-text-secondary: #666666;    /* Вторичный текст */
   --color-text-light: #7F7F7F;        /* Светлый текст */
   --color-text-white: #FFFFFF;        /* Белый текст */

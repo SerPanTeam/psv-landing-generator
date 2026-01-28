@@ -888,7 +888,7 @@
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
   line-height: 1.15;
-  color: var(--color-text-primary); /* FIGMA: BLACK text #3D3D3D */
+  color: var(--color-text-primary); /* FIGMA: text-black #000000 */
   margin-bottom: 20px;
 }
 
