@@ -3895,6 +3895,14 @@
   .features-cards--v3 .features-cards__text {
     font-size: 14px;
   }
+
+  /* ROUNDED variant (L3 Dogs) - full width images on mobile */
+  .features-cards--v3.rounded .features-cards__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 350/300;
+    border-radius: 25px;
+  }
 }
 
 /* ============================================

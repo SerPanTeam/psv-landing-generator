@@ -650,6 +650,50 @@
   margin-top: 56px; /* FIGMA: gap from cards to CTA */
 }
 
+/* ========================================
+   Features Cards V3 - ROUNDED variant (L3 Dogs)
+   FIGMA node 449:30:
+   - NO white card wrapper - items directly on section bg
+   - Image: 350x300px, rounded-35px
+   - Title: 28px Bold
+   - Text: 22px Medium
+   - Gap between cards: ~43px
+   ======================================== */
+.features-cards--v3.rounded .features-cards__grid {
+  gap: 43px;
+  justify-content: center;
+}
+
+.features-cards--v3.rounded .features-cards__item {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: auto;
+  background-color: transparent; /* No white card */
+  border-radius: 0;
+  padding: 0;
+  max-width: 390px; /* FIGMA: text width ~387-390px */
+}
+
+.features-cards--v3.rounded .features-cards__image {
+  width: 350px; /* FIGMA: 350x300px */
+  height: 300px;
+  border-radius: 35px; /* FIGMA: rounded-35px */
+  margin: 0 0 36px 0; /* Left align, not center */
+}
+
+.features-cards--v3.rounded .features-cards__title {
+  font-size: 28px; /* FIGMA: 28px Bold */
+  font-weight: var(--font-weight-bold);
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.features-cards--v3.rounded .features-cards__text {
+  font-size: 22px; /* FIGMA: 22px Medium */
+  font-weight: var(--font-weight-medium);
+  line-height: normal;
+}
+
 /* Hero V4 - Landing 4 (Kinder-Fotoshooting)
    Тёмный фон с лого внутри секции
    Галерея изображений: 4 карточки 293x348px, rounded-30px, с наклоном
@@ -3829,6 +3873,8 @@
 .pb-115 { padding-bottom: 115px !important; }
 .pb-120 { padding-bottom: 120px !important; }
 .pb-137 { padding-bottom: 137px !important; }
+.pb-142 { padding-bottom: 142px !important; }
+.pb-146 { padding-bottom: 146px !important; }
 .pb-172 { padding-bottom: 172px !important; }
 .pb-208 { padding-bottom: 208px !important; }
 

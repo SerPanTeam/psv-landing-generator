@@ -13,7 +13,7 @@
      - ctaText/ctaLink: кнопка внизу
      ============================================ -->
 
-<section class="features-cards features-cards--v3 {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
+<section class="features-cards features-cards--v3{{#if rounded}} rounded{{/if}} {{#if bgClass}}{{bgClass}}{{else}}section--bg-primary{{/if}}{{paddingClasses}}">
   <div class="container">
     {{#if title}}
     <h2 class="features-cards__section-title">{{title}}</h2>

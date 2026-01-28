@@ -162,7 +162,7 @@
     {
       "template": "content/content-sidebar.html",
       "data": {
-        "paddingBottom": 195,
+        "paddingBottom": 142,
         "image": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500&h=400&fit=crop",
         "title": "Warum kostenlos?",
         "texts": [
@@ -176,6 +176,8 @@
     {
       "template": "features/features-cards-v3.html",
       "data": {
+        "rounded": true,
+        "paddingTop": 0,
         "paddingBottom": 56,
         "features": [
           {
@@ -231,7 +233,7 @@
         "rounded": true,
         "ctaBottom": true,
         "paddingTop": 0,
-        "paddingBottom": 106,
+        "paddingBottom": 89,
         "title": "Wie läuft das mit dem kostenlosen Hunde-Fotoshooting ab?",
         "ctaText": "Kostenloses Fotoshooting sichern",
         "ctaLink": "quiz-step1.html",
@@ -267,7 +269,7 @@
       "template": "features/features-grid.html",
       "data": {
         "paddingTop": 0,
-        "paddingBottom": 208,
+        "paddingBottom": 146,
         "items": [
           { "image": "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=120&h=120&fit=crop", "text": "Ganz viel Zeit & Raum für dich und deinen pelzigen Freund" },
           { "image": "https://images.unsplash.com/photo-1517849845537-4d257902454a?w=120&h=120&fit=crop", "text": "Professionelle Fotografin aus Leidenschaft und Professionalität" },
@@ -279,8 +281,7 @@
     {
       "template": "gallery/gallery-decorated.html",
       "data": {
-        "paddingTop": 0,
-        "paddingBottom": 112,
+        "paddingBottom": 172,
         "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1300&h=600&fit=crop",
         "alt": "Hunde-Fotoshooting",
         "decorTopRight": "https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=350&h=250&fit=crop",
@@ -319,7 +320,7 @@
         "rounded": true,
         "primaryButton": true,
         "paddingTop": 115,
-        "paddingBottom": 38,
+        "paddingBottom": 137,
         "title": "Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.",
         "services": [
           {
