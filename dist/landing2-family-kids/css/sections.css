@@ -2997,10 +2997,15 @@
   font-weight: var(--font-weight-bold);
 }
 
+.about--v5 .about__image-caption {
+  position: relative;
+  z-index: 2; /* Above backdrop */
+  padding-top: 35px; /* FIGMA: gap below image */
+}
+
 .about--v5 .about__name--under-image {
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
-  margin-top: 35px; /* FIGMA: gap below image */
   margin-bottom: 0;
 }
 

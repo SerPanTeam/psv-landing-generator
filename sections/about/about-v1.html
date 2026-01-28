@@ -33,12 +33,14 @@
           <div class="about__image">
             <img src="{{image}}" alt="{{name}}">
           </div>
+          {{#if nameUnderImage}}
+          <div class="about__image-caption">
+            <h2 class="about__name about__name--under-image">{{name}}</h2>
+            {{#if subtitle}}<p class="about__tagline about__tagline--under-image">{{subtitle}}</p>{{/if}}
+            {{#if tagline}}<p class="about__tagline about__tagline--under-image">{{tagline}}</p>{{/if}}
+          </div>
+          {{/if}}
         </div>
-        {{#if nameUnderImage}}
-        <h2 class="about__name about__name--under-image">{{name}}</h2>
-        {{#if subtitle}}<p class="about__tagline about__tagline--under-image">{{subtitle}}</p>{{/if}}
-        {{#if tagline}}<p class="about__tagline about__tagline--under-image">{{tagline}}</p>{{/if}}
-        {{/if}}
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
