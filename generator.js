@@ -63,6 +63,16 @@ function replacePlaceholders(template, data) {
     });
   } while (result !== prevResult);
 
+  // 2.5. Обрабатываем {{#unless key}}...{{/unless}} (инверсия #if)
+  // ВАЖНО: НЕ обрабатываем {{#unless this.xxx}} - они обрабатываются внутри #each
+  do {
+    prevResult = result;
+    const simpleUnlessRegex = /\{\{#unless\s+((?!this\.)[\w.]+)\}\}((?:(?!\{\{else\}\})(?!\{\{#unless\s)[\s\S])*?)\{\{\/unless\}\}/g;
+    result = result.replace(simpleUnlessRegex, (match, key, content) => {
+      return !getValueByPath(data, key) ? content : '';
+    });
+  } while (result !== prevResult);
+
   // 3. Теперь обрабатываем условия с {{else}}: {{#if key}}...{{else}}...{{/if}}
   // ВАЖНО: НЕ обрабатываем {{#if this.xxx}} - они обрабатываются внутри #each
   do {
